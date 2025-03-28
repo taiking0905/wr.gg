@@ -3,10 +3,13 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const cheerio = require("cheerio");
+const { initializeDatabase } = require("./database");
 
 let mainWindow;
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+    await initializeDatabase(); // データベースの初期化
+    
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
@@ -16,7 +19,8 @@ app.whenReady().then(() => {
         },
     });
 
-    mainWindow.loadFile("src/index.html");
+    // 絶対パスで index.html をロード
+    mainWindow.loadFile(path.join(__dirname, "index.html"));
 });
 
 // JSONを読み込んでURLを取得し、スクレイピングして保存
