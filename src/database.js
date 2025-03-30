@@ -15,21 +15,22 @@ function initializeDatabase() {
         db.serialize(() => {
             db.run(`CREATE TABLE IF NOT EXISTS Champions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT UNIQUE NOT NULL
+                champion_name TEXT UNIQUE NOT NULL
             )`);
 
             db.run(`CREATE TABLE IF NOT EXISTS Patches (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                patch_name TEXT UNIQUE NOT NULL
+                patch_name TEXT UNIQUE NOT NULL,
+                patch_link TEXT NOT NULL
             )`);
 
             db.run(`CREATE TABLE IF NOT EXISTS Champion_Changes (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                champion_id INTEGER NOT NULL,
-                patch_id INTEGER NOT NULL,
+                champion_name TEXT NOT NULL,
+                patch_name TEXT NOT NULL,
                 change_description TEXT,
-                FOREIGN KEY (champion_id) REFERENCES Champions(id),
-                FOREIGN KEY (patch_id) REFERENCES Patches(id)
+                FOREIGN KEY (champion_name) REFERENCES Champions(champion_name),
+                FOREIGN KEY (patch_name) REFERENCES Patches(patch_name)
             )`, (err) => {
                 if (err) {
                     reject(err);
