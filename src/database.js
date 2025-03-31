@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const { seedDatabase } = require('./seedData'); 
+const {seedChampionData,seedPatchData} = require('./seedData'); 
 
 function initializeDatabase() {
     return new Promise((resolve, reject) => {
@@ -37,7 +37,10 @@ function initializeDatabase() {
         });
 
         // 初期データの挿入
-        seedDatabase(db)
+        Promise.all([
+            seedChampionData(db),
+            seedPatchData(db)
+        ])
             .then(() => {
                 console.log("Database initialized successfully.");
                 db.close((err) => {

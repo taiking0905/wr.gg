@@ -1,8 +1,9 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
+const { json } = require("stream/consumers");
 
-function seedDatabase(db) {
+function seedChampionData(db) {
     const url = "https://wildrift.leagueoflegends.com/ja-jp/champions/";
 
     return new Promise((resolve, reject) => {
@@ -39,7 +40,7 @@ function seedDatabase(db) {
                     });
                     insertStmt.finalize();
 
-                    console.log("チャンピオンデータがデータベースに挿入されました。");
+                    console.log("Champion names have been inserted into the database.");
                     resolve();
                 });
             })
@@ -50,7 +51,39 @@ function seedDatabase(db) {
     });
 }
 
-module.exports = { seedDatabase };
+function seedPatchData(db) {
+
+    // patch_note.json を読み込む
+    const patchData = require('./patch_notes.json'); // JSON ファイルを読み込む
+
+    return new Promise((resolve, reject) => {
+        db.serialize(() => {
+            const insertStmt = db.prepare(`INSERT OR IGNORE INTO Patches (patch_name, patch_link) VALUES (?, ?)`);
+
+            // JSON データをループして挿入
+            patchData.forEach(patch => {
+                insertStmt.run(patch.patch_name, patch.patch_link, (err) => {
+                    if (err) {
+                        console.error("Error inserting patch data:", err);
+                        reject(err);
+                    }
+                });
+            });
+
+            insertStmt.finalize((err) => {
+                if (err) {
+                    console.error("Error finalizing statement:", err);
+                    reject(err);
+                } else {
+                    console.log("Patch data inserted successfully from patch_note.json.");
+                    resolve();
+                }
+            });
+        });
+    });
+}
+
+module.exports = { seedChampionData ,seedPatchData};
 
 
 
