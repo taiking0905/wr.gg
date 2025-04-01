@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const {seedChampionData,seedPatchData} = require('./seedData'); 
+const {seedChampionData,seedPatchData,seedChampionChangesData} = require('./seedData'); 
 
 function initializeDatabase() {
     return new Promise((resolve, reject) => {
@@ -30,7 +30,8 @@ function initializeDatabase() {
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 champion_name TEXT NOT NULL,
                 patch_name TEXT NOT NULL,
-                change_description TEXT,
+                ability_title TEXT NOT NULL,
+                change_details TEXT NOT NULL,
                 FOREIGN KEY (champion_name) REFERENCES Champions(champion_name),
                 FOREIGN KEY (patch_name) REFERENCES Patches(patch_name)
             )`);
@@ -39,7 +40,8 @@ function initializeDatabase() {
         // 初期データの挿入
         Promise.all([
             seedChampionData(db),
-            seedPatchData(db)
+            seedPatchData(db),
+            seedChampionChangesData(db)
         ])
             .then(() => {
                 console.log("Database initialized successfully.");

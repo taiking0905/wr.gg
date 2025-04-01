@@ -2,6 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
 const { json } = require("stream/consumers");
+const path = require("path");
 
 function seedChampionData(db) {
     const url = "https://wildrift.leagueoflegends.com/ja-jp/champions/";
@@ -83,7 +84,52 @@ function seedPatchData(db) {
     });
 }
 
-module.exports = { seedChampionData ,seedPatchData};
+function seedChampionChangesData(db) {
+    // JSON ファイルを読み込む
+    const patchData = require('./test_result.json'); 
+
+    return new Promise((resolve, reject) => {
+        db.serialize(() => {
+            const insertStmt = db.prepare(`
+                INSERT OR IGNORE INTO Champion_Changes 
+                (champion_name, patch_name, ability_title, change_details) 
+                VALUES (?, ?, ?, ?)
+            `);
+
+            // JSON データをループして挿入
+            const patchName = patchData.patch_name; // パッチ名
+            patchData.character_changes.forEach(character => {
+                const championName = character.name; // チャンピオン名
+
+                character.changes.forEach(change => {
+                    const abilityTitle = change.ability_title; // アビリティ名
+                    const changeDetails = change.change_details; // 変更内容
+
+                    insertStmt.run(championName, patchName, abilityTitle, changeDetails, (err) => {
+                        if (err) {
+                            console.error("Error inserting champion changes data:", err);
+                            reject(err);
+                        }
+                    });
+                });
+            });
+
+            insertStmt.finalize((err) => {
+                if (err) {
+                    console.error("Error finalizing statement:", err);
+                    reject(err);
+                } else {
+                    console.log("Champion changes data inserted successfully from test_result.json.");
+                    resolve();
+                }
+            });
+        });
+    });
+}
+
+module.exports = { seedChampionChangesData };
+
+module.exports = { seedChampionData, seedPatchData, seedChampionChangesData };
 
 
 
