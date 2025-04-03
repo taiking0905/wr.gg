@@ -12,14 +12,14 @@ app.whenReady().then(async () => {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, "preload.js"), // preload.js を指定
+            preload: path.join(__dirname, "../preload/preload.js"), // preload.js を指定
             contextIsolation: true, // セキュリティのため true に設定
             enableRemoteModule: false, // 不要なモジュールを無効化
         },
     });
 
     // 絶対パスで index.html をロード
-    mainWindow.loadFile(path.join(__dirname, "index.html"));
+    mainWindow.loadFile(path.join(__dirname, "../renderer/index.html"));
 });
 
 // fetchPatchData を処理する IPC ハンドラーを設定

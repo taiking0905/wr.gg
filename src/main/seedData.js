@@ -93,8 +93,8 @@ async function seedChampionChangesData(db) {
                 db.run("BEGIN TRANSACTION"); // トランザクションの開始
 
                 for (const patch of patchData) {
-                    const patchName = patch.patch_name; // パッチ名
-                    const patchLink = patch.patch_link; // パッチリンク
+                    const patchName = patch.patch_name; 
+                    const patchLink = patch.patch_link; 
 
                     console.log(`Fetching data for: Patch_Name:${patchName.slice(-4)}`);
 

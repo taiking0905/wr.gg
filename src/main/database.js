@@ -1,6 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
-const path = require('path');
 const { seedChampionData, seedPatchData, seedChampionChangesData } = require('./seedData');
 
 function initializeDatabase() {
