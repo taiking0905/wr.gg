@@ -6,44 +6,55 @@ const cheerio = require("cheerio");
 async function fetchPatchData() {
     try {
         // patch_note_test.json の読み込み
-        const patchPath = path.join(__dirname, "patch_note_test.json");
+        const patchPath = path.join(__dirname, "patch_notes.json");
         const patchData = JSON.parse(fs.readFileSync(patchPath, "utf-8"));
-        const url = patchData[0].link;
 
-        // Webページ取得
-        const response = await axios.get(url);
-        const $ = cheerio.load(response.data);
+        // 結果を格納する配列
+        let allResults = [];
 
-        // パッチタイトルを取得
-        const patchTitle = $("h1").text().trim();
+        // 各パッチデータをループ処理
+        for (const patch of patchData) {
+            const patchName = patch.patch_name; // パッチ名
+            const patchLink = patch.patch_link; // パッチリンク
 
-        // キャラクター変更部分の取得 (仮)
-        let characterChanges = [];
-        $(".character-changes-container").each((i, elem) => {
-            const characterName = $(elem).find(".character-name").text().trim();
-            let changes = [];
+            console.log(`Fetching data for: ${patchName} (${patchLink})`);
 
-            $(elem)
-                .find(".character-change")
-                .each((j, change) => {
-                    const abilityTitle = $(change).find(".character-ability-title").text().trim();
-                    const changeDetails = $(change).find(".character-change-body").text().trim();
-                    changes.push({ ability_title: abilityTitle, change_details: changeDetails });
-                });
+            // Webページ取得
+            const response = await axios.get(patchLink);
+            const $ = cheerio.load(response.data);
 
-            characterChanges.push({ name: characterName, changes });
-        });
+            // キャラクター変更部分の取得
+            let characterChanges = [];
+            $(".character-changes-container").each((i, elem) => {
+                const characterName = $(elem).find(".character-name").text().trim();
+                let changes = [];
 
-        // データを JSON にまとめる
-        const resultData = {
-            patch_name: patchTitle,
-            character_changes: characterChanges,
-        };
+                $(elem)
+                    .find(".character-change")
+                    .each((j, change) => {
+                        const abilityTitle = $(change).find(".character-ability-title").text().trim();
+                        const changeDetails = $(change).find(".character-change-body").text().trim();
+                        changes.push({ ability_title: abilityTitle, change_details: changeDetails });
+                    });
 
-        // test_result.json に保存
+                characterChanges.push({ name: characterName, changes });
+            });
+
+            // データを JSON にまとめる（patch_link を含めない）
+            const resultData = {
+                patch_name: patchName,
+                character_changes: characterChanges,
+            };
+
+            // 結果を配列に追加
+            allResults.push(resultData);
+        }
+
+        // すべての結果を test_result.json に保存
         const resultPath = path.join(__dirname, "test_result.json");
-        fs.writeFileSync(resultPath, JSON.stringify(resultData, null, 4), "utf-8");
+        fs.writeFileSync(resultPath, JSON.stringify(allResults, null, 4), "utf-8");
 
+        console.log("Data successfully fetched and saved to test_result.json");
         return { success: true };
     } catch (error) {
         console.error("データ取得エラー:", error);

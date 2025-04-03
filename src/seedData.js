@@ -1,8 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
-const { json } = require("stream/consumers");
-const path = require("path");
 
 function seedChampionData(db) {
     const url = "https://wildrift.leagueoflegends.com/ja-jp/champions/";
@@ -85,8 +83,7 @@ function seedPatchData(db) {
 }
 
 function seedChampionChangesData(db) {
-    // JSON ファイルを読み込む
-    const patchData = require('./test_result.json'); 
+    const patchData = require('./test_result.json'); // JSON ファイルを読み込む
 
     return new Promise((resolve, reject) => {
         db.serialize(() => {
@@ -96,38 +93,46 @@ function seedChampionChangesData(db) {
                 VALUES (?, ?, ?, ?)
             `);
 
-            // JSON データをループして挿入
-            const patchName = patchData.patch_name; // パッチ名
-            patchData.character_changes.forEach(character => {
-                const championName = character.name; // チャンピオン名
+            try {
+                db.serialize(() => {
+                    db.run("BEGIN TRANSACTION"); // トランザクションの開始
 
-                character.changes.forEach(change => {
-                    const abilityTitle = change.ability_title; // アビリティ名
-                    const changeDetails = change.change_details; // 変更内容
+                    patchData.forEach(patch => {
+                        const patchName = patch.patch_name;
+                        const characterChanges = patch.character_changes || [];
 
-                    insertStmt.run(championName, patchName, abilityTitle, changeDetails, (err) => {
-                        if (err) {
-                            console.error("Error inserting champion changes data:", err);
-                            reject(err);
-                        }
+                        characterChanges.forEach(character => {
+                            const championName = character.name;
+                            const changes = character.changes || [];
+
+                            changes.forEach(change => {
+                                const abilityTitle = change.ability_title;
+                                const changeDetails = change.change_details;
+
+                                insertStmt.run(championName, patchName, abilityTitle, changeDetails);
+                            });
+                        });
                     });
-                });
-            });
 
-            insertStmt.finalize((err) => {
-                if (err) {
-                    console.error("Error finalizing statement:", err);
-                    reject(err);
-                } else {
-                    console.log("Champion changes data inserted successfully from test_result.json.");
-                    resolve();
-                }
-            });
+                    db.run("COMMIT"); // トランザクションの終了
+                });
+
+                insertStmt.finalize((err) => {
+                    if (err) {
+                        console.error("Error finalizing statement:", err);
+                        reject(err);
+                    } else {
+                        console.log("Champion changes data inserted successfully from test_result.json.");
+                        resolve();
+                    }
+                });
+            } catch (error) {
+                console.error("Error during data insertion:", error);
+                reject(error);
+            }
         });
     });
 }
-
-module.exports = { seedChampionChangesData };
 
 module.exports = { seedChampionData, seedPatchData, seedChampionChangesData };
 
