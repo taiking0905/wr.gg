@@ -21,18 +21,13 @@ function seedChampionData(db) {
                     }
                 });
 
-                // JSON ファイルに保存
-                const championsJson = { champions: championNames };
-                fs.writeFileSync('champions.json', JSON.stringify(championsJson, null, 4), 'utf-8');
-                console.log("Champion names have been saved to champions.json");
-
                 // データベースに挿入
                 db.serialize(() => {
                     const insertStmt = db.prepare(`INSERT OR IGNORE INTO Champions (champion_name) VALUES (?)`);
                     championNames.forEach(name => {
                         insertStmt.run(name, (err) => {
                             if (err) {
-                                console.error("データベース挿入エラー:", err);
+                                console.error("Database Insert Error:", err);
                                 reject(err);
                             }
                         });
@@ -82,11 +77,12 @@ function seedPatchData(db) {
     });
 }
 
-function seedChampionChangesData(db) {
-    const patchData = require('./test_result.json'); // JSON ファイルを読み込む
+async function seedChampionChangesData(db) {
+    // patch_notes.json の読み込み
+    const patchData = require('./patch_notes.json'); 
 
-    return new Promise((resolve, reject) => {
-        db.serialize(() => {
+    return new Promise(async (resolve, reject) => {
+        db.serialize(async () => {
             const insertStmt = db.prepare(`
                 INSERT OR IGNORE INTO Champion_Changes 
                 (champion_name, patch_name, ability_title, change_details) 
@@ -94,41 +90,63 @@ function seedChampionChangesData(db) {
             `);
 
             try {
-                db.serialize(() => {
-                    db.run("BEGIN TRANSACTION"); // トランザクションの開始
+                db.run("BEGIN TRANSACTION"); // トランザクションの開始
 
-                    patchData.forEach(patch => {
-                        const patchName = patch.patch_name;
-                        const characterChanges = patch.character_changes || [];
+                for (const patch of patchData) {
+                    const patchName = patch.patch_name; // パッチ名
+                    const patchLink = patch.patch_link; // パッチリンク
 
-                        characterChanges.forEach(character => {
-                            const championName = character.name;
-                            const changes = character.changes || [];
+                    console.log(`Fetching data for: Patch_Name:${patchName.slice(-4)}`);
 
-                            changes.forEach(change => {
-                                const abilityTitle = change.ability_title;
-                                const changeDetails = change.change_details;
 
-                                insertStmt.run(championName, patchName, abilityTitle, changeDetails);
+                    // Webページ取得
+                    const response = await axios.get(patchLink);
+                    const $ = cheerio.load(response.data);
+
+                    // キャラクター変更部分の取得
+                    $(".character-changes-container").each((i, elem) => {
+                        const championName = $(elem).find(".character-name").text().trim();
+                        let changes = [];
+
+                        $(elem)
+                            .find(".character-change")
+                            .each((j, change) => {
+                                const abilityTitle = $(change).find(".character-ability-title").text().trim();
+                                const changeDetails = $(change).find(".character-change-body").text().trim();
+                                changes.push({ ability_title: abilityTitle, change_details: changeDetails });
+                            });
+
+                        // データベースに挿入
+                        changes.forEach(change => {
+                            const abilityTitle = change.ability_title;
+                            const changeDetails = change.change_details;
+
+                            insertStmt.run(championName, patchName, abilityTitle, changeDetails, (err) => {
+                                if (err) {
+                                    console.error("Error inserting data:", err);
+                                    reject(err);
+                                }
                             });
                         });
                     });
+                }
 
-                    db.run("COMMIT"); // トランザクションの終了
-                });
-
-                insertStmt.finalize((err) => {
+                db.run("COMMIT", (err) => {
                     if (err) {
-                        console.error("Error finalizing statement:", err);
+                        console.error("Error committing transaction:", err);
                         reject(err);
                     } else {
-                        console.log("Champion changes data inserted successfully from test_result.json.");
+                        console.log("Champion changes data inserted successfully.");
                         resolve();
                     }
                 });
+
+                insertStmt.finalize();
             } catch (error) {
-                console.error("Error during data insertion:", error);
-                reject(error);
+                db.run("ROLLBACK", () => {
+                    console.error("Transaction rolled back due to error:", error);
+                    reject(error);
+                });
             }
         });
     });

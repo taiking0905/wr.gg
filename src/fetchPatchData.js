@@ -40,7 +40,7 @@ async function fetchPatchData() {
                 characterChanges.push({ name: characterName, changes });
             });
 
-            // データを JSON にまとめる（patch_link を含めない）
+            // データを JSON にまとめる
             const resultData = {
                 patch_name: patchName,
                 character_changes: characterChanges,
