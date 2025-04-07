@@ -22,7 +22,8 @@ function initializeDatabase() {
         db.serialize(() => {
             db.run(`CREATE TABLE IF NOT EXISTS Champions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                champion_name TEXT UNIQUE NOT NULL
+                champion_name TEXT UNIQUE NOT NULL,
+                new_flag boolean DEFAULT 1
             )`);
 
             db.run(`CREATE TABLE IF NOT EXISTS Patches (
@@ -54,28 +55,15 @@ function initializeDatabase() {
             ])
                 .then(() => {
                     console.log("Initial data inserted successfully.");
-                    db.close((err) => {
-                        if (err) {
-                            console.error(err.message);
-                        }
-                        console.log('Database connection closed.');
-                        resolve();
-                    });
+                    resolve(db); // データベース接続を返す
                 })
                 .catch((err) => {
                     console.error("Error during initial data insertion:", err);
-                    db.close();
                     reject(err);
                 });
         } else {
             console.log("Database already exists. Skipping initial data insertion.");
-            db.close((err) => {
-                if (err) {
-                    console.error(err.message);
-                }
-                console.log('Database connection closed.');
-                resolve();
-            });
+            resolve(db); // データベース接続を返す
         }
     });
 }

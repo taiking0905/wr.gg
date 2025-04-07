@@ -1,36 +1,70 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const { initializeDatabase } = require("./database");
-const fetchPatchData = require("./fetchPatchData"); 
+const fetchPatchData = require("./fetchPatchData");
 
 let mainWindow;
+let db; // データベース接続を保持
+
+async function updateDatabase(db) {
+    try {
+        const result = await fetchPatchData(db); // データベースを更新
+        console.log("Database updated successfully:", result);
+        return result;
+    } catch (error) {
+        console.error("Error updating database:", error);
+        throw error; // エラーを再スロー
+    }
+}
 
 app.whenReady().then(async () => {
-    await initializeDatabase(); // データベースの初期化
+    try {
+        db = await initializeDatabase(); // データベースの初期化
+        await updateDatabase(db); // データベースの最新の状態を取得
 
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            preload: path.join(__dirname, "../preload/preload.js"), // preload.js を指定
-            contextIsolation: true, // セキュリティのため true に設定
-            enableRemoteModule: false, // 不要なモジュールを無効化
-        },
-    });
+        mainWindow = new BrowserWindow({
+            width: 800,
+            height: 600,
+            webPreferences: {
+                preload: path.join(__dirname, "../preload/preload.js"), // preload.js を指定
+                contextIsolation: true, // セキュリティのため true に設定
+                enableRemoteModule: false, // 不要なモジュールを無効化
+            },
+        });
 
-    // 絶対パスで index.html をロード
-    mainWindow.loadFile(path.join(__dirname, "../renderer/index.html"));
+        // 絶対パスで index.html をロード
+        mainWindow.loadFile(path.join(__dirname, "../renderer/index.html"));
+    } catch (error) {
+        console.error("Error during app initialization:", error);
+    }
 });
 
 // fetchPatchData を処理する IPC ハンドラーを設定
 ipcMain.handle("fetchPatchData", async () => {
     try {
-        const result = await fetchPatchData();
+        const result = await fetchPatchData(db); // データベース接続を渡す
         console.log("fetchPatchData result:", result);
         return result;
     } catch (error) {
         console.error("fetchPatchData のエラー:", error);
         return { success: false, error: error.message };
+    }
+});
+
+// アプリケーション終了時にデータベース接続を閉じる
+app.on("window-all-closed", () => {
+    if (db) {
+        db.close((err) => {
+            if (err) {
+                console.error("Error closing database:", err);
+            } else {
+                console.log("Database connection closed.");
+            }
+        });
+    }
+
+    if (process.platform !== "darwin") {
+        app.quit();
     }
 });
 

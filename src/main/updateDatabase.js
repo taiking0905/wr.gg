@@ -25,12 +25,6 @@ async function fetchAndUpdateData(db) {
             });
         });
 
-        // スクレイピング結果を確認
-        console.log("Scraped patch notes:", patchNotes);
-        if (patchNotes.length === 0) {
-            throw new Error("No patch notes found. Please check the scraping logic.");
-        }
-
         const patchData = patchNotes.reverse();
 
         // スクレイピング結果を確認
