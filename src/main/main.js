@@ -2,25 +2,17 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const { initializeDatabase } = require("./database");
 const fetchPatchData = require("./fetchPatchData");
-
+const updateDatabase = require("./updateDatabase");
 let mainWindow;
 let db; // データベース接続を保持
 
-async function updateDatabase(db) {
-    try {
-        const result = await fetchPatchData(db); // データベースを更新
-        console.log("Database updated successfully:", result);
-        return result;
-    } catch (error) {
-        console.error("Error updating database:", error);
-        throw error; // エラーを再スロー
-    }
-}
 
 app.whenReady().then(async () => {
     try {
         db = await initializeDatabase(); // データベースの初期化
-        await updateDatabase(db); // データベースの最新の状態を取得
+
+        await updateDatabase(db); // データベースを更新
+
 
         mainWindow = new BrowserWindow({
             width: 800,

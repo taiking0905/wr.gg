@@ -1,5 +1,7 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const fs = require("fs");
+const path = require("path");
 
 async function fetchAndUpdateData(db) {
     try {
@@ -26,9 +28,6 @@ async function fetchAndUpdateData(db) {
         });
 
         const patchData = patchNotes.reverse();
-
-        // スクレイピング結果を確認
-        console.log("Patch note information obtained!", patchData);
 
         // チャンピオンデータの差分更新
         await updateChampionData(db);
@@ -110,8 +109,8 @@ async function updatePatchData(db, patchData) {
             `);
 
             patchData.forEach(patch => {
-                const patchName = patch.patch_name; 
-                const patchLink = patch.patch_link; 
+                const patchName = patch.patch_name;
+                const patchLink = patch.patch_link;
 
                 // データベースに挿入
                 insertStmt.run(patchName, patchLink, (err) => {
@@ -135,7 +134,20 @@ async function updatePatchData(db, patchData) {
                             reject(err);
                         } else {
                             console.log("Patch data updated successfully.");
-                            resolve();
+
+                            // データベースの内容を取得して JSON に保存
+                            db.all("SELECT * FROM Patches", (err, rows) => {
+                                if (err) {
+                                    console.error("Error fetching data from database:", err);
+                                    return reject(err);
+                                }
+
+                                const filePath = path.join(__dirname, "patch_notes.json");
+                                fs.writeFileSync(filePath, JSON.stringify(rows, null, 4), "utf-8");
+                                console.log(`Database content saved to ${filePath}`);
+
+                                resolve();
+                            });
                         }
                     });
                 }
