@@ -8,7 +8,7 @@ League of Legends: Wild Rift のパッチノートをスクレイピングし、
 
 ## 🚀 使用技術
 
-- Frontend: React + Tailwind CSS
+- Vite + Frontend: React + Tailwind CSS
 - Hosting: GitHub Pages
 - Scraping: Python (GitHub Actionsで定期実行)
 - 通知: Discord Webhook
@@ -39,7 +39,7 @@ wr.gg/
 │   ├── pages/
 │   ├── styles/
 │   └── App.jsx
-├── scripts/  ← スクレイピング用Pythonスクリプト
+├── scraper/  ← スクレイピング用Pythonスクリプト
 ├── .github/workflows/
 │   └── scrape.yml
 ├── tailwind.config.js
