@@ -3,9 +3,12 @@ from bs4 import BeautifulSoup
 import json
 import os
 
-PATCH_NOTES_JSON = "../data/patch_notes.json"
-CHAMPIONS_JSON = "../data/champions.json"
-PATCH_CONTENTS_JSON = "../data/patch_contents.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, '..', 'data')
+
+PATCH_NOTES_JSON = os.path.join(DATA_DIR, 'patch_notes.json')
+CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')
+PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')
 
 def fetch_patch_notes():
     url = "https://wildrift.leagueoflegends.com/ja-jp/news/tags/patch-notes/"
