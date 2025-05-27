@@ -94,6 +94,7 @@ def update_champion_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
+
 # パッチ内容のスクレイピング
 def fetch_patch_contents_for_patch(patch):
     patch_name = patch.get("patch_name", "")
@@ -145,15 +146,15 @@ def save_json(filename, data):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-# パッチ内容の更新
 def update_patch_contents():
+    patch_data = load_json(PATCH_NOTES_JSON)
     try:
         existing_contents = load_json(PATCH_CONTENTS_JSON)
         existing_patch_names = {item["patch_name"] for item in existing_contents}
 
         new_contents = []
 
-        for patch in PATCH_NOTES_JSON:
+        for patch in patch_data:
             if patch["patch_name"] not in existing_patch_names:
                 patch_changes = fetch_patch_contents_for_patch(patch)
                 new_contents.extend(patch_changes)
@@ -169,6 +170,8 @@ def update_patch_contents():
     except Exception as e:
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
+
+
 
 if __name__ == "__main__":
     update_patch_data()
