@@ -3,13 +3,14 @@ from bs4 import BeautifulSoup
 import json
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'data')
 
-PATCH_NOTES_JSON = os.path.join(DATA_DIR, 'patch_notes.json')
-CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')
-PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')
+PATCH_NOTES_JSON = os.path.join(DATA_DIR, 'patch_notes.json')# パッチノートの情報を保存するJSONファイル
+CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
+PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')# パッチ内容の情報を保存するJSONファイル
 
+# スクレイピング
 def fetch_patch_notes():
     url = "https://wildrift.leagueoflegends.com/ja-jp/news/tags/patch-notes/"
     response = requests.get(url)
@@ -25,7 +26,7 @@ def fetch_patch_notes():
             "patch_name": patch_name,
             "patch_link": patch_link
         })
-    return list(reversed(patch_notes))  # 逆順にして古い順→新しい順に
+    return list(reversed(patch_notes))  # 逆順にして古い順→新しい順に 
 
 
 def load_json(filename):
@@ -63,13 +64,13 @@ def update_patch_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
-
+# チャンピオン名の取得と保存
 def fetch_champion_names():
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     response = requests.get(url)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
-
+    #スクレイピング
     champion_names = []
     elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
     for el in elements:
@@ -93,6 +94,7 @@ def update_champion_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
+# パッチ内容のスクレイピング
 def fetch_patch_contents_for_patch(patch):
     patch_name = patch.get("patch_name", "")
     patch_link = patch.get("patch_link", "")
@@ -143,14 +145,15 @@ def save_json(filename, data):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def update_patch_contents(patch_data):
+# パッチ内容の更新
+def update_patch_contents():
     try:
         existing_contents = load_json(PATCH_CONTENTS_JSON)
         existing_patch_names = {item["patch_name"] for item in existing_contents}
 
         new_contents = []
 
-        for patch in patch_data:
+        for patch in PATCH_NOTES_JSON:
             if patch["patch_name"] not in existing_patch_names:
                 patch_changes = fetch_patch_contents_for_patch(patch)
                 new_contents.extend(patch_changes)
@@ -168,10 +171,6 @@ def update_patch_contents(patch_data):
         return {"success": False, "error": str(e)}
 
 if __name__ == "__main__":
-
     update_patch_data()
-
     update_champion_data()
-
-    patch_data = load_json("../data/patch_notes.json") 
-    update_patch_contents(patch_data)
+    update_patch_contents()
