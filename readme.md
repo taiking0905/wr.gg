@@ -17,31 +17,39 @@ League of Legends: Wild Rift のパッチノートをスクレイピングし、
 ---
 
 ## ⚙️ 開発環境構築
-
-### 1. Clone this repo
-
+## クローン
 ```bash
-git clone https://github.com/your-username/wr.gg.git
+git clone https://github.com/taiking0905/wr.gg.git
 cd wr.gg
+```
+## フロントエンド環境構築
+```bash
+cd wrgg-frontend
+npm install
+npm run dev  # 開発サーバー起動 
+```
 
+## スクレイピング仕様
+Github Actionsを使うことで毎週木曜の24:00に自動でスクレイピングをします。  
+Github Actionsから手動で行うことも可能です。  
 
----
-
-## ✅ ステップ2：環境構築でやること（React + Tailwind）
-
-### 📁 フォルダ構成（例）
+# 📁 ディレクトリ構成
 
 ```plaintext
 wr.gg/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── App.jsx
-├── scraper/  ← スクレイピング用Pythonスクリプト
-├── .github/workflows/
+├── .github/workflows/       # GitHub Actions のワークフロー設定
 │   └── scrape.yml
-├── tailwind.config.js
-├── package.json
+├── data/                    # スクレイピング結果の JSON 保存先
+│   └── patch_notes.json（自動生成）
+├── scraper/                 # Python スクレイピングスクリプト
+│   ├── patch_scraper.py
+│   └── requirements.txt
+├── wrgg-frontend/           # React + Vite + Tailwind フロントエンド
+│   ├── src/
+│   ├── public/
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── ...
+├── .gitignore
 └── README.md
+```
