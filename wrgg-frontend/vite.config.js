@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   base: '/wr.gg/',
   build: {
-    outDir: 'docs',
+    outDir: '../docs',
   },
   plugins: [react()],
 })
