@@ -28,6 +28,9 @@ cd wrgg-frontend
 npm install
 npm run dev  # 開発サーバー起動 
 ```
+## デバック処理 
+npm run dev
+npm run build-docs
 
 ## スクレイピング仕様
 Github Actionsを使うことで毎週木曜の24:00に自動でスクレイピングをします。  
