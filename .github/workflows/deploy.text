@@ -1,8 +1,12 @@
 name: Deploy to GitHub Pages
 
+# on:
+#   push:
+#     branches:
+#       - main
+
 on:
-  push:
-    workflow_dispatch:  
+  workflow_dispatch:      # 手動でも実行できるように
 
 jobs:
   deploy:
