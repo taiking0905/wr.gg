@@ -91,6 +91,12 @@ export const PatchViewer: React.FC = () => {
       })()}
     </div>
   )}
+  {!selectedPatch && (
+    <div>
+      <p className="text-gray-600 mt-4">表示したいパッチを上のセレクトから選んでください。</p>
+      <img src="/wr.gg/start.gif" alt="アニメーションGIF" className="mt-4"></img>
+    </div>
+  )}
 </div>
 
 
@@ -108,7 +114,11 @@ export const PatchViewer: React.FC = () => {
               ))}
             </ul>
           ) : (
-            <p className="text-gray-600">このパッチには変更内容が登録されていません。</p>
+            <div>
+              <p className="text-gray-600">このパッチには変更内容が登録されていません。</p>
+              <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
+            </div>
+            
           )}
         </div>
       )}

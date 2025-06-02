@@ -64,6 +64,12 @@ export const ChampionList: React.FC = () => {
             </option>
           ))}
         </select>
+          {!selectedChampion && (
+            <div>
+              <p className="text-gray-600 mt-4">表示したいパッチを上のセレクトから選んでください。</p>
+              <img src="/wr.gg/start.gif" alt="アニメーションGIF" className="mt-4"></img>
+            </div>
+          )}
       </div>
 
       {selectedChampion && (
@@ -80,7 +86,10 @@ export const ChampionList: React.FC = () => {
               ))}
             </ul>
           ) : (
-            <p className="text-gray-600">このチャンピオンには変更履歴がありません。</p>
+            <div>
+              <p className="text-gray-600">このチャンピオンには変更履歴がありません。</p>
+              <img src="/wr.gg/null.gif" alt="アニメーションGIF"></img>
+            </div>
           )}
         </div>
       )}
