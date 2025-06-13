@@ -35,11 +35,11 @@ jobs:
 
       - name: Install Node dependencies
         run: npm install
-        working-directory: wr.gg-frontend
+        working-directory: wrgg-frontend
 
       - name: Build docs
         run: npm run build-docs
-        working-directory: wr.gg-frontend
+        working-directory: wrgg-frontend
 
       - name: Commit and push changes
         env:
