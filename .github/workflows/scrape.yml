@@ -2,7 +2,7 @@ name: Scrape Patch Notes
 
 on:
   schedule:
-    - cron: '0 0 * * 5'  # 毎週金曜の0時
+    - cron: '0 0 * * 5'  # 毎週金曜0時（UTC）
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,7 @@ jobs:
       - name: Run scraper
         run: python scraper/patch_scraper.py
 
+      # Node.js セットアップと docs ビルド追加
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -34,9 +35,11 @@ jobs:
 
       - name: Install Node dependencies
         run: npm install
+        working-directory: wr.gg-frontend
 
       - name: Build docs
         run: npm run build-docs
+        working-directory: wr.gg-frontend
 
       - name: Commit and push changes
         env:
