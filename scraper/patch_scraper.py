@@ -178,9 +178,30 @@ def update_patch_contents():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
+def download_image(url, save_path):
+    response = requests.get(url)
+    response.raise_for_status()  # エラーがあれば例外発生
+    with open(save_path, 'wb') as f:
+        f.write(response.content)
+
+def download_champion_images():
+    champions = load_json(CHAMPIONS_JSON)
+    save_dir = os.path.join(DATA_DIR, 'champion_images')
+    os.makedirs(save_dir, exist_ok=True)
+    for champ in champions:
+        champ_id = champ["id"]
+        img_url = f"https://www.mobafire.com/images/champion/square/{champ_id}.png"
+        save_path = os.path.join(save_dir, f"{champ_id}.png")
+        try:
+            download_image(img_url, save_path)
+            print(f"{champ_id} の画像を保存しました。")
+        except Exception as e:
+            print(f"{champ_id} の画像取得に失敗しました: {e}")
+
 
 
 if __name__ == "__main__":
     update_patch_data()
     update_champion_data()
     update_patch_contents()
+    download_champion_images()
