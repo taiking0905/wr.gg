@@ -124,21 +124,28 @@ def fetch_champion_names():
         name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
         img_tag = el.select_one('img[data-testid="mediaImage"]')
 
-        if href and name_div and name_div.text.strip() and img_tag:
+        if href and name_div and name_div.text.strip():
             parts = href.strip('/').split('/')
             champion_name_en = parts[-1]
             champion_name_ja = name_div.text.strip()
-            img_url = img_tag.get('src')
+
+            img_url = img_tag.get('src') if img_tag else None
+
+            # data:URLのSVG画像は除外
+            if not img_url or img_url.startswith('data:'):
+                print(f"{champion_name_en} の画像URLが不正または埋め込みSVGのためスキップします。")
+                continue
 
             champions.append({
                 "id": champion_name_en,
                 "name_ja": champion_name_ja,
                 "kana": katakana_to_hiragana(champion_name_ja),
-                "filename": f"{champion_name_en}.png",
-                "image_url": img_url  
+                "image_url": img_url,  # ここは一時的に持っておく
+                "filename": f"{champion_name_en}.png"
             })
 
     return champions
+
 
 
 def update_champion_data():
