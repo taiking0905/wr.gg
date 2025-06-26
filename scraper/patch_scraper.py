@@ -10,6 +10,26 @@ PATCH_NOTES_JSON = os.path.join(DATA_DIR, 'patch_notes.json')# パッチノー�
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')# パッチ内容の情報を保存するJSONファイル
 
+
+def load_json(filename):
+    if os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_json(filename, data):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+# 画像ダウンロード関数
+def download_image(url, save_path):
+    response = requests.get(url)
+    response.raise_for_status()
+    with open(save_path, 'wb') as f:
+        f.write(response.content)
+
 # スクレイピング
 def fetch_patch_notes():
     url = "https://wildrift.leagueoflegends.com/ja-jp/news/tags/patch-notes/"
@@ -28,17 +48,6 @@ def fetch_patch_notes():
         })
     return list(reversed(patch_notes))  # 逆順にして古い順→新しい順に 
 
-
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def update_patch_data():
@@ -64,119 +73,115 @@ def update_patch_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
-# チャンピオン名の取得と保存
-def fetch_champion_names():
-    url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
-    response = requests.get(url)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
-    #スクレイピング
-    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
-    champions = []
-    for el in elements:
-        href = el.get('href')
-        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
-        if href and name_div and name_div.text.strip():
-            parts = href.strip('/').split('/')
-            champion_name_en = parts[-1]
-            champion_name_ja = name_div.text.strip()
-            champions.append({
-                "id": champion_name_en,
-                "name_ja": champion_name_ja,
-            })
 
-    return champions
-
+# カタカナをひらがなに変換する関数
 def katakana_to_hiragana(text):
     return ''.join(
         chr(ord(char) - 0x60) if 'ァ' <= char <= 'ヶ' else char
         for char in text
     )
 
+# チャンピオン名の取得と保存
+def fetch_champion_names():
+    url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
+    response = requests.get(url)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    champions = []
+
+    for el in elements:
+        href = el.get('href')
+        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
+        img_tag = el.select_one('img[data-testid="mediaImage"]')
+
+        if href and name_div and name_div.text.strip():
+            parts = href.strip('/').split('/')
+            champion_name_en = parts[-1]
+            champion_name_ja = name_div.text.strip()
+
+            champions.append({
+                "id": champion_name_en,
+                "name_ja": champion_name_ja,
+                "kana": katakana_to_hiragana(champion_name_ja),
+                "filename": f"{champion_name_en}.png"  # ← 画像ファイル名のみ保持
+            })
+
+    return champions
+
+def fetch_champion_names():
+    url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
+    response = requests.get(url)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    champions = []
+
+    for el in elements:
+        href = el.get('href')
+        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
+        img_tag = el.select_one('img[data-testid="mediaImage"]')
+
+        if href and name_div and name_div.text.strip() and img_tag:
+            parts = href.strip('/').split('/')
+            champion_name_en = parts[-1]
+            champion_name_ja = name_div.text.strip()
+            img_url = img_tag.get('src')
+
+            champions.append({
+                "id": champion_name_en,
+                "name_ja": champion_name_ja,
+                "kana": katakana_to_hiragana(champion_name_ja),
+                "filename": f"{champion_name_en}.png",
+                "image_url": img_url  
+            })
+
+    return champions
 
 
 def update_champion_data():
     try:
-        champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
-        
-        # ひらがな変換を追加
-        for champ in champions:
-            champ['kana'] = katakana_to_hiragana(champ['name_ja'])
-        
-        save_json(CHAMPIONS_JSON, champions)
-        print(f"{len(champions)} 件のチャンピオン名を保存しました。")
-        return {"success": True}
-    except Exception as e:
-        print(f"エラーが発生しました: {e}")
-        return {"success": False, "error": str(e)}
+        raw_champions = fetch_champion_names()  # image_url付き
+        save_dir = os.path.join(DATA_DIR, 'champion_images_official')
+        os.makedirs(save_dir, exist_ok=True)
 
+        champions_to_save = []  # JSONに保存するためのリスト
 
-# パッチ内容のスクレイピング
-def fetch_patch_contents_for_patch(patch):
-    patch_name = patch.get("patch_name", "")
-    patch_link = patch.get("patch_link", "")
-    changes = []
+        for champ in raw_champions:
+            champ_id = champ["id"]
+            img_url = champ.get("image_url")
+            save_path = os.path.join(save_dir, f"{champ_id}.png")
 
-    if not patch_link:
-        return changes
+            if not img_url:
+                print(f"{champ_id} の画像URLがありません。スキップ。")
+                continue
 
-    try:
-        response = requests.get(patch_link)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+            if os.path.exists(save_path):
+                print(f"{champ_id} の画像は既に保存済みです。")
+            else:
+                try:
+                    download_image(img_url, save_path)
+                    print(f"{champ_id} の画像を保存しました。")
+                except Exception as e:
+                    print(f"{champ_id} の画像保存に失敗: {e}")
+                    continue  # ダウンロード失敗時は保存対象から除外
 
-        container_elems = soup.select(".character-changes-container")
+            # image_urlを除いて保存用リストに追加
+            champ.pop("image_url", None)
+            champions_to_save.append(champ)
 
-        for container in container_elems:
-            champion_name = container.select_one(".character-name")
-            champion_name = champion_name.text.strip() if champion_name else ""
-
-            change_elems = container.select(".character-change")
-
-            for change in change_elems:
-                ability_title = change.select_one(".character-ability-title")
-                change_details = change.select_one(".character-change-body")
-
-                ability_title_text = ability_title.text.strip() if ability_title else ""
-                change_details_text = change_details.text.strip() if change_details else ""
-
-                changes.append({
-                    "champion_name": champion_name,
-                    "patch_name": patch_name,
-                    "ability_title": ability_title_text,
-                    "change_details": change_details_text,
-                })
-
-    except Exception as e:
-        print(f"Error fetching or parsing patch {patch_name} ({patch_link}): {e}")
-
-    return changes
-
-
-def update_patch_contents():
-    patch_data = load_json(PATCH_NOTES_JSON)
-    try:
-        existing_contents = load_json(PATCH_CONTENTS_JSON)
-        existing_patch_names = {item["patch_name"] for item in existing_contents}
-
-        new_contents = []
-
-        for patch in patch_data:
-            if patch["patch_name"] not in existing_patch_names:
-                patch_changes = fetch_patch_contents_for_patch(patch)
-                new_contents.extend(patch_changes)
-
-        if new_contents:
-            updated_contents = existing_contents + new_contents
-            save_json(PATCH_CONTENTS_JSON, updated_contents)
-            print(f"{len(new_contents)} 件の新しいパッチ内容を追加しました。")
-        else:
-            print("追加する新しいパッチ内容はありませんでした。")
+        # すべての保存が終わった後にJSONを書き出す
+        save_json(CHAMPIONS_JSON, champions_to_save)
+        print(f"{len(champions_to_save)} 件のチャンピオンデータを保存しました。")
 
         return {"success": True}
+
     except Exception as e:
-        print(f"エラーが発生しました: {e}")
+        print(f"全体処理中にエラー: {e}")
         return {"success": False, "error": str(e)}
+
 
 def download_image(url, save_path):
     response = requests.get(url)
@@ -188,15 +193,23 @@ def download_champion_images():
     champions = load_json(CHAMPIONS_JSON)
     save_dir = os.path.join(DATA_DIR, 'champion_images')
     os.makedirs(save_dir, exist_ok=True)
+
     for champ in champions:
         champ_id = champ["id"]
         img_url = f"https://www.mobafire.com/images/champion/square/{champ_id}.png"
         save_path = os.path.join(save_dir, f"{champ_id}.png")
+
+        # すでに画像が存在するならスキップ
+        if os.path.exists(save_path):
+            print(f"{champ_id} の画像は既に存在します。スキップします。")
+            continue
+
         try:
             download_image(img_url, save_path)
             print(f"{champ_id} の画像を保存しました。")
         except Exception as e:
             print(f"{champ_id} の画像取得に失敗しました: {e}")
+
 
 
 
