@@ -71,24 +71,40 @@ def fetch_champion_names():
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     #スクレイピング
-    champion_names = []
     elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    champions = []
     for el in elements:
+        href = el.get('href')
         name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
-        if name_div and name_div.text.strip():
-            champion_names.append(name_div.text.strip())
+        if href and name_div and name_div.text.strip():
+            parts = href.strip('/').split('/')
+            champion_name_en = parts[-1]
+            champion_name_ja = name_div.text.strip()
+            champions.append({
+                "id": champion_name_en,
+                "name_ja": champion_name_ja,
+            })
 
-    return champion_names
+    return champions
 
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+def katakana_to_hiragana(text):
+    return ''.join(
+        chr(ord(char) - 0x60) if 'ァ' <= char <= 'ヶ' else char
+        for char in text
+    )
+
+
 
 def update_champion_data():
     try:
-        champion_names = fetch_champion_names()
-        save_json(CHAMPIONS_JSON, champion_names)
-        print(f"{len(champion_names)} 件のチャンピオン名を保存しました。")
+        champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
+        
+        # ひらがな変換を追加
+        for champ in champions:
+            champ['kana'] = katakana_to_hiragana(champ['name_ja'])
+        
+        save_json(CHAMPIONS_JSON, champions)
+        print(f"{len(champions)} 件のチャンピオン名を保存しました。")
         return {"success": True}
     except Exception as e:
         print(f"エラーが発生しました: {e}")
@@ -136,15 +152,6 @@ def fetch_patch_contents_for_patch(patch):
 
     return changes
 
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 def update_patch_contents():
     patch_data = load_json(PATCH_NOTES_JSON)
