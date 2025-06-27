@@ -89,12 +89,13 @@ def fetch_champion_names():
     driver.quit()
 
     #スクレイピング
-    elements = soup.select('div[data-testid="character-card"]')
+    # elements = soup.select('div[data-testid="character-card"]')
+    elements = soup.select('a[href*="/champions/"]')
     print(f"✅ fetch_champion_names: {len(elements)} 件のチャンピオンカードを検出")
     champions = []
     for el in elements:
         href = el.get('href')
-        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs') # div[data-testid="card-title"]
+        name_div = el.select_one('div[data-testid="card-title"]')
         img_tag = el.select_one('img[data-testid="mediaImage"]')
         if href and name_div and img_tag and name_div.text.strip():
             parts = href.strip('/').split('/')
