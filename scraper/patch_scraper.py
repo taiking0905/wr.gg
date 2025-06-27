@@ -119,11 +119,16 @@ def fetch_champion_names():
     return champions
 
 def get_image_url(img_tag):
-    for attr in ['src', 'data-src', 'data-lazy-src']:
+    for attr in ['src', 'srcset', 'data-src', 'data-srcset', 'data-lazy-src']:
         url = img_tag.get(attr)
-        if url and not url.startswith('data:'):
-            return url
+        if url:
+            # srcsetは複数URLの可能性があるので先頭を取る
+            if attr in ['srcset', 'data-srcset']:
+                url = url.split(',')[0].split()[0]
+            if not url.startswith('data:'):
+                return url
     return None
+
 
 def update_champion_data():
     options = Options()
@@ -140,7 +145,9 @@ def update_champion_data():
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
 
-    time.sleep(30)  # 強制待機
+    time.sleep(30)  
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(3)
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
@@ -158,6 +165,7 @@ def update_champion_data():
 
             if not img_url:
                 print(f"{champion_name_ja} の画像が見つからなかったためスキップします。")
+                print(f"{champion_name_ja} の画像URLが見つからず。img_tag attrs: {img_tag.attrs}")
                 continue
 
             champions.append({
