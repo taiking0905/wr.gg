@@ -230,4 +230,4 @@ if __name__ == "__main__":
     update_patch_data()
     update_champion_data()
     update_patch_contents()
-    # download_champion_images()
+    download_champion_images()
