@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
+import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -66,23 +70,35 @@ def update_patch_data():
 
 # チャンピオン名の取得と保存
 def fetch_champion_names():
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(options=options)
+
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
-    response = requests.get(url)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
+    driver.get(url)
+    time.sleep(3)  # ページが完全に読み込まれるまで待機
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    driver.quit()
+
     #スクレイピング
-    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    elements = soup.select('div[data-testid="character-card"]')
     champions = []
     for el in elements:
         href = el.get('href')
-        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
-        if href and name_div and name_div.text.strip():
+        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs') # div[data-testid="card-title"]
+        img_tag = el.select_one('img[data-testid="mediaImage"]')
+        if href and name_div and img_tag and name_div.text.strip():
             parts = href.strip('/').split('/')
             champion_name_en = parts[-1]
             champion_name_ja = name_div.text.strip()
+            img_url = img_tag.get("src")
             champions.append({
                 "id": champion_name_en,
                 "name_ja": champion_name_ja,
+                "img_url": img_url
             })
 
     return champions
@@ -190,7 +206,7 @@ def download_champion_images():
     os.makedirs(save_dir, exist_ok=True)
     for champ in champions:
         champ_id = champ["id"]
-        img_url = f"https://www.mobafire.com/images/champion/square/{champ_id}.png"
+        img_url = champ["img_url"]
         save_path = os.path.join(save_dir, f"{champ_id}.png")
         try:
             download_image(img_url, save_path)
@@ -204,4 +220,4 @@ if __name__ == "__main__":
     update_patch_data()
     update_champion_data()
     update_patch_contents()
-    download_champion_images()
+    # download_champion_images()
