@@ -24,20 +24,18 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
 
-      - name: Install Chrome
+      - name: Install Chrome (fixed version)
         run: |
           sudo apt update
           sudo apt install -y wget unzip
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+          wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_117.0.5938.92-1_amd64.deb
+          sudo apt install -y ./google-chrome-stable_117.0.5938.92-1_amd64.deb
 
-      - name: Install ChromeDriver
+      - name: Install ChromeDriver (fixed version)
         run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-          wget -O chromedriver.zip "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip" || \
-          wget -O chromedriver.zip "https://chromedriver.storage.googleapis.com/$(echo $CHROME_VERSION | cut -d '.' -f1-3)/chromedriver_linux64.zip"
+          wget -O chromedriver.zip "https://chromedriver.storage.googleapis.com/117.0.5938.92/chromedriver_linux64.zip"
           unzip chromedriver.zip
-          sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+          sudo mv chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
 
       - name: Run scraper
