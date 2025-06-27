@@ -24,10 +24,17 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
 
+      - name: Install Chromium and chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+          which chromedriver
+          pip install chromedriver-autoinstaller  # 念のため
+
       - name: Run scraper
         run: python scraper/patch_scraper.py
 
-      # Node.js セットアップと docs ビルド追加
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -48,5 +55,5 @@ jobs:
           git config user.name "WR.GG_github-actions[bot]"
           git config user.email "WR.GG_github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Update data and docs from scraper" || echo "No changes"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update data and docs from scraper"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}

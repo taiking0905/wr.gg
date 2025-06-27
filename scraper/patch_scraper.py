@@ -4,8 +4,8 @@ import json
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
 import time
+import chromedriver_autoinstaller
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -74,6 +74,11 @@ def fetch_champion_names():
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+
+    prefs = {"profile.managed_default_content_settings.images": 1}
+    options.add_experimental_option("prefs", prefs)
+
+    chromedriver_autoinstaller.install()
 
     driver = webdriver.Chrome(options=options)
 
