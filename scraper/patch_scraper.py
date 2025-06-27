@@ -2,23 +2,12 @@ import os
 import json
 import requests
 from bs4 import BeautifulSoup
-<<<<<<< HEAD
 import json
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import chromedriver_autoinstaller
-=======
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import chromedriver_autoinstaller
-import time
-
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -90,7 +79,6 @@ def update_patch_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
-<<<<<<< HEAD
 # チャンピオン名の取得と保存
 def fetch_champion_names():
     options = Options()
@@ -134,8 +122,6 @@ def fetch_champion_names():
             print(f"⚠️ スキップ: href={href}, name_div={name_div}, img_tag={img_tag}")
 
     return champions
-=======
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
 # カタカナをひらがなに変換する関数
 def katakana_to_hiragana(text):
@@ -186,7 +172,6 @@ def get_image_url(img_tag):
 
 
 def update_champion_data():
-<<<<<<< HEAD
     try:
         champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
         print(f"✅ update_champion_data: {len(champions)} 件取得")
@@ -201,12 +186,6 @@ def update_champion_data():
     except Exception as e:
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
-=======
-    options = Options()
-    options.add_argument("--headless")  # 旧ヘッドレスでも試す
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
     prefs = {"profile.managed_default_content_settings.images": 1}
     options.add_experimental_option("prefs", prefs)
@@ -306,10 +285,6 @@ def download_champion_images():
         img_url = champ["img_url"]
         save_path = os.path.join(save_dir, f"{champ_id}.png")
 
-<<<<<<< HEAD
-=======
-        # すでに画像が存在するならスキップ
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
         if os.path.exists(save_path):
             print(f"{champ_id} の画像は既に存在します。スキップします。")
             continue
@@ -321,11 +296,6 @@ def download_champion_images():
             print(f"{champ_id} の画像取得に失敗しました: {e}")
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 if __name__ == "__main__":
     update_patch_data()
     update_champion_data()

@@ -24,16 +24,6 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
 
-<<<<<<< HEAD
-      - name: Install Chromium and chromedriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser chromium-chromedriver
-          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver || true
-
-          which chromedriver
-          pip install chromedriver-autoinstaller  # 念のため
-=======
       - name: Install Chrome
         run: |
           sudo apt update
@@ -42,7 +32,6 @@ jobs:
           sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
 
->>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
       - name: Run scraper
         run: python scraper/patch_scraper.py
