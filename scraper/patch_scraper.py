@@ -127,57 +127,45 @@ def get_image_url(img_tag):
 
 def update_champion_data():
     options = Options()
-    options.add_argument("--headless=new")  
+    options.add_argument("--headless")  # 旧ヘッドレスでも試す
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    # 画像を読み込むように設定
     prefs = {"profile.managed_default_content_settings.images": 1}
     options.add_experimental_option("prefs", prefs)
-    
+
     chromedriver_autoinstaller.install()
+
     driver = webdriver.Chrome(options=options)
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
-    time.sleep(30)  # ここで30秒停止
-    WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, 'img[data-testid="mediaImage"][src^="https"]'))
-    )
 
+    time.sleep(30)  # 強制待機
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
 
-    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    elements = soup.select('div[data-testid="character-card"]')  
     champions = []
 
     for el in elements:
-        href = el.get('href')
-        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
+        name_div = el.select_one('div[data-testid="card-title"]')
         img_tag = el.select_one('img[data-testid="mediaImage"]')
 
-        if href and name_div and name_div.text.strip():
-            parts = href.strip('/').split('/')
-            champion_name_en = parts[-1]
+        if name_div and name_div.text.strip():
             champion_name_ja = name_div.text.strip()
-
             img_url = get_image_url(img_tag)
 
             if not img_url:
-                print(f"{champion_name_en} の画像が見つからなかったためスキップします。")
+                print(f"{champion_name_ja} の画像が見つからなかったためスキップします。")
                 continue
 
             champions.append({
-                "id": champion_name_en,
                 "name_ja": champion_name_ja,
-                "kana": katakana_to_hiragana(champion_name_ja),
-                "image_url": img_url,
-                "filename": f"{champion_name_en}.png"
+                "image_url": img_url
             })
 
     return champions
-
-
 
 
 def update_patch_contents():
