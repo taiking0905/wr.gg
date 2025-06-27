@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import chromedriver_autoinstaller
+import time
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
@@ -138,7 +139,7 @@ def update_champion_data():
     driver = webdriver.Chrome(options=options)
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
-
+    time.sleep(30)  # ここで30秒停止
     WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, 'img[data-testid="mediaImage"][src^="https"]'))
     )
