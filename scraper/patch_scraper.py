@@ -214,16 +214,21 @@ def download_champion_images():
     champions = load_json(CHAMPIONS_JSON)
     save_dir = os.path.join(DATA_DIR, 'champion_images')
     os.makedirs(save_dir, exist_ok=True)
+
     for champ in champions:
         champ_id = champ["id"]
         img_url = champ["img_url"]
         save_path = os.path.join(save_dir, f"{champ_id}.png")
+
+        if os.path.exists(save_path):
+            print(f"{champ_id} の画像は既に存在します。スキップします。")
+            continue
+
         try:
             download_image(img_url, save_path)
             print(f"{champ_id} の画像を保存しました。")
         except Exception as e:
             print(f"{champ_id} の画像取得に失敗しました: {e}")
-
 
 
 if __name__ == "__main__":
