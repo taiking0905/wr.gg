@@ -29,19 +29,8 @@ jobs:
           sudo apt update
           sudo apt install -y wget unzip
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y
+          sudo apt install -y ./google-chrome-stable_current_amd64.deb
 
-      - name: Install ChromeDriver
-        run: |
-          CHROME_VERSION=$(google-chrome --version | grep -o '[0-9]\+' | head -1)
-          echo "Chrome Version: $CHROME_VERSION"
-          LATEST_DRIVER=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          echo "ChromeDriver Version: $LATEST_DRIVER"
-          wget -O chromedriver.zip "https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver_linux64.zip"
-          unzip chromedriver.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
-          chromedriver --version
 
 
       - name: Run scraper
