@@ -1,7 +1,13 @@
+import os
+import json
 import requests
 from bs4 import BeautifulSoup
-import json
-import os
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -110,11 +116,29 @@ def fetch_champion_names():
 
     return champions
 
-def fetch_champion_names():
+def get_image_url(img_tag):
+    for attr in ['src', 'data-src', 'data-lazy-src']:
+        url = img_tag.get(attr)
+        if url and not url.startswith('data:'):
+            return url
+    return None
+
+def update_champion_data():
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+
+    driver = webdriver.Chrome(options=options)
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
-    response = requests.get(url)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
+    driver.get(url)
+
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "img[data-testid='mediaImage']"))
+    )
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    driver.quit()
 
     elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
     champions = []
@@ -129,18 +153,17 @@ def fetch_champion_names():
             champion_name_en = parts[-1]
             champion_name_ja = name_div.text.strip()
 
-            img_url = img_tag.get('src') if img_tag else None
+            img_url = get_image_url(img_tag)
 
-            # data:URLのSVG画像は除外
-            if not img_url or img_url.startswith('data:'):
-                print(f"{champion_name_en} の画像URLが不正または埋め込みSVGのためスキップします。")
+            if not img_url:
+                print(f"{champion_name_en} の画像が見つからなかったためスキップします。")
                 continue
 
             champions.append({
                 "id": champion_name_en,
                 "name_ja": champion_name_ja,
                 "kana": katakana_to_hiragana(champion_name_ja),
-                "image_url": img_url,  # ここは一時的に持っておく
+                "image_url": img_url,
                 "filename": f"{champion_name_en}.png"
             })
 
@@ -148,7 +171,8 @@ def fetch_champion_names():
 
 
 
-def update_champion_data():
+
+def update_patch_contents():
     try:
         raw_champions = fetch_champion_names()  # image_url付き
         save_dir = os.path.join(DATA_DIR, 'champion_images_official')
