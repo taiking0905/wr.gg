@@ -130,6 +130,10 @@ def update_champion_data():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
+    # 画像を読み込むように設定
+    prefs = {"profile.managed_default_content_settings.images": 1}
+    options.add_experimental_option("prefs", prefs)
+    
     chromedriver_autoinstaller.install()
     driver = webdriver.Chrome(options=options)
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
