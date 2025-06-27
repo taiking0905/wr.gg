@@ -126,7 +126,7 @@ def get_image_url(img_tag):
 
 def update_champion_data():
     options = Options()
-    options.add_argument("--headless")
+    options.add_argument("--headless=new")  
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
@@ -140,8 +140,9 @@ def update_champion_data():
     driver.get(url)
 
     WebDriverWait(driver, 30).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "img[data-testid='mediaImage']"))
+        EC.presence_of_element_located((By.CSS_SELECTOR, 'img[data-testid="mediaImage"][src^="https"]'))
     )
+
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
