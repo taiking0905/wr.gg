@@ -1,11 +1,24 @@
+import os
+import json
 import requests
 from bs4 import BeautifulSoup
+<<<<<<< HEAD
 import json
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import chromedriver_autoinstaller
+=======
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_autoinstaller
+import time
+
+>>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -13,6 +26,26 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 PATCH_NOTES_JSON = os.path.join(DATA_DIR, 'patch_notes.json')# パッチノートの情報を保存するJSONファイル
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')# パッチ内容の情報を保存するJSONファイル
+
+
+def load_json(filename):
+    if os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_json(filename, data):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+# 画像ダウンロード関数
+def download_image(url, save_path):
+    response = requests.get(url)
+    response.raise_for_status()
+    with open(save_path, 'wb') as f:
+        f.write(response.content)
 
 # スクレイピング
 def fetch_patch_notes():
@@ -32,17 +65,6 @@ def fetch_patch_notes():
         })
     return list(reversed(patch_notes))  # 逆順にして古い順→新しい順に 
 
-
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def update_patch_data():
@@ -68,6 +90,7 @@ def update_patch_data():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
+<<<<<<< HEAD
 # チャンピオン名の取得と保存
 def fetch_champion_names():
     options = Options()
@@ -111,16 +134,59 @@ def fetch_champion_names():
             print(f"⚠️ スキップ: href={href}, name_div={name_div}, img_tag={img_tag}")
 
     return champions
+=======
+>>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
+# カタカナをひらがなに変換する関数
 def katakana_to_hiragana(text):
     return ''.join(
         chr(ord(char) - 0x60) if 'ァ' <= char <= 'ヶ' else char
         for char in text
     )
 
+# チャンピオン名の取得と保存
+def fetch_champion_names():
+    url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
+    response = requests.get(url)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    elements = soup.select('a.sc-985df63-0.cGQgsO.sc-d043b2-0.bZMlAb')
+    champions = []
+
+    for el in elements:
+        href = el.get('href')
+        name_div = el.select_one('div.sc-ce9b75fd-0.lmZfRs')
+        img_tag = el.select_one('img[data-testid="mediaImage"]')
+
+        if href and name_div and name_div.text.strip():
+            parts = href.strip('/').split('/')
+            champion_name_en = parts[-1]
+            champion_name_ja = name_div.text.strip()
+
+            champions.append({
+                "id": champion_name_en,
+                "name_ja": champion_name_ja,
+                "kana": katakana_to_hiragana(champion_name_ja),
+                "filename": f"{champion_name_en}.png"  # ← 画像ファイル名のみ保持
+            })
+
+    return champions
+
+def get_image_url(img_tag):
+    for attr in ['src', 'srcset', 'data-src', 'data-srcset', 'data-lazy-src']:
+        url = img_tag.get(attr)
+        if url:
+            # srcsetは複数URLの可能性があるので先頭を取る
+            if attr in ['srcset', 'data-srcset']:
+                url = url.split(',')[0].split()[0]
+            if not url.startswith('data:'):
+                return url
+    return None
 
 
 def update_champion_data():
+<<<<<<< HEAD
     try:
         champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
         print(f"✅ update_champion_data: {len(champions)} 件取得")
@@ -135,74 +201,94 @@ def update_champion_data():
     except Exception as e:
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
+=======
+    options = Options()
+    options.add_argument("--headless")  # 旧ヘッドレスでも試す
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+>>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 
+    prefs = {"profile.managed_default_content_settings.images": 1}
+    options.add_experimental_option("prefs", prefs)
 
-# パッチ内容のスクレイピング
-def fetch_patch_contents_for_patch(patch):
-    patch_name = patch.get("patch_name", "")
-    patch_link = patch.get("patch_link", "")
-    changes = []
+    chromedriver_autoinstaller.install()
 
-    if not patch_link:
-        return changes
+    driver = webdriver.Chrome(options=options)
+    url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
+    driver.get(url)
 
-    try:
-        response = requests.get(patch_link)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+    time.sleep(30)  
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(3)
 
-        container_elems = soup.select(".character-changes-container")
+    soup = BeautifulSoup(driver.page_source, "html.parser")
+    driver.quit()
 
-        for container in container_elems:
-            champion_name = container.select_one(".character-name")
-            champion_name = champion_name.text.strip() if champion_name else ""
+    elements = soup.select('div[data-testid="character-card"]')  
+    champions = []
 
-            change_elems = container.select(".character-change")
+    for el in elements:
+        name_div = el.select_one('div[data-testid="card-title"]')
+        img_tag = el.select_one('img[data-testid="mediaImage"]')
 
-            for change in change_elems:
-                ability_title = change.select_one(".character-ability-title")
-                change_details = change.select_one(".character-change-body")
+        if name_div and name_div.text.strip():
+            champion_name_ja = name_div.text.strip()
+            img_url = get_image_url(img_tag)
 
-                ability_title_text = ability_title.text.strip() if ability_title else ""
-                change_details_text = change_details.text.strip() if change_details else ""
+            if not img_url:
+                print(f"{champion_name_ja} の画像が見つからなかったためスキップします。")
+                print(f"{champion_name_ja} の画像URLが見つからず。img_tag attrs: {img_tag.attrs}")
+                continue
 
-                changes.append({
-                    "champion_name": champion_name,
-                    "patch_name": patch_name,
-                    "ability_title": ability_title_text,
-                    "change_details": change_details_text,
-                })
+            champions.append({
+                "name_ja": champion_name_ja,
+                "image_url": img_url
+            })
 
-    except Exception as e:
-        print(f"Error fetching or parsing patch {patch_name} ({patch_link}): {e}")
-
-    return changes
+    return champions
 
 
 def update_patch_contents():
-    patch_data = load_json(PATCH_NOTES_JSON)
     try:
-        existing_contents = load_json(PATCH_CONTENTS_JSON)
-        existing_patch_names = {item["patch_name"] for item in existing_contents}
+        raw_champions = fetch_champion_names()  # image_url付き
+        save_dir = os.path.join(DATA_DIR, 'champion_images_official')
+        os.makedirs(save_dir, exist_ok=True)
 
-        new_contents = []
+        champions_to_save = []  # JSONに保存するためのリスト
 
-        for patch in patch_data:
-            if patch["patch_name"] not in existing_patch_names:
-                patch_changes = fetch_patch_contents_for_patch(patch)
-                new_contents.extend(patch_changes)
+        for champ in raw_champions:
+            champ_id = champ["id"]
+            img_url = champ.get("image_url")
+            save_path = os.path.join(save_dir, f"{champ_id}.png")
 
-        if new_contents:
-            updated_contents = existing_contents + new_contents
-            save_json(PATCH_CONTENTS_JSON, updated_contents)
-            print(f"{len(new_contents)} 件の新しいパッチ内容を追加しました。")
-        else:
-            print("追加する新しいパッチ内容はありませんでした。")
+            if not img_url:
+                print(f"{champ_id} の画像URLがありません。スキップ。")
+                continue
+
+            if os.path.exists(save_path):
+                print(f"{champ_id} の画像は既に保存済みです。")
+            else:
+                try:
+                    download_image(img_url, save_path)
+                    print(f"{champ_id} の画像を保存しました。")
+                except Exception as e:
+                    print(f"{champ_id} の画像保存に失敗: {e}")
+                    continue  # ダウンロード失敗時は保存対象から除外
+
+            # image_urlを除いて保存用リストに追加
+            champ.pop("image_url", None)
+            champions_to_save.append(champ)
+
+        # すべての保存が終わった後にJSONを書き出す
+        save_json(CHAMPIONS_JSON, champions_to_save)
+        print(f"{len(champions_to_save)} 件のチャンピオンデータを保存しました。")
 
         return {"success": True}
+
     except Exception as e:
-        print(f"エラーが発生しました: {e}")
+        print(f"全体処理中にエラー: {e}")
         return {"success": False, "error": str(e)}
+
 
 def download_image(url, save_path):
     response = requests.get(url)
@@ -220,6 +306,10 @@ def download_champion_images():
         img_url = champ["img_url"]
         save_path = os.path.join(save_dir, f"{champ_id}.png")
 
+<<<<<<< HEAD
+=======
+        # すでに画像が存在するならスキップ
+>>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
         if os.path.exists(save_path):
             print(f"{champ_id} の画像は既に存在します。スキップします。")
             continue
@@ -231,6 +321,11 @@ def download_champion_images():
             print(f"{champ_id} の画像取得に失敗しました: {e}")
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f6ff33b8c38d4a1a2f5ebc953207a2904905f0a8
 if __name__ == "__main__":
     update_patch_data()
     update_champion_data()
