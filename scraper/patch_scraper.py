@@ -90,7 +90,7 @@ def fetch_champion_names():
 
     #スクレイピング
     # elements = soup.select('div[data-testid="character-card"]')
-    elements = soup.select('a[href*="/champions/"]')
+    elements = soup.select('a[href^="/ja-jp/champions/"][href$="/"]')
     print(f"✅ fetch_champion_names: {len(elements)} 件のチャンピオンカードを検出")
     champions = []
     for el in elements:
