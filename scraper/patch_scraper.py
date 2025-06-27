@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_autoinstaller
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
@@ -129,6 +130,7 @@ def update_champion_data():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
+    chromedriver_autoinstaller.install()
     driver = webdriver.Chrome(options=options)
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
