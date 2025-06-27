@@ -139,7 +139,7 @@ def update_champion_data():
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
 
-    WebDriverWait(driver, 10).until(
+    WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "img[data-testid='mediaImage']"))
     )
 
