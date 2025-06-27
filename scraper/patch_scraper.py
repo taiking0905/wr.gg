@@ -84,12 +84,13 @@ def fetch_champion_names():
 
     url = "https://wildrift.leagueoflegends.com/ja-jp/champions/"
     driver.get(url)
-    time.sleep(3)  # ページが完全に読み込まれるまで待機
+    time.sleep(10)  # ページが完全に読み込まれるまで待機
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
 
     #スクレイピング
     elements = soup.select('div[data-testid="character-card"]')
+    print(f"✅ fetch_champion_names: {len(elements)} 件のチャンピオンカードを検出")
     champions = []
     for el in elements:
         href = el.get('href')
@@ -105,6 +106,8 @@ def fetch_champion_names():
                 "name_ja": champion_name_ja,
                 "img_url": img_url
             })
+        else:
+            print(f"⚠️ スキップ: href={href}, name_div={name_div}, img_tag={img_tag}")
 
     return champions
 
@@ -119,6 +122,7 @@ def katakana_to_hiragana(text):
 def update_champion_data():
     try:
         champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
+        print(f"✅ update_champion_data: {len(champions)} 件取得")
         
         # ひらがな変換を追加
         for champ in champions:
