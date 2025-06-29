@@ -86,24 +86,21 @@ export const ChampionList: React.FC = () => {
 
       {/* 一覧表示 */}
       {!selectedChampion && (
-        <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 gap-4">
+        <div className="grid gap-6 justify-left grid-cols-[repeat(auto-fit,minmax(160px,max-content))] px-2">
           {filteredChampions.map((champ) => (
             <div
               key={champ.id}
               onClick={() => handleSelectChampion(champ.id)}
-              className="cursor-pointer text-center hover:bg-gray-100 rounded p-2"
+              className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
             >
               <img
                 src={`/wr.gg/data/champion_images/${champ.id}.png`}
                 alt={champ.name_ja}
-                className="w-28 h-28 mx-auto mb-2"
+                className="w-40 h-40 mx-auto mb-2 object-contain"
               />
-              <p className="text-sm">{champ.name_ja}</p>
+              <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
             </div>
           ))}
-          {filteredChampions.length === 0 && (
-            <p className="text-gray-500 col-span-full">該当するチャンピオンが見つかりません。</p>
-          )}
         </div>
       )}
 

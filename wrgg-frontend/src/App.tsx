@@ -19,6 +19,7 @@ export default function App() {
           <Route path="/" element={<PatchViewer />} />
           <Route path="/champions" element={<ChampionList />} />
           <Route path="/contact" element={<Contact />} />
+          
         </Routes>
       </main>
     </Router>
