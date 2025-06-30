@@ -226,7 +226,6 @@ def download_champion_images():
         save_path = os.path.join(save_dir, f"{champ_id}.png")
 
         if os.path.exists(save_path):
-            print(f"{champ_id} の画像は既に存在します。スキップします。")
             continue
 
         try:
