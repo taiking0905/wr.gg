@@ -190,9 +190,9 @@ def update_patch_contents():
         new_contents = []
 
         for patch in patch_data:
-            if patch["patch_name"] not in existing_patch_names:
-                patch_changes = fetch_patch_contents_for_patch(patch)
-                new_contents.extend(patch_changes)
+            # if patch["patch_name"] not in existing_patch_names:
+            patch_changes = fetch_patch_contents_for_patch(patch)
+            new_contents.extend(patch_changes)
 
         if new_contents:
             updated_contents = existing_contents + new_contents
