@@ -1,4 +1,7 @@
 # WR.GG - Wild Rift Patch Note Viewer
+## リンク
+
+[WR.GG](https://taiking0905.github.io/wr.gg/#/)
 
 ## 🔍 概要
 
