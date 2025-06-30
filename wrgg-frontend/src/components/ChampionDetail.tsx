@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 interface PatchContent {
   champion_name: string;
@@ -16,6 +17,7 @@ interface Champion {
 export const ChampionDetail: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
+  const navigate = useNavigate();
     
     useEffect(() => {
       const fetchData = async () => {
@@ -48,16 +50,30 @@ export const ChampionDetail: React.FC = () => {
     return (
       <div className="p-4">
         <p>チャンピオンが見つかりません。</p>
-        <Link to="/" className="text-blue-500 hover:underline">← 一覧に戻る</Link>
+      {/* 右上に戻るボタン */}
+      <button
+        onClick={() => navigate(-1)}
+        className="absolute top-28 right-8 bg-gray-800 text-white px-8 py-4 rounded hover:bg-gray-400 transition"
+      >
+        ← 戻る
+      </button>
+
       </div>
     );
   }
 
   return (
     <div className="p-4">
-      <Link to="/champions" className="text-blue-500 hover:underline">← 一覧に戻る</Link>
+      
 
       <h1 className="text-2xl font-bold mt-4 mb-2">{champion.name_ja} の変更履歴</h1>
+      {/* 右上に戻るボタン */}
+      <button
+        onClick={() => navigate(-1)}
+        className="absolute top-28 right-8 bg-gray-800 text-white px-8 py-4 rounded hover:bg-gray-400 transition"
+      >
+        ← 戻る
+      </button>
       <img
         src={`/wr.gg/data/champion_images/${champion.id}.png`}
         alt={champion.name_ja}

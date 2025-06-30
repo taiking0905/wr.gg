@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface PatchNote {
   patch_name: string;
@@ -11,10 +12,16 @@ interface PatchContent {
   ability_title: string;
   change_details: string;
 }
+interface Champion {
+  id: string;
+  name_ja: string;
+  kana: string;
+}
 
 export const PatchViewer: React.FC = () => {
   const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
+   const [champions, setChampions] = useState<Champion[]>([]);
   const [selectedPatch, setSelectedPatch] = useState<string | null>(null);
 
     useEffect(() => {
@@ -31,8 +38,13 @@ export const PatchViewer: React.FC = () => {
             if (!contentsRes.ok) throw new Error("patch_contents.json not found");
             const patchContents = await contentsRes.json();
 
+            const champsRes = await fetch("/wr.gg/data/champions.json");
+            if (!champsRes.ok) throw new Error("champions.json not found");
+            const championData = await champsRes.json();
+
             setPatchNotes(Re_patchNotes);        // ← 追加
             setPatchContents(patchContents);  // ← 追加
+            setChampions(championData) // ← 追加
 
             console.log(patchNotes, patchContents);
         } catch (error) {
@@ -106,16 +118,28 @@ export const PatchViewer: React.FC = () => {
             <h2 className="text-xl font-semibold mb-2">{selectedPatch} の変更点</h2>
             {filteredChanges.length > 0 ? (
               <ul className="space-y-4">
-                {filteredChanges.map((change, idx) => (
-                  <li key={idx} className="border p-3 rounded bg-gray-50">
-                    <p className="font-bold text-lg">{change.champion_name}</p>
-                    <p className="text-sm text-gray-700">{change.ability_title}</p>
-                    <div
-                      className="text-gray-800 mt-1"
-                      dangerouslySetInnerHTML={{ __html: change.change_details }}
-                    />
-                  </li>
-                ))}
+                
+                {filteredChanges.map((change, idx) => {
+                    const matchingChampion = champions.find(
+                      (champ) => champ.name_ja === change.champion_name
+                    );
+                    const championId = matchingChampion?.id ?? "notfound"; // Fallback
+
+                    return (
+                    <li key={idx} className="border p-3 rounded bg-gray-50">
+                      <Link
+                        to={`/champion/${championId}`}
+                      >
+                        <p className="font-bold text-lg">{change.champion_name}</p>
+                        <p className="text-sm text-gray-700">{change.ability_title}</p>
+                        <div
+                          className="text-gray-800 mt-1"
+                          dangerouslySetInnerHTML={{ __html: change.change_details }}
+                        />
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             ) : (
               <div>
