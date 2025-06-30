@@ -72,56 +72,60 @@ export const PatchViewer: React.FC = () => {
                 </option>
             ))}
             </select>
-  {/* ▼ 公式リンク表示（選択中のパッチにだけリンク表示） */}
-  {selectedPatch && (
-    <div className="mb-4">
-      {(() => {
-        const selected = patchNotes.find((p) => p.patch_name === selectedPatch);
-        if (!selected) return null;
-        return (
-          <a
-            href={selected.patch_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-blue-600 underline"
-          >
-            {selected.patch_name} の公式リンクを見る
-          </a>
-        );
-      })()}
-    </div>
-  )}
-  {!selectedPatch && (
-    <div>
-      <p className="text-gray-600 mt-4">表示したいパッチを上のセレクトから選んでください。</p>
-      <img src="/wr.gg/start.gif" alt="アニメーションGIF" className="mt-4"></img>
-    </div>
-  )}
-</div>
-
-
-      {selectedPatch && (
-        <div className="mt-6">
-          <h2 className="text-xl font-semibold mb-2">{selectedPatch} の変更点</h2>
-          {filteredChanges.length > 0 ? (
-            <ul className="space-y-4">
-              {filteredChanges.map((change, idx) => (
-                <li key={idx} className="border p-3 rounded bg-gray-50">
-                  <p className="font-bold text-lg">{change.champion_name}</p>
-                  <p className="text-sm text-gray-700">{change.ability_title}</p>
-                  <p className="text-gray-800 mt-1 whitespace-pre-line">{change.change_details}</p>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div>
-              <p className="text-gray-600">このパッチには変更内容が登録されていません。</p>
-              <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
+          {/* ▼ 公式リンク表示（選択中のパッチにだけリンク表示） */}
+          {selectedPatch && (
+            <div className="mb-4">
+              {(() => {
+                const selected = patchNotes.find((p) => p.patch_name === selectedPatch);
+                if (!selected) return null;
+                return (
+                  <a
+                    href={selected.patch_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 underline"
+                  >
+                    {selected.patch_name} の公式リンクを見る
+                  </a>
+                );
+              })()}
             </div>
-            
+          )}
+
+          {!selectedPatch && (
+            <div>
+              <p className="text-gray-600 mt-4">表示したいパッチを上のセレクトから選んでください。</p>
+              <img src="/wr.gg/start.gif" alt="アニメーションGIF" className="mt-4"></img>
+            </div>
           )}
         </div>
-      )}
+
+
+        {selectedPatch && (
+          <div className="mt-6">
+            <h2 className="text-xl font-semibold mb-2">{selectedPatch} の変更点</h2>
+            {filteredChanges.length > 0 ? (
+              <ul className="space-y-4">
+                {filteredChanges.map((change, idx) => (
+                  <li key={idx} className="border p-3 rounded bg-gray-50">
+                    <p className="font-bold text-lg">{change.champion_name}</p>
+                    <p className="text-sm text-gray-700">{change.ability_title}</p>
+                    <div
+                      className="text-gray-800 mt-1"
+                      dangerouslySetInnerHTML={{ __html: change.change_details }}
+                    />
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div>
+                <p className="text-gray-600">このパッチには変更内容が登録されていません。</p>
+                <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
+              </div>
+              
+            )}
+          </div>
+        )}
     </div>
   );
 };

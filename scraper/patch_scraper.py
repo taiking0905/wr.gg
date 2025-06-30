@@ -162,15 +162,17 @@ def fetch_patch_contents_for_patch(patch):
             for change in change_elems:
                 ability_title = change.select_one(".character-ability-title")
                 change_details = change.select_one(".character-change-body")
+                change_details_elem  = change.select_one(".character-change-body ul")
 
                 ability_title_text = ability_title.text.strip() if ability_title else ""
-                change_details_text = change_details.text.strip() if change_details else ""
+                change_details_html = "".join(str(elem) for elem in change_details_elem) if change_details_elem else ""
+                
 
                 changes.append({
                     "champion_name": champion_name,
                     "patch_name": patch_name,
                     "ability_title": ability_title_text,
-                    "change_details": change_details_text,
+                    "change_details": change_details_html,
                 })
 
     except Exception as e:
@@ -231,8 +233,11 @@ def download_champion_images():
             print(f"{champ_id} の画像取得に失敗しました: {e}")
 
 
-if __name__ == "__main__":
+def main():
     update_patch_data()
     update_champion_data()
     update_patch_contents()
     download_champion_images()
+
+if __name__ =="__main":
+    main()

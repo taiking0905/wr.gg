@@ -68,9 +68,12 @@ export const ChampionDetail: React.FC = () => {
         <ul className="space-y-4">
           {changes.map((change, idx) => (
             <li key={idx} className="border p-3 rounded bg-gray-50">
-              <p className="text-sm text-gray-500">{change.patch_name}</p>
+              <p className="text-sm text-gray-700">{change.patch_name}</p>
               <p className="font-bold text-lg">{change.ability_title}</p>
-              <p className="text-gray-800 mt-1 whitespace-pre-line">{change.change_details}</p>
+              <div
+                className="text-gray-800 mt-1"
+                dangerouslySetInnerHTML={{ __html: change.change_details }}
+              />
             </li>
           ))}
         </ul>
