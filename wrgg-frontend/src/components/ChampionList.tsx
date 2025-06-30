@@ -86,25 +86,31 @@ export const ChampionList: React.FC = () => {
         />
       </div>
 
-    {/* 一覧表示 */}
-    {!selectedChampion && (
-      <div className="grid gap-6 justify-left grid-cols-[repeat(auto-fit,minmax(160px,max-content))] px-2">
-        {filteredChampions.map((champ) => (
-          <Link
-            to={`/champion/${champ.id}`}
-            key={champ.id}
-            className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
-          >
-            <img
-              src={`/wr.gg/data/champion_images/${champ.id}.png`}
-              alt={champ.name_ja}
-              className="w-40 h-40 mx-auto mb-2 object-contain"
-            />
-            <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
-          </Link>
-        ))}
-      </div>
-    )}
+    <div
+      className="
+        grid gap-6 px-2
+        grid-cols-2       /* スマホは1列 */
+        sm:grid-cols-3    /* スマホ少し大きいなら2列 */
+        md:grid-cols-4    /* タブレットなら3列 */
+        lg:grid-cols-5    /* PCなど大きい画面は4列 */
+      "
+    >
+      {filteredChampions.map((champ) => (
+        <Link
+          to={`/champion/${champ.id}`}
+          key={champ.id}
+          className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
+        >
+          <img
+            src={`/wr.gg/data/champion_images/${champ.id}.png`}
+            alt={champ.name_ja}
+            className="mx-auto mb-2 max-w-full max-h-40 object-contain"
+          />
+          <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
+        </Link>
+      ))}
+    </div>
+
   </div>
 );
 };
