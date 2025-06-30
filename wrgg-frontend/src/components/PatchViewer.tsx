@@ -24,7 +24,7 @@ export const PatchViewer: React.FC = () => {
             if (!notesRes.ok) throw new Error("patch_notes.json not found");
             const patchNotes: PatchNote[] = await notesRes.json();
 
-            // パッチノートを逆順に（例: 新しい順）
+            // パッチノートを逆順に（例: 新しい順）よくないかもです
             const Re_patchNotes = patchNotes.reverse();
 
             const contentsRes = await fetch("/wr.gg/data/patch_contents.json");

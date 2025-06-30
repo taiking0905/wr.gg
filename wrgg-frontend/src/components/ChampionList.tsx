@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 interface PatchContent {
   champion_name: string;
@@ -62,6 +63,7 @@ export const ChampionList: React.FC = () => {
     );
   });
 
+
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">チャンピオンごとの変更履歴</h1>
@@ -84,63 +86,25 @@ export const ChampionList: React.FC = () => {
         />
       </div>
 
-      {/* 一覧表示 */}
-      {!selectedChampion && (
-        <div className="grid gap-6 justify-left grid-cols-[repeat(auto-fit,minmax(160px,max-content))] px-2">
-          {filteredChampions.map((champ) => (
-            <div
-              key={champ.id}
-              onClick={() => handleSelectChampion(champ.id)}
-              className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
-            >
-              <img
-                src={`/wr.gg/data/champion_images/${champ.id}.png`}
-                alt={champ.name_ja}
-                className="w-40 h-40 mx-auto mb-2 object-contain"
-              />
-              <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* 詳細表示 */}
-      {selectedChampion && selectedChampionObj && (
-        <div className="mt-6">
-          <button
-            onClick={() => setSelectedChampion(null)}
-            className="mb-4 text-blue-500 hover:underline"
+    {/* 一覧表示 */}
+    {!selectedChampion && (
+      <div className="grid gap-6 justify-left grid-cols-[repeat(auto-fit,minmax(160px,max-content))] px-2">
+        {filteredChampions.map((champ) => (
+          <Link
+            to={`/champion/${champ.id}`}
+            key={champ.id}
+            className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
           >
-            ← 戻る
-          </button>
-          <h2 className="text-xl font-semibold mb-2">
-            {selectedChampionObj.name_ja} の変更履歴
-          </h2>
-          <img
-            src={`/wr.gg/data/champion_images/${selectedChampionObj.id}.png`}
-            alt={selectedChampionObj.name_ja}
-            className="w-24 h-24 mb-4"
-          />
-          {filteredChanges.length > 0 ? (
-            <ul className="space-y-4">
-              {filteredChanges.map((change, idx) => (
-                <li key={idx} className="border p-3 rounded bg-gray-50">
-                  <p className="text-sm text-gray-500">{change.patch_name}</p>
-                  <p className="font-bold text-lg">{change.ability_title}</p>
-                  <p className="text-gray-800 mt-1 whitespace-pre-line">{change.change_details}</p>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div>
-              <p className="text-gray-600">
-                このチャンピオンには変更履歴がありません。
-              </p>
-              <img src="/wr.gg/null.gif" alt="アニメーションGIF" />
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
+            <img
+              src={`/wr.gg/data/champion_images/${champ.id}.png`}
+              alt={champ.name_ja}
+              className="w-40 h-40 mx-auto mb-2 object-contain"
+            />
+            <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
+          </Link>
+        ))}
+      </div>
+    )}
+  </div>
+);
 };

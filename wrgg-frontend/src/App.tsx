@@ -3,6 +3,8 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import {PatchViewer} from "./components/PatchViewer";
 import {ChampionList} from './components/ChampionList';
 import {Contact} from './components/Contact';
+import { ChampionDetail } from './components/ChampionDetail';
+
 
 export default function App() {
   return (
@@ -18,6 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<PatchViewer />} />
           <Route path="/champions" element={<ChampionList />} />
+          <Route path="/champion/:id" element={<ChampionDetail />} />
           <Route path="/contact" element={<Contact />} />
           
         </Routes>
