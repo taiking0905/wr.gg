@@ -242,5 +242,5 @@ def main():
     update_patch_contents()
     download_champion_images()
 
-if __name__ =="__main":
+if __name__ =="__main__":
     main()
