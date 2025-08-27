@@ -131,7 +131,7 @@ def update_champion_CN():
         champions_data = requests.get(champion_url).json()["data"]
 
         # --- id -> 中国語名 の辞書作成 ---
-        id_to_cn = {champ_id.lower(): info["name"] for champ_id, info in champions_data.items()}
+        id_to_cn = {champ_id.lower(): info["title"] for champ_id, info in champions_data.items()}
 
         # --- JSONに name_cn を追加 ---
         for champ in ja_json:
@@ -166,7 +166,9 @@ def create_champion_jsons():
             "name_ja": champ.get("name_ja"),
             "date": [
                 {
-                    "lean": None,
+                    "date": None, 
+                    "lane": None,
+                    "rank": None,
                     "winrate": None,
                     "pickrate": None,
                     "banrate": None
