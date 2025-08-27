@@ -1,0 +1,64 @@
+name: Scrape Champion Data
+
+on:
+  schedule:
+    - cron: '0 0 * * 4'  # 毎週木曜0時（UTC）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Install Chromium and chromedriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser chromium-chromedriver
+          sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver || true
+
+          which chromedriver
+          pip install chromedriver-autoinstaller  # 念のため
+
+      - name: Run champion scraper
+        run: python scraper/champion_scraper.py
+
+      - name: Run champion data scraper
+        run: python scraper/patch_scraper.py
+
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Node dependencies
+        run: npm install
+        working-directory: wrgg-frontend
+
+      - name: Build docs
+        run: npm run build-docs
+        working-directory: wrgg-frontend
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "WR.GG_github-actions[bot]"
+          git config user.email "WR.GG_github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update data and docs from scraper"
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
