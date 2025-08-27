@@ -91,7 +91,6 @@ def fetch_champion_names():
     #スクレイピング
     # elements = soup.select('div[data-testid="character-card"]')
     elements = soup.select('a[href^="/ja-jp/champions/"][href$="/"]')
-    print(f"✅ fetch_champion_names: {len(elements)} 件のチャンピオンカードを検出")
     champions = []
     for el in elements:
         href = el.get('href')
@@ -118,20 +117,61 @@ def katakana_to_hiragana(text):
         for char in text
     )
 
+def update_champion_CN():
+    try:
+        # --- test.json を読み込む ---
+        with open(CHAMPIONS_JSON, "r", encoding="utf-8") as f:
+            ja_json = json.load(f)
 
+        # --- 最新パッチのチャンピオン情報を取得 ---
+        versions_url = "https://ddragon.leagueoflegends.com/api/versions.json"
+        latest_patch = requests.get(versions_url).json()[0]
+
+        champion_url = f"https://ddragon.leagueoflegends.com/cdn/{latest_patch}/data/zh_CN/champion.json"
+        champions_data = requests.get(champion_url).json()["data"]
+
+        # --- id -> 中国語名 の辞書作成 ---
+        id_to_cn = {champ_id.lower(): info["name"] for champ_id, info in champions_data.items()}
+
+        # --- JSONに name_cn を追加 ---
+        for champ in ja_json:
+            champ_id = champ["id"].lower()
+            if champ_id in id_to_cn:
+                champ["name_cn"] = id_to_cn[champ_id]
+
+        # --- 上書き保存 ---
+        with open(CHAMPIONS_JSON, "w", encoding="utf-8") as f:
+            json.dump(ja_json, f, ensure_ascii=False, indent=2)
+
+        return {"success": True}
+    except Exception as e:
+        print(f"エラーが発生しました: {e}")
+        return {"success": False, "error": str(e)}
 
 def update_champion_data():
     try:
         champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
         print(f"✅ update_champion_data: {len(champions)} 件取得")
-        
+
+        # 既存JSONの件数をチェックしてスキップ
+        try:
+            with open(CHAMPIONS_JSON, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+            if len(existing) == len(champions):
+                print("既存JSONの件数と一致。更新をスキップします。")
+                return {"success": True, "skipped": True}
+        except FileNotFoundError:
+            # ファイルがなければ無視して進む
+            pass
+
         # ひらがな変換を追加
         for champ in champions:
             champ['kana'] = katakana_to_hiragana(champ['name_ja'])
         
         save_json(CHAMPIONS_JSON, champions)
         print(f"{len(champions)} 件のチャンピオン名を保存しました。")
-        return {"success": True}
+        update_champion_CN()
+        return {"success": True, "skipped": False}
     except Exception as e:
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
