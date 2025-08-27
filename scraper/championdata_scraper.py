@@ -19,6 +19,9 @@ def save_json(filename, data):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+
+
+def champion_data_scrape():
     # ====== 1. champion.json と hero_list.js を紐付け ======
     # champion.json の例（実際はファイルから読み込み）
     champion_json = load_json(CHAMPIONS_JSON)
@@ -27,7 +30,6 @@ def save_json(filename, data):
     res = requests.get(url_hero_list)
     hero_list = res.json()["heroList"]
 
-def champion_data_scrape():
     # name_cn → hero_id 辞書
     name_to_heroId = {info["name"]: hero_id for hero_id, info in hero_list.items()}
 
@@ -36,6 +38,8 @@ def champion_data_scrape():
     for champ in champion_json:
         name_cn = champ.get("name_cn")
         hero_id = name_to_heroId.get(name_cn)
+        if hero_id:
+            hero_id_map[hero_id] = champ.get("id")
 
     # ====== 2. 中国版 API から勝率データ取得 ======
     url_stats = "https://mlol.qt.qq.com/go/lgame_battle_info/hero_rank_list_v2"
