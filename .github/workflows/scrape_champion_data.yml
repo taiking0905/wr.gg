@@ -37,7 +37,7 @@ jobs:
         run: python scraper/champion_scraper.py
 
       - name: Run champion data scraper
-        run: python scraper/patch_scraper.py
+        run: python scraper/championdata_scraper.py
 
 
       - name: Set up Node.js
