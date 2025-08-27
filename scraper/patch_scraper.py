@@ -148,9 +148,10 @@ def update_champion_CN():
         print(f"エラーが発生しました: {e}")
         return {"success": False, "error": str(e)}
 
-def create_json():
-
-    os.makedirs(DATA_DIR, exist_ok=True)
+def create_champion_jsons():
+    # 保存フォルダを作成
+    champion_data_dir = os.path.join(DATA_DIR, "champion_data")
+    os.makedirs(champion_data_dir, exist_ok=True)
 
     # 既存のチャンピオンJSON読み込み
     with open(CHAMPIONS_JSON, "r", encoding="utf-8") as f:
@@ -158,7 +159,7 @@ def create_json():
 
     for champ in champions:
         champ_id = champ["id"]
-        champ_file = os.path.join(DATA_DIR, f"{champ_id}.json")
+        champ_file = os.path.join(champion_data_dir, f"{champ_id}.json")
 
         initial_data = {
             "id": champ_id,
@@ -173,10 +174,12 @@ def create_json():
             ]
         }
 
-    # ファイルがなければ作成
-    if not os.path.exists(champ_file):
-        with open(champ_file, "w", encoding="utf-8") as f:
-            json.dump(initial_data, f, ensure_ascii=False, indent=2)
+        # ファイルがなければ作成
+        if not os.path.exists(champ_file):
+            with open(champ_file, "w", encoding="utf-8") as f:
+                json.dump(initial_data, f, ensure_ascii=False, indent=2)
+
+
 
 
 def update_champion_data():
@@ -201,7 +204,7 @@ def update_champion_data():
         save_json(CHAMPIONS_JSON, champions)
         print(f"チャンピオン更新があったので修正しました")
         update_champion_CN()
-        create_json()
+        create_champion_jsons()
         return {"success": True, "skipped": False}
     except Exception as e:
         print(f"エラーが発生しました: {e}")
