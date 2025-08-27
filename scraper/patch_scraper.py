@@ -151,7 +151,6 @@ def update_champion_CN():
 def update_champion_data():
     try:
         champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
-        print(f"✅ update_champion_data: {len(champions)} 件取得")
 
         # 既存JSONの件数をチェックしてスキップ
         try:
@@ -169,7 +168,7 @@ def update_champion_data():
             champ['kana'] = katakana_to_hiragana(champ['name_ja'])
         
         save_json(CHAMPIONS_JSON, champions)
-        print(f"{len(champions)} 件のチャンピオン名を保存しました。")
+        print(f"チャンピオン更新があったので修正しました")
         update_champion_CN()
         return {"success": True, "skipped": False}
     except Exception as e:
