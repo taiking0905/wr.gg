@@ -7,13 +7,13 @@ export default function App() {
   return (
     <Router>
       <header className="fixed top-0 w-full z-50 p-4 bg-gray-800 text-white shadow">
-        <nav className="flex space-x-4">
+        <nav className="flex space-x-4 text-sm md:text-xl">
           <a href="#/">パッチ一覧</a>
           <a href="#/champions">チャンピオン一覧</a>
           <a href="#/about">このサイトについて</a>
         </nav>
-      </header>
 
+      </header>
       <main className="pt-20 p-1">
         <AppRoutes />
         <Footer />

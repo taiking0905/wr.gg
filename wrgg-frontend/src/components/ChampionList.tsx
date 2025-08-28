@@ -81,6 +81,7 @@ export const ChampionList: React.FC = () => {
           className="
             grid gap-3
             grid-cols-3    
+            text-sm
             sm:grid-cols-3   
             md:grid-cols-4   
             md:gap-8
