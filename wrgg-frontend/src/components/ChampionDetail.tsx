@@ -112,7 +112,7 @@ export const ChampionDetail: React.FC = () => {
             alt={champion.name_ja}
             className="w-24 h-24 rounded-lg"
           />
-          <h1 className="text-2xl font-bold">{champion.name_ja} の変更履歴</h1>
+          <h1 className="text-xl font-bold">{champion.name_ja} の変更履歴</h1>
         </div>
       </div>
 
@@ -194,9 +194,9 @@ export const ChampionDetail: React.FC = () => {
           ))}
         </ul>
       ) : (
-        <div className="text-center p-6 text-gray-500">
+        <div className="p-6 text-gray-500">
           このチャンピオンには変更履歴がありません
-          <img src="/wr.gg/null.gif" alt="アニメーションGIF" className="mx-auto mt-2"/>
+          <img src="/wr.gg/null.gif" alt="アニメーションGIF" className="mt-2"/>
         </div>
       )}
     </div>

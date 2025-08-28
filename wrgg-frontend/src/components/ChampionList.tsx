@@ -16,8 +16,6 @@ interface Champion {
 export const ChampionList: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
-  const [selectedChampion, setSelectedChampion] = useState<string | null>(null);
-  const selectedChampionObj = champions.find((champ) => champ.id === selectedChampion);
   const [searchQuery, setSearchQuery] = useState<string>("");
 
 
@@ -44,14 +42,6 @@ export const ChampionList: React.FC = () => {
     };
     fetchData();
   }, []);
-
-  const handleSelectChampion = (championName: string) => {
-    setSelectedChampion(championName);
-  };
-
-  const filteredChanges: PatchContent[] = selectedChampion
-    ? patchContents.filter((c) => c.champion_name === selectedChampion)
-    : [];
 
   // 検索クエリに基づいてチャンピオンをフィルタリング
   const filteredChampions = champions.filter((champ) => {
@@ -89,9 +79,12 @@ export const ChampionList: React.FC = () => {
       <div>
         <div
           className="
-            grid gap-6 px-2
-            grid-cols-3        
+            grid gap-3
+            grid-cols-3    
+            sm:grid-cols-3   
             md:grid-cols-4   
+            md:gap-8
+            md:text-xl
             lg:grid-cols-5
           "
         >
@@ -106,7 +99,7 @@ export const ChampionList: React.FC = () => {
                 alt={champ.name_ja}
                 className="mx-auto mb-2 max-w-full max-h-40 object-contain"
               />
-              <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
+              <p className="font-semibold text-gray-800">{champ.name_ja}</p>
             </Link>
           ))}
         </div>
