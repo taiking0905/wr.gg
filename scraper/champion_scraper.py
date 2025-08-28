@@ -53,7 +53,7 @@ def fetch_champion_names():
         img_tag = el.select_one('img[data-testid="mediaImage"]')
         if href and name_div and img_tag and name_div.text.strip():
             parts = href.strip('/').split('/')
-            champion_name_en = parts[-1]
+            champion_name_en = parts[-1].replace("-", "")
             champion_name_ja = name_div.text.strip()
             img_url = img_tag.get("src")
             champions.append({
