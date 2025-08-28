@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 interface PatchContent {
@@ -13,10 +13,27 @@ interface Champion {
   name_ja: string;
   kana: string;
 }
+interface ChampionStatsEntry {
+  updatetime: string | null;
+  lane: number | null;
+  rank: number | null;
+  winrate: number | null;
+  pickrate: number | null;
+  banrate: number | null;
+}
+
+interface ChampionData {
+  id: string;
+  name_ja: string;
+  data: ChampionStatsEntry[];
+}
 
 export const ChampionDetail: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
+ const [championStats, setChampionStats] = useState<ChampionStatsEntry | null>(null);
+
+
   const navigate = useNavigate();
     
     useEffect(() => {
@@ -45,6 +62,29 @@ export const ChampionDetail: React.FC = () => {
 
   const champion = champions.find((champ) => champ.id === id);
   const changes = patchContents.filter((change) => change.champion_name === champion?.name_ja);
+
+  useEffect(() => {
+    if (!champion) return;
+
+    const fetchChampionStats = async () => {
+      try {
+        const res = await fetch(`/wr.gg/data/champion_data/${champion.id}.json`);
+        if (!res.ok) throw new Error(`${champion.id}.json not found`);
+        const data: ChampionData = await res.json();
+        console.log("Champion stats JSON:", data);
+
+        // 最新データを取得（例: 配列の最後）
+        const latest = data.data.filter(d => d.winrate !== null).pop() || null;
+        setChampionStats(latest);
+      } catch (error) {
+        console.error("勝率データの読み込みに失敗しました:", error);
+      }
+    };
+
+    fetchChampionStats();
+  }, [champion]);
+
+
 
   if (!champion) {
     return (
@@ -79,6 +119,14 @@ export const ChampionDetail: React.FC = () => {
         alt={champion.name_ja}
         className="w-32 h-32 mb-4"
       />
+      {championStats && (
+        <div className="mb-4 text-gray-700">
+          <p>勝率: {championStats.winrate !== null ? championStats.winrate.toFixed(1) : "N/A"}%</p>
+          <p>ピック率: {championStats.pickrate !== null ? championStats.pickrate.toFixed(1) : "N/A"}%</p>
+          <p>バン率: {championStats.banrate !== null ? championStats.banrate.toFixed(1) : "N/A"}%</p>
+        </div>
+      )}
+
 
       {changes.length > 0 ? (
         <ul className="space-y-4">
@@ -94,7 +142,10 @@ export const ChampionDetail: React.FC = () => {
           ))}
         </ul>
       ) : (
-        <p className="text-gray-600">このチャンピオンには変更履歴がありません。</p>
+        <div>
+          <p className="text-gray-600">このチャンピオンには変更履歴がありません。</p>
+          <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
+        </div>
       )}
     </div>
   );

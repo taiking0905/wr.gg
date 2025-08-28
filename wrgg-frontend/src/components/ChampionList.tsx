@@ -65,7 +65,7 @@ export const ChampionList: React.FC = () => {
 
 
   return (
-    <div className="p-4">
+    <div className= " p-4 mx-auto max-w-[1400px]">
       <h1 className="text-2xl font-bold mb-4">チャンピオンごとの変更履歴</h1>
 
       {/* 検索欄 */}
@@ -86,31 +86,32 @@ export const ChampionList: React.FC = () => {
         />
       </div>
 
-    <div
-      className="
-        grid gap-6 px-2
-        grid-cols-2       /* スマホは1列 */
-        sm:grid-cols-3    /* スマホ少し大きいなら2列 */
-        md:grid-cols-4    /* タブレットなら3列 */
-        lg:grid-cols-5    /* PCなど大きい画面は4列 */
-      "
-    >
-      {filteredChampions.map((champ) => (
-        <Link
-          to={`/champion/${champ.id}`}
-          key={champ.id}
-          className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
+      <div>
+        <div
+          className="
+            grid gap-6 px-2
+            grid-cols-2      
+            sm:grid-cols-3   
+            md:grid-cols-4   
+            lg:grid-cols-5
+          "
         >
-          <img
-            src={`/wr.gg/data/champion_images/${champ.id}.png`}
-            alt={champ.name_ja}
-            className="mx-auto mb-2 max-w-full max-h-40 object-contain"
-          />
-          <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
-        </Link>
-      ))}
+          {filteredChampions.map((champ) => (
+            <Link
+              to={`/champion/${champ.id}`}
+              key={champ.id}
+              className="cursor-pointer text-center hover:bg-gray-100 rounded-lg p-4 shadow-md transition duration-200"
+            >
+              <img
+                src={`/wr.gg/data/champion_images/${champ.id}.png`}
+                alt={champ.name_ja}
+                className="mx-auto mb-2 max-w-full max-h-40 object-contain"
+              />
+              <p className="text-base font-semibold text-gray-800">{champ.name_ja}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
-
-  </div>
-);
+  );
 };

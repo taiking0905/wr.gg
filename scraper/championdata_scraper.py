@@ -50,6 +50,9 @@ def champion_data_scrape():
     save_dir = os.path.join(DATA_DIR, "champion_data")
     os.makedirs(save_dir, exist_ok=True)
 
+    lane_map = {1: "MID", 2: "TOP", 3: "ADC", 4: "SUP", 5: "JG"}
+    rank_map = {0: "Emerald", 1: "Diamond", 2: "Master", 3: "Challenger", 4: "Legendary"}
+
     # 各データを処理
     for rank_num_str, lanes in data.items():
         rank_num = int(rank_num_str)
@@ -77,25 +80,25 @@ def champion_data_scrape():
 
                 # updatetime + rank + lane の組み合わせで重複チェック
                 if not any(
-                    d["updatetime"] == update_time and d["rank"] == rank_num and d["lane"] == lane_num
+                    d["updatetime"] == update_time and d["rank"] == rank_map.get(rank_num) and d["lane"] == lane_map.get(lane_num)
                     for d in champ_data["data"]
                 ):
                     champ_data["data"].append({
                         "updatetime": update_time,
-                        "lane": lane_num,
-                        "rank": rank_num,
+                        "lane": lane_map.get(lane_num, lane_num),   # ← map で文字列化
+                        "rank": rank_map.get(rank_num, rank_num),   # ← map で文字列化
                         "winrate": winrate,
                         "pickrate": pickrate,
                         "banrate": banrate
                     })
 
+                    # 上書き保存
+                    save_json(champ_file, champ_data)
 
-                # 上書き保存
-                save_json(champ_file, champ_data)
+                    print(f"データを{update_time}の更新をしました。")
 
-    print(f"データを {save_dir} に保存しました。")
-
-
+                else:
+                    print(f"{update_time}と同じデータなので保存しません。")
 
 def main():
     champion_data_scrape()
