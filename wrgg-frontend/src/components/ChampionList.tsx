@@ -65,8 +65,8 @@ export const ChampionList: React.FC = () => {
 
 
   return (
-    <div className= " p-4 mx-auto max-w-[1400px]">
-      <h1 className="text-2xl font-bold mb-4">チャンピオンごとの変更履歴</h1>
+    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6 text-xl">
+      <h1 className="text-3xl font-bold mb-4 ">チャンピオンごとの変更履歴</h1>
 
       {/* 検索欄 */}
       <div className="mb-4">

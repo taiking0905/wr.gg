@@ -63,12 +63,12 @@ export const PatchViewer: React.FC = () => {
     : [];
 
   return (
-    <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">パッチノート一覧</h1>
+    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6 text-xl">
+        <h1 className="text-3xl font-bold mb-4">パッチノート一覧</h1>
 
         {/* ▼ セレクト形式でパッチを選択 */}
         <div className="mb-4">
-            <label htmlFor="patch-select" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="patch-select" className="block font-medium text-gray-700 mb-1">
             パッチを選択:
             </label>
             <select
@@ -106,7 +106,7 @@ export const PatchViewer: React.FC = () => {
 
           {!selectedPatch && (
             <div>
-              <p className="text-gray-600 mt-4">表示したいパッチを上のセレクトから選んでください。</p>
+              <p className="text-gray-600 mt-4 pt-20">表示したいパッチを上のセレクトから選んでください。</p>
               <img src="/wr.gg/start.gif" alt="アニメーションGIF" className="mt-4"></img>
             </div>
           )}
@@ -143,7 +143,7 @@ export const PatchViewer: React.FC = () => {
               </ul>
             ) : (
               <div>
-                <p className="text-gray-600">このパッチには変更内容が登録されていません。</p>
+                <p className="text-gray-600 pt-20">このパッチには変更内容が登録されていません。</p>
                 <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
               </div>
               
