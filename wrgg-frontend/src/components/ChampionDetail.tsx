@@ -103,7 +103,7 @@ export const ChampionDetail: React.FC = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6 text-xl">
+    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
       {/* ヘッダー: 画像、タイトル、戻るボタン */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-4">
@@ -112,7 +112,7 @@ export const ChampionDetail: React.FC = () => {
             alt={champion.name_ja}
             className="w-24 h-24 rounded-lg"
           />
-          <h1 className="text-3xl font-bold">{champion.name_ja} の変更履歴</h1>
+          <h1 className="text-2xl font-bold">{champion.name_ja} の変更履歴</h1>
         </div>
       </div>
 

@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <Router>
-      <header className="text-xl fixed top-0 w-full z-50 p-7 bg-gray-800 text-white shadow">
+      <header className="fixed top-0 w-full z-50 p-4 bg-gray-800 text-white shadow">
         <nav className="flex space-x-10">
           <a href="#/">パッチ一覧</a>
           <a href="#/champions">チャンピオン一覧</a>
