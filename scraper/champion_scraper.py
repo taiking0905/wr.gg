@@ -115,9 +115,9 @@ def create_champion_jsons():
         initial_data = {
             "id": champ_id,
             "name_ja": champ.get("name_ja"),
-            "date": [
+            "data": [
                 {
-                    "date": None, 
+                    "updatetime": None, 
                     "lane": None,
                     "rank": None,
                     "winrate": None,
