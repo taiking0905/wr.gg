@@ -11,6 +11,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
+ID_MAP = os.path.join(DATA_DIR, "id_map.json") # 例外のチャンピオンに名前付け
 
 def load_json(filename):
     if os.path.exists(filename):
@@ -47,17 +48,20 @@ def fetch_champion_names():
     # elements = soup.select('div[data-testid="character-card"]')
     elements = soup.select('a[href^="/ja-jp/champions/"][href$="/"]')
     champions = []
+    id_map = load_json(ID_MAP)# ウーコン、ヌヌ＆ウィルンプの名前を例外的に置き換え
+
     for el in elements:
         href = el.get('href')
         name_div = el.select_one('div[data-testid="card-title"]')
         img_tag = el.select_one('img[data-testid="mediaImage"]')
         if href and name_div and img_tag and name_div.text.strip():
             parts = href.strip('/').split('/')
-            champion_name_en = parts[-1].replace("-", "")
+            raw_id = parts[-1] 
+            champion_id = id_map.get(raw_id, raw_id.replace("-", "").title()) # -を除く(Dr-mundoとか)
             champion_name_ja = name_div.text.strip()
             img_url = img_tag.get("src")
             champions.append({
-                "id": champion_name_en,
+                "id": champion_id,
                 "name_ja": champion_name_ja,
                 "img_url": img_url
             })
