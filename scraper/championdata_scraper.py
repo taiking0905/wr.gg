@@ -22,8 +22,8 @@ def save_json(filename, data):
 
 
 def champion_data_scrape():
-    # ====== 1. champion.json と hero_list.js を紐付け ======
-    champion_json = load_json(CHAMPIONS_JSON)
+    # 既存のチャンピオン一覧
+    champions = load_json(CHAMPIONS_JSON)
 
     # hero_list.js を取得
     url_hero_list = "https://game.gtimg.cn/images/lgamem/act/lrlib/js/heroList/hero_list.js"
@@ -33,68 +33,68 @@ def champion_data_scrape():
     # name_cn → hero_id 辞書
     name_to_heroId = {info["name"]: hero_id for hero_id, info in hero_list.items()}
 
-    # champion.json に hero_id を追加
+    # champion.json に hero_id を追加した対応表
     hero_id_map = {}
-    champ_name_map = {}
-    for champ in champion_json:
+    for champ in champions:
         name_cn = champ.get("name_cn")
         hero_id = name_to_heroId.get(name_cn)
         if hero_id:
             hero_id_map[hero_id] = champ.get("id")
-            champ_name_map[champ.get("id")] = champ.get("name_ja")
 
-    # ====== 2. 中国版 API から勝率データ取得 ======
+    # 中国APIからデータ取得
     url_stats = "https://mlol.qt.qq.com/go/lgame_battle_info/hero_rank_list_v2"
     response = requests.get(url_stats)
     data = response.json()["data"]
 
-    # ====== 3. champions_summary にまとめる ======
-
-    save_dir = os.path.join(DATA_DIR, 'champion_data')
+    # 保存先
+    save_dir = os.path.join(DATA_DIR, "champion_data")
     os.makedirs(save_dir, exist_ok=True)
 
+    # 各データを処理
     for rank_num_str, lanes in data.items():
         rank_num = int(rank_num_str)
         for lane_num_str, champs in lanes.items():
             lane_num = int(lane_num_str)
             for champ in champs:
-                hero_id = champ['hero_id']
-                update_time = champ['dtstatdate']
-                winrate = float(champ.get('win_rate', 0)) * 100
-                pickrate = float(champ.get('appear_rate', 0)) * 100
-                banrate = float(champ.get('forbid_rate', 0)) * 100
+                hero_id = champ["hero_id"]
+                update_time = champ["dtstatdate"]
+                winrate = float(champ.get("win_rate", 0)) * 100
+                pickrate = float(champ.get("appear_rate", 0)) * 100
+                banrate = float(champ.get("forbid_rate", 0)) * 100
 
                 champ_id = hero_id_map.get(hero_id, hero_id)
                 champ_file = os.path.join(save_dir, f"{champ_id}.json")
 
-                # 既存データをロード or 初期化
+                # 既存データを読み込み
                 if os.path.exists(champ_file):
                     champ_data = load_json(champ_file)
                 else:
                     champ_data = {
                         "id": champ_id,
-                        "name_ja": champ_name_map.get(champ_id),
+                        "name_ja": next((c["name_ja"] for c in champions if c["id"] == champ_id), None),
                         "data": []
                     }
 
-                # 既に同じ updatetime があるかチェック
-                if any(d["updatetime"] == update_time for d in champ_data["data"]):
-                    continue  # 既存ならスキップ
+                # updatetime + rank + lane の組み合わせで重複チェック
+                if not any(
+                    d["updatetime"] == update_time and d["rank"] == rank_num and d["lane"] == lane_num
+                    for d in champ_data["data"]
+                ):
+                    champ_data["data"].append({
+                        "updatetime": update_time,
+                        "lane": lane_num,
+                        "rank": rank_num,
+                        "winrate": winrate,
+                        "pickrate": pickrate,
+                        "banrate": banrate
+                    })
 
-                # 新規データ追加
-                champ_data["data"].append({
-                    "updatetime": update_time,
-                    "lane": lane_num,
-                    "rank": rank_num,
-                    "winrate": winrate,
-                    "pickrate": pickrate,
-                    "banrate": banrate
-                })
 
-                # 保存
+                # 上書き保存
                 save_json(champ_file, champ_data)
 
-    print(f"{len(os.listdir(save_dir))} 件のチャンピオンデータを {save_dir} に保存しました。")
+    print(f"データを {save_dir} に保存しました。")
+
 
 
 def main():

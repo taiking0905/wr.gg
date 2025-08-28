@@ -72,6 +72,32 @@ def katakana_to_hiragana(text):
         for char in text
     )
 
+def update_champion_data():
+    try:
+        champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
+
+        # 既存JSONの件数をチェックしてスキップ
+        try:
+            existing = load_json(CHAMPIONS_JSON)
+            if len(existing) == len(champions):
+                print("既存JSONの件数と一致。更新をスキップします。")
+                return {"success": True, "skipped": True}
+        except FileNotFoundError:
+            # ファイルがなければ無視して進む
+            pass
+
+        # ひらがな変換を追加
+        for champ in champions:
+            champ['kana'] = katakana_to_hiragana(champ['name_ja'])
+        
+        save_json(CHAMPIONS_JSON, champions)
+        print(f"チャンピオン更新があったので修正しました")
+        
+        return {"success": True, "skipped": False}
+    except Exception as e:
+        print(f"エラーが発生しました: {e}")
+        return {"success": False, "error": str(e)}
+
 def update_champion_CN():
     try:
         champions = load_json(CHAMPIONS_JSON)
@@ -131,36 +157,6 @@ def create_champion_jsons():
         if not os.path.exists(champ_file):
             save_json(champ_file, initial_data)
 
-
-
-
-def update_champion_data():
-    try:
-        champions = fetch_champion_names()  # [{"id":..., "name_ja":...}, ...]
-
-        # 既存JSONの件数をチェックしてスキップ
-        try:
-            existing = load_json(CHAMPIONS_JSON)
-            if len(existing) == len(champions):
-                print("既存JSONの件数と一致。更新をスキップします。")
-                return {"success": True, "skipped": True}
-        except FileNotFoundError:
-            # ファイルがなければ無視して進む
-            pass
-
-        # ひらがな変換を追加
-        for champ in champions:
-            champ['kana'] = katakana_to_hiragana(champ['name_ja'])
-        
-        save_json(CHAMPIONS_JSON, champions)
-        print(f"チャンピオン更新があったので修正しました")
-        update_champion_CN()
-        create_champion_jsons()
-        return {"success": True, "skipped": False}
-    except Exception as e:
-        print(f"エラーが発生しました: {e}")
-        return {"success": False, "error": str(e)}
-
 def download_image(url, save_path):
     response = requests.get(url)
     response.raise_for_status()  # エラーがあれば例外発生
@@ -191,6 +187,8 @@ def download_champion_images():
 def main():
     update_champion_data()
     download_champion_images()
+    update_champion_CN()
+    create_champion_jsons()
 
 if __name__ =="__main__":
     main()
