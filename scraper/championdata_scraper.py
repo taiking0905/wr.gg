@@ -51,7 +51,7 @@ def champion_data_scrape():
     os.makedirs(save_dir, exist_ok=True)
 
     lane_map = {1: "MID", 2: "TOP", 3: "ADC", 4: "SUP", 5: "JG"}
-    rank_map = {0: "Emerald", 1: "Diamond", 2: "Master", 3: "Challenger", 4: "Legendary"}
+    rank_map = {0: "Emerald", 1: "Diamond", 2: "Master", 3: "Challenger", 4: "Legendary_rank"}
 
     # 各データを処理
     for rank_num_str, lanes in data.items():
