@@ -15,8 +15,8 @@ interface Champion {
 }
 interface ChampionStatsEntry {
   updatetime: string | null;
-  lane: number | null;
-  rank: number | null;
+  lane: string | null;
+  rank: string | null;
   winrate: number | null;
   pickrate: number | null;
   banrate: number | null;
@@ -31,7 +31,13 @@ interface ChampionData {
 export const ChampionDetail: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
- const [championStats, setChampionStats] = useState<ChampionStatsEntry | null>(null);
+  const [championStats, setChampionStats] = useState<ChampionStatsEntry | null>(null);
+  const [selectedRank, setSelectedRank] = useState<number | null>(null);
+  const [selectedLane, setSelectedLane] = useState<number | null>(null);
+  const [displayStats, setDisplayStats] = useState<ChampionStatsEntry | null>(null);
+  const [championStatsAll, setChampionStatsAll] = useState<ChampionStatsEntry[]>([]);
+
+
 
 
   const navigate = useNavigate();
@@ -71,11 +77,14 @@ export const ChampionDetail: React.FC = () => {
         const res = await fetch(`/wr.gg/data/champion_data/${champion.id}.json`);
         if (!res.ok) throw new Error(`${champion.id}.json not found`);
         const data: ChampionData = await res.json();
-        console.log("Champion stats JSON:", data);
+        
+        // null じゃないデータだけ抽出
+        const validData = data.data.filter(d => d.winrate !== null);
+        setChampionStatsAll(validData);
 
-        // 最新データを取得（例: 配列の最後）
-        const latest = data.data.filter(d => d.winrate !== null).pop() || null;
-        setChampionStats(latest);
+        // 最新データを displayStats に設定
+        setDisplayStats(validData[validData.length - 1] || null);
+
       } catch (error) {
         console.error("勝率データの読み込みに失敗しました:", error);
       }
@@ -83,6 +92,29 @@ export const ChampionDetail: React.FC = () => {
 
     fetchChampionStats();
   }, [champion]);
+
+  const handleSelectRank = (rank: number | null) => {
+    setSelectedRank(rank);
+    updateDisplayStats(rank, selectedLane);
+  };
+
+  const handleSelectLane = (lane: number | null) => {
+    setSelectedLane(lane);
+    updateDisplayStats(selectedRank, lane);
+  };
+
+  const updateDisplayStats = (rank: number | null, lane: number | null) => {
+    if (!championStatsAll) return;
+
+    const stats = championStatsAll.find(
+      (d) =>
+        (rank === null || Number(d.rank) === rank) &&
+        (lane === null || Number(d.lane) === lane) &&
+        d.winrate !== null
+    ) || null;
+
+    setDisplayStats(stats);
+  };
 
 
 
@@ -119,13 +151,51 @@ export const ChampionDetail: React.FC = () => {
         alt={champion.name_ja}
         className="w-32 h-32 mb-4"
       />
-      {championStats && (
+      {championStatsAll.length > 0 && (
         <div className="mb-4 text-gray-700">
-          <p>勝率: {championStats.winrate !== null ? championStats.winrate.toFixed(1) : "N/A"}%</p>
-          <p>ピック率: {championStats.pickrate !== null ? championStats.pickrate.toFixed(1) : "N/A"}%</p>
-          <p>バン率: {championStats.banrate !== null ? championStats.banrate.toFixed(1) : "N/A"}%</p>
+          <div className="flex gap-4 mb-2">
+            <div>
+              <label className="block mb-1">ランク:</label>
+              <select
+                value={selectedRank !== null ? selectedRank : ""}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setSelectedRank(val !== "" ? Number(val) : null); // 空文字は null に
+                }}
+              >
+                <option value="">全て</option>
+                {Array.from(new Set(championStatsAll.map(d => d.rank).filter((v) => v !== null))).map((rank) => (
+                  <option key={rank} value={rank!}>{rank}</option>
+                ))}
+              </select>
+
+              <select
+                value={selectedLane !== null ? selectedLane : ""}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  setSelectedLane(val !== "" ? Number(val) : null);
+                }}
+              >
+                <option value="">全て</option>
+                {Array.from(new Set(championStatsAll.map(d => d.lane).filter((v) => v !== null))).map((lane) => (
+                  <option key={lane} value={lane!}>{lane}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {displayStats ? (
+            <div>
+              <p>勝率: {displayStats.winrate?.toFixed(2) ?? "N/A"}%</p>
+              <p>ピック率: {displayStats.pickrate?.toFixed(2) ?? "N/A"}%</p>
+              <p>バン率: {displayStats.banrate?.toFixed(2) ?? "N/A"}%</p>
+            </div>
+          ) : (
+            <p>選択中のランク・レーンにデータがありません</p>
+          )}
         </div>
       )}
+
 
 
       {changes.length > 0 ? (
