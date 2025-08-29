@@ -207,7 +207,7 @@ export const ChampionDetail: React.FC = () => {
       {changes.length > 0 ? (
         <ul className="space-y-4">
           {changes.map((change, idx) => (
-            <li key={idx} className="border p-4 rounded-lg bg-gray-10 shadow-sm">
+            <li key={idx} className="border p-4 rounded-lg bg-white shadow-sm">
               <p className="font-bold text-xl text-gray-900 mb-3">
                 {change.patch_name} の変更
               </p>

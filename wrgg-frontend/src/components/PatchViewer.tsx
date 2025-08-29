@@ -138,7 +138,7 @@ export const PatchViewer: React.FC = () => {
 
                   return (
                     <Link key={championId} to={`/champion/${championId}`}>
-                      <li className="border p-4 rounded-lg bg-gray-10 shadow-sm">
+                      <li className="border p-4 rounded-lg bg-white shadow-sm">
                         <p className="font-bold text-xl text-gray-900 mb-3">
                           {champion_name}
                         </p>
