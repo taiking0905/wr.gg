@@ -40,7 +40,7 @@ Github Actionsを使うことで毎週木曜の24:00に自動でスクレイピ�
 ```bash
 python -m venv venv
 .\venv\Scripts\activat
-cd script
+cd scraper
 pip install -r requirements.txt
 
 # 📁 ディレクトリ構成
