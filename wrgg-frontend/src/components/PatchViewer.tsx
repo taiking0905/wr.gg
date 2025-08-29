@@ -129,27 +129,22 @@ export const PatchViewer: React.FC = () => {
           {filteredChanges ? (
             <ul className="flex flex-col gap-4">
               {Object.entries(filteredChanges.champions).map(
-                ([champion_name, changes], idx) => {
+                ([champion_name, changes]) => {
                   const matchingChampion = champions.find(
                     (champ) => champ.name_ja === champion_name
                   );
                   const championId = matchingChampion?.id ?? "notfound";
 
                   return (
-                    <Link to={`/champion/${championId}`}>
-                      <li
-                        key={idx}
-                        className="border p-4 rounded-lg bg-gray-10 shadow-sm"
-                      >
-                        
+                    <Link key={championId} to={`/champion/${championId}`}>
+                      <li className="border p-4 rounded-lg bg-gray-10 shadow-sm">
                         <p className="font-bold text-xl text-gray-900 mb-3">
                           {champion_name}
                         </p>
-                        
                         <ul className="space-y-4">
                           {changes.map((change, i) => (
                             <li
-                              key={i}
+                              key={i} // change が配列内で安定しているなら問題なし
                               className="border-l-4 border-blue-500 pl-3"
                             >
                               <p className="font-bold text-gray-800">
