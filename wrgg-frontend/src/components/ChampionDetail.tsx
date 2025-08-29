@@ -60,11 +60,10 @@ export const ChampionDetail: React.FC = () => {
   const changes = patchContents.filter(change => change.champion_name === champion?.name_ja);
 
   useEffect(() => {
-    if (!champion) return;
 
     const fetchChampionStats = async () => {
       try {
-        const res = await fetch(`/wr.gg/data/champion_data/${champion.id}.json`);
+        const res = await fetch(`/wr.gg/data/champion_data/${id}.json`);
         const data: ChampionData = await res.json();
         setChampionStatsAll(data.data);
 
