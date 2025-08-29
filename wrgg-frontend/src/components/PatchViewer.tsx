@@ -6,12 +6,20 @@ interface PatchNote {
   patch_link: string;
 }
 
-interface PatchContent {
-  champion_name: string;
-  patch_name: string;
+interface PatchContents {
+  [patch_name: string]: {
+    update_date: string;
+    champions: {
+      [champion_name: string]: ChampionChange[];
+    };
+  };
+}
+
+interface ChampionChange {
   ability_title: string;
   change_details: string;
 }
+
 interface Champion {
   id: string;
   name_ja: string;
@@ -19,9 +27,9 @@ interface Champion {
 }
 
 export const PatchViewer: React.FC = () => {
-  const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
-  const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
-   const [champions, setChampions] = useState<Champion[]>([]);
+  const [patchNotes] = useState<PatchNote[]>([]);
+  const [patchContents, setPatchContents] = useState<PatchContents>({});
+  const [champions, setChampions] = useState<Champion[]>([]);
   const [selectedPatch, setSelectedPatch] = useState<string | null>(null);
 
     useEffect(() => {
@@ -31,8 +39,7 @@ export const PatchViewer: React.FC = () => {
             if (!notesRes.ok) throw new Error("patch_notes.json not found");
             const patchNotes: PatchNote[] = await notesRes.json();
 
-            // パッチノートを逆順に（例: 新しい順）よくないかもです
-            const Re_patchNotes = patchNotes.reverse();
+
 
             const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
             if (!contentsRes.ok) throw new Error("patch_contents.json not found");
@@ -40,11 +47,9 @@ export const PatchViewer: React.FC = () => {
 
             const champsRes = await fetch("/wr.gg/data/champions.json");
             if (!champsRes.ok) throw new Error("champions.json not found");
-            const championData = await champsRes.json();
-
-            setPatchNotes(Re_patchNotes);        // ← 追加
-            setPatchContents(patchContents);  // ← 追加
-            setChampions(championData) // ← 追加
+            const championData = await champsRes.json();     
+            setPatchContents(patchContents);  
+            setChampions(championData) 
 
             console.log(patchNotes, patchContents);
         } catch (error) {
@@ -58,9 +63,10 @@ export const PatchViewer: React.FC = () => {
     setSelectedPatch(patchName);
   };
 
-  const filteredChanges: PatchContent[] = selectedPatch
-    ? patchContents.filter((c) => c.patch_name === selectedPatch)
-    : [];
+  const filteredChanges = selectedPatch
+    ? patchContents[selectedPatch]
+    : null;
+
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
@@ -78,10 +84,10 @@ export const PatchViewer: React.FC = () => {
             className="border rounded px-3 py-2 w-full max-w-sm"
             >
             <option value="">-- パッチを選択してください --</option>
-            {patchNotes.map((patch) => (
-                <option key={patch.patch_name} value={patch.patch_name}>
-                {patch.patch_name}
-                </option>
+            {Object.keys(patchContents).reverse().map((patchName) => (
+              <option key={patchName} value={patchName}>
+                {patchName}
+              </option>
             ))}
             </select>
           {/* ▼ 公式リンク表示（選択中のパッチにだけリンク表示） */}
@@ -113,43 +119,65 @@ export const PatchViewer: React.FC = () => {
         </div>
 
 
-        {selectedPatch && (
-          <div className="mt-6">
-            <h2 className="text-xl font-semibold mb-2">{selectedPatch} の変更点</h2>
-            {filteredChanges.length > 0 ? (
-              <ul className="space-y-4">
-                
-                {filteredChanges.map((change, idx) => {
-                    const matchingChampion = champions.find(
-                      (champ) => champ.name_ja === change.champion_name
-                    );
-                    const championId = matchingChampion?.id ?? "notfound"; // Fallback
-
-                    return (
-                    <li key={idx} className="border p-3 rounded bg-gray-50">
-                      <Link
-                        to={`/champion/${championId}`}
-                      >
-                        <p className="font-bold text-lg">{change.champion_name}</p>
-                        <p className="text-sm text-gray-700">{change.ability_title}</p>
-                        <div
-                          className="text-gray-800 mt-1"
-                          dangerouslySetInnerHTML={{ __html: change.change_details }}
-                        />
-                      </Link>
-                    </li>
+      {/* パッチ詳細部分 */}
+      {selectedPatch && (
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">{selectedPatch} の変更点</h2>
+          <span className="ml-2 text-sm text-gray-500">
+            ({filteredChanges?.update_date})
+          </span>
+          {filteredChanges ? (
+            <ul className="flex flex-col gap-4">
+              {Object.entries(filteredChanges.champions).map(
+                ([champion_name, changes], idx) => {
+                  const matchingChampion = champions.find(
+                    (champ) => champ.name_ja === champion_name
                   );
-                })}
-              </ul>
-            ) : (
-              <div>
-                <p className="text-gray-600 pt-20">このパッチには変更内容が登録されていません。</p>
-                <img src="/wr.gg/null.gif" alt="アニメーションGIF" ></img>
-              </div>
-              
-            )}
-          </div>
-        )}
+                  const championId = matchingChampion?.id ?? "notfound";
+
+                  return (
+                    <Link to={`/champion/${championId}`}>
+                      <li
+                        key={idx}
+                        className="border p-4 rounded-lg bg-gray-10 shadow-sm"
+                      >
+                        
+                        <p className="font-bold text-xl text-gray-900 mb-3">
+                          {champion_name}
+                        </p>
+                        
+                        <ul className="space-y-4">
+                          {changes.map((change, i) => (
+                            <li
+                              key={i}
+                              className="border-l-4 border-blue-500 pl-3"
+                            >
+                              <p className="font-bold text-gray-800">
+                                {change.ability_title}
+                              </p>
+                              <div
+                                className="text-gray-700 text-sm mt-1 leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: change.change_details }}
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    </Link>
+                  );
+                }
+              )}
+            </ul>
+          ) : (
+            <div>
+              <p className="text-gray-600 pt-20">
+                このパッチには変更内容が登録されていません。
+              </p>
+              <img src="/wr.gg/null.gif" alt="アニメーションGIF" />
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

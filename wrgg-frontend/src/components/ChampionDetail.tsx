@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 
-interface PatchContent {
-  champion_name: string;
-  patch_name: string;
+interface PatchContents {
+  [patch_name: string]: {
+    update_date: string;
+    champions: {
+      [champion_name: string]: ChampionChange[];
+    };
+  };
+}
+
+interface ChampionChange {
   ability_title: string;
   change_details: string;
 }
@@ -31,7 +38,7 @@ interface ChampionData {
 
 export const ChampionDetail: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
-  const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
+  const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [selectedRank, setSelectedRank] = useState<string>("");
   const [selectedLane, setSelectedLane] = useState<string>("");
   const [displayStats, setDisplayStats] = useState<ChampionStatsEntry | null>(null);
@@ -46,9 +53,10 @@ export const ChampionDetail: React.FC = () => {
         const champsRes = await fetch("/wr.gg/data/champions.json");
         const championData: Champion[] = await champsRes.json();
         const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
-        const patchContentData: PatchContent[] = await contentsRes.json();
+        if (!contentsRes.ok) throw new Error("patch_contents.json not found");
+        const patchContents = await contentsRes.json();
         setChampions(championData);
-        setPatchContents(patchContentData.reverse());
+        setPatchContents(patchContents);
       } catch (error) {
         console.error(error);
       }
@@ -57,7 +65,21 @@ export const ChampionDetail: React.FC = () => {
   }, []);
 
   const champion = champions.find(champ => champ.id === id);
-  const changes = patchContents.filter(change => change.champion_name === champion?.name_ja);
+  const changes =
+    champion && Object.entries(patchContents)
+      .reverse() 
+      .map(([patchName, content]) => {
+        const champChanges = content.champions[champion.name_ja];
+        if (!champChanges) return [];
+        return champChanges.map(change => ({
+          patch_name: patchName,
+          ...change,
+        }));
+      })
+      .flat()
+      .sort((a, b) => parseFloat(b.patch_name) - parseFloat(a.patch_name)) // 新しい順に
+    || [];
+
 
   useEffect(() => {
 
@@ -185,17 +207,30 @@ export const ChampionDetail: React.FC = () => {
       {changes.length > 0 ? (
         <ul className="space-y-4">
           {changes.map((change, idx) => (
-            <li key={idx} className="border p-4 rounded bg-gray-50 shadow-sm">
-              <p className="text-sm text-gray-500">{change.patch_name}</p>
-              <p className="font-semibold text-lg mt-1">{change.ability_title}</p>
-              <div className="text-gray-800 mt-2" dangerouslySetInnerHTML={{ __html: change.change_details }} />
+            <li key={idx} className="border p-4 rounded-lg bg-gray-10 shadow-sm">
+              <p className="font-bold text-xl text-gray-900 mb-3">
+                {change.patch_name} の変更
+              </p>
+              <ul className="space-y-2 border-l-4 border-blue-500 pl-3">
+                <li>
+                  <p className="font-bold text-gray-800">{change.ability_title}</p>
+                  <div
+                    className="text-gray-700 text-sm leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: change.change_details }}
+                  />
+                </li>
+              </ul>
             </li>
           ))}
         </ul>
       ) : (
-        <div className="p-6 text-gray-500">
-          このチャンピオンには変更履歴がありません
-          <img src="/wr.gg/null.gif" alt="アニメーションGIF" className="mt-2"/>
+        <div className="p-6 text-gray-600 text-center">
+          このチャンピオンには変更履歴がありません。
+          <img
+            src="/wr.gg/null.gif"
+            alt="アニメーションGIF"
+            className="mt-4 mx-auto"
+          />
         </div>
       )}
     </div>

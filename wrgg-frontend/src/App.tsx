@@ -12,7 +12,7 @@ export default function App() {
             <a href="#/">Home</a>
             <a href="#/patchs">パッチ一覧</a>
             <a href="#/champions">チャンピオン一覧</a>
-            <a href="#/championdata">勝率データ一覧</a>
+            <a href="#/championstats">データ一覧</a>
             <a href="#/about">このサイトについて</a>
           </div>
         </nav>

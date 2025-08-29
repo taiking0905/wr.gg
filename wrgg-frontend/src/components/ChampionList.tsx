@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
-interface PatchContent {
-  champion_name: string;
-  patch_name: string;
-  ability_title: string;
-  change_details: string;
-}
 interface Champion {
   id: string;
   name_ja: string;
@@ -15,7 +9,6 @@ interface Champion {
 
 export const ChampionList: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
-  const [patchContents, setPatchContents] = useState<PatchContent[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
 
 
@@ -27,15 +20,7 @@ export const ChampionList: React.FC = () => {
         if (!champsRes.ok) throw new Error("champions.json not found");
         const championData = await champsRes.json();
 
-        const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
-        if (!contentsRes.ok) throw new Error("patch_contents.json not found");
-
-        const patchContentData: PatchContent[] = await contentsRes.json();
-        // パッチノートを逆順に（例: 新しい順）
-        const Re_patchNotes = patchContentData.reverse();
-
         setChampions(championData);  // ← 文字列配列そのまま使う
-        setPatchContents(Re_patchNotes);
       } catch (error) {
         console.error("データの読み込みに失敗しました:", error);
       }
