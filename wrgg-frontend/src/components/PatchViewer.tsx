@@ -27,7 +27,7 @@ interface Champion {
 }
 
 export const PatchViewer: React.FC = () => {
-  const [patchNotes] = useState<PatchNote[]>([]);
+  const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [champions, setChampions] = useState<Champion[]>([]);
   const [selectedPatch, setSelectedPatch] = useState<string | null>(null);
@@ -40,7 +40,6 @@ export const PatchViewer: React.FC = () => {
             const patchNotes: PatchNote[] = await notesRes.json();
 
 
-
             const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
             if (!contentsRes.ok) throw new Error("patch_contents.json not found");
             const patchContents = await contentsRes.json();
@@ -48,6 +47,8 @@ export const PatchViewer: React.FC = () => {
             const champsRes = await fetch("/wr.gg/data/champions.json");
             if (!champsRes.ok) throw new Error("champions.json not found");
             const championData = await champsRes.json();     
+            
+            setPatchNotes(patchNotes);
             setPatchContents(patchContents);  
             setChampions(championData) 
 
