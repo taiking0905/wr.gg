@@ -6,13 +6,16 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <Router>
-      <header className="fixed top-0 w-full z-50 p-4 bg-gray-800 text-white shadow">
-        <nav className="flex space-x-4 text-sm md:text-xl">
-          <a href="#/">パッチ一覧</a>
-          <a href="#/champions">チャンピオン一覧</a>
-          <a href="#/about">このサイトについて</a>
+      <header className="fixed top-0 w-full z-50 bg-gray-800 text-white shadow">
+        <nav className="overflow-x-auto whitespace-nowrap px-4 py-3">
+          <div className="inline-flex space-x-6 text-sm md:text-xl md:gap-6">
+            <a href="#/">Home</a>
+            <a href="#/patchs">パッチ一覧</a>
+            <a href="#/champions">チャンピオン一覧</a>
+            <a href="#/championdata">勝率データ一覧</a>
+            <a href="#/about">このサイトについて</a>
+          </div>
         </nav>
-
       </header>
       <main className="pt-20 p-1">
         <AppRoutes />
