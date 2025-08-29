@@ -37,7 +37,11 @@ npm run build-docs
 
 ## スクレイピング仕様
 Github Actionsを使うことで毎週木曜の24:00に自動でスクレイピングをします。  
-Github Actionsから手動で行うことも可能です。  
+```bash
+python -m venv venv
+.\venv\Scripts\activat
+cd script
+pip install -r requirements.txt
 
 # 📁 ディレクトリ構成
 

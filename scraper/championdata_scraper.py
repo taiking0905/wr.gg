@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-
+from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -61,6 +61,7 @@ def champion_data_scrape():
             for champ in champs:
                 hero_id = champ["hero_id"]
                 update_time = champ["dtstatdate"]
+                update_time = datetime.strptime(update_time, "%Y%m%d").strftime("%Y/%m/%d")
                 winrate = float(champ.get("win_rate", 0)) * 100
                 pickrate = float(champ.get("appear_rate", 0)) * 100
                 banrate = float(champ.get("forbid_rate", 0)) * 100
@@ -85,8 +86,8 @@ def champion_data_scrape():
                 ):
                     champ_data["data"].append({
                         "updatetime": update_time,
-                        "lane": lane_map.get(lane_num, lane_num),   # ← map で文字列化
-                        "rank": rank_map.get(rank_num, rank_num),   # ← map で文字列化
+                        "lane": lane_map.get(lane_num, lane_num),
+                        "rank": rank_map.get(rank_num, rank_num),
                         "winrate": winrate,
                         "pickrate": pickrate,
                         "banrate": banrate
@@ -95,11 +96,7 @@ def champion_data_scrape():
                     # 上書き保存
                     save_json(champ_file, champ_data)
 
-                    print(f"データを{update_time}の更新をしました。")
-
-                else:
-                    print(f"{update_time}と同じデータなので保存しません。")
-
+    print(f"データを{update_time}の更新をしました。")
 def main():
     champion_data_scrape()
 
