@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface Champion {
   id: string;
   name_ja: string;
-  kana: string;
   img_url: string;
 }
 
@@ -25,73 +25,112 @@ interface AllChampionData {
 export const ChampionStats: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [allStats, setAllStats] = useState<AllChampionData[]>([]);
+  const [selectedRank, setSelectedRank] = useState<string>("");
+  const [selectedLane, setSelectedLane] = useState<string>("");
+  const [sortKey, setSortKey] = useState<"winrate" | "pickrate" | "banrate">("winrate");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const champsRes = await fetch("/wr.gg/data/champions.json");
-        const championData: Champion[] = await champsRes.json();
-        setChampions(championData);
+      const champsRes = await fetch("/wr.gg/data/champions.json");
+      const championData: Champion[] = await champsRes.json();
+      setChampions(championData);
 
-        const allRes = await fetch(`/wr.gg/data/all_champion_data.json`);
-        const statsData: AllChampionData[] = await allRes.json();
-        setAllStats(statsData);
-      } catch (error) {
-        console.error("データの読み込みに失敗しました:", error);
-      }
+      const statsRes = await fetch("/wr.gg/data/all_champion_data.json");
+      const statsData: AllChampionData[] = await statsRes.json();
+      setAllStats(statsData);
+      const allEntries = statsData.flatMap(champ => champ.data);
+      const firstRank = allEntries[0]?.rank || "";
+      const firstLane = allEntries[0]?.lane || "";
+      setSelectedRank(firstRank);
+      setSelectedLane(firstLane);
     };
     fetchData();
   }, []);
 
-  // champion.json からチャンピオン情報を取得
-  const getChampionInfo = (id: string) =>
-    champions.find((c) => c.id === id);
+  const allEntries = allStats.flatMap(champ =>
+    champ.data.map(d => ({
+      ...d,
+      id: champ.id,
+      name_ja: champ.name_ja
+    }))
+  );
 
-  // rank + lane でソート（例: rank→lane→winrate降順）
-  const sorted = [...allStats].sort((a, b) => {
-    const rankA = a.data[0]?.rank.localeCompare(b.data[0]?.rank || "");
-    if (rankA !== 0) return rankA;
-    const laneA = a.data[0]?.lane.localeCompare(b.data[0]?.lane || "");
-    if (laneA !== 0) return laneA;
-    return (b.data[0]?.winrate || 0) - (a.data[0]?.winrate || 0);
+  // ランク・レーンでフィルタ
+  const filtered = allEntries.filter(d => 
+    (selectedRank ? d.rank === selectedRank : true) &&
+    (selectedLane ? d.lane === selectedLane : true)
+  );
+
+  // ソート
+  const sorted = [...filtered].sort((a, b) => {
+    const diff = b[sortKey] - a[sortKey];
+    return sortOrder === "desc" ? diff : -diff;
   });
 
-  return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">最新データ一覧</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {sorted.map((champ) => {
-          const info = getChampionInfo(champ.id);
-          const data = champ.data[0]; // 最新データを一つ表示
-          if (!data) return null;
+  const getChampionInfo = (id: string) => champions.find(c => c.id === id);
 
-          return (
-            <div
-              key={champ.id}
-              className="border rounded-lg p-4 shadow bg-white"
-            >
-              {info && (
-                <>
-                  <img
-                    src={info.img_url}
-                    alt={info.name_ja}
-                    className="w-16 h-16 mx-auto rounded"
-                  />
-                  <h2 className="text-center font-semibold mt-2">
-                    {info.name_ja}
-                  </h2>
-                </>
-              )}
-              <p className="text-sm text-gray-500">
-                {data.rank} | {data.lane}
-              </p>
-              <p>勝率: {data.winrate.toFixed(1)}%</p>
-              <p>ピック率: {data.pickrate.toFixed(1)}%</p>
-              <p>バン率: {data.banrate.toFixed(1)}%</p>
-            </div>
-          );
-        })}
+  return (
+    <div className="p-6 flex flex-col items-center">
+      <h1 className="text-2xl font-bold mb-4">最新データ一覧</h1>
+
+      {/* フィルタ & ソート */}
+      <div className="flex gap-4 mb-6">
+        <select value={selectedRank} onChange={e => setSelectedRank(e.target.value)} className="border px-2 py-1 rounded">
+          {Array.from(new Set(allEntries.map(d => d.rank))).map(rank => (
+            <option key={rank} value={rank}>{rank}</option>
+          ))}
+        </select>
+
+        <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="border px-2 py-1 rounded">
+          {Array.from(new Set(allEntries.map(d => d.lane))).map(lane => (
+            <option key={lane} value={lane}>{lane}</option>
+          ))}
+        </select>
+
+        <select value={sortKey} onChange={e => setSortKey(e.target.value as any)} className="border px-2 py-1 rounded">
+          <option value="winrate">勝率</option>
+          <option value="pickrate">ピック率</option>
+          <option value="banrate">バン率</option>
+        </select>
+
+        <select value={sortOrder} onChange={e => setSortOrder(e.target.value as any)} className="border px-2 py-1 rounded">
+          <option value="desc">降順</option>
+          <option value="asc">昇順</option>
+        </select>
       </div>
+      <div className="flex flex-col space-y-4 w-full max-w-3xl">
+      {sorted.map((entry, index) => {
+        const info = getChampionInfo(entry.id);
+        return (
+          <Link
+            key={`${entry.id}-${entry.rank}-${entry.lane}`}
+            to={`/champion/${entry.id}`}
+            className="border rounded-lg p-4 shadow bg-white flex items-center gap-4 hover:bg-gray-50 transition"
+          >
+            <span className="font-bold w-6 text-center">{index + 1}</span>
+            {info && (
+              <img
+                src={info.img_url}
+                alt={info.name_ja}
+                className="w-12 h-12 rounded"
+              />
+            )}
+            <div>
+              <h2 className="font-semibold">{entry.name_ja}</h2>
+              <p className="text-sm text-gray-500">
+                {entry.rank} | {entry.lane}
+              </p>
+              <p>
+                勝率: {entry.winrate.toFixed(1)}% / ピック率:{" "}
+                {entry.pickrate.toFixed(1)}% / バン率:{" "}
+                {entry.banrate.toFixed(1)}%
+              </p>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
     </div>
   );
-}
+};
