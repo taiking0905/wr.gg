@@ -74,33 +74,35 @@ export const ChampionStats: React.FC = () => {
       <h1 className="text-2xl font-bold mb-4">最新データ一覧</h1>
 
       {/* フィルタ & ソート */}
-      <div className="flex gap-4 mb-6 overflow-x-auto whitespace-nowrap px-2">
-        <select value={selectedRank} onChange={e => setSelectedRank(e.target.value)} className="inline-block border px-2 py-1 rounded">
-          <option value="Emerald">Emerald</option>
-          <option value="Diamond">Diamond</option>
-          <option value="Master">Master</option>
-          <option value="Challenger">Challenger</option>
-          <option value="legendary rank">legendary rank</option>
-        </select>
+      <div className="mb-6 p-4 rounded-lg w-full max-w-3xl">
+        <div className="flex gap-2 overflow-x-auto whitespace-nowrap w-full px-2 pb-2 space-x-4 scrollbar-gutter-stable">
+          <select value={selectedRank} onChange={e => setSelectedRank(e.target.value)} className="inline-block border px-2 py-1 rounded">
+            <option value="Emerald">Emerald</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Master">Master</option>
+            <option value="Challenger">Challenger</option>
+            <option value="legendary rank">legendary rank</option>
+          </select>
 
-        <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="inline-block border px-2 py-1 rounded">
-          <option value="TOP">TOP</option>
-          <option value="JG">JG</option>
-          <option value="MID">MID</option>
-          <option value="ADC">ADC</option>
-          <option value="SUP">SUP</option>
-        </select>
+          <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="inline-block border px-2 py-1 rounded">
+            <option value="TOP">TOP</option>
+            <option value="JG">JG</option>
+            <option value="MID">MID</option>
+            <option value="ADC">ADC</option>
+            <option value="SUP">SUP</option>
+          </select>
 
-        <select value={sortKey} onChange={e => setSortKey(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
-          <option value="winrate">勝率</option>
-          <option value="pickrate">ピック率</option>
-          <option value="banrate">バン率</option>
-        </select>
+          <select value={sortKey} onChange={e => setSortKey(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
+            <option value="winrate">勝率</option>
+            <option value="pickrate">ピック率</option>
+            <option value="banrate">バン率</option>
+          </select>
 
-        <select value={sortOrder} onChange={e => setSortOrder(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
-          <option value="desc">降順</option>
-          <option value="asc">昇順</option>
-        </select>
+          <select value={sortOrder} onChange={e => setSortOrder(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
+            <option value="desc">降順</option>
+            <option value="asc">昇順</option>
+          </select>
+        </div>
       </div>
       <div className="flex flex-col space-y-4 w-full max-w-3xl">
       {sorted.map((entry, index) => {

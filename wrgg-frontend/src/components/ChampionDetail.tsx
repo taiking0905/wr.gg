@@ -144,7 +144,7 @@ export const ChampionDetail: React.FC = () => {
       {/* スタッツ部分 */}
       {championStatsAll.length > 0 ? (
         <div className="mb-6 p-4 bg-gray-50 rounded-lg shadow-inner">
-          <div className="flex gap-4 mb-6 overflow-x-auto whitespace-nowrap px-2">
+          <div className="flex gap-2 overflow-x-auto whitespace-nowrap w-full px-2 pb-2 space-x-4 scrollbar-gutter-stable">
             <div>
               <label className="block mb-1 text-sm font-medium">ランク</label>
               <select
@@ -186,6 +186,7 @@ export const ChampionDetail: React.FC = () => {
               </select>
             </div>
           </div>
+          <div className="h-4"></div>
 
           <div className="grid grid-cols-3 gap-4 text-center">
             <div className="p-2 bg-white rounded shadow-sm">

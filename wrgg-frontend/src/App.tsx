@@ -8,7 +8,7 @@ export default function App() {
     <Router>
       <header className="fixed top-0 w-full z-50 bg-gray-800 text-white shadow">
         <nav className="overflow-x-auto whitespace-nowrap px-4 py-3">
-          <div className="inline-flex space-x-6 text-sm md:text-xl md:gap-6">
+          <div className="flex space-x-6 text-sm md:text-xl md:gap-6 pb-2 scrollbar-gutter-stable">
             <a href="#/">Home</a>
             <a href="#/patchs">パッチ一覧</a>
             <a href="#/champions">チャンピオン一覧</a>
