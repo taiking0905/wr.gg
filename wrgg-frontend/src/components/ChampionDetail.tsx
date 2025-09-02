@@ -144,13 +144,13 @@ export const ChampionDetail: React.FC = () => {
       {/* スタッツ部分 */}
       {championStatsAll.length > 0 ? (
         <div className="mb-6 p-4 bg-gray-50 rounded-lg shadow-inner">
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 mb-6 overflow-x-auto whitespace-nowrap px-2">
             <div>
               <label className="block mb-1 text-sm font-medium">ランク</label>
               <select
                 value={selectedRank ?? ""}
                 onChange={(e) => setSelectedRank(e.target.value)}
-                className="border px-2 py-1 rounded shadow-sm"
+                className="inline-block border px-2 py-1 rounded"
               >
                 {Array.from(new Set(championStatsAll.map(d => d.rank)))
                   .map(rank => (
@@ -163,7 +163,7 @@ export const ChampionDetail: React.FC = () => {
               <select
                 value={selectedLane ?? ""}
                 onChange={(e) => setSelectedLane(e.target.value)}
-                className="border px-2 py-1 rounded shadow-sm"
+                className="inline-block border px-2 py-1 rounded"
               >
                 {Array.from(new Set(championStatsAll.map(d => d.lane)))
                   .map(lane => (
@@ -177,7 +177,7 @@ export const ChampionDetail: React.FC = () => {
               <select
                 value={selectedTime ?? ""}
                 onChange={(e) => setSelectedTime(e.target.value)}
-                className="border px-2 py-1 rounded shadow-sm"
+                className="inline-block border px-2 py-1 rounded"
               >
                 {Array.from(new Set(championStatsAll.map(d => d.updatetime)))
                   .map(updatetime => (
