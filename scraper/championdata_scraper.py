@@ -90,19 +90,27 @@ def champion_data_scrape():
                 # 個別ファイル保存
                 save_json(champ_file, champ_data_existing)
 
-                # 全体データには最新データのみ保持
-                all_champions_data[champ_id] = {
-                    "id": champ_id,
-                    "name_ja": next((c["name_ja"] for c in champions if c["id"] == champ_id), None),
-                    "data": [{
+                # 全体データには rank/lane を問わず最新データを追加
+                if champ_id not in all_champions_data:
+                    all_champions_data[champ_id] = {
+                        "id": champ_id,
+                        "name_ja": next((c["name_ja"] for c in champions if c["id"] == champ_id), None),
+                        "data": []
+                    }
+
+                # 重複チェック（updatetime + rank + lane が同じなら追加しない）
+                if not any(
+                    d["updatetime"] == update_time and d["rank"] == rank_map.get(rank_num) and d["lane"] == lane_map.get(lane_num)
+                    for d in all_champions_data[champ_id]["data"]
+                ):
+                    all_champions_data[champ_id]["data"].append({
                         "updatetime": update_time,
                         "lane": lane_map.get(lane_num, lane_num),
                         "rank": rank_map.get(rank_num, rank_num),
                         "winrate": winrate,
                         "pickrate": pickrate,
                         "banrate": banrate
-                    }]
-                }
+                    })
 
     # 全チャンピオンの最新データをまとめて保存
     save_json(ALL_CHAMPIONS_DATA_JSON, list(all_champions_data.values()))
