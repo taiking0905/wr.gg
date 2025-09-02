@@ -41,6 +41,7 @@ export const ChampionDetail: React.FC = () => {
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [selectedRank, setSelectedRank] = useState<string>("");
   const [selectedLane, setSelectedLane] = useState<string>("");
+  const [selectedTime, setSelectedTime] = useState<string>("");
   const [displayStats, setDisplayStats] = useState<ChampionStatsEntry | null>(null);
   const [championStatsAll, setChampionStatsAll] = useState<ChampionStatsEntry[]>([]);
 
@@ -76,7 +77,7 @@ export const ChampionDetail: React.FC = () => {
           return {
             patch_name: patchName,
             update_date: content.update_date,
-            changes: champChanges, // ← 1パッチ分まとめて保持
+            changes: champChanges,
           };
         })
         .filter((patch): patch is NonNullable<typeof patch> => patch !== null)
@@ -95,6 +96,7 @@ export const ChampionDetail: React.FC = () => {
           setDisplayStats(data.data[0]);
           setSelectedRank(data.data[0].rank);
           setSelectedLane(data.data[0].lane);
+          setSelectedTime(data.data[0].updatetime)
         }
       } catch (error) {
         console.error(error);
@@ -107,11 +109,11 @@ export const ChampionDetail: React.FC = () => {
     if (!championStatsAll.length) return;
 
     const stats = championStatsAll.find(d =>
-      d.rank === selectedRank && d.lane === selectedLane
+      d.rank === selectedRank && d.lane === selectedLane && d.updatetime == selectedTime
     );
 
     setDisplayStats(stats || null);
-  }, [selectedRank, selectedLane, championStatsAll]);
+  }, [selectedRank, selectedLane, selectedTime, championStatsAll]);
 
   if (!champion) {
     return (
@@ -166,6 +168,20 @@ export const ChampionDetail: React.FC = () => {
                 {Array.from(new Set(championStatsAll.map(d => d.lane)))
                   .map(lane => (
                     <option key={lane} value={lane ?? ""}>{lane ?? ""}</option>
+                  ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm font-medium">更新日</label>
+              <select
+                value={selectedTime ?? ""}
+                onChange={(e) => setSelectedTime(e.target.value)}
+                className="border px-2 py-1 rounded shadow-sm"
+              >
+                {Array.from(new Set(championStatsAll.map(d => d.updatetime)))
+                  .map(updatetime => (
+                    <option key={updatetime} value={updatetime ?? ""}>{updatetime ?? ""}</option>
                   ))}
               </select>
             </div>
