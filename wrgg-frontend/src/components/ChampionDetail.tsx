@@ -65,20 +65,22 @@ export const ChampionDetail: React.FC = () => {
   }, []);
 
   const champion = champions.find(champ => champ.id === id);
-  const changes =
-    champion && Object.entries(patchContents)
-      .reverse() 
-      .map(([patchName, content]) => {
-        const champChanges = content.champions[champion.name_ja];
-        if (!champChanges) return [];
-        return champChanges.map(change => ({
-          patch_name: patchName,
-          ...change,
-        }));
-      })
-      .flat()
-      .sort((a, b) => parseFloat(b.patch_name) - parseFloat(a.patch_name)) // 新しい順に
-    || [];
+  // パッチごとに変更点をまとめる
+  const groupedChanges = champion
+    ? Object.entries(patchContents)
+        .reverse()
+        .map(([patchName, content]) => {
+          const champChanges = content.champions[champion.name_ja];
+          if (!champChanges) return null;
+
+          return {
+            patch_name: patchName,
+            update_date: content.update_date,
+            changes: champChanges, // ← 1パッチ分まとめて保持
+          };
+        })
+        .filter((patch): patch is NonNullable<typeof patch> => patch !== null)
+    : [];
 
 
   useEffect(() => {
@@ -204,21 +206,29 @@ export const ChampionDetail: React.FC = () => {
       )}
 
       {/* 変更履歴部分 */}
-      {changes.length > 0 ? (
+      {groupedChanges.length > 0 ? (
         <ul className="space-y-4">
-          {changes.map((change, idx) => (
-            <li key={idx} className="border p-4 rounded-lg bg-white shadow-sm">
+          {groupedChanges.map((patch, idx) => (
+            <li 
+              key={idx} 
+              className="border p-4 rounded-lg bg-white shadow-sm"
+            >
               <p className="font-bold text-xl text-gray-900 mb-3">
-                {change.patch_name} の変更
+                {patch.patch_name} の変更
               </p>
-              <ul className="space-y-2 border-l-4 border-blue-500 pl-3">
-                <li>
-                  <p className="font-bold text-gray-800">{change.ability_title}</p>
-                  <div
-                    className="text-gray-700 text-sm leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: change.change_details }}
-                  />
-                </li>
+              <ul className="space-y-4 pl-3">
+                {patch.changes.map((change, i) => (
+                  <li 
+                    key={i} 
+                    className="border-l-4 border-blue-500 pl-3"
+                  >
+                    <p className="font-bold text-gray-800">{change.ability_title}</p>
+                    <div
+                      className=" text-gray-700 text-sm leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: change.change_details }}
+                    />
+                  </li>
+                ))}
               </ul>
             </li>
           ))}

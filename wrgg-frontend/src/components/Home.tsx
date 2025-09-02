@@ -76,16 +76,16 @@ export const Home: React.FC = () => {
 			<div className="border p-6 rounded-lg bg-gray-800 text-white space-y-6 shadow-md">
 				{/* サイトの使い方 */}
 				<section className="space-y-2">
-          <h2 className="text-xl font-semibold border-gray-600 pb-1">      パッチノートと中国版の統計データ（勝率・ピック率・バン率）をわかりやすくまとめて見ることができます。</h2>
+          <h2 className="text-xl font-semibold border-gray-600 pb-1">パッチノートと中国版の統計データ（勝率・ピック率・バン率）をわかりやすくまとめて見ることができます。</h2>
 					<h2 className="text-xl font-semibold border-gray-600 pb-1">サイトの使い方</h2>
 					<ol className="list-decimal list-inside space-y-1 text-gray-200">
-						<li>パッチノートから気になる <strong>チャンピオン</strong> を選んでみよう</li>
-						<li>チャンピオンごとに <strong>中国版の勝率、ピック率、バン率、過去の変更</strong> が見える</li>
+						<li>パッチノートから気になる <strong>チャンピオン</strong> をクリックしてみよう</li>
+						<li>チャンピオンごとに <strong>中国版の勝率、ピック率、バン率、過去の変更</strong> が見えるよ</li>
 					</ol>
 				</section>
 
 				<section className="space-y-1">
-					<h3 className="text-xl font-semibold border-gray-600 pb-1">パッチ一覧、チャンピオン一覧、データ一覧からも調べられる</h3>
+					<h3 className="text-xl font-semibold border-gray-600 pb-1">パッチ一覧、チャンピオン一覧、データ一覧からも調べられるよ</h3>
 				</section>
 			</div>
 

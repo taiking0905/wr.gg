@@ -39,7 +39,7 @@ npm run build-docs
 Github Actionsを使うことで毎週木曜の24:00に自動でスクレイピングをします。  
 ```bash
 python -m venv venv
-.\venv\Scripts\activat
+.\venv\Scripts\activate
 cd scraper
 pip install -r requirements.txt
 

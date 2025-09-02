@@ -39,6 +39,8 @@ jobs:
       - name: Run patch scraper
         run: python scraper/patch_scraper.py
 
+      - name: Run patch scraper
+        run: python scraper/champio_lane.py
 
       - name: Set up Node.js
         uses: actions/setup-node@v3

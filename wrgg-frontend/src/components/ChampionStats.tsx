@@ -39,9 +39,8 @@ export const ChampionStats: React.FC = () => {
       const statsRes = await fetch("/wr.gg/data/all_champion_data.json");
       const statsData: AllChampionData[] = await statsRes.json();
       setAllStats(statsData);
-      const allEntries = statsData.flatMap(champ => champ.data);
-      const firstRank = allEntries[0]?.rank || "";
-      const firstLane = allEntries[0]?.lane || "";
+      const firstRank = "Emerald";
+      const firstLane = "TOP";
       setSelectedRank(firstRank);
       setSelectedLane(firstLane);
     };
@@ -77,15 +76,19 @@ export const ChampionStats: React.FC = () => {
       {/* フィルタ & ソート */}
       <div className="flex gap-4 mb-6">
         <select value={selectedRank} onChange={e => setSelectedRank(e.target.value)} className="border px-2 py-1 rounded">
-          {Array.from(new Set(allEntries.map(d => d.rank))).map(rank => (
-            <option key={rank} value={rank}>{rank}</option>
-          ))}
+          <option value="Emerald">Emerald</option>
+          <option value="Diamond">Diamond</option>
+          <option value="Master">Master</option>
+          <option value="Challenger">Challenger</option>
+          <option value="legendary rank">legendary rank</option>
         </select>
 
         <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="border px-2 py-1 rounded">
-          {Array.from(new Set(allEntries.map(d => d.lane))).map(lane => (
-            <option key={lane} value={lane}>{lane}</option>
-          ))}
+          <option value="TOP">TOP</option>
+          <option value="JG">JG</option>
+          <option value="MID">MID</option>
+          <option value="ADC">ADC</option>
+          <option value="SUP">SUP</option>
         </select>
 
         <select value={sortKey} onChange={e => setSortKey(e.target.value as any)} className="border px-2 py-1 rounded">

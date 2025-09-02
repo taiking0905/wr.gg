@@ -5,11 +5,13 @@ interface Champion {
   id: string;
   name_ja: string;
   kana: string;
+  lanes:[string]
 }
 
 export const ChampionList: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedLane, setSelectedLane] = useState<string>("");
 
 
 
@@ -28,15 +30,22 @@ export const ChampionList: React.FC = () => {
     fetchData();
   }, []);
 
-  // 検索クエリに基づいてチャンピオンをフィルタリング
+  // 検索クエリ + レーン選択でフィルタリング
   const filteredChampions = champions.filter((champ) => {
     const query = searchQuery.toLowerCase();
     return (
       champ.name_ja.toLowerCase().includes(query) ||
-      champ.kana.toLowerCase().includes(query) ||
+      (champ.kana?.toLowerCase().includes(query) ?? false) ||
       champ.id.toLowerCase().includes(query)
     );
+  }).filter((champ) => {
+    // レーンフィルター
+    if (!selectedLane) return true;
+    if (Array.isArray(champ.lanes)) {
+      return champ.lanes.includes(selectedLane); // 配列対応
+    }
   });
+
 
 
   return (
@@ -60,6 +69,15 @@ export const ChampionList: React.FC = () => {
           className="border px-3 py-2 rounded w-full max-w-md mb-4"
         />
       </div>
+
+      <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="border px-2 py-1 rounded">
+          <option value="">ALL</option>
+          <option value="TOP">TOP</option>
+          <option value="JG">JG</option>
+          <option value="MID">MID</option>
+          <option value="ADC">ADC</option>
+          <option value="SUP">SUP</option>
+      </select>
 
       <div>
         <div

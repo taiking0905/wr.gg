@@ -143,9 +143,9 @@ export const PatchViewer: React.FC = () => {
                           {champion_name}
                         </p>
                         <ul className="space-y-4">
-                          {changes.map((change, i) => (
+                          {changes.map((change, idx) => (
                             <li
-                              key={i} // change が配列内で安定しているなら問題なし
+                              key={idx} // change が配列内で安定しているなら問題なし
                               className="border-l-4 border-blue-500 pl-3"
                             >
                               <p className="font-bold text-gray-800">
