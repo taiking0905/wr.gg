@@ -27,7 +27,7 @@ interface Champion {
 }
 
 export const PatchViewer: React.FC = () => {
-  const [patchNotes] = useState<PatchNote[]>([]);
+  const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [champions, setChampions] = useState<Champion[]>([]);
   const [selectedPatch, setSelectedPatch] = useState<string | null>(null);
@@ -40,7 +40,6 @@ export const PatchViewer: React.FC = () => {
             const patchNotes: PatchNote[] = await notesRes.json();
 
 
-
             const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
             if (!contentsRes.ok) throw new Error("patch_contents.json not found");
             const patchContents = await contentsRes.json();
@@ -48,6 +47,8 @@ export const PatchViewer: React.FC = () => {
             const champsRes = await fetch("/wr.gg/data/champions.json");
             if (!champsRes.ok) throw new Error("champions.json not found");
             const championData = await champsRes.json();     
+            
+            setPatchNotes(patchNotes);
             setPatchContents(patchContents);  
             setChampions(championData) 
 
@@ -137,14 +138,14 @@ export const PatchViewer: React.FC = () => {
 
                   return (
                     <Link key={championId} to={`/champion/${championId}`}>
-                      <li className="border p-4 rounded-lg bg-gray-10 shadow-sm">
+                      <li className="border p-4 rounded-lg bg-white shadow-sm">
                         <p className="font-bold text-xl text-gray-900 mb-3">
                           {champion_name}
                         </p>
                         <ul className="space-y-4">
-                          {changes.map((change, i) => (
+                          {changes.map((change, idx) => (
                             <li
-                              key={i} // change が配列内で安定しているなら問題なし
+                              key={idx} // change が配列内で安定しているなら問題なし
                               className="border-l-4 border-blue-500 pl-3"
                             >
                               <p className="font-bold text-gray-800">
