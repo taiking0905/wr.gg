@@ -93,10 +93,11 @@ export const ChampionDetail: React.FC = () => {
         setChampionStatsAll(data.data);
 
         if (data.data.length > 0) {
-          setDisplayStats(data.data[0]);
-          setSelectedRank(data.data[0].rank);
-          setSelectedLane(data.data[0].lane);
-          setSelectedTime(data.data[0].updatetime)
+        const latest = data.data[data.data.length - 1];
+        setDisplayStats(data.data[0]);
+        setSelectedRank(data.data[0].rank);
+        setSelectedLane(data.data[0].lane);
+        setSelectedTime(latest.updatetime);
         }
       } catch (error) {
         console.error(error);
