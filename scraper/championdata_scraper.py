@@ -72,21 +72,33 @@ def champion_data_scrape():
                         "name_ja": next((c["name_ja"] for c in champions if c["id"] == champ_id), None),
                         "data": []
                     }
-
-                # updatetime + rank + lane の組み合わせで重複チェック
-                if not any(
-                    d["updatetime"] == update_time and d["rank"] == rank_map.get(rank_num) and d["lane"] == lane_map.get(lane_num)
-                    for d in champ_data_existing["data"]
-                ):
-                    champ_data_existing["data"].append({
+                # updatetime ごとのスナップショットを取得、なければ新規作成
+                snapshot = next((s for s in champ_data_existing["data"] if s["updatetime"] == update_time), None)
+                if snapshot is None:
+                    snapshot = {
                         "updatetime": update_time,
-                        "lane": lane_map.get(lane_num, lane_num),
-                        "rank": rank_map.get(rank_num, rank_num),
+                        "entries": []
+                    }
+                    champ_data_existing["data"].append(snapshot)
+
+                # lane / rank の正規化値
+                lane_value = lane_map.get(lane_num, lane_num)
+                rank_value = rank_map.get(rank_num, rank_num)
+
+                # 同じ lane + rank が snapshot 内に存在するかチェック
+                exists = any(
+                    e["lane"] == lane_value and e["rank"] == rank_value
+                    for e in snapshot["entries"]
+                )
+                # 重複していなければ追加
+                if not exists:
+                    snapshot["entries"].append({
+                        "lane": lane_value,
+                        "rank": rank_value,
                         "winrate": winrate,
                         "pickrate": pickrate,
                         "banrate": banrate
                     })
-
                 # 個別ファイル保存
                 save_json(champ_file, champ_data_existing)
 
