@@ -1,15 +1,19 @@
 {
   "id": "Nilah",
   "name_ja": "ニーラ",
-  "data": [
+  "patches": [
     {
-      "updatetime": "2025/10/28",
-      "lane": "JG",
-      "rank": "Master",
-      "winrate": 53.8945,
-      "pickrate": 1.1202,
-      "banrate": 0.5137,
-      "patch_name": "ワイルドリフト パッチノート 6.3"
+      "patch": "ワイルドリフト パッチノート 6.3",
+      "date": "2025/10/28",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 53.8945,
+          "pickrate": 1.1202,
+          "banrate": 0.5137
+        }
+      ]
     }
   ]
 }
