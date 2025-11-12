@@ -8,6 +8,7 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 ALL_CHAMPIONS_DATA_JSON = os.path.join(DATA_DIR, 'all_champion_data.json')# チャンピオンの名前を保存するJSONファイル
+PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')# 最新のパッチ名を取得する
 def load_json(filename):
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as f:
@@ -19,7 +20,23 @@ def save_json(filename, data):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+def last_patch_name():
+    patch_data = load_json(PATCH_CONTENTS_JSON)
 
+    # update_date があるパッチだけ抽出
+    patch_dates = [
+        (name, info["update_date"])
+        for name, info in patch_data.items()
+        if info.get("update_date")
+    ]
+
+    if not patch_dates:
+        return None  # パッチがない場合は None を返す
+
+    # 日付でソートして最新パッチを取得
+    patch_dates.sort(key=lambda x: datetime.strptime(x[1], "%Y/%m/%d"))
+    latest_patch_name = patch_dates[-1][0]
+    return latest_patch_name
 
 def champion_data_scrape():
     champions = load_json(CHAMPIONS_JSON)
@@ -62,7 +79,7 @@ def champion_data_scrape():
 
                 champ_id = hero_id_map.get(hero_id, hero_id)
                 champ_file = os.path.join(save_dir, f"{champ_id}.json")
-
+                patch_name = last_patch_name()
                 # 個別ファイルは従来通り更新（過去データも保持）
                 if os.path.exists(champ_file):
                     champ_data_existing = load_json(champ_file)
@@ -77,6 +94,7 @@ def champion_data_scrape():
                 if snapshot is None:
                     snapshot = {
                         "updatetime": update_time,
+                        "patch_name":patch_name,
                         "entries": []
                     }
                     champ_data_existing["data"].append(snapshot)
@@ -97,7 +115,8 @@ def champion_data_scrape():
                         "rank": rank_value,
                         "winrate": winrate,
                         "pickrate": pickrate,
-                        "banrate": banrate
+                        "banrate": banrate,
+                        
                     })
                 # 個別ファイル保存
                 save_json(champ_file, champ_data_existing)
