@@ -83,21 +83,27 @@ def champion_data_scrape():
                 # 個別ファイルは従来通り更新（過去データも保持）
                 if os.path.exists(champ_file):
                     champ_data_existing = load_json(champ_file)
+
+                    if "patches" not in champ_data_existing or not isinstance(champ_data_existing["patches"], list):
+                        champ_data_existing["patches"] = []
+
                 else:
                     champ_data_existing = {
                         "id": champ_id,
                         "name_ja": next((c["name_ja"] for c in champions if c["id"] == champ_id), None),
-                        "data": []
+                        "patches": []
                     }
                 # updatetime ごとのスナップショットを取得、なければ新規作成
-                snapshot = next((s for s in champ_data_existing["data"] if s["updatetime"] == update_time), None)
-                if snapshot is None:
+                snapshots = [s for s in champ_data_existing["patches"] if s["patch"] == patch_name]
+                if snapshots:
+                    snapshot = snapshots[0]
+                else:
                     snapshot = {
-                        "updatetime": update_time,
-                        "patch_name":patch_name,
-                        "entries": []
+                        "patch": patch_name,
+                        "date": update_time,
+                        "data": []
                     }
-                    champ_data_existing["data"].append(snapshot)
+                    champ_data_existing["patches"].append(snapshot)
 
                 # lane / rank の正規化値
                 lane_value = lane_map.get(lane_num, lane_num)
@@ -106,11 +112,11 @@ def champion_data_scrape():
                 # 同じ lane + rank が snapshot 内に存在するかチェック
                 exists = any(
                     e["lane"] == lane_value and e["rank"] == rank_value
-                    for e in snapshot["entries"]
+                    for e in snapshot["data"]
                 )
                 # 重複していなければ追加
                 if not exists:
-                    snapshot["entries"].append({
+                    snapshot["data"].append({
                         "lane": lane_value,
                         "rank": rank_value,
                         "winrate": winrate,

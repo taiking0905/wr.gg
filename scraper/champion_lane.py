@@ -28,10 +28,11 @@ def champion_lane():
         champ_json = load_json(champ_file)
 
         lanes = set()
-        for entry in champ_json.get("data", []):
-            lane = entry.get("lane")
-            if lane:
-                lanes.add(lane)
+        for patch in champ_json.get("patches", []):
+            for entry in patch.get("data", []):
+                lane = entry.get("lane")
+                if lane:
+                    lanes.add(lane)
 
         # lanes が空でなければ追加
         if lanes:
@@ -40,6 +41,7 @@ def champion_lane():
     # champions.json を上書き
     save_json(CHAMPIONS_JSON, champions)
     print("champions.json に lanes を追加しました")
+
 
 def add_manual_lanes_bulk():
     # 使い方例
@@ -64,12 +66,9 @@ def add_manual_lanes_bulk():
     print("複数チャンピオンの lanes 追加が完了しました")
 
 
-
-
-add_manual_lanes_bulk()
-
 def main():
     champion_lane()
+    add_manual_lanes_bulk()
 
 if __name__ =="__main__":
     main()
