@@ -94,13 +94,13 @@ def champion_data_scrape():
                         "patches": []
                     }
                 # updatetime ごとのスナップショットを取得、なければ新規作成
-                snapshots = [s for s in champ_data_existing["patches"] if s["patch"] == patch_name]
+                snapshots = [s for s in champ_data_existing["patches"] if s["patch_name"] == patch_name]
                 if snapshots:
                     snapshot = snapshots[0]
                 else:
                     snapshot = {
-                        "patch": patch_name,
-                        "date": update_time,
+                        "patch_name": patch_name,
+                        "updatetime": update_time,
                         "data": []
                     }
                     champ_data_existing["patches"].append(snapshot)
