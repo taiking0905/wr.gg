@@ -202,7 +202,7 @@ useEffect(() => {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm font-medium">更新日</label>
+              <label className="block mb-1 text-sm font-medium">パッチ</label>
               <select
                 value={selectedPatch ?? ""}
                 onChange={(e) => setSelectedPatch(e.target.value)}
