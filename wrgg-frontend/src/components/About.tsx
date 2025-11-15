@@ -33,14 +33,6 @@ export const About: React.FC = () => {
       <p className="text-gray-700 leading-relaxed">
         本サイトは営利目的ではなく、個人・コミュニティ向けの情報提供を目的としています。
       </p>
-      <p className="text-gray-700 leading-relaxed font-semibold text-red-600">
-        本サイトのコンテンツの無断転載や商業利用は禁止です。
-      </p>
-
-      <h2 className="text-2xl font-bold border-b pb-2 mb-4">免責事項</h2>
-      <p className="text-gray-700 leading-relaxed">
-        掲載している情報は可能な限り正確を期していますが、正確性を保証するものではありません。利用にあたっては自己責任でお願いします。
-      </p>
 
       <h2 className="text-2xl font-bold border-b pb-2 mb-4">お問い合わせ先</h2>
       <p className="text-gray-700 leading-relaxed">

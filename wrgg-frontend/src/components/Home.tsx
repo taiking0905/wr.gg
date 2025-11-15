@@ -26,11 +26,29 @@ interface Champion {
   kana: string;
 }
 
+interface ChampionStatsEntry {
+  updatetime: string;
+  lane: string;
+  rank: string;
+  winrate: number;
+  pickrate: number;
+  banrate: number;
+}
+
+interface AllChampionData {
+  id: string;
+  name_ja: string;
+  data: ChampionStatsEntry[];
+}
+
+
 export const Home: React.FC = () => {
   const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [champions, setChampions] = useState<Champion[]>([]);
   const [latestPatch, setLatestPatch] = useState<string | null>(null);
+  const [latestPatchUpdate, setLatestPatchUpdate] = useState<string>("N/A");
+  const [latestStatUpdate, setLatestStatUpdate] = useState<string>("N/A");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,22 +56,34 @@ export const Home: React.FC = () => {
         const notesRes = await fetch("/wr.gg/data/patch_notes.json");
         const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
         const champsRes = await fetch("/wr.gg/data/champions.json");
+        const statsRes = await fetch("/wr.gg/data/all_champion_data.json");
 
-        if (!notesRes.ok || !contentsRes.ok || !champsRes.ok) {
+        if (!notesRes.ok || !contentsRes.ok || !champsRes.ok || !statsRes.ok) {
           throw new Error("データの取得に失敗しました");
         }
 
         const notes: PatchNote[] = await notesRes.json();
         const contents: PatchContents = await contentsRes.json();
         const champs: Champion[] = await champsRes.json();
+        const allChampionData: AllChampionData[] = await statsRes.json();
 
         const patchNames = Object.keys(contents);
         const latest = patchNames[patchNames.length - 1];
+        
 
         setPatchNotes(notes);
         setPatchContents(contents);
         setChampions(champs);
         setLatestPatch(latest);
+        setLatestPatchUpdate(contents[latest]?.update_date ?? "N/A");
+
+        // 統計データ更新日を別の JSON から取得
+        const latestStat = allChampionData
+          .flatMap(champ => champ.data)
+          .sort((a, b) => a.updatetime.localeCompare(b.updatetime))
+          .pop()?.updatetime ?? "N/A";
+
+        setLatestStatUpdate(latestStat);
 
         console.log("loaded:", { notes, contents, champs });
       } catch (error) {
@@ -73,22 +103,29 @@ export const Home: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
       <h1 className="text-2xl font-bold mb-4">WR.GG</h1>
-			<div className="border p-6 rounded-lg bg-gray-800 text-white space-y-6 shadow-md">
-				{/* サイトの使い方 */}
-				<section className="space-y-2">
-          <h2 className="text-xl font-semibold border-gray-600 pb-1">パッチノートと中国版の統計データ（勝率・ピック率・バン率）をわかりやすくまとめて見ることができます。</h2>
-					<h2 className="text-xl font-semibold border-gray-600 pb-1">サイトの使い方</h2>
-					<ol className="list-decimal list-inside space-y-1 text-gray-200">
-						<li>パッチノートから気になる <strong>チャンピオン</strong> をクリックしてみよう</li>
-						<li>チャンピオンごとに <strong>中国版の勝率、ピック率、バン率、過去の変更</strong> が見えるよ</li>
-					</ol>
-				</section>
+      <div className="border p-6 rounded-lg bg-gray-800 text-white space-y-6 shadow-md">
+        {/* サイトの特徴 */}
+        <section className="space-y-2">
+          <h2 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">
+            パッチノートと中国版の統計データ（勝率・ピック率・バン率）を
+            わかりやすく確認できます。
+          </h2>
 
-				<section className="space-y-1">
-					<h3 className="text-xl font-semibold border-gray-600 pb-1">パッチ一覧、チャンピオン一覧、データ一覧からも調べられるよ</h3>
-				</section>
-			</div>
+          <h2 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">
+            気になるチャンピオンをクリックすると、過去の統計データを確認できます。
+          </h2>
+      </section>
 
+      <section className="space-y-1">
+        <h3 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">最新更新情報</h3>
+        <p className="text-sm md:text-base">
+          パッチノート更新日：<strong>{latestPatchUpdate}</strong>
+        </p>
+        <p className="text-sm md:text-base">
+          統計データ更新日：<strong>{latestStatUpdate}</strong>
+        </p>
+      </section>
+      </div>
       {/* パッチ詳細 */}
       <div className="mt-6">
         <h2 className="text-xl mb-2">

@@ -22,26 +22,34 @@ interface Champion {
 }
 
 interface ChampionStatsEntry {
-  updatetime: string;
   lane: string;
   rank: string;
   winrate: number;
   pickrate: number;
   banrate: number;
+  updatetime: string;
+  patchname : string;
+}
+
+interface PatchInfo {
+  patch_name: string;
+  updatetime: string;
+  data: ChampionStatsEntry[];
 }
 
 interface ChampionData {
   id: string;
   name_ja: string;
-  data: ChampionStatsEntry[];
+  patches: PatchInfo[];
 }
+
 
 export const ChampionDetail: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [selectedRank, setSelectedRank] = useState<string>("");
   const [selectedLane, setSelectedLane] = useState<string>("");
-  const [selectedTime, setSelectedTime] = useState<string>("");
+  const [selectedPatch, setSelectedPatch] = useState<string>("");
   const [displayStats, setDisplayStats] = useState<ChampionStatsEntry | null>(null);
   const [championStatsAll, setChampionStatsAll] = useState<ChampionStatsEntry[]>([]);
 
@@ -84,37 +92,57 @@ export const ChampionDetail: React.FC = () => {
     : [];
 
 
-  useEffect(() => {
+useEffect(() => {
+  const fetchChampionStats = async () => {
+    try {
+      const res = await fetch(`/wr.gg/data/champion_data/${id}.json`);
+      if (!res.ok) throw new Error("Champion data not found");
+      const data: ChampionData = await res.json();
 
-    const fetchChampionStats = async () => {
-      try {
-        const res = await fetch(`/wr.gg/data/champion_data/${id}.json`);
-        const data: ChampionData = await res.json();
-        setChampionStatsAll(data.data);
+      // patches を平坦化してすべての統計を取得
+      const allStats: ChampionStatsEntry[] = data.patches.flatMap(patch =>
+        patch.data.map(d => ({
+          ...d,
+          updatetime: patch.updatetime, // 日付を補完
+          patchname: patch.patch_name, // パッチ名を補完
+        }))
+      );
+      
 
-        if (data.data.length > 0) {
-        const latest = data.data[data.data.length - 1];
-        setDisplayStats(data.data[0]);
-        setSelectedRank(data.data[0].rank);
-        setSelectedLane(data.data[0].lane);
-        setSelectedTime(latest.updatetime);
-        }
-      } catch (error) {
-        console.error(error);
+      setChampionStatsAll(allStats);
+
+      if (allStats.length > 0) {
+        const newestPatch = data.patches[data.patches.length - 1].patch_name;
+
+        // 最新パッチのデータだけに絞る
+        const newestPatchStats = allStats.filter(s => s.patchname === newestPatch);
+
+        // Master があれば優先、なければ先頭
+        const latest = newestPatchStats.find(s => s.rank === "Master") || newestPatchStats[0];
+
+        setDisplayStats(latest);
+        setSelectedRank(latest.rank);
+        setSelectedLane(latest.lane);
+        setSelectedPatch(latest.patchname);
       }
-    };
-    fetchChampionStats();
-  }, [champion]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchChampionStats();
+}, [id]);
+
 
   useEffect(() => {
     if (!championStatsAll.length) return;
 
     const stats = championStatsAll.find(d =>
-      d.rank === selectedRank && d.lane === selectedLane && d.updatetime == selectedTime
+      d.rank === selectedRank && d.lane === selectedLane && d.patchname == selectedPatch
     );
 
     setDisplayStats(stats || null);
-  }, [selectedRank, selectedLane, selectedTime, championStatsAll]);
+  }, [selectedRank, selectedLane, selectedPatch, championStatsAll]);
 
   if (!champion) {
     return (
@@ -176,18 +204,26 @@ export const ChampionDetail: React.FC = () => {
             <div>
               <label className="block mb-1 text-sm font-medium">更新日</label>
               <select
-                value={selectedTime ?? ""}
-                onChange={(e) => setSelectedTime(e.target.value)}
+                value={selectedPatch ?? ""}
+                onChange={(e) => setSelectedPatch(e.target.value)}
                 className="inline-block border px-2 py-1 rounded"
               >
-                {Array.from(new Set(championStatsAll.map(d => d.updatetime)))
-                  .map(updatetime => (
-                    <option key={updatetime} value={updatetime ?? ""}>{updatetime ?? ""}</option>
-                  ))}
+                {Array.from(new Set(championStatsAll.map(d => d.patchname)))
+                  .map(fullPatchName  => {
+                    const displayName = fullPatchName.replace("ワイルドリフト パッチノート ", "");
+                    return (
+                      <option key={fullPatchName} value={fullPatchName}>
+                        Patch {displayName}
+                      </option>
+                    );
+                  })}
               </select>
             </div>
           </div>
-          <div className="h-4"></div>
+          <div className="h-2"></div>
+          <div className="flex justify-end mb-2 text-sm text-gray-500">
+            データ更新日: {displayStats?.updatetime ?? "N/A"}
+          </div>
 
           <div className="grid grid-cols-3 gap-4 text-center">
             <div className="p-2 bg-white rounded shadow-sm">

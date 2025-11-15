@@ -39,7 +39,7 @@ export const ChampionStats: React.FC = () => {
       const statsRes = await fetch("/wr.gg/data/all_champion_data.json");
       const statsData: AllChampionData[] = await statsRes.json();
       setAllStats(statsData);
-      const firstRank = "Emerald";
+      const firstRank = "Master";
       const firstLane = "TOP";
       setSelectedRank(firstRank);
       setSelectedLane(firstLane);
@@ -71,7 +71,7 @@ export const ChampionStats: React.FC = () => {
 
   return (
     <div className="p-6 flex flex-col items-center">
-      <h1 className="text-2xl font-bold mb-4">最新データ一覧</h1>
+      <h1 className="text-2xl font-bold mb-4">最新データ一覧 ({sorted[0]?.updatetime ?? "N/A"})</h1>
 
       {/* フィルタ & ソート */}
       <div className="mb-6 p-4 rounded-lg w-full max-w-3xl">
@@ -118,7 +118,7 @@ export const ChampionStats: React.FC = () => {
               <img
                 src={info.img_url}
                 alt={info.name_ja}
-                className="w-12 h-12 rounded"
+                className="w-16 h-16"
               />
             )}
             <div>
