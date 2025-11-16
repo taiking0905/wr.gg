@@ -109,20 +109,33 @@ def champion_data_scrape():
                 lane_value = lane_map.get(lane_num, lane_num)
                 rank_value = rank_map.get(rank_num, rank_num)
 
-                # 同じ lane + rank が snapshot 内に存在するかチェック
-                exists = any(
-                    e["lane"] == lane_value and e["rank"] == rank_value
-                    for e in snapshot["data"]
-                )
-                # 重複していなければ追加
-                if not exists:
+                updated = False
+                for entry in snapshot["data"]:
+                    if entry["lane"] == lane_value and entry["rank"] == rank_value:
+
+                        # すでに全く同じ値なら、更新しない
+                        if (entry["winrate"] == winrate and
+                            entry["pickrate"] == pickrate and
+                            entry["banrate"] == banrate):
+                            updated = True  # "存在している" という意味で True にする
+                            break
+
+                        # 🔥 値が違った時だけ更新
+                        entry["winrate"] = winrate
+                        entry["pickrate"] = pickrate
+                        entry["banrate"] = banrate
+                        snapshot["updatetime"] = update_time
+                        updated = True
+                        break
+
+                # もし既存が無ければ新規追加
+                if not updated:
                     snapshot["data"].append({
                         "lane": lane_value,
                         "rank": rank_value,
                         "winrate": winrate,
                         "pickrate": pickrate,
                         "banrate": banrate,
-                        
                     })
                 # 個別ファイル保存
                 save_json(champ_file, champ_data_existing)
