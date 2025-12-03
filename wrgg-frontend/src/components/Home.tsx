@@ -1,23 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-interface PatchNote {
-  patch_name: string;
-  patch_link: string;
-}
-
 interface PatchContents {
   [patch_name: string]: {
     update_date: string;
-    champions: {
-      [champion_name: string]: ChampionChange[];
-    };
+    champions: string[]; // チャンピオン名だけ
   };
-}
-
-interface ChampionChange {
-  ability_title: string;
-  change_details: string;
 }
 
 interface Champion {
@@ -41,14 +29,19 @@ interface AllChampionData {
   data: ChampionStatsEntry[];
 }
 
+interface AiHighlight {
+  ranking: string;     
+  champion: string;   
+  reason: string;
+}
 
 export const Home: React.FC = () => {
-  const [patchNotes, setPatchNotes] = useState<PatchNote[]>([]);
   const [patchContents, setPatchContents] = useState<PatchContents>({});
   const [champions, setChampions] = useState<Champion[]>([]);
   const [latestPatch, setLatestPatch] = useState<string | null>(null);
   const [latestPatchUpdate, setLatestPatchUpdate] = useState<string>("N/A");
   const [latestStatUpdate, setLatestStatUpdate] = useState<string>("N/A");
+  const [aiHighlights, setAiHighlights] = useState<AiHighlight[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,25 +50,25 @@ export const Home: React.FC = () => {
         const contentsRes = await fetch("/wr.gg/data/patch_contents.json");
         const champsRes = await fetch("/wr.gg/data/champions.json");
         const statsRes = await fetch("/wr.gg/data/all_champion_data.json");
+        const AIRes = await fetch("/wr.gg/data/AI/output_ai.json");
 
-        if (!notesRes.ok || !contentsRes.ok || !champsRes.ok || !statsRes.ok) {
+        if (!notesRes.ok || !contentsRes.ok || !champsRes.ok || !statsRes.ok || !AIRes.ok) {
           throw new Error("データの取得に失敗しました");
         }
 
-        const notes: PatchNote[] = await notesRes.json();
         const contents: PatchContents = await contentsRes.json();
         const champs: Champion[] = await champsRes.json();
         const allChampionData: AllChampionData[] = await statsRes.json();
+        const aiData: AiHighlight[] = await AIRes.json();
 
         const patchNames = Object.keys(contents);
         const latest = patchNames[patchNames.length - 1];
-        
 
-        setPatchNotes(notes);
         setPatchContents(contents);
         setChampions(champs);
         setLatestPatch(latest);
         setLatestPatchUpdate(contents[latest]?.update_date ?? "N/A");
+        setAiHighlights(aiData);
 
         // 統計データ更新日を別の JSON から取得
         const latestStat = allChampionData
@@ -85,7 +78,7 @@ export const Home: React.FC = () => {
 
         setLatestStatUpdate(latestStat);
 
-        console.log("loaded:", { notes, contents, champs });
+        console.log("loaded:", {contents, champs });
       } catch (error) {
         console.error("データの読み込みに失敗しました:", error);
       }
@@ -97,7 +90,6 @@ export const Home: React.FC = () => {
     return <p className="text-gray-600">読み込み中...</p>;
   }
 
-  const latestNote = patchNotes.find((p) => p.patch_name === latestPatch);
   const changes = patchContents[latestPatch]?.champions ?? {};
 
   return (
@@ -128,67 +120,66 @@ export const Home: React.FC = () => {
       </div>
       {/* パッチ詳細 */}
       <div className="mt-6">
-        <h2 className="text-xl mb-2">
-          {latestPatch} の変更点
-        </h2>
-			
+        <h2 className="text-xl mb-2">{latestPatch} の注目チャンピオン</h2>
 
-      {/* 公式リンク */}
-      {latestNote && (
-        <a
-          href={latestNote.patch_link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-blue-600 underline"
-        >
-          {latestNote.patch_name} の公式リンクを見る
-        </a>
-      )}
-
-        {Object.keys(changes).length > 0 ? (
-          <ul className="flex flex-col gap-4">
-            {Object.entries(changes).map(([champion_name, details]) => {
+        {/* パッチ変更があったチャンピオン（アイコンのみ） */}
+        {Object.keys(changes).length > 0 && (
+          <ul className="flex flex-wrap gap-4">
+            {Object.keys(changes).map((champion_name) => {
               const champ = champions.find((c) => c.name_ja === champion_name);
               const champId = champ?.id ?? "notfound";
 
               return (
                 <Link key={champId} to={`/champion/${champId}`}>
-                  <li className="border p-4 rounded-lg bg-white shadow-sm">
-                    <p className="font-bold text-xl text-gray-900 mb-3">
-                      {champion_name}
+                  <li className="border p-2 rounded-lg bg-white shadow-sm w-32 text-center">
+                    {champ && (
+                      <img
+                        src={`/wr.gg/data/champion_images/${champ.id}.png`}
+                        alt={champ.name_ja}
+                        className="mx-auto mb-2 max-w-full max-h-30 object-contain"
+                      />
+                    )}
+                    <p className="font-bold text-sm text-gray-900">
+                      {champ?.name_ja ?? champion_name}
                     </p>
-                    <ul className="space-y-4">
-                      {details.map((change, i) => (
-                        <li
-                          key={i}
-                          className="border-l-4 border-blue-500 pl-3"
-                        >
-                          <p className="font-bold">
-                            {change.ability_title}
-                          </p>
-                          <div
-                            className="text-sm mt-1 leading-relaxed"
-                            dangerouslySetInnerHTML={{
-                              __html: change.change_details,
-                            }}
-                          />
-                        </li>
-                      ))}
-                    </ul>
                   </li>
                 </Link>
               );
             })}
           </ul>
-        ) : (
-          <div>
-            <p className="pt-20">
-              このパッチには変更内容が登録されていません。
-            </p>
-            <img src="/wr.gg/null.gif" alt="アニメーションGIF" />
+        )}
+        {/* AIが選んだ今回の見どころトップ5 */}
+        {aiHighlights.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-3">AIが選んだ注目チャンピオン</h3>
+            <ul className="flex flex-col gap-4">
+              {aiHighlights.map((highlight) => {
+                const champ = champions.find((c) => c.id === highlight.champion);
+                const champId = champ?.id ?? "notfound";
+
+                return (
+                  <Link key={champId} to={`/champion/${champId}`}>
+                    <li className="border p-4 rounded-lg bg-white shadow-sm">
+                      {champ && (
+                        <img
+                          src={`/wr.gg/data/champion_images/${champ.id}.png`}
+                          alt={champ.name_ja}
+                          className="mx-auto mb-2 max-w-full max-h-40 object-contain"
+                        />
+                      )}
+                      <p className="font-bold text-xl text-gray-900 mb-1">
+                        {highlight.ranking}. {highlight.champion}
+                      </p>
+                      <p className="text-sm leading-relaxed">{highlight.reason}</p>
+                    </li>
+                  </Link>
+                );
+              })}
+            </ul>
           </div>
         )}
       </div>
+
     </div>
   );
 };
