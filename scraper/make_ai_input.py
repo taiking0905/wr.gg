@@ -7,7 +7,7 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 
 # --- チャンピオンデータ関連 ---
 CHAMPION_DIR = os.path.join(DATA_DIR, 'champion_data')
-OUTPUT_DIR = os.path.join(DATA_DIR, 'make_ai_input')
+OUTPUT_DIR = os.path.join(DATA_DIR, 'AI')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 latest_data = {}
