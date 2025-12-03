@@ -26,6 +26,8 @@ jobs:
         run: pip install -r scraper/requirements.txt
 
       - name: Run AI response
+        env:
+            GEMINI_API: ${{ secrets.GEMINI_API }}
         run: python scraper/response_ai.py
 
       - name: Commit and push AI output
