@@ -41,8 +41,6 @@ jobs:
       - name: Run champion data scraper
         run: python scraper/championdata_scraper.py
 
-      - name: Run AI response
-        run: python scraper/response_ai.py
 
       - name: Set up Node.js
         uses: actions/setup-node@v3

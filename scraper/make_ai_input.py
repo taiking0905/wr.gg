@@ -35,13 +35,13 @@ for file_name in os.listdir(CHAMPION_DIR):
     latest_data[champion_id] = patches[-1]
 
 # 出力
-with open(os.path.join(OUTPUT_DIR, 'previous_data.json'), 'w', encoding='utf-8') as f:
+with open(os.path.join(OUTPUT_DIR, 'previous_input.json'), 'w', encoding='utf-8') as f:
     json.dump(previous_data, f, ensure_ascii=False, indent=2)
 
-with open(os.path.join(OUTPUT_DIR, 'latest_data.json'), 'w', encoding='utf-8') as f:
+with open(os.path.join(OUTPUT_DIR, 'latest_input.json'), 'w', encoding='utf-8') as f:
     json.dump(latest_data, f, ensure_ascii=False, indent=2)
 
-print("latest_data.json と previous_data.json を作成しました")
+print("latest_input.json と previous_input.json を作成しました")
 
 
 # --- パッチノート関連 ---
