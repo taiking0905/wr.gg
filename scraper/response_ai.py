@@ -44,8 +44,11 @@ prompt = f"""
 - 同一チャンピオン・同一ランク内の変化のみ比較（縦比較禁止）
 - 勝率 ±1%以上、ピック率/バン率 ±0.5%以上の変化が対象
 - 上昇も下降も重要
-- ランクの重要度は Master > Challenger > Diamond > Legendary_rank > Emerald とし、重み付けを考慮して評価する。 
-- Master、Challenger、Diamondを最優先評価。Legendary_rank、Emeraldは補助としてのみ使用
+- ランクの重要度は Master > Diamond > Challenger > Legendary_rank > Emerald とし、重み付けを考慮して評価する。 
+- ランクの評価優先度は以下の通り：
+  1. Master, Diamond（最優先）
+  2. Challenger（次点）
+  3. Legendary_rank, Emerald（補助のみ）
 - 複数レーンで変化している場合は優先
 - パッチノートは参考のみ（計算に直接使わない）
 - RAG のため、与えたデータ以外は使用禁止
@@ -78,8 +81,11 @@ while not success and retry_count < MAX_RETRY:
         response = client.models.generate_content(
             model="gemini-2.5-flash-lite",
             contents=prompt,
-            config={
-                "max_output_tokens": 2000
+            config = {
+                "max_output_tokens": 2000,
+                "temperature": 0,  # フォーマット厳守
+                "top_p": 1,
+                "candidate_count": 1
             }
         )
         raw = response.text.strip()
