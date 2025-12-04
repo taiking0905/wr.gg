@@ -34,6 +34,12 @@ interface AiHighlight {
   champion: string;   
   reason: string;
 }
+interface TopChampion {
+  championId: string;
+  championName: string;
+  lane: string;
+  score: number;
+}
 
 export const Home: React.FC = () => {
   const [patchContents, setPatchContents] = useState<PatchContents>({});
@@ -42,7 +48,7 @@ export const Home: React.FC = () => {
   const [latestPatchUpdate, setLatestPatchUpdate] = useState<string>("N/A");
   const [latestStatUpdate, setLatestStatUpdate] = useState<string>("N/A");
   const [aiHighlights, setAiHighlights] = useState<AiHighlight[]>([]);
-  const [opTop10, setOpTop10] = useState<AllChampionData[]>([]);
+  const [opTop10, setOpTop10] = useState<TopChampion[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -80,21 +86,25 @@ export const Home: React.FC = () => {
         setLatestStatUpdate(latestStat);
         
         // 各チャンプの最新統計を取得してスコア計算
-        const top10 = allChampionData
-          .map(champ => {
-            const masterData = champ.data.filter(d => d.rank === "Master");
-            if (masterData.length === 0) return null;
+      // laneごとに個別にスコア計算してフラットに
+// laneごとに個別スコア計算
+const top10 = allChampionData
+  .map(champ => {
+    const masterEntries = champ.data.filter(e => e.rank === "Master");
+    return masterEntries.map(e => ({
+      championId: champ.id,
+      championName: champ.name_ja,
+      lane: e.lane,
+      score: e.winrate * 0.5 + e.pickrate * 0.3 + e.banrate * 0.2,
+    }));
+  })
+  .flat()
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 10); // laneごとのTop10
 
-            const latest = masterData[masterData.length - 1];
-            const score = latest.winrate * 0.6 + latest.pickrate * 0.2 + latest.banrate * 0.2;
+setOpTop10(top10);
+console.log("OP Top10 (lane別保持):", top10);
 
-            return { ...champ, score };
-          })
-          .filter((item): item is Exclude<typeof item, null> => item !== null)
-          .sort((a, b) => (b.score - a.score))
-          .slice(0, 10); // 上位10件だけ取得
-
-        setOpTop10(top10);
 
 
           console.log("loaded:", {contents, champs });
@@ -167,9 +177,10 @@ export const Home: React.FC = () => {
                         alt={champ.name_ja}
                         className="
                           mx-auto mb-1 object-contain
-                          max-h-16       /* base */
-                          sm:max-h-20
-                          md:max-h-32
+                          max-h-20
+                          sm:max-h-24
+                          md:max-h-28
+                          lg:max-h-32
                         "
                       />
                     )}
@@ -189,35 +200,34 @@ export const Home: React.FC = () => {
             <h2 className="text-xl mb-2">OPランキングトップ10</h2>
             <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
               {opTop10.map((champ) => {
-                const latest = champ.data.filter(d => d.rank === "Master").slice(-1)[0];
-                const score = (latest.winrate * 0.6 + latest.pickrate * 0.2 + latest.banrate * 0.2).toFixed(2);
-
+                const champData = champions.find((c) => c.id === champ.championId);
                 return (
                   <Link
-                    key={champ.id}
-                    to={`/champion/${champ.id}`}
+                    key={`${champ.championId}-${champ.lane}`}
+                    to={`/champion/${champ.championId}`}
                     className="flex-shrink-0 cursor-pointer text-center rounded-lg p-2 bg-white border shadow-sm"
                   >
                     {/* 画像 */}
                     <img
-                      src={`/wr.gg/data/champion_images/${champ.id}.png`}
-                      alt={champ.name_ja}
+                      src={`/wr.gg/data/champion_images/${champ.championId}.png`}
+                      alt={champ.championName}
                       className="
                         mx-auto mb-1 object-contain
-                        max-h-16       /* base */
-                        sm:max-h-20
-                        md:max-h-32
+                          max-h-20
+                          sm:max-h-24
+                          md:max-h-28
+                          lg:max-h-32
                       "
                     />
 
                     {/* 名前 */}
-                    <p className="text-xs font-semibold text-gray-900">{champ.name_ja}</p>
+                    <p className="text-xs font-semibold text-gray-900">{champ.championName}</p>
 
                     {/* レーン */}
-                    <p className="text-xs text-gray-600">{latest.lane}</p>
+                    <p className="text-xs text-gray-600">{champ.lane}</p>
 
                     {/* スコア */}
-                    <p className="text-xs text-gray-700 font-bold">{score}</p>
+                    <p className="text-xs text-gray-700 font-bold">{champ.score.toFixed(2)}</p>
                   </Link>
                 );
               })}
