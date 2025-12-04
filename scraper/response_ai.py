@@ -77,7 +77,10 @@ while not success and retry_count < MAX_RETRY:
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash-lite",
-            contents=prompt
+            contents=prompt,
+            config={
+                "max_output_tokens": 2000
+            }
         )
         raw = response.text.strip()
 
