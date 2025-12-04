@@ -101,7 +101,7 @@ export const ChampionList: React.FC = () => {
               <img
                 src={`/wr.gg/data/champion_images/${champ.id}.png`}
                 alt={champ.name_ja}
-                className="mx-auto mb-2 max-w-full max-h-40 object-contain"
+                className="mx-auto mb-2 max-w-full max-h-32 object-contain"
               />
               <p className="font-semibold text-gray-800">{champ.name_ja}</p>
             </Link>

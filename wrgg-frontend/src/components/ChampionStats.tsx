@@ -118,7 +118,12 @@ export const ChampionStats: React.FC = () => {
               <img
                 src={info.img_url}
                 alt={info.name_ja}
-                className="w-16 h-16"
+                className="
+                    max-h-16
+                    sm:max-h-20
+                    md:max-h-24
+                    lg:max-h-28
+                "
               />
             )}
             <div>
