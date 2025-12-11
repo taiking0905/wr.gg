@@ -7,6 +7,14 @@ from dotenv import load_dotenv
 # .envファイルを読み込む
 load_dotenv()
 api_key = os.getenv('GEMINI_API')
+print("GEMINI_API =", api_key)
+
+if api_key is None:
+    print("GEMINI_API: None（渡っていない）")
+elif api_key == "":
+    print("GEMINI_API: 空文字（渡ってるが空）")
+else:
+    print("GEMINI_API: OK（値は存在する）")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data/AI')
