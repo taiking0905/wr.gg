@@ -25,6 +25,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
 
+      - name: Run Make_ai_input
+        run: python scraper/make_ai_input.pys
+
       - name: Run AI response
         env:
             GEMINI_API: ${{ secrets.GEMINI_API }}
