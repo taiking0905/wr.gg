@@ -7,14 +7,14 @@ CHAMPION_DIR = os.path.join(DATA_DIR, 'champion_data')
 OUTPUT_DIR = os.path.join(DATA_DIR, 'AI')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-threshold_win = 3.0  # win/pick/ban の差分閾値(%)
-threshold = 5.0
+threshold_win = 2.0  # win/pick/ban の差分閾値(%)
+threshold = 3.0
 diff_input = {}
 
 rank_weight = {
-    "Master": 6,
-    "Diamond": 4,
-    "Challenger": 2,
+    "Master": 8,
+    "Diamond": 6,
+    "Challenger": 3,
     "Legendary_rank": 1,
     "Emerald": 1
 }
@@ -37,8 +37,15 @@ for file_name in os.listdir(CHAMPION_DIR):
     champ_id = champ_data.get("id", file_name.replace('.json',''))
     champ_name_ja = champ_data.get("name_ja", champ_id)  # 日本語名
 
+    prev_dict = {(e["lane"], e["rank"]): e for e in prev_patch["data"]}
     champ_diff = []
-    for latest_entry, prev_entry in zip(latest_patch['data'], prev_patch['data']):
+
+    for latest_entry in latest_patch["data"]:
+        key = (latest_entry["lane"], latest_entry["rank"])
+        prev_entry = prev_dict.get(key)
+        if not prev_entry:
+            continue
+
         win_diff = latest_entry['winrate'] - prev_entry['winrate']
         pick_diff = latest_entry['pickrate'] - prev_entry['pickrate']
         ban_diff = latest_entry['banrate'] - prev_entry['banrate']

@@ -200,7 +200,6 @@ console.log("OP Top10 (lane別保持):", top10);
             <h2 className="text-xl mb-2">OPランキングトップ10</h2>
             <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
               {opTop10.map((champ) => {
-                const champData = champions.find((c) => c.id === champ.championId);
                 return (
                   <Link
                     key={`${champ.championId}-${champ.lane}`}
@@ -241,16 +240,16 @@ console.log("OP Top10 (lane別保持):", top10);
             <h2 className="text-xl mb-2">AIが選んだ注目チャンピオン</h2>
 
             <ul className="flex flex-col gap-4">
-              {aiHighlights.map((highlight) => {
-                const champ = champions.find((c) => c.id === highlight.champion);
+              {aiHighlights.map((highlight, index) => {
+                const champ = champions.find((c) => c.name_ja ===  highlight.champion);
                 const champId = champ?.id ?? "notfound";
 
                 return (
-                  <Link
-                    key={champId}
-                    to={`/champion/${champId}`}
-                    className="block"
-                  >
+                      <Link
+                        key={`${champId}-${index}`} // インデックスを追加
+                        to={`/champion/${champId}`}
+                        className="block"
+                      >
                     <li
                       className="
                         flex items-start gap-4
