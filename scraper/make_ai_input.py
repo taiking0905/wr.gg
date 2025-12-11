@@ -1,17 +1,23 @@
 import os
 import json
-from datetime import datetime
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # github actions でも絶対パス取得
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
-
-# --- チャンピオンデータ関連 ---
 CHAMPION_DIR = os.path.join(DATA_DIR, 'champion_data')
 OUTPUT_DIR = os.path.join(DATA_DIR, 'AI')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-latest_data = {}
-previous_data = {}
+threshold_win = 3.0  # win/pick/ban の差分閾値(%)
+threshold = 5.0
+diff_input = {}
+
+rank_weight = {
+    "Master": 6,
+    "Diamond": 4,
+    "Challenger": 2,
+    "Legendary_rank": 1,
+    "Emerald": 1
+}
 
 for file_name in os.listdir(CHAMPION_DIR):
     if not file_name.endswith('.json'):
@@ -21,56 +27,49 @@ for file_name in os.listdir(CHAMPION_DIR):
     with open(file_path, 'r', encoding='utf-8') as f:
         champ_data = json.load(f)
 
-    if 'patches' not in champ_data:
-        print(f"{file_name} に patches がありません")
+    if 'patches' not in champ_data or len(champ_data['patches']) < 2:
         continue
 
     patches = sorted(champ_data['patches'], key=lambda x: x['updatetime'])
-    if len(patches) < 2:
-        print(f"{file_name} はパッチが少なすぎます")
-        continue
+    prev_patch = patches[-2]
+    latest_patch = patches[-1]
 
-    champion_id = champ_data.get("id", file_name.replace('.json',''))
-    previous_data[champion_id] = patches[-2]
-    latest_data[champion_id] = patches[-1]
+    champ_id = champ_data.get("id", file_name.replace('.json',''))
+    champ_name_ja = champ_data.get("name_ja", champ_id)  # 日本語名
 
-# 出力
-with open(os.path.join(OUTPUT_DIR, 'previous_input.json'), 'w', encoding='utf-8') as f:
-    json.dump(previous_data, f, ensure_ascii=False, indent=2)
+    champ_diff = []
+    for latest_entry, prev_entry in zip(latest_patch['data'], prev_patch['data']):
+        win_diff = latest_entry['winrate'] - prev_entry['winrate']
+        pick_diff = latest_entry['pickrate'] - prev_entry['pickrate']
+        ban_diff = latest_entry['banrate'] - prev_entry['banrate']
+        weight = rank_weight.get(latest_entry["rank"], 1)
+        score = abs(win_diff)*weight + abs(pick_diff)*weight*0.5 + abs(ban_diff)*weight*0.5
 
-with open(os.path.join(OUTPUT_DIR, 'latest_input.json'), 'w', encoding='utf-8') as f:
-    json.dump(latest_data, f, ensure_ascii=False, indent=2)
+        if abs(win_diff) >= threshold_win or abs(pick_diff) >= threshold or abs(ban_diff) >= threshold:
+            champ_diff.append({
+                "name_ja": champ_name_ja,
+                "lane": latest_entry["lane"],
+                "rank": latest_entry["rank"],
+                "winrate": latest_entry["winrate"],
+                "pickrate": latest_entry["pickrate"],
+                "banrate": latest_entry["banrate"],
+                "win_diff": round(win_diff, 3),
+                "pick_diff": round(pick_diff, 3),
+                "ban_diff": round(ban_diff, 3),
+                "score": round(score, 2),
+                "trend": f"win{'↑' if win_diff>0 else '↓'} pick{'↑' if pick_diff>0 else '↓'} ban{'↑' if ban_diff>0 else '↓'}"
+            })
 
-print("latest_input.json と previous_input.json を作成しました")
+    if champ_diff:
+        diff_input[champ_id] = {
+            "patch_name": latest_patch["patch_name"],
+            "updatetime": latest_patch["updatetime"],
+            "diff_data": champ_diff
+        }
 
-
-# --- パッチノート関連 ---
-PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')  # 最新パッチ名を取得
-OUTPUT_JSON = os.path.join(OUTPUT_DIR, 'patchnote_input.json')
-
-# JSON 読み込み
-with open(PATCH_CONTENTS_JSON, 'r', encoding='utf-8') as f:
-    patch_notes = json.load(f)
-
-# 最新パッチを探す
-latest_patch_name = None
-latest_date = None
-
-for patch_name, patch_data in patch_notes.items():
-    update_date_str = patch_data.get("update_date")
-    if update_date_str:
-        update_date = datetime.strptime(update_date_str, "%Y/%m/%d")
-        if latest_date is None or update_date > latest_date:
-            latest_date = update_date
-            latest_patch_name = patch_name
-
-if not latest_patch_name:
-    raise ValueError("パッチ情報が見つかりませんでした")
-
-# 最新パッチの内容を抽出して保存
-latest_patch_data = patch_notes[latest_patch_name]
-
+# 保存
+OUTPUT_JSON = os.path.join(OUTPUT_DIR, 'diff_input.json')
 with open(OUTPUT_JSON, 'w', encoding='utf-8') as f:
-    json.dump({latest_patch_name: latest_patch_data}, f, ensure_ascii=False, indent=2)
+    json.dump(diff_input, f, ensure_ascii=False, indent=2)
 
-print(f"最新パッチ {latest_patch_name} を {OUTPUT_JSON} に保存しました")
+print(f"差分データを {OUTPUT_JSON} に保存しました")

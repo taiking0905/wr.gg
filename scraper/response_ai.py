@@ -7,21 +7,11 @@ from dotenv import load_dotenv
 # .envファイルを読み込む
 load_dotenv()
 api_key = os.getenv('GEMINI_API')
-print("GEMINI_API =", api_key)
-
-if api_key is None:
-    print("GEMINI_API: None（渡っていない）")
-elif api_key == "":
-    print("GEMINI_API: 空文字（渡ってるが空）")
-else:
-    print("GEMINI_API: OK（値は存在する）")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data/AI')
 
-LATEST_PATH = os.path.join(DATA_DIR, 'latest_input.json')
-PREVIOUS_PATH = os.path.join(DATA_DIR, 'previous_input.json')
-PATCHNOTE_PATH = os.path.join(DATA_DIR, 'patchnote_input.json')
+DIFF_PATH = os.path.join(DATA_DIR, 'DIFF_input.json')
 OUTPUT_CSV = os.path.join(DATA_DIR, 'output_ai.csv')
 OUTPUT_JSON = os.path.join(DATA_DIR, 'output_ai.json')
 
@@ -32,56 +22,43 @@ success = False
 client = genai.Client(api_key=api_key)
 
 # 入力データ読み込み
-with open(LATEST_PATH, "r", encoding="utf-8") as f:
-    latest = f.read()
-
-with open(PREVIOUS_PATH, "r", encoding="utf-8") as f:
-    previous = f.read()
-
-with open(PATCHNOTE_PATH, "r", encoding="utf-8") as f:
-    patchnote = f.read()
+with open(DIFF_PATH, "r", encoding="utf-8") as f:
+    diff = f.read()
 
 # Geminiプロンプト
 prompt = f"""
 あなたはワイルドリフトの統計アナリストです。
-以下に最新パッチデータ（LATEST）、前回パッチデータ（PREVIOUS）、
-パッチノート（PATCHNOTE）を渡します。そこで見つけた差が激しいものを15件表示してください。
+以下に最新パッチ差分データ（DIFF）を渡します。
+差が大きいものを15件だけ抽出してください。
 
 
 【分析条件】
-- 同一チャンピオン・同一ランク内の変化のみ比較（縦比較禁止）
-- 勝率 ±1%以上、ピック率/バン率 ±0.5%以上の変化が対象
-- 上昇も下降も重要
-- ランクの重要度は Master > Diamond > Challenger > Legendary_rank > Emerald とし、重み付けを考慮して評価する。 
-- ランクの評価優先度は以下の通り：
-  1. Master, Diamond（最優先）
-  2. Challenger（次点）
-  3. Legendary_rank, Emerald（補助のみ）
-- 複数レーンで変化している場合は優先
-- パッチノートは参考のみ（計算に直接使わない）
-- RAG のため、与えたデータ以外は使用禁止
+- 同一チャンピオン・同一ランク内のみ比較
+- 上昇・下降トレンドともに重要
+- reason には trend の情報（win↑/↓ pick↑/↓ ban↑/↓）を使用
+- 数字は勝手に補完せず、trend とレーン/ランクだけで記載
+- score は分析にのみ使用、出力に表示しない
 
 【絶対遵守ルール】
-1. 絶対に15件のみ返す。15件より多くても少なくてもダメ。
-2. CSV 形式で返すこと
-3. ヘッダーは 'champion,reason'
+1. 出力は必ず15件
+2. CSV形式
+3. ヘッダーは "ranking,champion,reason"
 4. ダブルクォートで囲む
 5. CSV以外の文章は書かない
-6. 出力は必ず 1 から 15 まで番号を振り、15 件を超えないようにする
+6. 1～15の番号を振る
 
 【出力例】
 "ranking","champion","reason"
-"1~15の数字",name","日本語で選ばれた理由を書く。データは変化を見やすく。予想もしてよい"
+【出力例】
+"ranking","champion","reason"
+"1","名前","laneのrankでwin↑ pick↑ ban↑。勝率1.41%上昇、ピック率10.71%増加、バン率5.30%増加。"
+"2","名前","laneのrankでwin↓ pick↓ ban↓。勝率1.87%上昇、ピック率5.33%増加、バン率2.38%増加。"
+
 
 【データ】
-LATEST:
-{latest}
+DIFF:
+{diff}
 
-PREVIOUS:
-{previous}
-
-PATCHNOTE:
-{patchnote}
 """
 
 while not success and retry_count < MAX_RETRY:
@@ -92,7 +69,7 @@ while not success and retry_count < MAX_RETRY:
             config = {
                 "max_output_tokens": 2000,
                 "temperature": 0,  # フォーマット厳守
-                "top_p": 1,
+                "top_p": 0,
                 "candidate_count": 1
             }
         )
