@@ -25,9 +25,6 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scraper/requirements.txt
 
-      - name: Run Make_ai_input
-        run: python scraper/make_ai_input.py
-
       - name: Run AI response
         env:
             GEMINI_API: ${{ secrets.GEMINI_API }}
@@ -52,6 +49,6 @@ jobs:
         run: |
           git config user.name "WR.GG_github-actions[bot]"
           git config user.email "WR.GG_github-actions[bot]@users.noreply.github.com"
-          git add wrgg-frontend/public/data/AI/output_ai.json
+          git add .
           git diff --quiet && git diff --staged --quiet || git commit -m "Update AI output"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
