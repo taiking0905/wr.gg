@@ -30,6 +30,19 @@ jobs:
             GEMINI_API: ${{ secrets.GEMINI_API }}
         run: python scraper/response_ai.py
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Node dependencies
+        run: npm install
+        working-directory: wrgg-frontend
+
+      - name: Build docs
+        run: npm run build-docs
+        working-directory: wrgg-frontend
+
       - name: Commit and push AI output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
