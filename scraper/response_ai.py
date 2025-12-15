@@ -38,7 +38,7 @@ scoreが大きいものを15件だけ抽出してください。
 - reason には trend の情報（win↑/↓ pick↑/↓ ban↑/↓）を使用
 - 数字は勝手に補完せず、trend とレーン/ランクだけで記載
 - score は分析にのみ使用、出力に表示しない
-- reason には「選定理由（該当ランク）」と「他ランク帯との比較」を必ず含める
+- reason には「選定理由（該当ランク）」と「他ランク帯やレーンとの比較」を必ず含める
 
 【絶対遵守ルール】
 1. 出力は必ず15件
@@ -52,8 +52,8 @@ scoreが大きいものを15件だけ抽出してください。
 "ranking","champion","reason"
 【出力例】
 "ranking","champion","reason"
-"1","名前","laneのrankでwin↑ pick↑ ban↑。"
-"2","名前","laneのrankでwin↓ pick↓ ban↓。。"
+"1","名前","laneのrankでwin↑ pick↑ ban↑。TOPレーンでは、～"
+"2","名前","laneのrankでwin↓ pick↓ ban↓。チャレンジャー帯では、～"
 
 【reason 記載ルール】
 - 1文目：このランク・レーンで選ばれた理由（trend を使用）
