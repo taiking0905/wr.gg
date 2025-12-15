@@ -11,7 +11,7 @@ api_key = os.getenv('GEMINI_API')
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data/AI')
 
-DIFF_PATH = os.path.join(DATA_DIR, 'DIFF_input.json')
+DIFF_PATH = os.path.join(DATA_DIR, 'diff_input.json')
 OUTPUT_CSV = os.path.join(DATA_DIR, 'output_ai.csv')
 OUTPUT_JSON = os.path.join(DATA_DIR, 'output_ai.json')
 
