@@ -167,8 +167,13 @@ useEffect(() => {
             className="w-24 h-24 rounded-lg"
           />
           <h1 className="text-xl font-bold">{champion.name_ja} の変更履歴</h1>
+        {champion.id === "Norra" && (
+        <div className="mt-3 px-4 py-3 bg-yellow-100 border border-yellow-300 rounded text-yellow-800">
+          このキャラは現在対応中です。もう少しお待ちください。
         </div>
+        )}
       </div>
+    </div>
 
       {/* スタッツ部分 */}
       {championStatsAll.length > 0 ? (
