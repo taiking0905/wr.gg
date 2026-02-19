@@ -15,6 +15,8 @@ DIFF_PATH = os.path.join(DATA_DIR, 'diff_input.json')
 OUTPUT_CSV = os.path.join(DATA_DIR, 'output_ai.csv')
 OUTPUT_JSON = os.path.join(DATA_DIR, 'output_ai.json')
 
+CHAMPION_PATH= os.path.join(DATA_DIR, '..', 'champion_data.json')
+
 MAX_RETRY = 5
 retry_count = 0
 success = False
@@ -24,6 +26,16 @@ client = genai.Client(api_key=api_key)
 # 入力データ読み込み
 with open(DIFF_PATH, "r", encoding="utf-8") as f:
     diff = f.read()
+
+#  英語を日本語に応急処置
+with open(CHAMPION_PATH, "r", encoding="utf-8") as f:
+    champions_data = json.load(f)
+
+# id → name_ja 辞書作成
+id_to_ja = {
+    champ["id"].strip().lower(): champ["name_ja"]
+    for champ in champions_data
+}
 
 # Geminiプロンプト
 prompt = f"""
@@ -118,9 +130,16 @@ parsed = []
 with open(OUTPUT_CSV, 'r', encoding='utf-8') as f:
     reader = csv.DictReader(f)
     for row in reader:
+        champ_name = row["champion"].strip()
+        champ_key = champ_name.lower()
+
+        # 🔥 ここが応急処置
+        if champ_key in id_to_ja:
+            champ_name = id_to_ja[champ_key]
+
         parsed.append({
-            "ranking":row["ranking"].strip(),
-            "champion": row["champion"].strip(),
+            "ranking": row["ranking"].strip(),
+            "champion": champ_name,
             "reason": row["reason"].strip()
         })
 
