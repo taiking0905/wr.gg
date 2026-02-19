@@ -12,6 +12,7 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 ID_MAP = os.path.join(DATA_DIR, "id_map.json") # 例外のチャンピオンに名前付け
+WR_EXTRA = os.path.join(DATA_DIR, "wr_exclusive.json") #WR限定チャンピオン
 
 def load_json(filename):
     if os.path.exists(filename):
@@ -115,6 +116,12 @@ def update_champion_CN():
 
         # --- id -> 中国語名 の辞書作成 ---
         id_to_cn = {champ_id.lower(): info["title"] for champ_id, info in champions_data.items()}
+        
+        # WR限定例外処理
+        wr_extra = load_json(WR_EXTRA)
+        extra_data = wr_extra["data"]
+        extra_dict = {champ_id.lower(): info["title"] for champ_id, info in extra_data.items()}
+        id_to_cn.update(extra_dict)
 
         # --- JSONに name_cn を追加 ---
         for champ in champions:
