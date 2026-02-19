@@ -15,7 +15,7 @@ DIFF_PATH = os.path.join(DATA_DIR, 'diff_input.json')
 OUTPUT_CSV = os.path.join(DATA_DIR, 'output_ai.csv')
 OUTPUT_JSON = os.path.join(DATA_DIR, 'output_ai.json')
 
-CHAMPION_PATH= os.path.join(DATA_DIR, '..', 'champion_data.json')
+CHAMPION_PATH= os.path.join(DATA_DIR, '..', 'champions.json')
 
 MAX_RETRY = 5
 retry_count = 0
