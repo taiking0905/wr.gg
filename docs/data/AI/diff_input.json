@@ -1,831 +1,1209 @@
 {
-  "Caitlyn": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ケイトリン",
-        "lane": "ADC",
-        "rank": "Emerald",
-        "winrate": 52.4257,
-        "pickrate": 26.095299999999998,
-        "banrate": 3.8830000000000005,
-        "win_diff": 0.789,
-        "pick_diff": -6.231,
-        "ban_diff": -0.499,
-        "score": 4.15,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ケイトリン",
-        "lane": "ADC",
-        "rank": "Diamond",
-        "winrate": 51.125299999999996,
-        "pickrate": 26.728800000000003,
-        "banrate": 4.3693,
-        "win_diff": 0.243,
-        "pick_diff": -3.072,
-        "ban_diff": 0.067,
-        "score": 10.87,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Seraphine": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "セラフィーン",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 47.911500000000004,
-        "pickrate": 6.2958,
-        "banrate": 0.1031,
-        "win_diff": -3.069,
-        "pick_diff": -0.853,
-        "ban_diff": 0.033,
-        "score": 10.54,
-        "trend": "win↓ pick↓ ban↑"
-      }
-    ]
-  },
-  "Pantheon": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "パンテオン",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 51.002,
-        "pickrate": 5.1459,
-        "banrate": 1.5469,
-        "win_diff": -7.331,
-        "pick_diff": 0.099,
-        "ban_diff": 0.268,
-        "score": 22.54,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Tryndamere": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "トリンダメア",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 51.0673,
-        "pickrate": 3.1401,
-        "banrate": 12.0346,
-        "win_diff": 3.898,
-        "pick_diff": 0.354,
-        "ban_diff": 4.693,
-        "score": 19.26,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "トリンダメア",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 49.8724,
-        "pickrate": 4.0425,
-        "banrate": 12.0346,
-        "win_diff": 0.626,
-        "pick_diff": 0.556,
-        "ban_diff": 4.693,
-        "score": 9.75,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "トリンダメア",
-        "lane": "TOP",
-        "rank": "Legendary_rank",
-        "winrate": 48.925999999999995,
-        "pickrate": 2.5708,
-        "banrate": 16.6725,
-        "win_diff": 3.878,
-        "pick_diff": -0.093,
-        "ban_diff": 1.881,
-        "score": 4.87,
-        "trend": "win↑ pick↓ ban↑"
-      },
-      {
-        "name_ja": "トリンダメア",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 48.1132,
-        "pickrate": 3.9022,
-        "banrate": 16.6725,
-        "win_diff": 2.443,
-        "pick_diff": -0.047,
-        "ban_diff": 1.881,
-        "score": 3.41,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Darius": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ダリウス",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 47.7947,
-        "pickrate": 2.5504,
-        "banrate": 6.9189,
-        "win_diff": 2.383,
-        "pick_diff": 0.059,
-        "ban_diff": 0.345,
-        "score": 2.58,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Janna": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ジャンナ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 49.4681,
-        "pickrate": 3.8774999999999995,
-        "banrate": 0.0567,
-        "win_diff": -4.181,
-        "pick_diff": -0.924,
-        "ban_diff": -0.224,
-        "score": 14.27,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Nidalee": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ニダリー",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 56.203,
-        "pickrate": 2.7431,
-        "banrate": 17.7168,
-        "win_diff": 0.182,
-        "pick_diff": -0.604,
-        "ban_diff": -14.121,
-        "score": 22.63,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ニダリー",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 52.984500000000004,
-        "pickrate": 2.7753,
-        "banrate": 17.5151,
-        "win_diff": -2.417,
-        "pick_diff": -0.463,
-        "ban_diff": -7.067,
-        "score": 6.18,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Graves": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "グレイブス",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 46.5236,
-        "pickrate": 6.007,
-        "banrate": 0.4795,
-        "win_diff": -3.774,
-        "pick_diff": 0.12,
-        "ban_diff": 0.234,
-        "score": 11.85,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Ryze": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ライズ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 49.8908,
-        "pickrate": 7.0794999999999995,
-        "banrate": 4.3725,
-        "win_diff": -5.747,
-        "pick_diff": -2.4,
-        "ban_diff": -0.026,
-        "score": 20.88,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ライズ",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 50.1887,
-        "pickrate": 1.3664,
-        "banrate": 4.3725,
-        "win_diff": -9.335,
-        "pick_diff": 0.352,
-        "ban_diff": -0.362,
-        "score": 29.08,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Nunu": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヌヌ＆ウィルンプ",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 51.3661,
-        "pickrate": 1.8872,
-        "banrate": 0.8611000000000001,
-        "win_diff": -2.435,
-        "pick_diff": -1.109,
-        "ban_diff": -0.996,
-        "score": 10.46,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Lillia": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "リリア",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 52.0386,
-        "pickrate": 4.8056,
-        "banrate": 1.9903,
-        "win_diff": 2.789,
-        "pick_diff": -1.029,
-        "ban_diff": -1.339,
-        "score": 11.92,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Vayne": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヴェイン",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 51.254999999999995,
-        "pickrate": 14.174500000000002,
-        "banrate": 25.306800000000003,
-        "win_diff": -1.193,
-        "pick_diff": -1.928,
-        "ban_diff": -5.935,
-        "score": 15.38,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Lulu": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ルル",
-        "lane": "SUP",
-        "rank": "Master",
-        "winrate": 49.587399999999995,
-        "pickrate": 10.3053,
-        "banrate": 10.7648,
-        "win_diff": 0.254,
-        "pick_diff": -1.647,
-        "ban_diff": -3.23,
-        "score": 21.54,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ルル",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 48.3662,
-        "pickrate": 16.7268,
-        "banrate": 18.6553,
-        "win_diff": -0.601,
-        "pick_diff": -1.093,
-        "ban_diff": -3.37,
-        "score": 8.5,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ルル",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 50.316399999999994,
-        "pickrate": 12.9297,
-        "banrate": 15.2776,
-        "win_diff": 0.137,
-        "pick_diff": -1.748,
-        "ban_diff": -3.848,
-        "score": 2.94,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Sona": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ソナ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 53.220299999999995,
-        "pickrate": 3.0422000000000002,
-        "banrate": 0.0052,
-        "win_diff": 4.93,
-        "pick_diff": -1.058,
-        "ban_diff": -0.012,
-        "score": 16.39,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Zed": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ゼド",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 53.9162,
-        "pickrate": 5.6615,
-        "banrate": 4.0115,
-        "win_diff": 4.09,
-        "pick_diff": 0.633,
-        "ban_diff": 0.577,
-        "score": 14.09,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ゼド",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.5814,
-        "pickrate": 4.4344,
-        "banrate": 4.0115,
-        "win_diff": 2.226,
-        "pick_diff": -0.892,
-        "ban_diff": 0.577,
-        "score": 8.88,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
   "MonkeyKing": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "ウーコン",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 52.8642,
-        "pickrate": 3.1504999999999996,
-        "banrate": 0.7322000000000001,
-        "win_diff": 2.554,
-        "pick_diff": 0.329,
-        "ban_diff": 0.207,
-        "score": 8.46,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Pyke": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "パイク",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 53.87,
-        "pickrate": 4.9964,
-        "banrate": 1.3819,
-        "win_diff": 2.461,
-        "pick_diff": 0.02,
-        "ban_diff": -1.194,
-        "score": 9.21,
-        "trend": "win↑ pick↑ ban↓"
-      }
-    ]
-  },
-  "Shen": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "シェン",
-        "lane": "TOP",
+        "lane": "JG",
         "rank": "Legendary_rank",
-        "winrate": 54.3478,
-        "pickrate": 1.5053,
-        "banrate": 0.057300000000000004,
-        "win_diff": 3.393,
-        "pick_diff": -0.132,
-        "ban_diff": 0.018,
-        "score": 3.47,
-        "trend": "win↑ pick↓ ban↑"
+        "winrate": 52.1382,
+        "pickrate": 3.5893,
+        "banrate": 0.6041000000000001,
+        "win_diff": 5.217,
+        "pick_diff": -0.251,
+        "ban_diff": -0.148,
+        "score": 5.42,
+        "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Teemo": {
+  "Veigar": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ティーモ",
+        "name_ja": "ベイガー",
+        "lane": "SUP",
+        "rank": "Emerald",
+        "winrate": 52.259699999999995,
+        "pickrate": 5.1409,
+        "banrate": 10.1433,
+        "win_diff": 2.534,
+        "pick_diff": -0.2,
+        "ban_diff": -0.645,
+        "score": 2.96,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ベイガー",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 50.09780000000001,
-        "pickrate": 2.6348,
-        "banrate": 9.6061,
-        "win_diff": 0.498,
-        "pick_diff": 0.445,
-        "ban_diff": 4.402,
-        "score": 8.76,
+        "winrate": 48.235299999999995,
+        "pickrate": 7.062,
+        "banrate": 4.2764999999999995,
+        "win_diff": 4.448,
+        "pick_diff": 1.139,
+        "ban_diff": 1.946,
+        "score": 17.97,
         "trend": "win↑ pick↑ ban↑"
       },
       {
-        "name_ja": "ティーモ",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 54.4056,
-        "pickrate": 3.6866999999999996,
-        "banrate": 9.6061,
-        "win_diff": 1.4,
-        "pick_diff": 0.48,
-        "ban_diff": 4.402,
-        "score": 11.52,
+        "name_ja": "ベイガー",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 46.6586,
+        "pickrate": 1.6195000000000002,
+        "banrate": 6.035299999999999,
+        "win_diff": 3.269,
+        "pick_diff": 0.57,
+        "ban_diff": 0.645,
+        "score": 3.88,
         "trend": "win↑ pick↑ ban↑"
       }
     ]
   },
-  "Kalista": {
+  "Viego": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "カリスタ",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 48.1591,
-        "pickrate": 3.5011,
-        "banrate": 0.5105000000000001,
-        "win_diff": 3.133,
-        "pick_diff": 0.154,
-        "ban_diff": 0.3,
-        "score": 10.08,
+        "name_ja": "ヴィエゴ",
+        "lane": "JG",
+        "rank": "Emerald",
+        "winrate": 52.13250000000001,
+        "pickrate": 18.5639,
+        "banrate": 8.4417,
+        "win_diff": 0.234,
+        "pick_diff": 5.787,
+        "ban_diff": 3.175,
+        "score": 4.71,
         "trend": "win↑ pick↑ ban↑"
       },
       {
-        "name_ja": "カリスタ",
-        "lane": "ADC",
-        "rank": "Legendary_rank",
-        "winrate": 48.0188,
-        "pickrate": 3.0453,
-        "banrate": 0.49699999999999994,
-        "win_diff": -2.539,
-        "pick_diff": 0.065,
-        "ban_diff": 0.212,
-        "score": 2.68,
+        "name_ja": "ヴィエゴ",
+        "lane": "JG",
+        "rank": "Diamond",
+        "winrate": 50.3046,
+        "pickrate": 14.7255,
+        "banrate": 12.0257,
+        "win_diff": -0.28,
+        "pick_diff": 5.73,
+        "ban_diff": 4.226,
+        "score": 31.55,
         "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ヴィエゴ",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 49.924099999999996,
+        "pickrate": 13.9048,
+        "banrate": 13.9398,
+        "win_diff": -0.494,
+        "pick_diff": 5.018,
+        "ban_diff": 3.933,
+        "score": 39.75,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ヴィエゴ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 50.3741,
+        "pickrate": 14.6093,
+        "banrate": 18.243000000000002,
+        "win_diff": -3.242,
+        "pick_diff": 3.465,
+        "ban_diff": 4.628,
+        "score": 21.87,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ヴィエゴ",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 50.0942,
+        "pickrate": 15.6657,
+        "banrate": 20.4081,
+        "win_diff": -0.747,
+        "pick_diff": 3.823,
+        "ban_diff": 5.429,
+        "score": 5.37,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Poppy": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ポッピー",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 52.2659,
+        "pickrate": 2.8947000000000003,
+        "banrate": 0.4766,
+        "win_diff": 3.663,
+        "pick_diff": -0.242,
+        "ban_diff": -0.119,
+        "score": 11.53,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Aurelionsol": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "オレリオン・ソル",
+        "lane": "MID",
+        "rank": "Master",
+        "winrate": 49.3025,
+        "pickrate": 7.9907,
+        "banrate": 8.1625,
+        "win_diff": -0.626,
+        "pick_diff": -1.209,
+        "ban_diff": -3.588,
+        "score": 24.19,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Renekton": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "レネクトン",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 50.0541,
+        "pickrate": 12.1256,
+        "banrate": 2.9166000000000003,
+        "win_diff": -3.013,
+        "pick_diff": -1.016,
+        "ban_diff": -0.15,
+        "score": 10.79,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Nautilus": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ノーチラス",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 54.945100000000004,
+        "pickrate": 1.9896,
+        "banrate": 2.9472,
+        "win_diff": 7.83,
+        "pick_diff": 0.167,
+        "ban_diff": 0.967,
+        "score": 25.19,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ノーチラス",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 52.0583,
+        "pickrate": 2.2945,
+        "banrate": 2.4991,
+        "win_diff": 4.219,
+        "pick_diff": -0.238,
+        "ban_diff": 0.125,
+        "score": 4.4,
+        "trend": "win↑ pick↓ ban↑"
       }
     ]
   },
   "Bard": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "バード",
         "lane": "SUP",
         "rank": "Diamond",
-        "winrate": 48.3106,
-        "pickrate": 1.1652,
-        "banrate": 2.4603,
-        "win_diff": -3.512,
-        "pick_diff": -1.259,
-        "ban_diff": -1.327,
-        "score": 28.83,
+        "winrate": 48.5942,
+        "pickrate": 1.1544,
+        "banrate": 2.4125,
+        "win_diff": -3.228,
+        "pick_diff": -1.27,
+        "ban_diff": -1.375,
+        "score": 27.3,
         "trend": "win↓ pick↓ ban↓"
       },
       {
         "name_ja": "バード",
         "lane": "SUP",
         "rank": "Master",
-        "winrate": 49.36,
-        "pickrate": 1.2144,
-        "banrate": 3.3550000000000004,
-        "win_diff": -3.474,
-        "pick_diff": -1.376,
-        "ban_diff": -2.433,
-        "score": 43.03,
+        "winrate": 49.6639,
+        "pickrate": 1.1979,
+        "banrate": 3.2552,
+        "win_diff": -3.17,
+        "pick_diff": -1.392,
+        "ban_diff": -2.533,
+        "score": 41.06,
         "trend": "win↓ pick↓ ban↓"
       },
       {
         "name_ja": "バード",
         "lane": "SUP",
         "rank": "Challenger",
-        "winrate": 54.4737,
-        "pickrate": 1.9594,
-        "banrate": 17.2012,
-        "win_diff": -5.383,
-        "pick_diff": -2.929,
-        "ban_diff": -23.468,
-        "score": 55.74,
+        "winrate": 53.884699999999995,
+        "pickrate": 1.7447000000000001,
+        "banrate": 15.5582,
+        "win_diff": -5.972,
+        "pick_diff": -3.144,
+        "ban_diff": -25.111,
+        "score": 60.3,
         "trend": "win↓ pick↓ ban↓"
       },
       {
         "name_ja": "バード",
         "lane": "SUP",
         "rank": "Legendary_rank",
-        "winrate": 49.9489,
-        "pickrate": 2.0022,
-        "banrate": 15.326699999999999,
-        "win_diff": -5.359,
-        "pick_diff": -2.471,
-        "ban_diff": -12.347,
-        "score": 12.77,
+        "winrate": 49.8602,
+        "pickrate": 2.1115,
+        "banrate": 15.2249,
+        "win_diff": -5.448,
+        "pick_diff": -2.362,
+        "ban_diff": -12.449,
+        "score": 12.85,
         "trend": "win↓ pick↓ ban↓"
       }
     ]
   },
-  "Ambessa": {
+  "Samira": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "アンベッサ",
-        "lane": "JG",
+        "name_ja": "サミーラ",
+        "lane": "ADC",
         "rank": "Challenger",
-        "winrate": 47.8571,
-        "pickrate": 1.4567999999999999,
-        "banrate": 2.6431,
-        "win_diff": 5.549,
-        "pick_diff": 0.201,
-        "ban_diff": -0.57,
-        "score": 17.8,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "アンベッサ",
-        "lane": "TOP",
-        "rank": "Legendary_rank",
-        "winrate": 52.1591,
-        "pickrate": 3.5996,
-        "banrate": 1.7425,
-        "win_diff": -3.018,
-        "pick_diff": -0.477,
-        "ban_diff": -0.104,
-        "score": 3.31,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "アンベッサ",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 50.2752,
-        "pickrate": 1.1146,
-        "banrate": 1.7425,
-        "win_diff": -2.723,
-        "pick_diff": -0.091,
-        "ban_diff": -0.104,
-        "score": 2.82,
-        "trend": "win↓ pick↓ ban↓"
+        "winrate": 48.7278,
+        "pickrate": 9.1084,
+        "banrate": 2.8554,
+        "win_diff": -3.462,
+        "pick_diff": -0.494,
+        "ban_diff": 0.437,
+        "score": 11.78,
+        "trend": "win↓ pick↓ ban↑"
       }
     ]
   },
-  "Nocturne": {
+  "Sona": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ノクターン",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 49.9197,
-        "pickrate": 3.8184000000000005,
-        "banrate": 20.075699999999998,
-        "win_diff": -0.125,
-        "pick_diff": -0.524,
-        "ban_diff": -4.665,
-        "score": 2.72,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Akali": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "アカリ",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 46.2763,
-        "pickrate": 3.5975,
-        "banrate": 0.5522,
-        "win_diff": -2.828,
-        "pick_diff": 0.215,
-        "ban_diff": -0.194,
-        "score": 3.03,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Yone": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヨネ",
-        "lane": "MID",
+        "name_ja": "ソナ",
+        "lane": "SUP",
         "rank": "Challenger",
-        "winrate": 46.940599999999996,
-        "pickrate": 5.8987,
-        "banrate": 10.1062,
-        "win_diff": 2.227,
-        "pick_diff": -2.056,
-        "ban_diff": 1.573,
-        "score": 12.12,
-        "trend": "win↑ pick↓ ban↑"
-      },
-      {
-        "name_ja": "ヨネ",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 49.5023,
-        "pickrate": 7.7703999999999995,
-        "banrate": 10.1062,
-        "win_diff": 3.839,
-        "pick_diff": 0.902,
-        "ban_diff": 1.573,
-        "score": 15.23,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ヨネ",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.9592,
-        "pickrate": 4.3003,
-        "banrate": 10.1062,
-        "win_diff": 6.303,
-        "pick_diff": -0.291,
-        "ban_diff": 1.573,
-        "score": 21.7,
+        "winrate": 53.684200000000004,
+        "pickrate": 3.3232999999999997,
+        "banrate": 0.0437,
+        "win_diff": 5.394,
+        "pick_diff": -0.777,
+        "ban_diff": 0.026,
+        "score": 17.39,
         "trend": "win↑ pick↓ ban↑"
       }
     ]
   },
-  "Jax": {
+  "Fizz": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ジャックス",
-        "lane": "TOP",
-        "rank": "Emerald",
-        "winrate": 49.3192,
-        "pickrate": 2.7877,
-        "banrate": 0.4988,
-        "win_diff": 2.153,
-        "pick_diff": 0.162,
-        "ban_diff": 0.065,
-        "score": 2.27,
+        "name_ja": "フィズ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 50.354600000000005,
+        "pickrate": 3.6993,
+        "banrate": 1.0188,
+        "win_diff": -3.663,
+        "pick_diff": -0.226,
+        "ban_diff": 0.283,
+        "score": 11.75,
+        "trend": "win↓ pick↓ ban↑"
+      },
+      {
+        "name_ja": "フィズ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 48.5714,
+        "pickrate": 2.4486999999999997,
+        "banrate": 1.0188,
+        "win_diff": 4.017,
+        "pick_diff": 0.679,
+        "ban_diff": 0.283,
+        "score": 13.49,
         "trend": "win↑ pick↑ ban↑"
       },
       {
-        "name_ja": "ジャックス",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 45.5426,
-        "pickrate": 2.6606,
-        "banrate": 0.0722,
-        "win_diff": 2.519,
-        "pick_diff": -0.353,
-        "ban_diff": -0.051,
-        "score": 8.16,
-        "trend": "win↑ pick↓ ban↓"
-      },
+        "name_ja": "フィズ",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 48.046299999999995,
+        "pickrate": 2.7195,
+        "banrate": 1.0803,
+        "win_diff": 2.947,
+        "pick_diff": 0.267,
+        "ban_diff": 0.021,
+        "score": 3.09,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Mordekaiser": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
       {
-        "name_ja": "ジャックス",
+        "name_ja": "モルデカイザー",
+        "lane": "TOP",
+        "rank": "Master",
+        "winrate": 49.6046,
+        "pickrate": 9.6832,
+        "banrate": 29.0182,
+        "win_diff": -0.486,
+        "pick_diff": 0.242,
+        "ban_diff": -3.302,
+        "score": 18.06,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Amumu": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アムム",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 50.60980000000001,
-        "pickrate": 1.1199999999999999,
-        "banrate": 0.1093,
-        "win_diff": 3.388,
-        "pick_diff": -0.142,
-        "ban_diff": -0.013,
-        "score": 10.4,
+        "winrate": 55.359100000000005,
+        "pickrate": 3.9572999999999996,
+        "banrate": 0.1443,
+        "win_diff": 2.47,
+        "pick_diff": 0.015,
+        "ban_diff": 0.004,
+        "score": 7.44,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Lux": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ラックス",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 47.462700000000005,
+        "pickrate": 7.3243,
+        "banrate": 3.5944,
+        "win_diff": -2.735,
+        "pick_diff": 2.891,
+        "ban_diff": 2.175,
+        "score": 15.8,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Alistar": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アリスター",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 49.6,
+        "pickrate": 5.4658999999999995,
+        "banrate": 0.5903,
+        "win_diff": -4.246,
+        "pick_diff": -1.14,
+        "ban_diff": -0.163,
+        "score": 14.69,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Janna": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ジャンナ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 49.3166,
+        "pickrate": 3.8392999999999997,
+        "banrate": 0.1268,
+        "win_diff": -4.333,
+        "pick_diff": -0.962,
+        "ban_diff": -0.154,
+        "score": 14.67,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Zeri": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ゼリ",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 50.1166,
+        "pickrate": 1.8759000000000001,
+        "banrate": 0.0087,
+        "win_diff": 4.662,
+        "pick_diff": -0.437,
+        "ban_diff": -0.009,
+        "score": 14.66,
         "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Akshan": {
+  "Kalista": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "アクシャン",
-        "lane": "MID",
+        "name_ja": "カリスタ",
+        "lane": "ADC",
         "rank": "Challenger",
-        "winrate": 48.1481,
-        "pickrate": 1.1137,
-        "banrate": 0.0206,
-        "win_diff": 8.493,
-        "pick_diff": 0.097,
-        "ban_diff": -0.049,
-        "score": 25.7,
-        "trend": "win↑ pick↑ ban↓"
+        "winrate": 48.9336,
+        "pickrate": 3.6906000000000003,
+        "banrate": 0.5204,
+        "win_diff": 3.907,
+        "pick_diff": 0.344,
+        "ban_diff": 0.31,
+        "score": 12.7,
+        "trend": "win↑ pick↑ ban↑"
       },
       {
-        "name_ja": "アクシャン",
-        "lane": "MID",
+        "name_ja": "カリスタ",
+        "lane": "ADC",
         "rank": "Legendary_rank",
-        "winrate": 47.810900000000004,
-        "pickrate": 1.1678,
-        "banrate": 0.0286,
-        "win_diff": -4.371,
-        "pick_diff": 0.093,
-        "ban_diff": -0.003,
-        "score": 4.42,
-        "trend": "win↓ pick↑ ban↓"
+        "winrate": 47.2416,
+        "pickrate": 3.1032,
+        "banrate": 0.38180000000000003,
+        "win_diff": -3.316,
+        "pick_diff": 0.123,
+        "ban_diff": 0.097,
+        "score": 3.43,
+        "trend": "win↓ pick↑ ban↑"
       }
     ]
   },
   "Garen": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "ガレン",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 51.296,
+        "pickrate": 23.2804,
+        "banrate": 7.4555,
+        "win_diff": 2.05,
+        "pick_diff": 0.046,
+        "ban_diff": 2.041,
+        "score": 9.28,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Leona": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "レオナ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 52.056599999999996,
+        "pickrate": 6.4848,
+        "banrate": 1.4692,
+        "win_diff": 2.792,
+        "pick_diff": 1.719,
+        "ban_diff": 0.961,
+        "score": 12.4,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Lulu": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ルル",
+        "lane": "SUP",
+        "rank": "Master",
+        "winrate": 49.9897,
+        "pickrate": 10.3935,
+        "banrate": 10.639899999999999,
+        "win_diff": 0.656,
+        "pick_diff": -1.559,
+        "ban_diff": -3.355,
+        "score": 24.91,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ルル",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 50.2196,
+        "pickrate": 17.9195,
+        "banrate": 18.4398,
+        "win_diff": 1.252,
+        "pick_diff": 0.099,
+        "ban_diff": -3.586,
+        "score": 9.28,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ルル",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 50.3583,
+        "pickrate": 12.906799999999999,
+        "banrate": 15.506300000000001,
+        "win_diff": 0.179,
+        "pick_diff": -1.771,
+        "ban_diff": -3.62,
+        "score": 2.87,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Graves": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "グレイブス",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 50.455099999999995,
+        "pickrate": 6.4859,
+        "banrate": 0.61,
+        "win_diff": 3.186,
+        "pick_diff": 0.152,
+        "ban_diff": 0.137,
+        "score": 3.33,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Vex": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヴェックス",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 53.252,
-        "pickrate": 1.2684000000000002,
-        "banrate": 7.0331,
-        "win_diff": 3.854,
-        "pick_diff": -0.186,
-        "ban_diff": 1.619,
-        "score": 14.27,
+        "winrate": 46.042,
+        "pickrate": 2.7067,
+        "banrate": 0.3673,
+        "win_diff": -2.172,
+        "pick_diff": -0.237,
+        "ban_diff": 0.104,
+        "score": 7.03,
+        "trend": "win↓ pick↓ ban↑"
+      }
+    ]
+  },
+  "Morgana": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "モルガナ",
+        "lane": "SUP",
+        "rank": "Emerald",
+        "winrate": 50.2441,
+        "pickrate": 11.6637,
+        "banrate": 17.3336,
+        "win_diff": 0.238,
+        "pick_diff": 3.817,
+        "ban_diff": 0.379,
+        "score": 2.34,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "SUP",
+        "rank": "Diamond",
+        "winrate": 49.276399999999995,
+        "pickrate": 11.171899999999999,
+        "banrate": 29.552400000000002,
+        "win_diff": -0.765,
+        "pick_diff": 3.441,
+        "ban_diff": 2.327,
+        "score": 21.9,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "SUP",
+        "rank": "Master",
+        "winrate": 48.9153,
+        "pickrate": 10.293,
+        "banrate": 33.76,
+        "win_diff": -0.978,
+        "pick_diff": 3.248,
+        "ban_diff": 1.42,
+        "score": 26.49,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 48.293,
+        "pickrate": 1.4045999999999998,
+        "banrate": 33.76,
+        "win_diff": 1.211,
+        "pick_diff": 0.387,
+        "ban_diff": 17.066,
+        "score": 79.5,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 50.598200000000006,
+        "pickrate": 6.213699999999999,
+        "banrate": 29.865799999999997,
+        "win_diff": -2.275,
+        "pick_diff": 3.165,
+        "ban_diff": 0.744,
+        "score": 12.69,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 46.7474,
+        "pickrate": 8.6711,
+        "banrate": 29.865799999999997,
+        "win_diff": -6.35,
+        "pick_diff": 2.731,
+        "ban_diff": 0.744,
+        "score": 24.26,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 47.9213,
+        "pickrate": 7.904700000000001,
+        "banrate": 29.0684,
+        "win_diff": -0.261,
+        "pick_diff": 2.206,
+        "ban_diff": 3.191,
+        "score": 2.96,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "モルガナ",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 46.9381,
+        "pickrate": 11.2145,
+        "banrate": 29.0684,
+        "win_diff": -1.121,
+        "pick_diff": 2.907,
+        "ban_diff": 3.191,
+        "score": 4.17,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Khazix": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "カ＝ジックス",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 52.169900000000005,
+        "pickrate": 4.7357000000000005,
+        "banrate": 0.2405,
+        "win_diff": 4.409,
+        "pick_diff": 0.04,
+        "ban_diff": 0.1,
+        "score": 13.44,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Kayle": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ケイル",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 51.973499999999994,
+        "pickrate": 1.4425999999999999,
+        "banrate": 0.5856,
+        "win_diff": 2.427,
+        "pick_diff": 0.333,
+        "ban_diff": -0.002,
+        "score": 2.59,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ケイル",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 52.485099999999996,
+        "pickrate": 2.1995,
+        "banrate": 0.3236,
+        "win_diff": 10.429,
+        "pick_diff": 0.325,
+        "ban_diff": 0.218,
+        "score": 32.1,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Fiora": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "フィオラ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 52.5,
+        "pickrate": 6.2966999999999995,
+        "banrate": 8.1551,
+        "win_diff": -4.516,
+        "pick_diff": -1.571,
+        "ban_diff": -5.284,
+        "score": 23.83,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "フィオラ",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 50.273500000000006,
+        "pickrate": 6.8342,
+        "banrate": 8.7922,
+        "win_diff": -2.047,
+        "pick_diff": -0.199,
+        "ban_diff": -1.083,
+        "score": 2.69,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Jarvaniv": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ジャーヴァンⅣ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 48.8168,
+        "pickrate": 4.9893,
+        "banrate": 0.5072,
+        "win_diff": 3.152,
+        "pick_diff": -1.073,
+        "ban_diff": 0.332,
+        "score": 11.56,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ジャーヴァンⅣ",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 48.780499999999996,
+        "pickrate": 1.0359,
+        "banrate": 0.5499999999999999,
+        "win_diff": 2.15,
+        "pick_diff": -0.037,
+        "ban_diff": 0.056,
+        "score": 2.2,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Gwen": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "グウェン",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 48.3918,
+        "pickrate": 2.9909000000000003,
+        "banrate": 0.5115999999999999,
+        "win_diff": -3.721,
+        "pick_diff": 0.503,
+        "ban_diff": -0.277,
+        "score": 12.33,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Ornn": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "オーン",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 55.042,
+        "pickrate": 2.0814,
+        "banrate": 0.0962,
+        "win_diff": 2.062,
+        "pick_diff": -0.565,
+        "ban_diff": 0.026,
+        "score": 7.07,
         "trend": "win↑ pick↓ ban↑"
       }
     ]
   },
   "Kindred": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "キンドレッド",
         "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 55.057100000000005,
+        "pickrate": 2.4125,
+        "banrate": 0.3503,
+        "win_diff": 2.635,
+        "pick_diff": -0.089,
+        "ban_diff": -0.007,
+        "score": 2.68,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Soraka": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ソラカ",
+        "lane": "SUP",
         "rank": "Challenger",
-        "winrate": 53.29089999999999,
-        "pickrate": 2.4286,
-        "banrate": 0.45370000000000005,
-        "win_diff": 2.227,
-        "pick_diff": -0.042,
-        "ban_diff": 0.016,
-        "score": 6.77,
+        "winrate": 51.99,
+        "pickrate": 3.5157000000000003,
+        "banrate": 0.4285,
+        "win_diff": 10.225,
+        "pick_diff": 0.537,
+        "ban_diff": 0.148,
+        "score": 31.7,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Olaf": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "オラフ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 47.8788,
+        "pickrate": 1.443,
+        "banrate": 1.2375,
+        "win_diff": -6.883,
+        "pick_diff": -0.029,
+        "ban_diff": -0.602,
+        "score": 21.6,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "オラフ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 55.256099999999996,
+        "pickrate": 1.6223,
+        "banrate": 1.2375,
+        "win_diff": 7.55,
+        "pick_diff": -0.288,
+        "ban_diff": -0.602,
+        "score": 23.98,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "オラフ",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 53.481500000000004,
+        "pickrate": 1.3283,
+        "banrate": 1.3853,
+        "win_diff": 3.803,
+        "pick_diff": -0.19,
+        "ban_diff": -0.235,
+        "score": 4.02,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Rengar": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "レンガー",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 50.2146,
+        "pickrate": 2.0377,
+        "banrate": 1.9677,
+        "win_diff": -8.021,
+        "pick_diff": -0.941,
+        "ban_diff": -1.397,
+        "score": 27.57,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "レンガー",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 51.0571,
+        "pickrate": 1.8615,
+        "banrate": 2.202,
+        "win_diff": -2.205,
+        "pick_diff": -0.146,
+        "ban_diff": -0.548,
+        "score": 2.55,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Ezreal": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "エズリアル",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 49.897000000000006,
+        "pickrate": 1.0087000000000002,
+        "banrate": 0.5569000000000001,
+        "win_diff": 2.214,
+        "pick_diff": -0.05,
+        "ban_diff": 0.158,
+        "score": 2.32,
         "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Zoe": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ゾーイ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 50.613200000000006,
+        "pickrate": 1.7651,
+        "banrate": 1.2909,
+        "win_diff": -2.627,
+        "pick_diff": 0.077,
+        "ban_diff": -0.218,
+        "score": 2.77,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Lucian": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ルシアン",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 52.1595,
+        "pickrate": 13.161900000000001,
+        "banrate": 2.3744,
+        "win_diff": -3.456,
+        "pick_diff": -6.183,
+        "ban_diff": -1.148,
+        "score": 21.36,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Kennen": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ケネン",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 51.465399999999995,
+        "pickrate": 1.0489,
+        "banrate": 0.5002000000000001,
+        "win_diff": -2.953,
+        "pick_diff": -0.034,
+        "ban_diff": 0.033,
+        "score": 2.99,
+        "trend": "win↓ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ケネン",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 53.6122,
+        "pickrate": 3.4500999999999995,
+        "banrate": 0.1749,
+        "win_diff": -3.779,
+        "pick_diff": -0.58,
+        "ban_diff": 0.052,
+        "score": 12.29,
+        "trend": "win↓ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ケネン",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 51.820699999999995,
+        "pickrate": 1.5611,
+        "banrate": 0.1749,
+        "win_diff": 2.438,
+        "pick_diff": 0.142,
+        "ban_diff": 0.052,
+        "score": 7.6,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ケネン",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 52.5316,
+        "pickrate": 2.4873,
+        "banrate": 0.307,
+        "win_diff": -2.461,
+        "pick_diff": -0.135,
+        "ban_diff": 0.059,
+        "score": 2.56,
+        "trend": "win↓ pick↓ ban↑"
+      }
+    ]
+  },
+  "Irelia": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "イレリア",
+        "lane": "MID",
+        "rank": "Diamond",
+        "winrate": 44.9948,
+        "pickrate": 1.3605,
+        "banrate": 1.8686999999999998,
+        "win_diff": -2.219,
+        "pick_diff": 0.036,
+        "ban_diff": 0.164,
+        "score": 13.91,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "イレリア",
+        "lane": "MID",
+        "rank": "Master",
+        "winrate": 44.426300000000005,
+        "pickrate": 1.2038,
+        "banrate": 2.2068999999999996,
+        "win_diff": -2.94,
+        "pick_diff": 0.032,
+        "ban_diff": 0.126,
+        "score": 24.15,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "イレリア",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 52.2388,
+        "pickrate": 1.0364,
+        "banrate": 3.1298,
+        "win_diff": -5.901,
+        "pick_diff": -0.002,
+        "ban_diff": -1.967,
+        "score": 20.66,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Vayne": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヴェイン",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 50.7764,
+        "pickrate": 14.080200000000001,
+        "banrate": 24.6141,
+        "win_diff": -1.672,
+        "pick_diff": -2.023,
+        "ban_diff": -6.628,
+        "score": 17.99,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ヴェイン",
+        "lane": "ADC",
+        "rank": "Legendary_rank",
+        "winrate": 52.790400000000005,
+        "pickrate": 15.126500000000002,
+        "banrate": 21.4668,
+        "win_diff": 1.026,
+        "pick_diff": -0.937,
+        "ban_diff": -3.014,
+        "score": 3.0,
+        "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
   "Gragas": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "グラガス",
@@ -844,796 +1222,1830 @@
         "name_ja": "グラガス",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 52.424899999999994,
-        "pickrate": 2.2325999999999997,
-        "banrate": 0.1392,
-        "win_diff": 6.534,
-        "pick_diff": -0.326,
-        "ban_diff": -0.019,
-        "score": 20.12,
+        "winrate": 50.912800000000004,
+        "pickrate": 2.1558,
+        "banrate": 0.10490000000000001,
+        "win_diff": 5.022,
+        "pick_diff": -0.402,
+        "ban_diff": -0.053,
+        "score": 15.75,
         "trend": "win↑ pick↓ ban↓"
-      },
+      }
+    ]
+  },
+  "Kassadin": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
       {
-        "name_ja": "グラガス",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 49.8294,
-        "pickrate": 1.7977,
-        "banrate": 0.10020000000000001,
-        "win_diff": -2.326,
-        "pick_diff": -0.469,
-        "ban_diff": -0.003,
-        "score": 2.56,
+        "name_ja": "カサディン",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 47.1622,
+        "pickrate": 1.1351,
+        "banrate": 0.0761,
+        "win_diff": -2.94,
+        "pick_diff": -0.207,
+        "ban_diff": 0.017,
+        "score": 3.05,
+        "trend": "win↓ pick↓ ban↑"
+      }
+    ]
+  },
+  "Senna": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "セナ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 53.154199999999996,
+        "pickrate": 3.7431,
+        "banrate": 0.3717,
+        "win_diff": -3.735,
+        "pick_diff": -0.199,
+        "ban_diff": -0.224,
+        "score": 11.84,
         "trend": "win↓ pick↓ ban↓"
       }
     ]
   },
-  "Jinx": {
+  "Smolder": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ジンクス",
+        "name_ja": "スモルダー",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 52.778099999999995,
+        "pickrate": 3.7327,
+        "banrate": 37.5591,
+        "win_diff": 0.295,
+        "pick_diff": -1.632,
+        "ban_diff": -9.307,
+        "score": 5.76,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "TOP",
+        "rank": "Emerald",
+        "winrate": 53.8404,
+        "pickrate": 2.7922,
+        "banrate": 37.5591,
+        "win_diff": 0.78,
+        "pick_diff": -0.596,
+        "ban_diff": -9.307,
+        "score": 5.73,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
         "lane": "ADC",
         "rank": "Emerald",
-        "winrate": 50.809000000000005,
-        "pickrate": 10.1174,
-        "banrate": 0.8791,
-        "win_diff": -0.438,
-        "pick_diff": -4.237,
-        "ban_diff": -0.131,
-        "score": 2.62,
+        "winrate": 55.70349999999999,
+        "pickrate": 12.1404,
+        "banrate": 37.5591,
+        "win_diff": -0.202,
+        "pick_diff": -2.19,
+        "ban_diff": -9.307,
+        "score": 5.95,
         "trend": "win↓ pick↓ ban↓"
       },
       {
-        "name_ja": "ジンクス",
+        "name_ja": "スモルダー",
+        "lane": "MID",
+        "rank": "Diamond",
+        "winrate": 50.8335,
+        "pickrate": 3.363,
+        "banrate": 59.8028,
+        "win_diff": -0.851,
+        "pick_diff": -0.626,
+        "ban_diff": -6.751,
+        "score": 27.24,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "TOP",
+        "rank": "Diamond",
+        "winrate": 52.0818,
+        "pickrate": 1.9727999999999999,
+        "banrate": 59.8028,
+        "win_diff": 0.458,
+        "pick_diff": -0.162,
+        "ban_diff": -6.751,
+        "score": 23.49,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
         "lane": "ADC",
         "rank": "Diamond",
-        "winrate": 50.485,
-        "pickrate": 12.8786,
-        "banrate": 0.5488999999999999,
-        "win_diff": 0.023,
-        "pick_diff": -3.626,
-        "ban_diff": -0.127,
-        "score": 11.4,
+        "winrate": 55.3457,
+        "pickrate": 12.6584,
+        "banrate": 59.8028,
+        "win_diff": -0.242,
+        "pick_diff": 0.173,
+        "ban_diff": -6.751,
+        "score": 22.23,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "MID",
+        "rank": "Master",
+        "winrate": 50.4832,
+        "pickrate": 2.9811,
+        "banrate": 64.8383,
+        "win_diff": -0.327,
+        "pick_diff": -0.162,
+        "ban_diff": -7.702,
+        "score": 34.07,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "TOP",
+        "rank": "Master",
+        "winrate": 52.3547,
+        "pickrate": 1.6223,
+        "banrate": 64.8383,
+        "win_diff": 2.025,
+        "pick_diff": 0.112,
+        "ban_diff": -7.702,
+        "score": 47.45,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "ADC",
+        "rank": "Master",
+        "winrate": 55.741,
+        "pickrate": 12.6287,
+        "banrate": 64.8383,
+        "win_diff": 0.069,
+        "pick_diff": 0.847,
+        "ban_diff": -7.702,
+        "score": 34.75,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 49.3409,
+        "pickrate": 2.3219,
+        "banrate": 68.3327,
+        "win_diff": -2.633,
+        "pick_diff": -0.342,
+        "ban_diff": -3.894,
+        "score": 14.25,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 56.9825,
+        "pickrate": 17.5347,
+        "banrate": 68.3327,
+        "win_diff": 1.899,
+        "pick_diff": 0.643,
+        "ban_diff": -3.894,
+        "score": 12.5,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 51.993199999999995,
+        "pickrate": 2.32,
+        "banrate": 70.355,
+        "win_diff": 2.843,
+        "pick_diff": 0.022,
+        "ban_diff": -5.11,
+        "score": 5.41,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "スモルダー",
+        "lane": "ADC",
+        "rank": "Legendary_rank",
+        "winrate": 56.4329,
+        "pickrate": 14.9278,
+        "banrate": 70.355,
+        "win_diff": -1.221,
+        "pick_diff": 1.881,
+        "ban_diff": -5.11,
+        "score": 4.72,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Ambessa": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アンベッサ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 55.172399999999996,
+        "pickrate": 2.7898,
+        "banrate": 1.3774,
+        "win_diff": 3.796,
+        "pick_diff": -1.03,
+        "ban_diff": -2.162,
+        "score": 16.18,
         "trend": "win↑ pick↓ ban↓"
       },
       {
-        "name_ja": "ジンクス",
-        "lane": "ADC",
-        "rank": "Master",
-        "winrate": 50.333099999999995,
-        "pickrate": 13.833599999999999,
-        "banrate": 0.6088,
-        "win_diff": -0.054,
-        "pick_diff": -3.683,
-        "ban_diff": -0.187,
-        "score": 15.91,
+        "name_ja": "アンベッサ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 47.8571,
+        "pickrate": 1.4567999999999999,
+        "banrate": 2.6431,
+        "win_diff": 5.549,
+        "pick_diff": 0.201,
+        "ban_diff": -0.57,
+        "score": 17.8,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "アンベッサ",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 52.173899999999996,
+        "pickrate": 3.5302,
+        "banrate": 1.6215,
+        "win_diff": -3.004,
+        "pick_diff": -0.546,
+        "ban_diff": -0.225,
+        "score": 3.39,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "アンベッサ",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 47.9371,
+        "pickrate": 1.0016,
+        "banrate": 1.6215,
+        "win_diff": -5.061,
+        "pick_diff": -0.204,
+        "ban_diff": -0.225,
+        "score": 5.28,
         "trend": "win↓ pick↓ ban↓"
       }
     ]
   },
-  "Urgot": {
+  "Yasuo": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "アーゴット",
+        "name_ja": "ヤスオ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 51.007400000000004,
+        "pickrate": 12.3705,
+        "banrate": 27.2465,
+        "win_diff": 2.336,
+        "pick_diff": 1.822,
+        "ban_diff": -6.239,
+        "score": 19.1,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ヤスオ",
         "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 46.7601,
-        "pickrate": 2.9442,
-        "banrate": 0.43829999999999997,
-        "win_diff": -7.294,
-        "pick_diff": 0.999,
-        "ban_diff": 0.105,
-        "score": 23.54,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Masteryi": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "マスター・イー",
-        "lane": "JG",
-        "rank": "Emerald",
-        "winrate": 55.7851,
-        "pickrate": 21.1905,
-        "banrate": 51.8075,
-        "win_diff": -0.71,
-        "pick_diff": 2.893,
-        "ban_diff": -3.604,
-        "score": 3.96,
+        "winrate": 50.0,
+        "pickrate": 2.9385000000000003,
+        "banrate": 27.2465,
+        "win_diff": -3.279,
+        "pick_diff": 0.801,
+        "ban_diff": -6.239,
+        "score": 20.4,
         "trend": "win↓ pick↑ ban↓"
       },
       {
-        "name_ja": "マスター・イー",
-        "lane": "JG",
-        "rank": "Master",
-        "winrate": 51.6011,
-        "pickrate": 7.954700000000001,
-        "banrate": 83.6251,
-        "win_diff": -1.151,
-        "pick_diff": 1.646,
-        "ban_diff": -3.378,
-        "score": 29.3,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "マスター・イー",
+        "name_ja": "ヤスオ",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 44.6945,
-        "pickrate": 6.4144000000000005,
-        "banrate": 75.2552,
-        "win_diff": -8.411,
-        "pick_diff": 0.772,
-        "ban_diff": 0.207,
-        "score": 26.7,
-        "trend": "win↓ pick↑ ban↑"
+        "winrate": 52.1236,
+        "pickrate": 1.1325,
+        "banrate": 27.2465,
+        "win_diff": 2.124,
+        "pick_diff": -0.234,
+        "ban_diff": -6.239,
+        "score": 16.08,
+        "trend": "win↑ pick↓ ban↓"
       },
       {
-        "name_ja": "マスター・イー",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 48.7045,
-        "pickrate": 6.235799999999999,
-        "banrate": 77.40259999999999,
-        "win_diff": -2.774,
-        "pick_diff": 1.278,
-        "ban_diff": -4.718,
-        "score": 5.77,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Rammus": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ラムス",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 52.5372,
-        "pickrate": 3.9902,
-        "banrate": 9.003,
-        "win_diff": -2.301,
-        "pick_diff": -1.28,
-        "ban_diff": -1.657,
-        "score": 3.77,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Xayah": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ザヤ",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 50.4317,
-        "pickrate": 7.1672,
-        "banrate": 0.40220000000000006,
-        "win_diff": 2.813,
-        "pick_diff": -1.664,
-        "ban_diff": 0.052,
-        "score": 11.01,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Gwen": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "グウェン",
+        "name_ja": "ヤスオ",
         "lane": "TOP",
         "rank": "Legendary_rank",
-        "winrate": 52.6648,
-        "pickrate": 3.5688999999999997,
-        "banrate": 0.7404,
-        "win_diff": 3.781,
-        "pick_diff": 0.854,
-        "ban_diff": -0.08,
-        "score": 4.25,
+        "winrate": 50.4969,
+        "pickrate": 3.1682,
+        "banrate": 29.6076,
+        "win_diff": 3.121,
+        "pick_diff": 0.45,
+        "ban_diff": -1.469,
+        "score": 4.08,
         "trend": "win↑ pick↑ ban↓"
       }
     ]
   },
-  "Morgana": {
+  "Nocturne": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "モルガナ",
-        "lane": "MID",
-        "rank": "Emerald",
-        "winrate": 52.6416,
-        "pickrate": 8.2801,
-        "banrate": 17.403,
-        "win_diff": -0.172,
-        "pick_diff": 3.766,
-        "ban_diff": 0.449,
-        "score": 2.28,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "SUP",
-        "rank": "Emerald",
-        "winrate": 50.3606,
-        "pickrate": 12.491299999999999,
-        "banrate": 17.403,
-        "win_diff": 0.355,
-        "pick_diff": 4.645,
-        "ban_diff": 0.449,
-        "score": 2.9,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "MID",
-        "rank": "Diamond",
-        "winrate": 51.722500000000004,
-        "pickrate": 10.632900000000001,
-        "banrate": 28.944799999999997,
-        "win_diff": -0.763,
-        "pick_diff": 4.05,
-        "ban_diff": 1.72,
-        "score": 21.89,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "SUP",
-        "rank": "Diamond",
-        "winrate": 49.269200000000005,
-        "pickrate": 12.2373,
-        "banrate": 28.944799999999997,
-        "win_diff": -0.772,
-        "pick_diff": 4.507,
-        "ban_diff": 1.72,
-        "score": 23.31,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 51.02179999999999,
-        "pickrate": 10.3349,
-        "banrate": 33.2832,
-        "win_diff": -1.16,
-        "pick_diff": 3.915,
-        "ban_diff": 0.943,
-        "score": 28.71,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "SUP",
-        "rank": "Master",
-        "winrate": 49.015100000000004,
-        "pickrate": 11.2882,
-        "banrate": 33.2832,
-        "win_diff": -0.878,
-        "pick_diff": 4.243,
-        "ban_diff": 0.943,
-        "score": 27.77,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
+        "name_ja": "ノクターン",
         "lane": "JG",
         "rank": "Master",
-        "winrate": 48.0899,
-        "pickrate": 1.4887,
-        "banrate": 33.2832,
-        "win_diff": 1.008,
-        "pick_diff": 0.472,
-        "ban_diff": 16.589,
-        "score": 76.31,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 46.3309,
-        "pickrate": 7.1672,
-        "banrate": 28.1788,
-        "win_diff": -6.543,
-        "pick_diff": 4.118,
-        "ban_diff": -0.943,
-        "score": 27.22,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 49.9224,
-        "pickrate": 9.966999999999999,
-        "banrate": 28.1788,
-        "win_diff": -3.175,
-        "pick_diff": 4.027,
-        "ban_diff": -0.943,
-        "score": 16.98,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "モルガナ",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 48.5567,
-        "pickrate": 11.9031,
-        "banrate": 28.5121,
-        "win_diff": 0.497,
-        "pick_diff": 3.596,
-        "ban_diff": 2.634,
-        "score": 3.61,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Soraka": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ソラカ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 46.3847,
-        "pickrate": 3.7795,
-        "banrate": 0.428,
-        "win_diff": 4.62,
-        "pick_diff": 0.801,
-        "ban_diff": 0.148,
-        "score": 15.28,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Tristana": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "トリスターナ",
-        "lane": "ADC",
-        "rank": "Legendary_rank",
-        "winrate": 49.41,
-        "pickrate": 4.1598999999999995,
-        "banrate": 0.0409,
-        "win_diff": 3.084,
-        "pick_diff": 0.144,
-        "ban_diff": 0.01,
-        "score": 3.16,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Shyvana": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "シヴァーナ",
-        "lane": "JG",
-        "rank": "Master",
-        "winrate": 51.9592,
-        "pickrate": 9.422,
-        "banrate": 13.273299999999999,
-        "win_diff": 0.166,
-        "pick_diff": -1.885,
-        "ban_diff": -3.532,
-        "score": 23.0,
+        "winrate": 50.4355,
+        "pickrate": 3.636,
+        "banrate": 12.5764,
+        "win_diff": 0.819,
+        "pick_diff": -0.484,
+        "ban_diff": -3.213,
+        "score": 21.34,
         "trend": "win↑ pick↓ ban↓"
       },
       {
-        "name_ja": "シヴァーナ",
+        "name_ja": "ノクターン",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 47.6744,
+        "pickrate": 3.7605,
+        "banrate": 20.1102,
+        "win_diff": -2.326,
+        "pick_diff": -0.655,
+        "ban_diff": -2.809,
+        "score": 12.17,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ノクターン",
         "lane": "JG",
         "rank": "Legendary_rank",
-        "winrate": 51.0303,
-        "pickrate": 8.8332,
-        "banrate": 16.1612,
-        "win_diff": 2.248,
-        "pick_diff": -0.553,
-        "ban_diff": -1.855,
-        "score": 3.45,
+        "winrate": 50.10059999999999,
+        "pickrate": 3.9120000000000004,
+        "banrate": 19.8001,
+        "win_diff": 0.056,
+        "pick_diff": -0.43,
+        "ban_diff": -4.94,
+        "score": 2.74,
         "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Kogmaw": {
+  "Drmundo": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "コグ＝マウ",
-        "lane": "ADC",
-        "rank": "Legendary_rank",
-        "winrate": 54.3014,
-        "pickrate": 3.7325,
-        "banrate": 0.906,
-        "win_diff": 2.561,
-        "pick_diff": -0.872,
-        "ban_diff": -0.429,
-        "score": 3.21,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Nautilus": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ノーチラス",
-        "lane": "JG",
+        "name_ja": "ドクター・ムンド",
+        "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 55.4295,
-        "pickrate": 3.1814,
-        "banrate": 2.8411,
-        "win_diff": 8.676,
-        "pick_diff": 0.483,
-        "ban_diff": 0.861,
-        "score": 28.05,
-        "trend": "win↑ pick↑ ban↑"
+        "winrate": 44.5687,
+        "pickrate": 2.7373000000000003,
+        "banrate": 0.0568,
+        "win_diff": 6.107,
+        "pick_diff": -0.089,
+        "ban_diff": 0.009,
+        "score": 18.47,
+        "trend": "win↑ pick↓ ban↑"
       },
       {
-        "name_ja": "ノーチラス",
+        "name_ja": "ドクター・ムンド",
         "lane": "TOP",
         "rank": "Legendary_rank",
-        "winrate": 53.8662,
-        "pickrate": 2.3539999999999996,
-        "banrate": 2.8449,
-        "win_diff": 6.027,
-        "pick_diff": -0.179,
-        "ban_diff": 0.47,
-        "score": 6.35,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Ornn": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "オーン",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 54.7548,
-        "pickrate": 2.7528,
-        "banrate": 0.2291,
-        "win_diff": 3.054,
-        "pick_diff": -0.177,
-        "ban_diff": 0.071,
+        "winrate": 49.5918,
+        "pickrate": 2.8927,
+        "banrate": 0.1869,
+        "win_diff": 3.047,
+        "pick_diff": -0.218,
+        "ban_diff": 0.038,
         "score": 3.18,
         "trend": "win↑ pick↓ ban↑"
       }
     ]
   },
-  "Veigar": {
+  "Malphite": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ベイガー",
-        "lane": "MID",
+        "name_ja": "マルファイト",
+        "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 49.2938,
-        "pickrate": 7.3012,
-        "banrate": 4.1147,
-        "win_diff": 5.507,
-        "pick_diff": 1.379,
-        "ban_diff": 1.784,
-        "score": 21.26,
+        "winrate": 51.0111,
+        "pickrate": 8.6493,
+        "banrate": 8.5793,
+        "win_diff": 0.174,
+        "pick_diff": 0.274,
+        "ban_diff": 3.953,
+        "score": 6.86,
         "trend": "win↑ pick↑ ban↑"
       },
       {
-        "name_ja": "ベイガー",
+        "name_ja": "マルファイト",
         "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 48.693599999999996,
-        "pickrate": 1.7221,
-        "banrate": 6.426,
-        "win_diff": 5.304,
-        "pick_diff": 0.673,
-        "ban_diff": 1.036,
-        "score": 6.16,
+        "rank": "Challenger",
+        "winrate": 51.5753,
+        "pickrate": 6.3842,
+        "banrate": 8.5793,
+        "win_diff": 0.978,
+        "pick_diff": 1.986,
+        "ban_diff": 3.953,
+        "score": 11.84,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "マルファイト",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 48.957499999999996,
+        "pickrate": 1.0366,
+        "banrate": 18.593799999999998,
+        "win_diff": 4.018,
+        "pick_diff": -0.028,
+        "ban_diff": -0.753,
+        "score": 4.41,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "マルファイト",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 46.428599999999996,
+        "pickrate": 1.0999,
+        "banrate": 7.7277,
+        "win_diff": 1.191,
+        "pick_diff": 0.085,
+        "ban_diff": 4.08,
+        "score": 9.82,
         "trend": "win↑ pick↑ ban↑"
       }
     ]
   },
-  "Singed": {
+  "Evelynn": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "シンジド",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 53.7037,
-        "pickrate": 1.0495,
-        "banrate": 0.5306,
-        "win_diff": -2.893,
-        "pick_diff": 0.018,
-        "ban_diff": -0.095,
-        "score": 2.95,
-        "trend": "win↓ pick↑ ban↓"
+        "name_ja": "イブリン",
+        "lane": "JG",
+        "rank": "Emerald",
+        "winrate": 51.010999999999996,
+        "pickrate": 2.5282,
+        "banrate": 0.5277999999999999,
+        "win_diff": 2.208,
+        "pick_diff": -0.398,
+        "ban_diff": -0.061,
+        "score": 2.44,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "イブリン",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 52.554,
+        "pickrate": 4.4514,
+        "banrate": 3.4326000000000003,
+        "win_diff": 5.322,
+        "pick_diff": -0.297,
+        "ban_diff": -1.351,
+        "score": 18.44,
+        "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Gnar": {
+  "Tryndamere": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ナー",
+        "name_ja": "トリンダメア",
         "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 48.768499999999996,
-        "pickrate": 2.0934,
-        "banrate": 0.1237,
-        "win_diff": 8.938,
-        "pick_diff": 0.026,
-        "ban_diff": 0.089,
-        "score": 26.99,
+        "winrate": 48.1962,
+        "pickrate": 3.0303,
+        "banrate": 12.593499999999999,
+        "win_diff": 1.026,
+        "pick_diff": 0.244,
+        "ban_diff": 5.252,
+        "score": 11.32,
         "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "トリンダメア",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 47.553200000000004,
+        "pickrate": 4.1104,
+        "banrate": 12.593499999999999,
+        "win_diff": -1.693,
+        "pick_diff": 0.624,
+        "ban_diff": 5.252,
+        "score": 13.89,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "トリンダメア",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 49.0706,
+        "pickrate": 2.6467,
+        "banrate": 16.9468,
+        "win_diff": 4.023,
+        "pick_diff": -0.017,
+        "ban_diff": 2.155,
+        "score": 5.11,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "トリンダメア",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 48.192099999999996,
+        "pickrate": 3.8097,
+        "banrate": 16.9468,
+        "win_diff": 2.522,
+        "pick_diff": -0.14,
+        "ban_diff": 2.155,
+        "score": 3.67,
+        "trend": "win↑ pick↓ ban↑"
       }
     ]
   },
   "Diana": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
-      {
-        "name_ja": "ダイアナ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 45.238099999999996,
-        "pickrate": 1.0828,
-        "banrate": 0.0206,
-        "win_diff": -4.095,
-        "pick_diff": -0.231,
-        "ban_diff": -0.014,
-        "score": 12.65,
-        "trend": "win↓ pick↓ ban↓"
-      },
       {
         "name_ja": "ダイアナ",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 50.812999999999995,
-        "pickrate": 1.2684000000000002,
-        "banrate": 0.0206,
-        "win_diff": 3.377,
-        "pick_diff": -0.098,
-        "ban_diff": -0.014,
-        "score": 10.3,
+        "winrate": 50.1873,
+        "pickrate": 1.1675,
+        "banrate": 0.017499999999999998,
+        "win_diff": 2.751,
+        "pick_diff": -0.199,
+        "ban_diff": -0.017,
+        "score": 8.58,
         "trend": "win↑ pick↓ ban↓"
       },
       {
         "name_ja": "ダイアナ",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 46.3932,
-        "pickrate": 1.4460000000000002,
-        "banrate": 0.026600000000000002,
-        "win_diff": -2.092,
-        "pick_diff": -0.231,
-        "ban_diff": -0.007,
-        "score": 2.21,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ダイアナ",
         "lane": "JG",
         "rank": "Legendary_rank",
-        "winrate": 49.2126,
-        "pickrate": 1.039,
-        "banrate": 0.026600000000000002,
-        "win_diff": 2.721,
-        "pick_diff": -0.298,
-        "ban_diff": -0.007,
-        "score": 2.87,
+        "winrate": 53.3445,
+        "pickrate": 1.1766999999999999,
+        "banrate": 0.0335,
+        "win_diff": 6.853,
+        "pick_diff": -0.16,
+        "ban_diff": 0.0,
+        "score": 6.93,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Akali": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アカリ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 47.0845,
+        "pickrate": 3.6109,
+        "banrate": 0.6966,
+        "win_diff": -2.02,
+        "pick_diff": 0.228,
+        "ban_diff": -0.05,
+        "score": 2.16,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Vladimir": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ブラッドミア",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 48.5294,
+        "pickrate": 4.7575,
+        "banrate": 1.1719,
+        "win_diff": 2.35,
+        "pick_diff": -0.517,
+        "ban_diff": 0.383,
+        "score": 8.4,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Xayah": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ザヤ",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 50.49940000000001,
+        "pickrate": 7.0051000000000005,
+        "banrate": 0.23609999999999998,
+        "win_diff": 2.88,
+        "pick_diff": -1.826,
+        "ban_diff": -0.114,
+        "score": 11.55,
         "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Aatrox": {
+  "Leesin": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "エイトロックス",
+        "name_ja": "リー・シン",
         "lane": "JG",
         "rank": "Emerald",
-        "winrate": 44.8164,
-        "pickrate": 2.119,
-        "banrate": 11.2104,
-        "win_diff": -2.55,
-        "pick_diff": -0.115,
-        "ban_diff": 0.113,
-        "score": 2.66,
+        "winrate": 49.0249,
+        "pickrate": 21.3327,
+        "banrate": 7.478700000000001,
+        "win_diff": 0.045,
+        "pick_diff": 4.107,
+        "ban_diff": 1.09,
+        "score": 2.64,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "リー・シン",
+        "lane": "JG",
+        "rank": "Diamond",
+        "winrate": 48.3822,
+        "pickrate": 21.276999999999997,
+        "banrate": 9.741800000000001,
+        "win_diff": 0.111,
+        "pick_diff": 4.643,
+        "ban_diff": 1.918,
+        "score": 20.35,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "リー・シン",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 48.4439,
+        "pickrate": 21.29,
+        "banrate": 11.2427,
+        "win_diff": 0.005,
+        "pick_diff": 4.419,
+        "ban_diff": 1.749,
+        "score": 24.71,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "リー・シン",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 49.5589,
+        "pickrate": 23.2935,
+        "banrate": 16.4896,
+        "win_diff": 2.58,
+        "pick_diff": 3.861,
+        "ban_diff": -0.7,
+        "score": 14.58,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "リー・シン",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 48.8746,
+        "pickrate": 21.7698,
+        "banrate": 19.284499999999998,
+        "win_diff": -0.039,
+        "pick_diff": 3.603,
+        "ban_diff": 3.154,
+        "score": 3.42,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Ryze": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ライズ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 49.4788,
+        "pickrate": 7.131899999999999,
+        "banrate": 4.0579,
+        "win_diff": -6.159,
+        "pick_diff": -2.348,
+        "ban_diff": -0.34,
+        "score": 22.51,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ライズ",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 56.1462,
+        "pickrate": 1.1846,
+        "banrate": 3.4771000000000005,
+        "win_diff": 4.422,
+        "pick_diff": 0.155,
+        "ban_diff": 0.643,
+        "score": 4.82,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ライズ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 48.6166,
+        "pickrate": 1.1063,
+        "banrate": 4.0579,
+        "win_diff": -10.907,
+        "pick_diff": 0.092,
+        "ban_diff": -0.676,
+        "score": 33.87,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Milio": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ミリオ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 48.6315,
+        "pickrate": 11.0237,
+        "banrate": 14.193900000000001,
+        "win_diff": 1.032,
+        "pick_diff": -2.118,
+        "ban_diff": -4.275,
+        "score": 12.68,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ミリオ",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 50.713699999999996,
+        "pickrate": 7.306500000000001,
+        "banrate": 10.3231,
+        "win_diff": 0.317,
+        "pick_diff": -1.554,
+        "ban_diff": -3.751,
+        "score": 2.97,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Teemo": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ティーモ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 50.3788,
+        "pickrate": 2.3088,
+        "banrate": 9.2833,
+        "win_diff": 0.779,
+        "pick_diff": 0.119,
+        "ban_diff": 4.079,
+        "score": 8.63,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ティーモ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 50.5549,
+        "pickrate": 3.5463,
+        "banrate": 9.2833,
+        "win_diff": -2.451,
+        "pick_diff": 0.34,
+        "ban_diff": 4.079,
+        "score": 13.98,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ティーモ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 48.4089,
+        "pickrate": 2.0406,
+        "banrate": 9.8666,
+        "win_diff": -4.246,
+        "pick_diff": -0.205,
+        "ban_diff": 1.201,
+        "score": 4.95,
         "trend": "win↓ pick↓ ban↑"
       }
     ]
   },
-  "Viego": {
+  "Camille": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ヴィエゴ",
-        "lane": "JG",
-        "rank": "Emerald",
-        "winrate": 52.1143,
-        "pickrate": 20.3187,
-        "banrate": 7.9416,
-        "win_diff": 0.215,
-        "pick_diff": 7.542,
-        "ban_diff": 2.675,
-        "score": 5.32,
-        "trend": "win↑ pick↑ ban↑"
+        "name_ja": "カミール",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 47.395199999999996,
+        "pickrate": 3.4413,
+        "banrate": 0.45909999999999995,
+        "win_diff": -4.253,
+        "pick_diff": -1.342,
+        "ban_diff": -0.47,
+        "score": 15.48,
+        "trend": "win↓ pick↓ ban↓"
       },
       {
-        "name_ja": "ヴィエゴ",
-        "lane": "JG",
-        "rank": "Diamond",
-        "winrate": 50.4451,
-        "pickrate": 15.853,
-        "banrate": 11.1871,
-        "win_diff": -0.139,
-        "pick_diff": 6.858,
-        "ban_diff": 3.387,
-        "score": 31.57,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ヴィエゴ",
-        "lane": "JG",
-        "rank": "Master",
-        "winrate": 50.173100000000005,
-        "pickrate": 14.896400000000002,
-        "banrate": 13.158900000000001,
-        "win_diff": -0.245,
-        "pick_diff": 6.01,
-        "ban_diff": 3.152,
-        "score": 38.6,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ヴィエゴ",
+        "name_ja": "カミール",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 50.645799999999994,
-        "pickrate": 15.169599999999999,
-        "banrate": 16.6907,
-        "win_diff": -2.971,
-        "pick_diff": 4.025,
-        "ban_diff": 3.076,
-        "score": 19.56,
-        "trend": "win↓ pick↑ ban↑"
+        "winrate": 46.5278,
+        "pickrate": 1.2593,
+        "banrate": 0.45909999999999995,
+        "win_diff": 2.372,
+        "pick_diff": -0.09,
+        "ban_diff": -0.47,
+        "score": 7.96,
+        "trend": "win↑ pick↓ ban↓"
       },
       {
-        "name_ja": "ヴィエゴ",
-        "lane": "JG",
+        "name_ja": "カミール",
+        "lane": "TOP",
         "rank": "Legendary_rank",
-        "winrate": 50.931099999999994,
-        "pickrate": 16.5845,
-        "banrate": 18.956899999999997,
-        "win_diff": 0.089,
-        "pick_diff": 4.742,
-        "ban_diff": 3.978,
-        "score": 4.45,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Ashe": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "アッシュ",
-        "lane": "ADC",
-        "rank": "Emerald",
-        "winrate": 51.94029999999999,
-        "pickrate": 15.3829,
-        "banrate": 0.4815,
-        "win_diff": 0.958,
-        "pick_diff": 7.928,
-        "ban_diff": 0.28,
-        "score": 5.06,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "アッシュ",
-        "lane": "ADC",
-        "rank": "Diamond",
-        "winrate": 50.857200000000006,
-        "pickrate": 12.1189,
-        "banrate": 0.23149999999999998,
-        "win_diff": 0.04,
-        "pick_diff": 6.119,
-        "ban_diff": 0.153,
-        "score": 19.06,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "アッシュ",
-        "lane": "ADC",
-        "rank": "Master",
-        "winrate": 50.5542,
-        "pickrate": 11.203100000000001,
-        "banrate": 0.2302,
-        "win_diff": 0.039,
-        "pick_diff": 5.667,
-        "ban_diff": 0.167,
-        "score": 23.65,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "アッシュ",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 47.1154,
-        "pickrate": 7.5075,
-        "banrate": 0.0567,
-        "win_diff": -6.838,
-        "pick_diff": 3.74,
-        "ban_diff": -0.031,
-        "score": 26.17,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "アッシュ",
-        "lane": "ADC",
-        "rank": "Legendary_rank",
-        "winrate": 49.7742,
-        "pickrate": 7.7002,
-        "banrate": 0.11249999999999999,
-        "win_diff": -1.909,
-        "pick_diff": 3.231,
-        "ban_diff": 0.087,
-        "score": 3.57,
-        "trend": "win↓ pick↑ ban↑"
+        "winrate": 49.6849,
+        "pickrate": 4.0596,
+        "banrate": 0.4703,
+        "win_diff": -2.599,
+        "pick_diff": -0.945,
+        "ban_diff": -0.266,
+        "score": 3.21,
+        "trend": "win↓ pick↓ ban↓"
       }
     ]
   },
   "Ziggs": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "ジグス",
         "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 49.6629,
-        "pickrate": 4.5506,
-        "banrate": 0.8222,
-        "win_diff": 3.521,
-        "pick_diff": -0.515,
-        "ban_diff": 0.128,
-        "score": 3.84,
+        "rank": "Challenger",
+        "winrate": 48.4009,
+        "pickrate": 4.1015999999999995,
+        "banrate": 0.9313999999999999,
+        "win_diff": 2.499,
+        "pick_diff": -0.174,
+        "ban_diff": 0.406,
+        "score": 8.37,
         "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Zed": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ゼド",
+        "lane": "JG",
+        "rank": "Emerald",
+        "winrate": 48.986000000000004,
+        "pickrate": 1.7215,
+        "banrate": 1.3358,
+        "win_diff": -2.587,
+        "pick_diff": -0.301,
+        "ban_diff": 0.087,
+        "score": 2.78,
+        "trend": "win↓ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ゼド",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 48.8425,
+        "pickrate": 5.1852,
+        "banrate": 3.5479999999999996,
+        "win_diff": -3.085,
+        "pick_diff": 0.47,
+        "ban_diff": -0.661,
+        "score": 3.65,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Shyvana": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "シヴァーナ",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 52.1705,
+        "pickrate": 9.6737,
+        "banrate": 12.763,
+        "win_diff": 0.377,
+        "pick_diff": -1.633,
+        "ban_diff": -4.043,
+        "score": 25.72,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Caitlyn": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ケイトリン",
+        "lane": "ADC",
+        "rank": "Emerald",
+        "winrate": 52.261500000000005,
+        "pickrate": 26.4096,
+        "banrate": 3.9617,
+        "win_diff": 0.625,
+        "pick_diff": -5.917,
+        "ban_diff": -0.421,
+        "score": 3.79,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ケイトリン",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 49.4382,
+        "pickrate": 17.512800000000002,
+        "banrate": 1.3861999999999999,
+        "win_diff": 1.498,
+        "pick_diff": 3.477,
+        "ban_diff": 0.58,
+        "score": 10.58,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Swain": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "スウェイン",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 47.2803,
+        "pickrate": 3.1351999999999998,
+        "banrate": 4.4995,
+        "win_diff": -3.034,
+        "pick_diff": 0.349,
+        "ban_diff": -2.106,
+        "score": 12.79,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Vi": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヴァイ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 52.1197,
+        "pickrate": 7.0139000000000005,
+        "banrate": 0.9839,
+        "win_diff": 3.273,
+        "pick_diff": -1.344,
+        "ban_diff": -0.33,
+        "score": 12.33,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ヴァイ",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 48.0105,
+        "pickrate": 5.9841,
+        "banrate": 0.7143,
+        "win_diff": -2.017,
+        "pick_diff": -1.192,
+        "ban_diff": -0.155,
+        "score": 2.69,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Hecarim": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヘカリム",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 46.055,
+        "pickrate": 8.384,
+        "banrate": 33.7524,
+        "win_diff": -1.642,
+        "pick_diff": 1.311,
+        "ban_diff": -6.478,
+        "score": 44.29,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ヘカリム",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 47.6366,
+        "pickrate": 5.9207,
+        "banrate": 74.7344,
+        "win_diff": -1.725,
+        "pick_diff": 1.803,
+        "ban_diff": -12.317,
+        "score": 26.35,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ヘカリム",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 52.6994,
+        "pickrate": 5.6495999999999995,
+        "banrate": 72.5865,
+        "win_diff": -3.444,
+        "pick_diff": 0.623,
+        "ban_diff": -8.465,
+        "score": 7.99,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Akshan": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アクシャン",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 52.9617,
+        "pickrate": 1.2550000000000001,
+        "banrate": 0.034999999999999996,
+        "win_diff": 13.306,
+        "pick_diff": 0.239,
+        "ban_diff": -0.035,
+        "score": 40.33,
+        "trend": "win↑ pick↑ ban↓"
+      },
+      {
+        "name_ja": "アクシャン",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 47.810900000000004,
+        "pickrate": 1.1678,
+        "banrate": 0.0286,
+        "win_diff": -4.371,
+        "pick_diff": 0.093,
+        "ban_diff": -0.003,
+        "score": 4.42,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Urgot": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アーゴット",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 49.1436,
+        "pickrate": 3.3189,
+        "banrate": 0.7870999999999999,
+        "win_diff": -4.911,
+        "pick_diff": 1.374,
+        "ban_diff": 0.454,
+        "score": 17.47,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Yone": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヨネ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 49.3219,
+        "pickrate": 6.1262,
+        "banrate": 10.232199999999999,
+        "win_diff": 4.608,
+        "pick_diff": -1.829,
+        "ban_diff": 1.699,
+        "score": 19.12,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ヨネ",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 48.139700000000005,
+        "pickrate": 7.6392,
+        "banrate": 10.232199999999999,
+        "win_diff": 2.476,
+        "pick_diff": 0.77,
+        "ban_diff": 1.699,
+        "score": 11.13,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ヨネ",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 46.7824,
+        "pickrate": 4.2809,
+        "banrate": 10.232199999999999,
+        "win_diff": 2.126,
+        "pick_diff": -0.31,
+        "ban_diff": 1.699,
+        "score": 9.39,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Kaisa": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "カイ＝サ",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 47.2119,
+        "pickrate": 16.4677,
+        "banrate": 0.4985,
+        "win_diff": 4.659,
+        "pick_diff": -0.003,
+        "ban_diff": 0.096,
+        "score": 14.12,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Maokai": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "マオカイ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 54.7794,
+        "pickrate": 4.7575,
+        "banrate": 0.3411,
+        "win_diff": 5.416,
+        "pick_diff": -0.744,
+        "ban_diff": 0.131,
+        "score": 17.56,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Zyra": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ザイラ",
+        "lane": "MID",
+        "rank": "Master",
+        "winrate": 51.45570000000001,
+        "pickrate": 2.1079,
+        "banrate": 30.581500000000002,
+        "win_diff": 0.123,
+        "pick_diff": -0.287,
+        "ban_diff": -3.377,
+        "score": 15.64,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ザイラ",
+        "lane": "SUP",
+        "rank": "Master",
+        "winrate": 51.27969999999999,
+        "pickrate": 4.4742,
+        "banrate": 30.581500000000002,
+        "win_diff": 0.046,
+        "pick_diff": -0.083,
+        "ban_diff": -3.377,
+        "score": 14.21,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ザイラ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 52.162200000000006,
+        "pickrate": 1.6179,
+        "banrate": 12.1649,
+        "win_diff": 9.454,
+        "pick_diff": -0.064,
+        "ban_diff": 4.245,
+        "score": 34.83,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ザイラ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 49.7207,
+        "pickrate": 3.1308999999999996,
+        "banrate": 12.1649,
+        "win_diff": 6.036,
+        "pick_diff": -0.198,
+        "ban_diff": 4.245,
+        "score": 24.77,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ザイラ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 52.266400000000004,
+        "pickrate": 2.1271999999999998,
+        "banrate": 13.139000000000001,
+        "win_diff": 6.221,
+        "pick_diff": -0.097,
+        "ban_diff": 0.048,
+        "score": 6.29,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Riven": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "リヴェン",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 51.4166,
+        "pickrate": 4.1672,
+        "banrate": 2.7636000000000003,
+        "win_diff": -2.476,
+        "pick_diff": -1.685,
+        "ban_diff": -2.388,
+        "score": 13.54,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "リヴェン",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 46.6447,
+        "pickrate": 3.5775,
+        "banrate": 2.9025,
+        "win_diff": -4.99,
+        "pick_diff": -0.726,
+        "ban_diff": -0.985,
+        "score": 5.85,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Kayn": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ケイン",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 46.7742,
+        "pickrate": 2.44,
+        "banrate": 0.09179999999999999,
+        "win_diff": 4.745,
+        "pick_diff": 0.022,
+        "ban_diff": 0.074,
+        "score": 14.38,
+        "trend": "win↑ pick↑ ban↑"
+      }
+    ]
+  },
+  "Jax": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ジャックス",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 49.19,
+        "pickrate": 2.9691,
+        "banrate": 0.1399,
+        "win_diff": 6.167,
+        "pick_diff": -0.045,
+        "ban_diff": 0.017,
+        "score": 18.59,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ジャックス",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 50.60980000000001,
+        "pickrate": 1.1199999999999999,
+        "banrate": 0.1093,
+        "win_diff": 3.388,
+        "pick_diff": -0.142,
+        "ban_diff": -0.013,
+        "score": 10.4,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ジャックス",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 52.863099999999996,
+        "pickrate": 2.8179,
+        "banrate": 0.24989999999999998,
+        "win_diff": 3.93,
+        "pick_diff": -0.297,
+        "ban_diff": 0.117,
+        "score": 4.14,
+        "trend": "win↑ pick↓ ban↑"
+      },
+      {
+        "name_ja": "ジャックス",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 48.780499999999996,
+        "pickrate": 1.2102,
+        "banrate": 0.24989999999999998,
+        "win_diff": 2.404,
+        "pick_diff": -0.138,
+        "ban_diff": 0.117,
+        "score": 2.53,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Zilean": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ジリアン",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 55.12629999999999,
+        "pickrate": 2.9428,
+        "banrate": 7.158200000000001,
+        "win_diff": 2.64,
+        "pick_diff": -0.229,
+        "ban_diff": -2.514,
+        "score": 12.03,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ジリアン",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 54.453399999999995,
+        "pickrate": 2.9163,
+        "banrate": 6.666900000000001,
+        "win_diff": 3.338,
+        "pick_diff": -0.502,
+        "ban_diff": -0.464,
+        "score": 3.82,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Nidalee": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ニダリー",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 51.8193,
+        "pickrate": 1.9129,
+        "banrate": 6.1975,
+        "win_diff": 0.536,
+        "pick_diff": -0.434,
+        "ban_diff": -3.006,
+        "score": 18.05,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ニダリー",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 55.3763,
+        "pickrate": 2.44,
+        "banrate": 16.2797,
+        "win_diff": -0.645,
+        "pick_diff": -0.907,
+        "ban_diff": -15.558,
+        "score": 26.63,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ニダリー",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 54.58969999999999,
+        "pickrate": 2.8297,
+        "banrate": 16.5532,
+        "win_diff": -0.812,
+        "pick_diff": -0.409,
+        "ban_diff": -8.029,
+        "score": 5.03,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Nasus": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ナサス",
+        "lane": "TOP",
+        "rank": "Emerald",
+        "winrate": 49.5124,
+        "pickrate": 5.7107,
+        "banrate": 1.4347,
+        "win_diff": -0.986,
+        "pick_diff": -3.794,
+        "ban_diff": -0.748,
+        "score": 3.26,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "TOP",
+        "rank": "Diamond",
+        "winrate": 49.4963,
+        "pickrate": 7.7082,
+        "banrate": 6.8785,
+        "win_diff": -1.148,
+        "pick_diff": -3.68,
+        "ban_diff": -2.416,
+        "score": 25.17,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "MID",
+        "rank": "Master",
+        "winrate": 49.742599999999996,
+        "pickrate": 1.4248,
+        "banrate": 9.1276,
+        "win_diff": -1.842,
+        "pick_diff": -0.61,
+        "ban_diff": -4.179,
+        "score": 33.89,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "TOP",
+        "rank": "Master",
+        "winrate": 49.5035,
+        "pickrate": 8.109,
+        "banrate": 9.1276,
+        "win_diff": -1.587,
+        "pick_diff": -3.646,
+        "ban_diff": -4.179,
+        "score": 44.0,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 49.357,
+        "pickrate": 7.1407,
+        "banrate": 11.644599999999999,
+        "win_diff": -4.07,
+        "pick_diff": -2.83,
+        "ban_diff": -2.373,
+        "score": 20.01,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 51.1521,
+        "pickrate": 1.7081,
+        "banrate": 8.6859,
+        "win_diff": -0.307,
+        "pick_diff": -0.635,
+        "ban_diff": -4.099,
+        "score": 2.67,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ナサス",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 48.2678,
+        "pickrate": 6.7023,
+        "banrate": 8.6859,
+        "win_diff": -2.62,
+        "pick_diff": -2.107,
+        "ban_diff": -4.099,
+        "score": 5.72,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Galio": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ガリオ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 44.756800000000005,
+        "pickrate": 8.089599999999999,
+        "banrate": 0.5991,
+        "win_diff": -4.458,
+        "pick_diff": 1.396,
+        "ban_diff": -0.225,
+        "score": 15.8,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "ガリオ",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 50.0,
+        "pickrate": 1.4692,
+        "banrate": 0.5991,
+        "win_diff": -4.839,
+        "pick_diff": -0.16,
+        "ban_diff": -0.225,
+        "score": 15.09,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Velkoz": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ヴェル＝コズ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 51.27270000000001,
+        "pickrate": 2.405,
+        "banrate": 0.2055,
+        "win_diff": 2.436,
+        "pick_diff": 0.145,
+        "ban_diff": 0.083,
+        "score": 7.65,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ヴェル＝コズ",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 47.0483,
+        "pickrate": 2.1999999999999997,
+        "banrate": 0.49,
+        "win_diff": -2.04,
+        "pick_diff": -0.264,
+        "ban_diff": 0.095,
+        "score": 2.22,
+        "trend": "win↓ pick↓ ban↑"
+      }
+    ]
+  },
+  "Ashe": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アッシュ",
+        "lane": "ADC",
+        "rank": "Emerald",
+        "winrate": 52.0434,
+        "pickrate": 15.386800000000001,
+        "banrate": 0.5091,
+        "win_diff": 1.061,
+        "pick_diff": 7.931,
+        "ban_diff": 0.308,
+        "score": 5.18,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "アッシュ",
+        "lane": "ADC",
+        "rank": "Diamond",
+        "winrate": 50.812999999999995,
+        "pickrate": 12.034400000000002,
+        "banrate": 0.2396,
+        "win_diff": -0.004,
+        "pick_diff": 6.035,
+        "ban_diff": 0.161,
+        "score": 18.61,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "アッシュ",
+        "lane": "ADC",
+        "rank": "Master",
+        "winrate": 50.666999999999994,
+        "pickrate": 11.1056,
+        "banrate": 0.2385,
+        "win_diff": 0.152,
+        "pick_diff": 5.57,
+        "ban_diff": 0.175,
+        "score": 24.19,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "アッシュ",
+        "lane": "ADC",
+        "rank": "Challenger",
+        "winrate": 49.780499999999996,
+        "pickrate": 7.9671,
+        "banrate": 0.1006,
+        "win_diff": -4.173,
+        "pick_diff": 4.2,
+        "ban_diff": 0.013,
+        "score": 18.84,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "アッシュ",
+        "lane": "ADC",
+        "rank": "Legendary_rank",
+        "winrate": 50.6903,
+        "pickrate": 7.5544,
+        "banrate": 0.1181,
+        "win_diff": -0.993,
+        "pick_diff": 3.085,
+        "ban_diff": 0.093,
+        "score": 2.58,
+        "trend": "win↓ pick↑ ban↑"
+      }
+    ]
+  },
+  "Katarina": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "カタリナ",
+        "lane": "MID",
+        "rank": "Challenger",
+        "winrate": 49.6139,
+        "pickrate": 2.2651,
+        "banrate": 0.3411,
+        "win_diff": -9.053,
+        "pick_diff": 0.951,
+        "ban_diff": -0.22,
+        "score": 28.91,
+        "trend": "win↓ pick↑ ban↓"
+      }
+    ]
+  },
+  "Ahri": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "アーリ",
+        "lane": "MID",
+        "rank": "Emerald",
+        "winrate": 50.217,
+        "pickrate": 7.0872,
+        "banrate": 0.3811,
+        "win_diff": -2.849,
+        "pick_diff": -0.116,
+        "ban_diff": -0.021,
+        "score": 2.92,
+        "trend": "win↓ pick↓ ban↓"
+      }
+    ]
+  },
+  "Aatrox": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "エイトロックス",
+        "lane": "JG",
+        "rank": "Challenger",
+        "winrate": 49.5987,
+        "pickrate": 2.7241999999999997,
+        "banrate": 6.353599999999999,
+        "win_diff": 2.391,
+        "pick_diff": -0.728,
+        "ban_diff": -1.602,
+        "score": 10.67,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Gnar": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ナー",
+        "lane": "TOP",
+        "rank": "Challenger",
+        "winrate": 50.8121,
+        "pickrate": 1.8846000000000003,
+        "banrate": 0.1924,
+        "win_diff": 10.982,
+        "pick_diff": -0.183,
+        "ban_diff": 0.157,
+        "score": 33.46,
+        "trend": "win↑ pick↓ ban↑"
+      }
+    ]
+  },
+  "Blitzcrank": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "ブリッツクランク",
+        "lane": "SUP",
+        "rank": "Challenger",
+        "winrate": 55.013,
+        "pickrate": 8.4175,
+        "banrate": 1.0626,
+        "win_diff": 3.408,
+        "pick_diff": 1.321,
+        "ban_diff": 0.502,
+        "score": 12.96,
+        "trend": "win↑ pick↑ ban↑"
+      },
+      {
+        "name_ja": "ブリッツクランク",
+        "lane": "SUP",
+        "rank": "Legendary_rank",
+        "winrate": 52.6316,
+        "pickrate": 6.954200000000001,
+        "banrate": 1.0606,
+        "win_diff": 3.018,
+        "pick_diff": 0.372,
+        "ban_diff": 0.261,
+        "score": 3.33,
+        "trend": "win↑ pick↑ ban↑"
       }
     ]
   },
   "Rumble": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "ランブル",
@@ -1651,1590 +3063,354 @@
       {
         "name_ja": "ランブル",
         "lane": "TOP",
-        "rank": "Legendary_rank",
-        "winrate": 52.146899999999995,
-        "pickrate": 3.62,
-        "banrate": 1.4460000000000002,
-        "win_diff": 2.126,
-        "pick_diff": -1.107,
-        "ban_diff": -0.035,
-        "score": 2.7,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Irelia": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "イレリア",
-        "lane": "MID",
         "rank": "Challenger",
-        "winrate": 52.2388,
-        "pickrate": 1.0364,
-        "banrate": 3.1298,
-        "win_diff": -5.901,
-        "pick_diff": -0.002,
-        "ban_diff": -1.967,
-        "score": 20.66,
-        "trend": "win↓ pick↓ ban↓"
+        "winrate": 47.9064,
+        "pickrate": 3.5506999999999995,
+        "banrate": 1.0626,
+        "win_diff": -2.094,
+        "pick_diff": -0.059,
+        "ban_diff": 0.379,
+        "score": 6.94,
+        "trend": "win↓ pick↓ ban↑"
       }
     ]
   },
-  "Jarvaniv": {
+  "Darius": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ジャーヴァンⅣ",
-        "lane": "TOP",
+        "name_ja": "ダリウス",
+        "lane": "JG",
         "rank": "Legendary_rank",
-        "winrate": 48.780499999999996,
-        "pickrate": 1.0359,
-        "banrate": 0.5499999999999999,
-        "win_diff": 2.15,
-        "pick_diff": -0.037,
-        "ban_diff": 0.056,
-        "score": 2.2,
-        "trend": "win↑ pick↓ ban↑"
+        "winrate": 50.699000000000005,
+        "pickrate": 2.6742,
+        "banrate": 7.031,
+        "win_diff": 5.287,
+        "pick_diff": 0.183,
+        "ban_diff": 0.457,
+        "score": 5.61,
+        "trend": "win↑ pick↑ ban↑"
       }
     ]
   },
-  "Sion": {
+  "Masteryi": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "サイオン",
-        "lane": "TOP",
+        "name_ja": "マスター・イー",
+        "lane": "JG",
+        "rank": "Emerald",
+        "winrate": 55.42209999999999,
+        "pickrate": 21.148600000000002,
+        "banrate": 52.166199999999996,
+        "win_diff": -1.073,
+        "pick_diff": 2.851,
+        "ban_diff": -3.245,
+        "score": 4.12,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "マスター・イー",
+        "lane": "JG",
+        "rank": "Master",
+        "winrate": 51.0034,
+        "pickrate": 8.0245,
+        "banrate": 83.5886,
+        "win_diff": -1.748,
+        "pick_diff": 1.716,
+        "ban_diff": -3.414,
+        "score": 34.51,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "マスター・イー",
+        "lane": "JG",
         "rank": "Challenger",
-        "winrate": 53.365399999999994,
-        "pickrate": 4.29,
-        "banrate": 0.2578,
-        "win_diff": 5.014,
-        "pick_diff": -2.088,
-        "ban_diff": 0.012,
-        "score": 18.19,
-        "trend": "win↑ pick↓ ban↑"
+        "winrate": 46.6113,
+        "pickrate": 6.3229999999999995,
+        "banrate": 75.6395,
+        "win_diff": -6.494,
+        "pick_diff": 0.681,
+        "ban_diff": 0.591,
+        "score": 21.39,
+        "trend": "win↓ pick↑ ban↑"
+      },
+      {
+        "name_ja": "マスター・イー",
+        "lane": "JG",
+        "rank": "Legendary_rank",
+        "winrate": 47.2826,
+        "pickrate": 6.517399999999999,
+        "banrate": 76.87429999999999,
+        "win_diff": -4.196,
+        "pick_diff": 1.559,
+        "ban_diff": -5.246,
+        "score": 7.6,
+        "trend": "win↓ pick↑ ban↓"
       }
     ]
   },
   "Jayce": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "ジェイス",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 52.884600000000006,
-        "pickrate": 2.145,
-        "banrate": 0.6394000000000001,
-        "win_diff": 5.702,
-        "pick_diff": -0.343,
-        "ban_diff": -0.832,
-        "score": 18.87,
+        "winrate": 51.687799999999996,
+        "pickrate": 2.0726999999999998,
+        "banrate": 0.8789,
+        "win_diff": 4.505,
+        "pick_diff": -0.416,
+        "ban_diff": -0.593,
+        "score": 15.03,
         "trend": "win↑ pick↓ ban↓"
       },
       {
         "name_ja": "ジェイス",
         "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 49.786,
-        "pickrate": 3.6144999999999996,
-        "banrate": 0.6394000000000001,
-        "win_diff": 2.122,
-        "pick_diff": -0.135,
-        "ban_diff": -0.832,
-        "score": 7.82,
-        "trend": "win↑ pick↓ ban↓"
+        "winrate": 52.4377,
+        "pickrate": 4.036,
+        "banrate": 0.8789,
+        "win_diff": 4.774,
+        "pick_diff": 0.286,
+        "ban_diff": -0.593,
+        "score": 15.64,
+        "trend": "win↑ pick↑ ban↓"
       }
     ]
   },
-  "Aurelionsol": {
+  "Missfortune": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "オレリオン・ソル",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 49.7671,
-        "pickrate": 7.9683,
-        "banrate": 8.4093,
-        "win_diff": -0.161,
-        "pick_diff": -1.231,
-        "ban_diff": -3.341,
-        "score": 19.58,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Rell": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "レル",
-        "lane": "SUP",
+        "name_ja": "ミス・フォーチュン",
+        "lane": "ADC",
         "rank": "Challenger",
-        "winrate": 45.7143,
-        "pickrate": 1.8047,
-        "banrate": 0.6187,
-        "win_diff": -3.517,
-        "pick_diff": -0.473,
-        "ban_diff": 0.181,
-        "score": 11.53,
+        "winrate": 50.2152,
+        "pickrate": 9.1434,
+        "banrate": 0.4723,
+        "win_diff": -3.179,
+        "pick_diff": -0.406,
+        "ban_diff": 0.244,
+        "score": 10.51,
         "trend": "win↓ pick↓ ban↑"
       }
     ]
   },
-  "Ahri": {
+  "Nilah": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "アーリ",
-        "lane": "MID",
-        "rank": "Emerald",
-        "winrate": 49.829,
-        "pickrate": 7.1748,
-        "banrate": 0.396,
-        "win_diff": -3.237,
-        "pick_diff": -0.028,
-        "ban_diff": -0.006,
-        "score": 3.25,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "アーリ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 50.5894,
-        "pickrate": 5.2490000000000006,
-        "banrate": 0.1598,
-        "win_diff": -2.372,
-        "pick_diff": 0.22,
-        "ban_diff": 0.125,
-        "score": 7.63,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Warwick": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ワーウィック",
+        "name_ja": "ニーラ",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 51.165000000000006,
-        "pickrate": 5.5326,
-        "banrate": 3.1144000000000003,
-        "win_diff": -2.713,
-        "pick_diff": 1.24,
-        "ban_diff": 0.346,
-        "score": 10.52,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Olaf": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "オラフ",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 42.507600000000004,
-        "pickrate": 1.6861000000000002,
-        "banrate": 1.5623,
-        "win_diff": -5.199,
-        "pick_diff": -0.224,
-        "ban_diff": -0.278,
-        "score": 16.35,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Katarina": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "カタリナ",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 46.0727,
-        "pickrate": 2.0115000000000003,
-        "banrate": 0.46169999999999994,
-        "win_diff": -2.1,
-        "pick_diff": 0.415,
-        "ban_diff": 0.018,
-        "score": 18.53,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "カタリナ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 50.495000000000005,
-        "pickrate": 2.0831,
-        "banrate": 0.3042,
-        "win_diff": -8.172,
-        "pick_diff": 0.769,
-        "ban_diff": -0.256,
-        "score": 26.05,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Nasus": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ナサス",
-        "lane": "TOP",
-        "rank": "Emerald",
-        "winrate": 49.2066,
-        "pickrate": 5.4361,
-        "banrate": 1.4487999999999999,
-        "win_diff": -1.292,
-        "pick_diff": -4.069,
-        "ban_diff": -0.734,
-        "score": 3.69,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "TOP",
-        "rank": "Diamond",
-        "winrate": 49.6408,
-        "pickrate": 7.280100000000001,
-        "banrate": 6.8759,
-        "win_diff": -1.003,
-        "pick_diff": -4.108,
-        "ban_diff": -2.418,
-        "score": 25.6,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 49.803999999999995,
-        "pickrate": 1.3993,
-        "banrate": 9.2743,
-        "win_diff": -1.78,
-        "pick_diff": -0.636,
-        "ban_diff": -4.032,
-        "score": 32.91,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "TOP",
-        "rank": "Master",
-        "winrate": 49.6471,
-        "pickrate": 7.7216000000000005,
-        "banrate": 9.2743,
-        "win_diff": -1.444,
-        "pick_diff": -4.034,
-        "ban_diff": -4.032,
-        "score": 43.81,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 52.89469999999999,
-        "pickrate": 1.9594,
-        "banrate": 11.4623,
-        "win_diff": 4.818,
-        "pick_diff": -0.774,
-        "ban_diff": -2.556,
-        "score": 19.45,
+        "winrate": 53.333299999999994,
+        "pickrate": 1.3774,
+        "banrate": 1.1894,
+        "win_diff": 3.883,
+        "pick_diff": -0.217,
+        "ban_diff": -0.282,
+        "score": 12.4,
         "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 48.1092,
-        "pickrate": 7.3631,
-        "banrate": 11.4623,
-        "win_diff": -5.318,
-        "pick_diff": -2.607,
-        "ban_diff": -2.556,
-        "score": 23.7,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 50.4425,
-        "pickrate": 1.6178000000000001,
-        "banrate": 9.3711,
-        "win_diff": -1.017,
-        "pick_diff": -0.725,
-        "ban_diff": -3.413,
-        "score": 3.09,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ナサス",
-        "lane": "TOP",
-        "rank": "Legendary_rank",
-        "winrate": 49.3667,
-        "pickrate": 6.4587,
-        "banrate": 9.3711,
-        "win_diff": -1.521,
-        "pick_diff": -2.351,
-        "ban_diff": -3.413,
-        "score": 4.4,
-        "trend": "win↓ pick↓ ban↓"
       }
     ]
   },
-  "Fizz": {
+  "Pantheon": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "フィズ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 48.4138,
-        "pickrate": 3.7382999999999997,
-        "banrate": 0.6703,
-        "win_diff": -5.604,
-        "pick_diff": -0.187,
-        "ban_diff": -0.066,
-        "score": 17.19,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "フィズ",
+        "name_ja": "パンテオン",
         "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.7143,
-        "pickrate": 2.1656,
-        "banrate": 0.6703,
-        "win_diff": 6.16,
-        "pick_diff": 0.396,
-        "ban_diff": -0.066,
-        "score": 19.17,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "フィズ",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 48.4219,
-        "pickrate": 2.6567,
-        "banrate": 1.0594,
-        "win_diff": 3.322,
-        "pick_diff": 0.204,
-        "ban_diff": 0.0,
-        "score": 3.42,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Kennen": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ケネン",
-        "lane": "MID",
         "rank": "Emerald",
-        "winrate": 51.465399999999995,
-        "pickrate": 1.0489,
-        "banrate": 0.5002000000000001,
-        "win_diff": -2.953,
-        "pick_diff": -0.034,
-        "ban_diff": 0.033,
-        "score": 2.99,
-        "trend": "win↓ pick↓ ban↑"
-      },
-      {
-        "name_ja": "ケネン",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 56.8,
-        "pickrate": 1.2891,
-        "banrate": 0.232,
-        "win_diff": 7.417,
-        "pick_diff": -0.13,
-        "ban_diff": 0.109,
-        "score": 22.61,
+        "winrate": 51.924400000000006,
+        "pickrate": 3.5202999999999998,
+        "banrate": 1.9052,
+        "win_diff": 2.291,
+        "pick_diff": -0.603,
+        "ban_diff": 0.004,
+        "score": 2.59,
         "trend": "win↑ pick↓ ban↑"
       },
       {
-        "name_ja": "ケネン",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 52.0648,
-        "pickrate": 2.5258,
-        "banrate": 0.2454,
-        "win_diff": -2.928,
-        "pick_diff": -0.097,
-        "ban_diff": -0.003,
-        "score": 2.98,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Syndra": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "シンドラ",
-        "lane": "MID",
+        "name_ja": "パンテオン",
+        "lane": "JG",
         "rank": "Challenger",
-        "winrate": 52.794200000000004,
-        "pickrate": 7.842599999999999,
-        "banrate": 6.868100000000001,
-        "win_diff": 2.169,
-        "pick_diff": -0.568,
-        "ban_diff": -1.332,
-        "score": 9.36,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Galio": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ガリオ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 46.4952,
-        "pickrate": 8.017900000000001,
-        "banrate": 0.8508,
-        "win_diff": -2.72,
-        "pick_diff": 1.324,
-        "ban_diff": 0.027,
-        "score": 10.19,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ガリオ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 49.8392,
-        "pickrate": 1.6036000000000001,
-        "banrate": 0.8508,
-        "win_diff": -4.999,
-        "pick_diff": -0.026,
-        "ban_diff": 0.027,
-        "score": 15.08,
+        "winrate": 49.386,
+        "pickrate": 4.9849,
+        "banrate": 1.5348000000000002,
+        "win_diff": -8.947,
+        "pick_diff": -0.062,
+        "ban_diff": 0.256,
+        "score": 27.32,
         "trend": "win↓ pick↓ ban↑"
       }
     ]
   },
-  "Zoe": {
+  "Ekko": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "ゾーイ",
+        "name_ja": "エコー",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 52.454,
-        "pickrate": 1.6809,
-        "banrate": 1.0828,
-        "win_diff": 2.454,
-        "pick_diff": -0.457,
-        "ban_diff": -0.301,
-        "score": 8.5,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ゾーイ",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 49.566300000000005,
-        "pickrate": 1.6504999999999999,
-        "banrate": 1.3437,
-        "win_diff": -3.674,
-        "pick_diff": -0.038,
-        "ban_diff": -0.165,
-        "score": 3.78,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Smolder": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "スモルダー",
-        "lane": "MID",
-        "rank": "Emerald",
-        "winrate": 53.041000000000004,
-        "pickrate": 3.7948000000000004,
-        "banrate": 38.0372,
-        "win_diff": 0.558,
-        "pick_diff": -1.57,
-        "ban_diff": -8.829,
-        "score": 5.76,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "TOP",
-        "rank": "Emerald",
-        "winrate": 53.459599999999995,
-        "pickrate": 2.7925999999999997,
-        "banrate": 38.0372,
-        "win_diff": 0.399,
-        "pick_diff": -0.595,
-        "ban_diff": -8.829,
-        "score": 5.11,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "ADC",
-        "rank": "Emerald",
-        "winrate": 54.9439,
-        "pickrate": 12.3069,
-        "banrate": 38.0372,
-        "win_diff": -0.961,
-        "pick_diff": -2.023,
-        "ban_diff": -8.829,
-        "score": 6.39,
+        "winrate": 46.6258,
+        "pickrate": 1.4255,
+        "banrate": 0.0262,
+        "win_diff": -7.541,
+        "pick_diff": -0.257,
+        "ban_diff": -0.079,
+        "score": 23.13,
         "trend": "win↓ pick↓ ban↓"
       },
       {
-        "name_ja": "スモルダー",
-        "lane": "MID",
-        "rank": "Diamond",
-        "winrate": 50.9984,
-        "pickrate": 3.3842,
-        "banrate": 59.9939,
-        "win_diff": -0.686,
-        "pick_diff": -0.605,
-        "ban_diff": -6.56,
-        "score": 25.61,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "TOP",
-        "rank": "Diamond",
-        "winrate": 51.803999999999995,
-        "pickrate": 2.0031,
-        "banrate": 59.9939,
-        "win_diff": 0.18,
-        "pick_diff": -0.132,
-        "ban_diff": -6.56,
-        "score": 21.16,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "ADC",
-        "rank": "Diamond",
-        "winrate": 55.0621,
-        "pickrate": 12.4955,
-        "banrate": 59.9939,
-        "win_diff": -0.526,
-        "pick_diff": 0.01,
-        "ban_diff": -6.56,
-        "score": 22.87,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 51.016799999999996,
-        "pickrate": 2.9765,
-        "banrate": 65.0703,
-        "win_diff": 0.207,
-        "pick_diff": -0.167,
-        "ban_diff": -7.47,
-        "score": 32.21,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "TOP",
-        "rank": "Master",
-        "winrate": 51.6034,
-        "pickrate": 1.6138,
-        "banrate": 65.0703,
-        "win_diff": 1.273,
-        "pick_diff": 0.103,
-        "ban_diff": -7.47,
-        "score": 40.48,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "ADC",
-        "rank": "Master",
-        "winrate": 55.462500000000006,
-        "pickrate": 12.548599999999999,
-        "banrate": 65.0703,
-        "win_diff": -0.21,
-        "pick_diff": 0.767,
-        "ban_diff": -7.47,
-        "score": 34.63,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 48.5714,
-        "pickrate": 2.3461,
-        "banrate": 67.0929,
-        "win_diff": -3.402,
-        "pick_diff": -0.317,
-        "ban_diff": -5.134,
-        "score": 18.38,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 55.45250000000001,
-        "pickrate": 18.3459,
-        "banrate": 67.0929,
-        "win_diff": 0.37,
-        "pick_diff": 1.454,
-        "ban_diff": -5.134,
-        "score": 10.99,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 51.135299999999994,
-        "pickrate": 2.2518,
-        "banrate": 70.5246,
-        "win_diff": 1.986,
-        "pick_diff": -0.046,
-        "ban_diff": -4.94,
-        "score": 4.48,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "スモルダー",
-        "lane": "ADC",
-        "rank": "Legendary_rank",
-        "winrate": 56.236200000000004,
-        "pickrate": 14.7909,
-        "banrate": 70.5246,
-        "win_diff": -1.418,
-        "pick_diff": 1.744,
-        "ban_diff": -4.94,
-        "score": 4.76,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Kayle": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ケイル",
-        "lane": "TOP",
-        "rank": "Emerald",
-        "winrate": 53.9756,
-        "pickrate": 4.3059,
-        "banrate": 0.5958,
-        "win_diff": 2.393,
-        "pick_diff": 1.181,
-        "ban_diff": 0.008,
-        "score": 2.99,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ケイル",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 49.6659,
-        "pickrate": 2.3151,
-        "banrate": 0.2784,
-        "win_diff": 7.61,
-        "pick_diff": 0.44,
-        "ban_diff": 0.173,
-        "score": 23.75,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Fiora": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "フィオラ",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 49.5817,
-        "pickrate": 6.7804,
-        "banrate": 7.7703999999999995,
-        "win_diff": -7.434,
-        "pick_diff": -1.087,
-        "ban_diff": -5.669,
-        "score": 32.44,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Leesin": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "リー・シン",
-        "lane": "JG",
-        "rank": "Emerald",
-        "winrate": 49.1332,
-        "pickrate": 22.448,
-        "banrate": 7.3577,
-        "win_diff": 0.154,
-        "pick_diff": 5.223,
-        "ban_diff": 0.969,
-        "score": 3.25,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "リー・シン",
-        "lane": "JG",
-        "rank": "Diamond",
-        "winrate": 48.262899999999995,
-        "pickrate": 22.4836,
-        "banrate": 9.3679,
-        "win_diff": -0.008,
-        "pick_diff": 5.849,
-        "ban_diff": 1.545,
-        "score": 22.23,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "リー・シン",
-        "lane": "JG",
-        "rank": "Master",
-        "winrate": 48.2507,
-        "pickrate": 22.4022,
-        "banrate": 10.895199999999999,
-        "win_diff": -0.188,
-        "pick_diff": 5.531,
-        "ban_diff": 1.402,
-        "score": 29.24,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "リー・シン",
+        "name_ja": "エコー",
         "lane": "JG",
         "rank": "Challenger",
-        "winrate": 49.2518,
-        "pickrate": 24.4663,
-        "banrate": 15.9689,
-        "win_diff": 2.273,
-        "pick_diff": 5.034,
-        "ban_diff": -1.22,
-        "score": 16.2,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "リー・シン",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 48.8527,
-        "pickrate": 23.2641,
-        "banrate": 18.237000000000002,
-        "win_diff": -0.061,
-        "pick_diff": 5.098,
-        "ban_diff": 2.107,
-        "score": 3.66,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Zyra": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ザイラ",
-        "lane": "MID",
-        "rank": "Master",
-        "winrate": 51.3143,
-        "pickrate": 2.0523,
-        "banrate": 30.9003,
-        "win_diff": -0.019,
-        "pick_diff": -0.343,
-        "ban_diff": -3.059,
-        "score": 13.75,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ザイラ",
-        "lane": "SUP",
-        "rank": "Master",
-        "winrate": 52.001200000000004,
-        "pickrate": 4.367900000000001,
-        "banrate": 30.9003,
-        "win_diff": 0.768,
-        "pick_diff": -0.19,
-        "ban_diff": -3.059,
-        "score": 19.14,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ザイラ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 51.864399999999996,
-        "pickrate": 1.5211000000000001,
-        "banrate": 11.5809,
-        "win_diff": 9.156,
-        "pick_diff": -0.161,
-        "ban_diff": 3.661,
-        "score": 33.2,
-        "trend": "win↑ pick↓ ban↑"
-      },
-      {
-        "name_ja": "ザイラ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 50.834900000000005,
-        "pickrate": 2.7792,
-        "banrate": 11.5809,
-        "win_diff": 7.151,
-        "pick_diff": -0.55,
-        "ban_diff": 3.661,
-        "score": 27.77,
-        "trend": "win↑ pick↓ ban↑"
-      },
-      {
-        "name_ja": "ザイラ",
-        "lane": "MID",
-        "rank": "Legendary_rank",
-        "winrate": 49.7612,
-        "pickrate": 2.1413,
-        "banrate": 13.5944,
-        "win_diff": 3.715,
-        "pick_diff": -0.083,
-        "ban_diff": 0.503,
-        "score": 4.01,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Rengar": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "レンガー",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 48.9899,
-        "pickrate": 2.0419,
-        "banrate": 1.7995,
-        "win_diff": -9.245,
-        "pick_diff": -0.937,
-        "ban_diff": -1.565,
-        "score": 31.49,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Camille": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "カミール",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 49.2462,
-        "pickrate": 1.0261,
-        "banrate": 0.3764,
-        "win_diff": 5.09,
-        "pick_diff": -0.323,
-        "ban_diff": -0.552,
-        "score": 16.58,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Zeri": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ゼリ",
-        "lane": "ADC",
-        "rank": "Emerald",
-        "winrate": 49.1561,
-        "pickrate": 1.4538,
-        "banrate": 0.031100000000000003,
-        "win_diff": 3.75,
-        "pick_diff": 0.089,
-        "ban_diff": 0.002,
-        "score": 3.8,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ゼリ",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 47.7064,
-        "pickrate": 1.8351,
-        "banrate": 0.0112,
-        "win_diff": 2.252,
-        "pick_diff": -0.478,
-        "ban_diff": -0.006,
-        "score": 7.48,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Senna": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "セナ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 52.173899999999996,
-        "pickrate": 3.6763999999999997,
-        "banrate": 0.44339999999999996,
-        "win_diff": -4.715,
-        "pick_diff": -0.266,
-        "ban_diff": -0.152,
-        "score": 14.77,
-        "trend": "win↓ pick↓ ban↓"
-      },
-      {
-        "name_ja": "セナ",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 53.105199999999996,
-        "pickrate": 4.841,
-        "banrate": 0.5563,
-        "win_diff": 2.022,
-        "pick_diff": 0.151,
-        "ban_diff": -0.133,
-        "score": 2.16,
-        "trend": "win↑ pick↑ ban↓"
-      }
-    ]
-  },
-  "Swain": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "スウェイン",
-        "lane": "TOP",
-        "rank": "Emerald",
-        "winrate": 47.0487,
-        "pickrate": 1.7862,
-        "banrate": 2.8126,
-        "win_diff": 2.221,
-        "pick_diff": -0.059,
-        "ban_diff": -0.224,
-        "score": 2.36,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Yasuo": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヤスオ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 50.749500000000005,
-        "pickrate": 12.0398,
-        "banrate": 27.5498,
-        "win_diff": 2.078,
-        "pick_diff": 1.491,
-        "ban_diff": -5.935,
-        "score": 17.38,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "ヤスオ",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 47.786,
-        "pickrate": 2.7946999999999997,
-        "banrate": 27.5498,
-        "win_diff": -5.493,
-        "pick_diff": 0.657,
-        "ban_diff": -5.935,
-        "score": 26.37,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "ヤスオ",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 45.1923,
-        "pickrate": 1.0822,
-        "banrate": 32.539,
-        "win_diff": -4.808,
-        "pick_diff": -0.284,
-        "ban_diff": -0.946,
-        "score": 16.27,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Milio": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ミリオ",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 49.472699999999996,
-        "pickrate": 11.2457,
-        "banrate": 14.52,
-        "win_diff": 1.873,
-        "pick_diff": -1.896,
-        "ban_diff": -3.948,
-        "score": 14.39,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ミリオ",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 51.136700000000005,
-        "pickrate": 7.287000000000001,
-        "banrate": 9.9949,
-        "win_diff": 0.74,
-        "pick_diff": -1.573,
-        "ban_diff": -4.08,
-        "score": 3.57,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Kaisa": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "カイ＝サ",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 46.4352,
-        "pickrate": 16.634,
-        "banrate": 0.45890000000000003,
-        "win_diff": 3.882,
-        "pick_diff": 0.163,
-        "ban_diff": 0.056,
-        "score": 11.97,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Velkoz": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヴェル＝コズ",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 51.6736,
-        "pickrate": 2.4646999999999997,
-        "banrate": 0.28869999999999996,
-        "win_diff": 2.836,
-        "pick_diff": 0.204,
-        "ban_diff": 0.166,
-        "score": 9.06,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Hecarim": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヘカリム",
-        "lane": "JG",
-        "rank": "Master",
-        "winrate": 46.1092,
-        "pickrate": 8.3565,
-        "banrate": 33.955400000000004,
-        "win_diff": -1.587,
-        "pick_diff": 1.284,
-        "ban_diff": -6.275,
-        "score": 42.93,
-        "trend": "win↓ pick↑ ban↓"
-      },
-      {
-        "name_ja": "ヘカリム",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.228300000000004,
-        "pickrate": 5.6461,
-        "banrate": 75.6007,
-        "win_diff": 0.867,
-        "pick_diff": 1.528,
-        "ban_diff": -11.45,
-        "score": 22.07,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "ヘカリム",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 52.276,
-        "pickrate": 5.7511,
-        "banrate": 72.8827,
-        "win_diff": -3.867,
-        "pick_diff": 0.725,
-        "ban_diff": -8.169,
-        "score": 8.31,
-        "trend": "win↓ pick↑ ban↓"
-      }
-    ]
-  },
-  "Riven": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "リヴェン",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 49.1189,
-        "pickrate": 3.7141,
-        "banrate": 3.2253,
-        "win_diff": -2.516,
-        "pick_diff": -0.589,
-        "ban_diff": -0.662,
-        "score": 3.14,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Lucian": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ルシアン",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 50.6182,
-        "pickrate": 13.761999999999999,
-        "banrate": 2.2894,
-        "win_diff": -4.998,
-        "pick_diff": -5.583,
-        "ban_diff": -1.233,
-        "score": 25.22,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Amumu": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "アムム",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 56.1265,
-        "pickrate": 3.9135999999999997,
-        "banrate": 0.0928,
-        "win_diff": 3.238,
-        "pick_diff": -0.029,
-        "ban_diff": -0.047,
-        "score": 9.83,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "アムム",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 55.016600000000004,
-        "pickrate": 3.078,
-        "banrate": 0.1186,
-        "win_diff": 4.072,
-        "pick_diff": -0.129,
-        "ban_diff": -0.001,
-        "score": 4.14,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Drmundo": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ドクター・ムンド",
-        "lane": "JG",
-        "rank": "Emerald",
-        "winrate": 51.305800000000005,
-        "pickrate": 1.1157,
-        "banrate": 1.3507,
-        "win_diff": 2.512,
-        "pick_diff": -0.308,
-        "ban_diff": -0.031,
-        "score": 2.68,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ドクター・ムンド",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 46.4706,
-        "pickrate": 2.6297,
-        "banrate": 0.067,
-        "win_diff": 8.009,
-        "pick_diff": -0.196,
-        "ban_diff": 0.019,
-        "score": 24.35,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Malphite": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "マルファイト",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 50.6135,
-        "pickrate": 8.4047,
-        "banrate": 8.4614,
-        "win_diff": -0.223,
-        "pick_diff": 0.029,
-        "ban_diff": 3.835,
-        "score": 6.47,
-        "trend": "win↓ pick↑ ban↑"
-      },
-      {
-        "name_ja": "マルファイト",
-        "lane": "SUP",
-        "rank": "Challenger",
-        "winrate": 51.804300000000005,
-        "pickrate": 6.429799999999999,
-        "banrate": 8.4614,
-        "win_diff": 1.207,
-        "pick_diff": 2.032,
-        "ban_diff": 3.835,
-        "score": 12.42,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "マルファイト",
-        "lane": "MID",
-        "rank": "Emerald",
-        "winrate": 48.3612,
-        "pickrate": 1.0996000000000001,
-        "banrate": 18.912399999999998,
-        "win_diff": 3.422,
-        "pick_diff": 0.035,
-        "ban_diff": -0.434,
-        "score": 3.66,
-        "trend": "win↑ pick↑ ban↓"
-      },
-      {
-        "name_ja": "マルファイト",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 46.428599999999996,
-        "pickrate": 1.0999,
-        "banrate": 7.7277,
-        "win_diff": 1.191,
-        "pick_diff": 0.085,
-        "ban_diff": 4.08,
-        "score": 9.82,
-        "trend": "win↑ pick↑ ban↑"
-      }
-    ]
-  },
-  "Varus": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ヴァルス",
-        "lane": "ADC",
-        "rank": "Challenger",
-        "winrate": 44.227,
-        "pickrate": 5.2697,
-        "banrate": 0.2062,
-        "win_diff": -2.687,
-        "pick_diff": -0.407,
-        "ban_diff": 0.014,
-        "score": 8.69,
-        "trend": "win↓ pick↓ ban↑"
-      }
-    ]
-  },
-  "Poppy": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ポッピー",
-        "lane": "TOP",
-        "rank": "Challenger",
-        "winrate": 50.853899999999996,
-        "pickrate": 2.7173,
-        "banrate": 0.5259,
-        "win_diff": 2.25,
-        "pick_diff": -0.419,
-        "ban_diff": -0.07,
-        "score": 7.49,
-        "trend": "win↑ pick↓ ban↓"
-      },
-      {
-        "name_ja": "ポッピー",
-        "lane": "TOP",
-        "rank": "Legendary_rank",
-        "winrate": 52.1922,
-        "pickrate": 2.4256,
-        "banrate": 0.4684,
-        "win_diff": 3.447,
-        "pick_diff": -0.377,
-        "ban_diff": -0.253,
-        "score": 3.76,
-        "trend": "win↑ pick↓ ban↓"
-      }
-    ]
-  },
-  "Heimerdinger": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ハイマーディンガー",
-        "lane": "MID",
-        "rank": "Challenger",
-        "winrate": 51.209700000000005,
-        "pickrate": 1.2787,
-        "banrate": 0.4331,
-        "win_diff": -2.919,
-        "pick_diff": -0.631,
-        "ban_diff": 0.048,
-        "score": 9.77,
-        "trend": "win↓ pick↓ ban↑"
-      }
-    ]
-  },
-  "Mordekaiser": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "モルデカイザー",
-        "lane": "TOP",
-        "rank": "Master",
-        "winrate": 50.02720000000001,
-        "pickrate": 9.421100000000001,
-        "banrate": 29.1311,
-        "win_diff": -0.064,
-        "pick_diff": -0.02,
-        "ban_diff": -3.189,
-        "score": 13.35,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Fiddlesticks": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "フィドルスティックス",
-        "lane": "JG",
-        "rank": "Emerald",
-        "winrate": 51.385099999999994,
-        "pickrate": 1.6885000000000001,
-        "banrate": 0.3052,
-        "win_diff": 2.015,
-        "pick_diff": -0.564,
-        "ban_diff": 0.015,
-        "score": 2.3,
-        "trend": "win↑ pick↓ ban↑"
-      }
-    ]
-  },
-  "Xinzhao": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "シン・ジャオ",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.29,
-        "pickrate": 8.8893,
-        "banrate": 2.5368999999999997,
-        "win_diff": -2.628,
-        "pick_diff": -0.117,
-        "ban_diff": 0.119,
-        "score": 8.24,
-        "trend": "win↓ pick↓ ban↑"
-      }
-    ]
-  },
-  "Kayn": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ケイン",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 44.3114,
-        "pickrate": 2.5833,
-        "banrate": 0.1134,
-        "win_diff": 2.282,
-        "pick_diff": 0.165,
-        "ban_diff": 0.096,
-        "score": 7.24,
-        "trend": "win↑ pick↑ ban↑"
-      },
-      {
-        "name_ja": "ケイン",
-        "lane": "JG",
-        "rank": "Legendary_rank",
-        "winrate": 44.1907,
-        "pickrate": 3.0453,
-        "banrate": 0.1207,
-        "win_diff": -5.157,
-        "pick_diff": 0.499,
-        "ban_diff": 0.066,
-        "score": 5.44,
-        "trend": "win↓ pick↑ ban↑"
-      }
-    ]
-  },
-  "Evelynn": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "イブリン",
-        "lane": "JG",
-        "rank": "Challenger",
-        "winrate": 50.3982,
-        "pickrate": 4.5323,
-        "banrate": 3.2586999999999997,
-        "win_diff": 3.166,
-        "pick_diff": -0.216,
-        "ban_diff": -1.525,
-        "score": 12.11,
+        "winrate": 47.9893,
+        "pickrate": 1.6310000000000002,
+        "banrate": 0.0262,
+        "win_diff": 2.535,
+        "pick_diff": -0.296,
+        "ban_diff": -0.079,
+        "score": 8.17,
         "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
   "Aurora": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
         "name_ja": "オーロラ",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 50.1288,
-        "pickrate": 6.007,
-        "banrate": 12.534799999999999,
-        "win_diff": -2.871,
-        "pick_diff": -1.002,
-        "ban_diff": -6.389,
-        "score": 19.7,
-        "trend": "win↓ pick↓ ban↓"
-      }
-    ]
-  },
-  "Zilean": {
-    "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
-    "diff_data": [
-      {
-        "name_ja": "ジリアン",
-        "lane": "SUP",
-        "rank": "Legendary_rank",
-        "winrate": 54.6111,
-        "pickrate": 2.5504,
-        "banrate": 6.593699999999999,
-        "win_diff": 3.496,
-        "pick_diff": -0.868,
-        "ban_diff": -0.537,
-        "score": 4.2,
+        "winrate": 53.9683,
+        "pickrate": 6.8871,
+        "banrate": 12.4404,
+        "win_diff": 0.968,
+        "pick_diff": -0.122,
+        "ban_diff": -6.484,
+        "score": 12.81,
         "trend": "win↑ pick↓ ban↓"
       }
     ]
   },
-  "Ekko": {
+  "Brand": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "エコー",
+        "name_ja": "ブランド",
         "lane": "MID",
         "rank": "Challenger",
-        "winrate": 50.0,
-        "pickrate": 1.4334,
-        "banrate": 0.05159999999999999,
-        "win_diff": -4.167,
-        "pick_diff": -0.249,
-        "ban_diff": -0.054,
-        "score": 12.95,
-        "trend": "win↓ pick↓ ban↓"
+        "winrate": 49.1997,
+        "pickrate": 6.2836,
+        "banrate": 2.0421,
+        "win_diff": -2.334,
+        "pick_diff": 0.571,
+        "ban_diff": 1.376,
+        "score": 9.92,
+        "trend": "win↓ pick↑ ban↑"
       }
     ]
   },
-  "Khazix": {
+  "Jinx": {
     "patch_name": "ワイルドリフト パッチノート 7.0c",
-    "updatetime": "2026/02/18",
+    "updatetime": "2026/02/19",
     "diff_data": [
       {
-        "name_ja": "カ＝ジックス",
-        "lane": "JG",
+        "name_ja": "ジンクス",
+        "lane": "ADC",
+        "rank": "Emerald",
+        "winrate": 50.4192,
+        "pickrate": 10.3108,
+        "banrate": 0.8915,
+        "win_diff": -0.828,
+        "pick_diff": -4.043,
+        "ban_diff": -0.119,
+        "score": 2.91,
+        "trend": "win↓ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ジンクス",
+        "lane": "ADC",
+        "rank": "Diamond",
+        "winrate": 50.6923,
+        "pickrate": 13.032499999999999,
+        "banrate": 0.5558,
+        "win_diff": 0.23,
+        "pick_diff": -3.472,
+        "ban_diff": -0.12,
+        "score": 12.16,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "ジンクス",
+        "lane": "ADC",
+        "rank": "Master",
+        "winrate": 50.49829999999999,
+        "pickrate": 13.9508,
+        "banrate": 0.6257,
+        "win_diff": 0.111,
+        "pick_diff": -3.566,
+        "ban_diff": -0.17,
+        "score": 15.84,
+        "trend": "win↑ pick↓ ban↓"
+      }
+    ]
+  },
+  "Singed": {
+    "patch_name": "ワイルドリフト パッチノート 7.0c",
+    "updatetime": "2026/02/19",
+    "diff_data": [
+      {
+        "name_ja": "シンジド",
+        "lane": "TOP",
         "rank": "Challenger",
-        "winrate": 51.2146,
-        "pickrate": 5.0944,
-        "banrate": 0.4177,
-        "win_diff": 3.453,
-        "pick_diff": 0.398,
-        "ban_diff": 0.278,
-        "score": 11.37,
-        "trend": "win↑ pick↑ ban↑"
+        "winrate": 55.019600000000004,
+        "pickrate": 3.3539,
+        "banrate": 0.6427999999999999,
+        "win_diff": 2.726,
+        "pick_diff": -0.466,
+        "ban_diff": -0.689,
+        "score": 9.91,
+        "trend": "win↑ pick↓ ban↓"
+      },
+      {
+        "name_ja": "シンジド",
+        "lane": "MID",
+        "rank": "Legendary_rank",
+        "winrate": 53.7037,
+        "pickrate": 1.0495,
+        "banrate": 0.5306,
+        "win_diff": -2.893,
+        "pick_diff": 0.018,
+        "ban_diff": -0.095,
+        "score": 2.95,
+        "trend": "win↓ pick↑ ban↓"
+      },
+      {
+        "name_ja": "シンジド",
+        "lane": "TOP",
+        "rank": "Legendary_rank",
+        "winrate": 55.739000000000004,
+        "pickrate": 2.5031000000000003,
+        "banrate": 0.5215,
+        "win_diff": 2.926,
+        "pick_diff": -0.102,
+        "ban_diff": 0.074,
+        "score": 3.01,
+        "trend": "win↑ pick↓ ban↑"
       }
     ]
   }
