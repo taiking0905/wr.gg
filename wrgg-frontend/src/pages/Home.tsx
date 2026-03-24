@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { PatchChampionList } from "../components/PatchChampionList";
+import { OPChampionList } from "../components/OPChampionList";
+import { ChampionCard } from "../components/ChampionCard";
 
 interface PatchContents {
   [patch_name: string]: {
@@ -35,8 +38,8 @@ interface AiHighlight {
   reason: string;
 }
 interface TopChampion {
-  championId: string;
-  championName: string;
+  id: string;
+  name_ja: string;
   lane: string;
   score: number;
 }
@@ -86,32 +89,28 @@ export const Home: React.FC = () => {
         setLatestStatUpdate(latestStat);
         
         // 各チャンプの最新統計を取得してスコア計算
-      // laneごとに個別にスコア計算してフラットに
-// laneごとに個別スコア計算
-const top10 = allChampionData
-  .map(champ => {
-    const masterEntries = champ.data.filter(e => e.rank === "Master");
-    return masterEntries.map(e => ({
-      championId: champ.id,
-      championName: champ.name_ja,
-      lane: e.lane,
-      score: e.winrate * 0.5 + e.pickrate * 0.3 + e.banrate * 0.2,
-    }));
-  })
-  .flat()
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 10); // laneごとのTop10
+        // laneごとに個別にスコア計算してフラットに
+        const top10 = allChampionData
+          .map(champ => {
+            const masterEntries = champ.data.filter(e => e.rank === "Master");
+            return masterEntries.map(e => ({
+              id: champ.id,
+              name_ja: champ.name_ja,
+              lane: e.lane,
+              score: e.winrate * 0.5 + e.pickrate * 0.3 + e.banrate * 0.2,
+            }));
+          })
+          .flat()
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 10); // laneごとのTop10
 
-setOpTop10(top10);
-console.log("OP Top10 (lane別保持):", top10);
-
-
-
-          console.log("loaded:", {contents, champs });
-        } catch (error) {
-          console.error("データの読み込みに失敗しました:", error);
-        }
-      };
+        setOpTop10(top10);
+        console.log("OP Top10 (lane別保持):", top10);
+        console.log("loaded:", {contents, champs });
+      } catch (error) {
+        console.error("データの読み込みに失敗しました:", error);
+      }
+    };
     fetchData();
   }, []);
 
@@ -135,104 +134,29 @@ console.log("OP Top10 (lane別保持):", top10);
           <h2 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">
             気になるチャンピオンをクリックすると、過去の統計データを確認できます。
           </h2>
-      </section>
+        </section>
 
-      <section className="space-y-1">
-        <h3 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">最新更新情報</h3>
-        <p className="text-sm md:text-base">
-          パッチノート更新日：<strong>{latestPatchUpdate}</strong>
-        </p>
-        <p className="text-sm md:text-base">
-          統計データ更新日：<strong>{latestStatUpdate}</strong>
-        </p>
-      </section>
+        <section className="space-y-1">
+          <h3 className="text-sm md:text-xl font-semibold border-gray-600 pb-1">最新更新情報</h3>
+          <p className="text-sm md:text-base">
+            パッチノート更新日：<strong>{latestPatchUpdate}</strong>
+          </p>
+          <p className="text-sm md:text-base">
+            統計データ更新日：<strong>{latestStatUpdate}</strong>
+          </p>
+        </section>
       </div>
-      {/* パッチ詳細 */}
       <div className="mt-6">
-        <h2 className="text-xl mb-2">{latestPatch} 変更チャンピオン</h2>
-        {/* パッチ変更があったチャンピオン（横スクロール対応版） */}
-        {Object.keys(changes).length > 0 && (
-          <div>
-            <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
-              {Object.keys(changes).map((champion_name) => {
-                const champ = champions.find((c) => c.name_ja === champion_name);
-                const champId = champ?.id ?? "notfound";
-
-                return (
-                  <Link
-                    to={`/champion/${champId}`}
-                    key={champId}
-                    className="
-                      flex-shrink-0
-                      cursor-pointer text-center
-                      rounded-lg
-                      p-2
-                      bg-white
-                      border
-                    "
-                  >
-                    {champ && (
-                      <img
-                        src={`/wr.gg/data/champion_images/${champ.id}.png`}
-                        alt={champ.name_ja}
-                        className="
-                          mx-auto mb-1 object-contain
-                          max-h-20
-                          sm:max-h-24
-                          md:max-h-28
-                          lg:max-h-32
-                        "
-                      />
-                    )}
-
-                    <p className="text-xs font-semibold text-gray-900">
-                      {champ?.name_ja ?? champion_name}
-                    </p>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
-        {/* OPランキングトップ10（横スクロール版） */}
-        {opTop10.length > 0 && (
-          <div className="mt-6">
-            <h2 className="text-xl mb-2">OPランキングトップ10</h2>
-            <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
-              {opTop10.map((champ) => {
-                return (
-                  <Link
-                    key={`${champ.championId}-${champ.lane}`}
-                    to={`/champion/${champ.championId}`}
-                    className="flex-shrink-0 cursor-pointer text-center rounded-lg p-2 bg-white border shadow-sm"
-                  >
-                    {/* 画像 */}
-                    <img
-                      src={`/wr.gg/data/champion_images/${champ.championId}.png`}
-                      alt={champ.championName}
-                      className="
-                        mx-auto mb-1 object-contain
-                          max-h-20
-                          sm:max-h-24
-                          md:max-h-28
-                          lg:max-h-32
-                      "
-                    />
-
-                    {/* 名前 */}
-                    <p className="text-xs font-semibold text-gray-900">{champ.championName}</p>
-
-                    {/* レーン */}
-                    <p className="text-xs text-gray-600">{champ.lane}</p>
-
-                    {/* スコア */}
-                    <p className="text-xs text-gray-700 font-bold">{champ.score.toFixed(2)}</p>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        {/* パッチ詳細 */}
+        <PatchChampionList
+          latestPatch={latestPatch}
+          changes={changes}
+          champions={champions}
+        />
+        {/* パッチ詳細 */}
+        <OPChampionList
+          opTop10={opTop10}
+        />
 
         {/* AIが選んだ今回の見どころトップ15 */}
         {aiHighlights.length > 0 && (
