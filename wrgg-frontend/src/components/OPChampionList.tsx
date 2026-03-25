@@ -23,8 +23,9 @@ export const OPChampionList: React.FC<Props> = ({
           <div>
             <h2 className="text-xl mb-2">OPランキングトップ10</h2>
             <div className="flex gap-4 overflow-x-auto py-2 scrollbar-hide">
-            {opTop10.map((champ) => (
+            {opTop10.map((champ, index) => (
               <ChampionCard
+                key={`${champ.id}-${index}`} 
                 id={champ.id}
                 name={champ.name_ja}
                 lane={champ.lane}

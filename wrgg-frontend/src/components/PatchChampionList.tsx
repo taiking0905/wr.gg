@@ -36,8 +36,9 @@ export const PatchChampionList: React.FC<Props> = ({
 
           return (
             <ChampionCard
+              key={champId}
               id={champId}
-            //   パッチのチャンピオン名が英語の時の負債
+            //// TODO: パッチのチャンピオン名が英語の時の負債
               name={champ?.name_ja ?? champion_name}
             />
           );

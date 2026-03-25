@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { PatchChampionList } from "../components/PatchChampionList";
 import { OPChampionList } from "../components/OPChampionList";
-import { ChampionCard } from "../components/ChampionCard";
+import { AiChampionList } from "../components/AiChampionList";
 
 interface PatchContents {
   [patch_name: string]: {
@@ -146,6 +145,7 @@ export const Home: React.FC = () => {
           </p>
         </section>
       </div>
+
       <div className="mt-6">
         {/* パッチ詳細 */}
         <PatchChampionList
@@ -153,70 +153,16 @@ export const Home: React.FC = () => {
           changes={changes}
           champions={champions}
         />
-        {/* パッチ詳細 */}
+        {/* OPランキングトップ10 */}
         <OPChampionList
           opTop10={opTop10}
         />
-
         {/* AIが選んだ今回の見どころトップ15 */}
-        {aiHighlights.length > 0 && (
-          <div className="mt-8">
-            <h2 className="text-xl mb-2">AIが選んだ注目チャンピオン</h2>
-
-            <ul className="flex flex-col gap-4">
-              {aiHighlights.map((highlight, index) => {
-                const champ = champions.find((c) => c.name_ja ===  highlight.champion);
-                const champId = champ?.id ?? "notfound";
-
-                return (
-                      <Link
-                        key={`${champId}-${index}`} // インデックスを追加
-                        to={`/champion/${champId}`}
-                        className="block"
-                      >
-                    <li
-                      className="
-                        flex items-start gap-4
-                        p-4
-                        rounded-xl
-                        bg-white
-                        shadow-md
-                        hover:bg-gray-50
-                        transition
-                      "
-                    >
-                      {/* 左：チャンピオン画像 */}
-                      {champ && (
-                        <img
-                          src={`/wr.gg/data/champion_images/${champ.id}.png`}
-                          alt={champ.name_ja}
-                          className="
-                            mx-auto mb-2 object-contain
-                            max-h-20
-                            sm:max-h-24
-                            md:max-h-28
-                            lg:max-h-32
-                          "
-                        />
-                      )}
-
-                      {/* 右：テキストエリア */}
-                      <div className="flex-1">
-                        <p className="font-bold text-sm text-gray-900 mb-1">
-                          {champ?.name_ja ?? highlight.champion}
-                        </p>
-
-                        <p className="text-sm text-gray-700 leading-relaxed">
-                          {highlight.reason}
-                        </p>
-                      </div>
-                    </li>
-                  </Link>
-                );
-              })}
-            </ul>
-          </div>
-        )}
+        <AiChampionList
+          aiTOP15={aiHighlights}
+          // TODO: Aiが出力する英語を日本語と紐づけするために
+          champions={champions}
+        />
       </div>
 
     </div>
