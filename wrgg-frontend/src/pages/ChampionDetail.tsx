@@ -167,11 +167,12 @@ useEffect(() => {
             className="w-24 h-24 rounded-lg"
           />
           <h1 className="text-xl font-bold">{champion.name_ja} の変更履歴</h1>
-        {champion.id === "Norra" && (
+        {/* ノラみたいな例外を一時的に処理 */}
+        {/* {champion.id === "" && (
         <div className="mt-3 px-4 py-3 bg-yellow-100 border border-yellow-300 rounded text-yellow-800">
           このキャラは現在対応中です。もう少しお待ちください。
         </div>
-        )}
+        )} */}
       </div>
     </div>
 
@@ -180,7 +181,6 @@ useEffect(() => {
         <div className="mb-6 p-4 bg-gray-50 rounded-lg shadow-inner">
           <div className="flex gap-2 overflow-x-auto whitespace-nowrap w-full px-2 pb-2 space-x-4 scrollbar-gutter-stable">
             <div>
-              <label className="block mb-1 text-sm font-medium">ランク</label>
               <select
                 value={selectedRank ?? ""}
                 onChange={(e) => setSelectedRank(e.target.value)}
@@ -193,7 +193,6 @@ useEffect(() => {
               </select>
             </div>
             <div>
-              <label className="block mb-1 text-sm font-medium">レーン</label>
               <select
                 value={selectedLane ?? ""}
                 onChange={(e) => setSelectedLane(e.target.value)}
@@ -207,7 +206,6 @@ useEffect(() => {
             </div>
 
             <div>
-              <label className="block mb-1 text-sm font-medium">パッチ</label>
               <select
                 value={selectedPatch ?? ""}
                 onChange={(e) => setSelectedPatch(e.target.value)}

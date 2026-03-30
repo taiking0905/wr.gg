@@ -20,11 +20,6 @@ const Section: React.FC<SectionProps> = ({
   );
 };
 
-type ParagraphProps = {
-  children: React.ReactNode;
-  className?: string;
-};
-
 export const About: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
