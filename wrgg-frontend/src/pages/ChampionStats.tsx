@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
+import { Select } from "../components/Select";
+import { createOptions } from "../components/createOptions";
 
 interface Champion {
   id: string;
@@ -47,6 +49,39 @@ export const ChampionStats: React.FC = () => {
     fetchData();
   }, []);
 
+  const rankOptions = useMemo(
+    () => createOptions([
+      "Emerald",
+      "Diamond",
+      "Master",
+      "Challenger",
+      "legendary rank",
+    ]),
+    []
+  );
+
+  const laneOptions = useMemo(
+    () => createOptions(["TOP", "JG", "MID", "ADC", "SUP"]),
+    []
+  );
+
+  const sortKeyOptions = useMemo(
+    () => [
+      { label: "勝率", value: "winrate" },
+      { label: "ピック率", value: "pickrate" },
+      { label: "バン率", value: "banrate" },
+    ],
+    []
+  );
+
+  const sortOrderOptions = useMemo(
+    () => [
+      { label: "降順", value: "desc" },
+      { label: "昇順", value: "asc" },
+    ],
+    []
+  );
+
   const allEntries = allStats.flatMap(champ =>
     champ.data.map(d => ({
       ...d,
@@ -76,32 +111,35 @@ export const ChampionStats: React.FC = () => {
       {/* フィルタ & ソート */}
       <div className="mb-6 p-4 rounded-lg w-full max-w-3xl">
         <div className="flex gap-2 overflow-x-auto whitespace-nowrap w-full px-2 pb-2 space-x-4 scrollbar-gutter-stable">
-          <select value={selectedRank} onChange={e => setSelectedRank(e.target.value)} className="inline-block border px-2 py-1 rounded">
-            <option value="Emerald">Emerald</option>
-            <option value="Diamond">Diamond</option>
-            <option value="Master">Master</option>
-            <option value="Challenger">Challenger</option>
-            <option value="legendary rank">legendary rank</option>
-          </select>
 
-          <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="inline-block border px-2 py-1 rounded">
-            <option value="TOP">TOP</option>
-            <option value="JG">JG</option>
-            <option value="MID">MID</option>
-            <option value="ADC">ADC</option>
-            <option value="SUP">SUP</option>
-          </select>
+          <Select
+              options={rankOptions}
+              value={selectedRank}
+              onChange={setSelectedRank}
+              className="inline-block border px-2 py-1 rounded"
+            />
 
-          <select value={sortKey} onChange={e => setSortKey(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
-            <option value="winrate">勝率</option>
-            <option value="pickrate">ピック率</option>
-            <option value="banrate">バン率</option>
-          </select>
+            <Select
+              options={laneOptions}
+              value={selectedLane}
+              onChange={setSelectedLane}
+              className="inline-block border px-2 py-1 rounded"
+            />
 
-          <select value={sortOrder} onChange={e => setSortOrder(e.target.value as any)} className="inline-block border px-2 py-1 rounded">
-            <option value="desc">降順</option>
-            <option value="asc">昇順</option>
-          </select>
+            <Select
+              options={sortKeyOptions}
+              value={sortKey}
+              onChange={(v) => setSortKey(v as any)}
+              className="inline-block border px-2 py-1 rounded"
+            />
+
+            <Select
+              options={sortOrderOptions}
+              value={sortOrder}
+              onChange={(v) => setSortOrder(v as any)}
+              className="inline-block border px-2 py-1 rounded"
+            />
+
         </div>
       </div>
       <div className="flex flex-col space-y-4 w-full max-w-3xl">

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Link } from 'react-router-dom';
+import { Select } from "../components/Select";
 
 interface Champion {
   id: string;
@@ -12,8 +13,6 @@ export const ChampionList: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedLane, setSelectedLane] = useState<string>("");
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +29,18 @@ export const ChampionList: React.FC = () => {
     fetchData();
   }, []);
 
+  const laneOptions = useMemo(
+    () => [
+      { label: "ALL", value: "" },
+      { label: "TOP", value: "TOP" },
+      { label: "JG", value: "JG" },
+      { label: "MID", value: "MID" },
+      { label: "ADC", value: "ADC" },
+      { label: "SUP", value: "SUP" },
+    ],
+    []
+  );
+
   // 検索クエリ + レーン選択でフィルタリング
   const filteredChampions = champions.filter((champ) => {
     const query = searchQuery.toLowerCase();
@@ -45,8 +56,6 @@ export const ChampionList: React.FC = () => {
       return champ.lanes.includes(selectedLane); // 配列対応
     }
   });
-
-
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-6">
@@ -70,14 +79,12 @@ export const ChampionList: React.FC = () => {
         />
       </div>
 
-      <select value={selectedLane} onChange={e => setSelectedLane(e.target.value)} className="border px-2 py-1 rounded">
-          <option value="">ALL</option>
-          <option value="TOP">TOP</option>
-          <option value="JG">JG</option>
-          <option value="MID">MID</option>
-          <option value="ADC">ADC</option>
-          <option value="SUP">SUP</option>
-      </select>
+      <Select
+        options={laneOptions}
+        value={selectedLane}
+        onChange={setSelectedLane}
+        className="border px-2 py-1 rounded"
+      />
 
       <div>
         <div
