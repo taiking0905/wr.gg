@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { Select } from "../components/Select";
 import { createOptions } from '../components/createOptions';
+import { ChangeList } from '../components/ChangeList';
 
 interface PatchContents {
   [patch_name: string]: {
@@ -251,20 +252,7 @@ export const ChampionDetail: React.FC = () => {
               <p className="font-bold text-xl text-gray-900 mb-3">
                 {patch.patch_name} の変更
               </p>
-              <ul className="space-y-4 pl-3">
-                {patch.changes.map((change, i) => (
-                  <li 
-                    key={i} 
-                    className="border-l-4 border-blue-500 pl-3"
-                  >
-                    <p className="font-bold text-gray-800">{change.ability_title}</p>
-                    <div
-                      className=" text-gray-700 text-sm leading-relaxed"
-                      dangerouslySetInnerHTML={{ __html: change.change_details }}
-                    />
-                  </li>
-                ))}
-              </ul>
+              <ChangeList changes={patch.changes} />
             </li>
           ))}
         </ul>
