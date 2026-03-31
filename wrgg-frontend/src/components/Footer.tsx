@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const Footer: React.FC = () => {
+export function Footer() {
   return (
     <footer className="text-gray-400 p-4 mt-4 text-xs md:text-sm">
       <div className="max-w-6xl mx-auto space-y-1">
@@ -10,5 +8,5 @@ export const Footer: React.FC = () => {
         <p>お問い合わせ: Discord DM (tomato0905)</p>
       </div>
     </footer>
-  )
+  );
 }

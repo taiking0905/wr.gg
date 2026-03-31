@@ -6,7 +6,7 @@ import { ChampionDetail } from "../pages/ChampionDetail";
 import { ChampionStats } from "../pages/ChampionStats";
 import { About } from "../pages/About";
 
-export const AppRoutes: React.FC = () => {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />

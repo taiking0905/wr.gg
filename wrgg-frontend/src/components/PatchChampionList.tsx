@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChampionCard } from "../components/ChampionCard";
 
 interface Champion {
@@ -13,12 +12,8 @@ type Props = {
   champions: Champion[];
 };
 
-export const PatchChampionList: React.FC<Props> = ({
-  latestPatch,
-  changes,
-  champions
-}) => {
-  if (Object.keys(changes).length === 0) return null;
+export function PatchChampionList({ latestPatch, changes, champions }: Props) {
+  if (changes.length === 0) return null;
 
   return (
     <div>
@@ -38,7 +33,7 @@ export const PatchChampionList: React.FC<Props> = ({
             <ChampionCard
               key={champId}
               id={champId}
-            //// TODO: パッチのチャンピオン名が英語の時の負債
+            // TODO: パッチのチャンピオン名が英語の時の負債
               name={champ?.name_ja ?? champion_name}
             />
           );

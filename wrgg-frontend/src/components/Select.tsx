@@ -1,5 +1,3 @@
-import React from 'react';
-
 type Option = {
   label: string;
   value: string;
@@ -11,7 +9,7 @@ type SelectProps = {
   onChange: (value: string) => void;
   className?: string;
 };
-export const Select: React.FC<SelectProps> = ({options, value, onChange, className  }) => {
+export function Select({ options, value, onChange, className }: SelectProps) {
   return (
     <select
       value={value ?? ""}

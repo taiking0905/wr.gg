@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChampionCard } from "../components/ChampionCard";
 
 interface TopChampion {
@@ -11,11 +10,8 @@ type Props = {
   opTop10: TopChampion[];
 };
 
-
-export const OPChampionList: React.FC<Props> = ({
-  opTop10
-}) => {
-  if (Object.keys(opTop10).length === 0) return null;
+export function OPChampionList({ opTop10 }: Props) {
+  if (opTop10.length === 0) return null;
 
   return (
       <div className="mt-6">
