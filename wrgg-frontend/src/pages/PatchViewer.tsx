@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ChangeList } from "../components/ChangeList";
 
 interface PatchNote {
   patch_name: string;
@@ -142,22 +143,7 @@ export const PatchViewer: React.FC = () => {
                         <p className="font-bold text-xl text-gray-900 mb-3">
                           {champion_name}
                         </p>
-                        <ul className="space-y-4">
-                          {changes.map((change, idx) => (
-                            <li
-                              key={idx} // change が配列内で安定しているなら問題なし
-                              className="border-l-4 border-blue-500 pl-3"
-                            >
-                              <p className="font-bold text-gray-800">
-                                {change.ability_title}
-                              </p>
-                              <div
-                                className="text-gray-700 text-sm mt-1 leading-relaxed"
-                                dangerouslySetInnerHTML={{ __html: change.change_details }}
-                              />
-                            </li>
-                          ))}
-                        </ul>
+                        <ChangeList changes={changes} />
                       </li>
                     </Link>
                   );

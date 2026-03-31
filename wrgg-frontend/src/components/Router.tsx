@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./Home";
-import { PatchViewer } from "./PatchViewer";
-import { ChampionList } from "./ChampionList";
-import { ChampionDetail } from "./ChampionDetail";
-import { ChampionStats } from "./ChampionStats";
-import { About } from "./About";
+import { Home } from "../pages/Home";
+import { PatchViewer } from "../pages/PatchViewer";
+import { ChampionList } from "../pages/ChampionList";
+import { ChampionDetail } from "../pages/ChampionDetail";
+import { ChampionStats } from "../pages/ChampionStats";
+import { About } from "../pages/About";
 
-export const AppRoutes: React.FC = () => {
+export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
