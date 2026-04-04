@@ -2,7 +2,7 @@ import requests
 import json
 import os
 from datetime import datetime
-from delte_champion_data import delte_champion_data
+from delete_champion_data import delete_champion_data
 from modeule import load_json, save_json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
@@ -162,7 +162,7 @@ def champion_data_scrape():
 
 def main():
     champion_data_scrape()
-    delte_champion_data()
+    delete_champion_data()
 
 
 if __name__ =="__main__":
