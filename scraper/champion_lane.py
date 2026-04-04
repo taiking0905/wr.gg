@@ -1,23 +1,12 @@
-import requests
-import json
 import os
-from datetime import datetime
+from modeule import load_json, save_json
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json') # チャンピオン一覧のJSON
-CHAMPION_DIR = os.path.join(DATA_DIR,'champion_data')    # チャンピオン個別のディレクトリ
-
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+CHAMPION_DIR = os.path.join(DATA_DIR,'champion_data')    # チャンピオン個別のディレクト
 
 def champion_lane():
     champions = load_json(CHAMPIONS_JSON)

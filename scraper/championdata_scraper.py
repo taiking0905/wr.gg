@@ -2,6 +2,8 @@ import requests
 import json
 import os
 from datetime import datetime
+from delte_champion_data import delte_champion_data
+from modeule import load_json, save_json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -9,16 +11,6 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 ALL_CHAMPIONS_DATA_JSON = os.path.join(DATA_DIR, 'all_champion_data.json')# チャンピオンの名前を保存するJSONファイル
 PATCH_CONTENTS_JSON = os.path.join(DATA_DIR, 'patch_contents.json')# 最新のパッチ名を取得する
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 def last_patch_name():
     patch_data = load_json(PATCH_CONTENTS_JSON)
@@ -170,6 +162,7 @@ def champion_data_scrape():
 
 def main():
     champion_data_scrape()
+    delte_champion_data()
 
 
 if __name__ =="__main__":
