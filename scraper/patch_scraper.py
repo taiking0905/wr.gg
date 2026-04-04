@@ -1,9 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 import os
 from datetime import datetime
-
+from modeule import load_json, save_json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -28,19 +27,6 @@ def fetch_patch_notes():
             "patch_link": patch_link
         })
     return list(reversed(patch_notes))  # 逆順にして古い順→新しい順に 
-
-
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
 
 def update_patch_data():
     try:

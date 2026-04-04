@@ -1,11 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
 import chromedriver_autoinstaller
+from modeule import load_json, save_json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) #githubactionsでの実行を考慮して、絶対パスを取得
 DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
@@ -13,17 +13,6 @@ DATA_DIR = os.path.join(BASE_DIR, '..', 'wrgg-frontend/public/data')
 CHAMPIONS_JSON = os.path.join(DATA_DIR, 'champions.json')# チャンピオンの名前を保存するJSONファイル
 ID_MAP = os.path.join(DATA_DIR, "id_map.json") # 例外のチャンピオンに名前付け
 WR_EXTRA = os.path.join(DATA_DIR, "wr_exclusive.json") #WR限定チャンピオン
-
-def load_json(filename):
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
 
 # チャンピオン名の取得と保存
 def fetch_champion_names():
