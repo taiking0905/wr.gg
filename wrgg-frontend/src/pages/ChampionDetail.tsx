@@ -101,20 +101,20 @@ export const ChampionDetail: React.FC = () => {
         if (!res.ok) throw new Error("Champion data not found");
         const data: ChampionData = await res.json();
 
-        // patches を平坦化してすべての統計を取得
-        const allStats: ChampionStatsEntry[] = data.patches.flatMap(patch =>
-          patch.data.map(d => ({
-            ...d,
-            updatetime: patch.updatetime, // 日付を補完
-            patchname: patch.patch_name, // パッチ名を補完
-          }))
-        );
-        
+        const allStats: ChampionStatsEntry[] = data.patches
+          .flatMap(patch =>
+            patch.data.map(d => ({
+              ...d,
+              updatetime: patch.updatetime,
+              patchname: patch.patch_name,
+            }))
+          )
+          .sort((a, b) => b.updatetime.localeCompare(a.updatetime));
 
         setChampionStatsAll(allStats);
 
         if (allStats.length > 0) {
-          const newestPatch = data.patches[data.patches.length - 1].patch_name;
+          const newestPatch = allStats[0].patchname;
 
           // 最新パッチのデータだけに絞る
           const newestPatchStats = allStats.filter(s => s.patchname === newestPatch);
