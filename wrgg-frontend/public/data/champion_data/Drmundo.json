@@ -3,68 +3,6 @@
   "name_ja": "ドクター・ムンド",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 6.3f",
-      "updatetime": "2026/01/27",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 48.5452,
-          "pickrate": 5.6878,
-          "banrate": 1.2596
-        },
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 48.521300000000004,
-          "pickrate": 1.9765000000000001,
-          "banrate": 1.2596
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.0402,
-          "pickrate": 4.2526,
-          "banrate": 0.5272
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 47.5007,
-          "pickrate": 1.0058,
-          "banrate": 0.5272
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 47.484300000000005,
-          "pickrate": 3.1260999999999997,
-          "banrate": 0.09380000000000001
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 48.748999999999995,
-          "pickrate": 1.6538000000000002,
-          "banrate": 1.8893
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 47.9009,
-          "pickrate": 4.0477,
-          "banrate": 0.7523
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 46.5233,
-          "pickrate": 3.4485,
-          "banrate": 0.5265
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0a",
       "updatetime": "2026/02/10",
       "data": [
@@ -302,6 +240,33 @@
           "winrate": 46.1883,
           "pickrate": 3.5526,
           "banrate": 0.2091
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1",
+      "updatetime": "2026/04/10",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 50.8822,
+          "pickrate": 4.1662,
+          "banrate": 0.5694
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 53.05950000000001,
+          "pickrate": 1.0999,
+          "banrate": 0.5694
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 49.1732,
+          "pickrate": 2.8688000000000002,
+          "banrate": 0.06989999999999999
         }
       ]
     }

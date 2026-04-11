@@ -1,5 +1,41 @@
 {
   "id": "Ksante",
   "name_ja": "カ・サンテ",
-  "data": []
+  "data": [],
+  "patches": [
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1",
+      "updatetime": "2026/04/10",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 46.8106,
+          "pickrate": 25.7326,
+          "banrate": 51.5715
+        },
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 39.4685,
+          "pickrate": 1.377,
+          "banrate": 51.5715
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 37.7436,
+          "pickrate": 1.0125,
+          "banrate": 51.5715
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 46.8379,
+          "pickrate": 20.2795,
+          "banrate": 71.16329999999999
+        }
+      ]
+    }
+  ]
 }

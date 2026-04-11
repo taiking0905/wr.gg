@@ -3,47 +3,6 @@
   "name_ja": "ソナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 6.3f",
-      "updatetime": "2026/01/27",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 49.0543,
-          "pickrate": 2.0334000000000003,
-          "banrate": 0.062
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 51.5141,
-          "pickrate": 2.2418,
-          "banrate": 0.0171
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 52.7012,
-          "pickrate": 3.3084000000000002,
-          "banrate": 0.008
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 51.334999999999994,
-          "pickrate": 2.3342,
-          "banrate": 0.0302
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 50.8227,
-          "pickrate": 2.7043999999999997,
-          "banrate": 0.047
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0a",
       "updatetime": "2026/02/10",
       "data": [
@@ -204,6 +163,26 @@
           "winrate": 51.481,
           "pickrate": 2.8237,
           "banrate": 0.006
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1",
+      "updatetime": "2026/04/10",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 49.6579,
+          "pickrate": 1.6276,
+          "banrate": 0.025799999999999997
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 49.925399999999996,
+          "pickrate": 2.7904999999999998,
+          "banrate": 0.021599999999999998
         }
       ]
     }

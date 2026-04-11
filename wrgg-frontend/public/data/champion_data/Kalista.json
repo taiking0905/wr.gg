@@ -3,75 +3,6 @@
   "name_ja": "カリスタ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 6.3f",
-      "updatetime": "2026/01/27",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 50.182700000000004,
-          "pickrate": 2.2857,
-          "banrate": 3.893
-        },
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 46.108,
-          "pickrate": 7.0542,
-          "banrate": 3.893
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.478500000000004,
-          "pickrate": 1.2148,
-          "banrate": 1.3089
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 46.916000000000004,
-          "pickrate": 5.3482,
-          "banrate": 1.3089
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 48.644,
-          "pickrate": 1.699,
-          "banrate": 4.3278
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 45.9954,
-          "pickrate": 4.6864,
-          "banrate": 0.3593
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 47.0918,
-          "pickrate": 6.512900000000001,
-          "banrate": 1.9023999999999999
-        },
-        {
-          "lane": "ADC",
-          "rank": "Legendary_rank",
-          "winrate": 47.2173,
-          "pickrate": 5.5968,
-          "banrate": 1.5327
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 46.7576,
-          "pickrate": 1.3215,
-          "banrate": 1.9023999999999999
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0a",
       "updatetime": "2026/02/10",
       "data": [
@@ -316,6 +247,33 @@
           "winrate": 50.4779,
           "pickrate": 1.2257,
           "banrate": 1.5291000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1",
+      "updatetime": "2026/04/10",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 52.348099999999995,
+          "pickrate": 1.5008000000000001,
+          "banrate": 2.2153
+        },
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 49.7916,
+          "pickrate": 5.8021,
+          "banrate": 2.2153
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 50.221199999999996,
+          "pickrate": 3.9507,
+          "banrate": 0.3362
         }
       ]
     }

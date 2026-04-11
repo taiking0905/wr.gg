@@ -3,54 +3,6 @@
   "name_ja": "セラフィーン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 6.3f",
-      "updatetime": "2026/01/27",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 44.9309,
-          "pickrate": 1.0714,
-          "banrate": 1.9255000000000002
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 49.2401,
-          "pickrate": 9.889199999999999,
-          "banrate": 1.3240999999999998
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 49.3176,
-          "pickrate": 7.2001,
-          "banrate": 0.39740000000000003
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 49.402499999999996,
-          "pickrate": 5.9081,
-          "banrate": 0.11800000000000001
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 49.268299999999996,
-          "pickrate": 6.621499999999999,
-          "banrate": 0.5059
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 51.844699999999996,
-          "pickrate": 6.365600000000001,
-          "banrate": 0.4499
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0a",
       "updatetime": "2026/02/10",
       "data": [
@@ -239,6 +191,26 @@
           "winrate": 43.8438,
           "pickrate": 1.2383,
           "banrate": 2.3204
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1",
+      "updatetime": "2026/04/10",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 48.2008,
+          "pickrate": 7.2113,
+          "banrate": 0.5206
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 48.4344,
+          "pickrate": 5.0501,
+          "banrate": 0.0782
         }
       ]
     }
