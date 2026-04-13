@@ -92,7 +92,9 @@ export const Home: React.FC = () => {
         const top10 = allChampionData
           .map(champ => {
             const masterEntries = champ.data.filter(e => e.rank === "Master");
-            return masterEntries.map(e => ({
+            const diamondEntries = champ.data.filter(e => e.rank === "Diamond");
+            const entries = masterEntries.length > 0 ? masterEntries : diamondEntries;
+            return entries.map(e => ({
               id: champ.id,
               name_ja: champ.name_ja,
               lane: e.lane,
