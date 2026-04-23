@@ -3,33 +3,6 @@
   "name_ja": "アクシャン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0a",
-      "updatetime": "2026/02/10",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 50.794399999999996,
-          "pickrate": 1.1057000000000001,
-          "banrate": 0.01
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 39.6552,
-          "pickrate": 1.0163,
-          "banrate": 0.0701
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 52.1818,
-          "pickrate": 1.0748,
-          "banrate": 0.0313
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0c",
       "updatetime": "2026/03/03",
       "data": [
@@ -120,6 +93,19 @@
           "winrate": 50.8274,
           "pickrate": 1.0693,
           "banrate": 0.0228
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1b",
+      "updatetime": "2026/04/21",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 33.3333,
+          "pickrate": 1.4949999999999999,
+          "banrate": 0.3322
         }
       ]
     }
