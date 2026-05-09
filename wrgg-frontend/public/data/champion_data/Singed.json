@@ -3,61 +3,6 @@
   "name_ja": "シンジド",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0c",
-      "updatetime": "2026/03/03",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 50.0,
-          "pickrate": 1.0469,
-          "banrate": 0.20249999999999999
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 51.9054,
-          "pickrate": 1.1526,
-          "banrate": 0.21719999999999998
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 52.0339,
-          "pickrate": 1.2122000000000002,
-          "banrate": 0.2356
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 55.6701,
-          "pickrate": 1.0887,
-          "banrate": 0.9933000000000001
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 52.80160000000001,
-          "pickrate": 2.2485,
-          "banrate": 0.43870000000000003
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 53.7037,
-          "pickrate": 1.0495,
-          "banrate": 0.5306
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 53.97690000000001,
-          "pickrate": 2.3975,
-          "banrate": 0.3048
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0d",
       "updatetime": "2026/03/17",
       "data": [
@@ -225,6 +170,47 @@
           "winrate": 53.457600000000006,
           "pickrate": 2.9059,
           "banrate": 0.6308
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1d",
+      "updatetime": "2026/05/08",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 50.9452,
+          "pickrate": 1.0848,
+          "banrate": 0.2461
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 51.0389,
+          "pickrate": 1.4588,
+          "banrate": 0.2072
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 51.2698,
+          "pickrate": 1.5913,
+          "banrate": 0.23509999999999998
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 52.2622,
+          "pickrate": 2.9148,
+          "banrate": 0.5733
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 53.6644,
+          "pickrate": 2.9086,
+          "banrate": 0.5460999999999999
         }
       ]
     }

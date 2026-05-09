@@ -3,40 +3,6 @@
   "name_ja": "ニーラ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0c",
-      "updatetime": "2026/03/03",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 49.9859,
-          "pickrate": 1.1403999999999999,
-          "banrate": 0.6092
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 50.0422,
-          "pickrate": 1.7564,
-          "banrate": 1.0894
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 53.6813,
-          "pickrate": 1.7488,
-          "banrate": 0.7969999999999999
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 50.3904,
-          "pickrate": 1.0598,
-          "banrate": 0.5261
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0d",
       "updatetime": "2026/03/17",
       "data": [
@@ -155,6 +121,26 @@
           "winrate": 50.855399999999996,
           "pickrate": 1.1236,
           "banrate": 1.3175
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1d",
+      "updatetime": "2026/05/08",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 53.333299999999994,
+          "pickrate": 1.413,
+          "banrate": 1.5744999999999998
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 49.261700000000005,
+          "pickrate": 1.3125,
+          "banrate": 1.1539000000000001
         }
       ]
     }

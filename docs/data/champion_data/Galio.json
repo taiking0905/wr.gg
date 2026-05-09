@@ -3,82 +3,6 @@
   "name_ja": "ガリオ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0c",
-      "updatetime": "2026/03/03",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 50.8435,
-          "pickrate": 8.0884,
-          "banrate": 2.3677
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 51.6361,
-          "pickrate": 2.8183,
-          "banrate": 2.3677
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.277300000000004,
-          "pickrate": 9.7401,
-          "banrate": 1.9943
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 51.918299999999995,
-          "pickrate": 2.4357,
-          "banrate": 1.9943
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.1338,
-          "pickrate": 9.8092,
-          "banrate": 2.1001
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 52.111200000000004,
-          "pickrate": 2.328,
-          "banrate": 2.1001
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 48.2349,
-          "pickrate": 9.1111,
-          "banrate": 0.9901
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 51.9031,
-          "pickrate": 1.7134,
-          "banrate": 0.9901
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 49.2305,
-          "pickrate": 9.6372,
-          "banrate": 0.885
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 50.6849,
-          "pickrate": 2.6175,
-          "banrate": 0.885
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0d",
       "updatetime": "2026/03/17",
       "data": [
@@ -351,6 +275,82 @@
           "winrate": 53.3718,
           "pickrate": 3.9385999999999997,
           "banrate": 1.5883999999999998
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1d",
+      "updatetime": "2026/05/08",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 51.661699999999996,
+          "pickrate": 7.8672,
+          "banrate": 1.7225000000000001
+        },
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 53.5606,
+          "pickrate": 3.0380000000000003,
+          "banrate": 1.7225000000000001
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.571200000000005,
+          "pickrate": 10.2467,
+          "banrate": 1.6223
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 52.19780000000001,
+          "pickrate": 3.0269999999999997,
+          "banrate": 1.6223
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.417199999999994,
+          "pickrate": 10.709200000000001,
+          "banrate": 1.8279
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 52.4674,
+          "pickrate": 2.9602,
+          "banrate": 1.8279
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 49.407000000000004,
+          "pickrate": 10.6661,
+          "banrate": 2.0401
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 49.152499999999996,
+          "pickrate": 2.8583000000000003,
+          "banrate": 2.0401
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 48.7003,
+          "pickrate": 11.250499999999999,
+          "banrate": 1.5609
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 50.8088,
+          "pickrate": 4.2476,
+          "banrate": 1.5609
         }
       ]
     }

@@ -3,82 +3,6 @@
   "name_ja": "エコー",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0c",
-      "updatetime": "2026/03/03",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 46.8281,
-          "pickrate": 1.9501000000000002,
-          "banrate": 0.18289999999999998
-        },
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 48.9424,
-          "pickrate": 1.2761,
-          "banrate": 0.18289999999999998
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 46.8655,
-          "pickrate": 1.7177000000000002,
-          "banrate": 0.1111
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 50.3618,
-          "pickrate": 1.6479000000000001,
-          "banrate": 0.1111
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 46.407399999999996,
-          "pickrate": 1.6764999999999999,
-          "banrate": 0.1087
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.2278,
-          "pickrate": 1.6919,
-          "banrate": 0.1087
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 46.2264,
-          "pickrate": 1.5711,
-          "banrate": 0.0474
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 50.472899999999996,
-          "pickrate": 1.7238,
-          "banrate": 0.0474
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 45.9846,
-          "pickrate": 1.4815,
-          "banrate": 0.0896
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 48.978100000000005,
-          "pickrate": 2.2329000000000003,
-          "banrate": 0.0896
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0d",
       "updatetime": "2026/03/17",
       "data": [
@@ -351,6 +275,82 @@
           "winrate": 51.1883,
           "pickrate": 2.0963,
           "banrate": 0.0268
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1d",
+      "updatetime": "2026/05/08",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 44.7208,
+          "pickrate": 2.1849,
+          "banrate": 0.12
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 48.9234,
+          "pickrate": 1.7143,
+          "banrate": 0.12
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 47.251,
+          "pickrate": 1.7350999999999999,
+          "banrate": 0.0841
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 49.3895,
+          "pickrate": 1.7409999999999999,
+          "banrate": 0.0841
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 47.426899999999996,
+          "pickrate": 1.6859,
+          "banrate": 0.0834
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 49.8605,
+          "pickrate": 1.794,
+          "banrate": 0.0834
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 49.3651,
+          "pickrate": 1.6955999999999998,
+          "banrate": 0.0323
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 48.6322,
+          "pickrate": 1.771,
+          "banrate": 0.0323
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 48.589,
+          "pickrate": 1.4358,
+          "banrate": 0.0335
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 48.6777,
+          "pickrate": 2.1317,
+          "banrate": 0.0335
         }
       ]
     }

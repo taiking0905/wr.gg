@@ -3,47 +3,6 @@
   "name_ja": "ジャンナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0c",
-      "updatetime": "2026/03/03",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 52.2868,
-          "pickrate": 1.3278,
-          "banrate": 0.1215
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 52.6811,
-          "pickrate": 2.0944000000000003,
-          "banrate": 0.1023
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 52.459900000000005,
-          "pickrate": 2.2950000000000004,
-          "banrate": 0.1147
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 51.5668,
-          "pickrate": 3.7366,
-          "banrate": 0.1067
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 51.6734,
-          "pickrate": 4.4315,
-          "banrate": 0.1825
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.0d",
       "updatetime": "2026/03/17",
       "data": [
@@ -190,6 +149,47 @@
           "winrate": 48.2207,
           "pickrate": 4.3702,
           "banrate": 0.0961
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1d",
+      "updatetime": "2026/05/08",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 50.4673,
+          "pickrate": 1.2068,
+          "banrate": 0.12819999999999998
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 51.136,
+          "pickrate": 1.7904,
+          "banrate": 0.0848
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 51.3059,
+          "pickrate": 1.9945000000000002,
+          "banrate": 0.094
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 51.7274,
+          "pickrate": 2.8045,
+          "banrate": 0.1992
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 49.0949,
+          "pickrate": 3.9903,
+          "banrate": 0.1251
         }
       ]
     }
