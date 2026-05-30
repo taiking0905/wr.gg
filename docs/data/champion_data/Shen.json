@@ -3,47 +3,6 @@
   "name_ja": "シェン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0f",
-      "updatetime": "2026/04/07",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 51.929899999999996,
-          "pickrate": 1.4014,
-          "banrate": 0.0744
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 52.257,
-          "pickrate": 1.4499,
-          "banrate": 0.0779
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 52.906200000000005,
-          "pickrate": 1.5933,
-          "banrate": 0.058
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 50.934599999999996,
-          "pickrate": 1.2785,
-          "banrate": 0.0717
-        },
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 48.96,
-          "pickrate": 1.0426,
-          "banrate": 0.0951
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1",
       "updatetime": "2026/04/14",
       "data": [
@@ -183,6 +142,75 @@
           "winrate": 52.0534,
           "pickrate": 1.5211999999999999,
           "banrate": 0.026600000000000002
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1f",
+      "updatetime": "2026/05/29",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 51.0529,
+          "pickrate": 3.4433,
+          "banrate": 0.14150000000000001
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 51.664,
+          "pickrate": 1.1159000000000001,
+          "banrate": 0.14150000000000001
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 50.8531,
+          "pickrate": 3.9774,
+          "banrate": 0.179
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 52.261100000000006,
+          "pickrate": 1.2464,
+          "banrate": 0.179
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 50.822199999999995,
+          "pickrate": 3.9737,
+          "banrate": 0.1922
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 52.0953,
+          "pickrate": 1.2234,
+          "banrate": 0.1922
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 50.8775,
+          "pickrate": 4.1054,
+          "banrate": 0.189
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 51.9118,
+          "pickrate": 1.0536999999999999,
+          "banrate": 0.189
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 51.813500000000005,
+          "pickrate": 3.0210999999999997,
+          "banrate": 0.2113
         }
       ]
     }

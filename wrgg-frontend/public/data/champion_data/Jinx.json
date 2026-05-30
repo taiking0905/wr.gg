@@ -3,47 +3,6 @@
   "name_ja": "ジンクス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0f",
-      "updatetime": "2026/04/07",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 48.978500000000004,
-          "pickrate": 10.0104,
-          "banrate": 1.0170000000000001
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 49.7715,
-          "pickrate": 11.9644,
-          "banrate": 0.4302
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 49.6977,
-          "pickrate": 12.3429,
-          "banrate": 0.4277
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 49.622699999999995,
-          "pickrate": 13.6045,
-          "banrate": 0.3336
-        },
-        {
-          "lane": "ADC",
-          "rank": "Legendary_rank",
-          "winrate": 49.1626,
-          "pickrate": 13.079199999999998,
-          "banrate": 0.39830000000000004
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1",
       "updatetime": "2026/04/14",
       "data": [
@@ -190,6 +149,47 @@
           "winrate": 49.5393,
           "pickrate": 8.1371,
           "banrate": 0.1062
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1f",
+      "updatetime": "2026/05/29",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 49.7129,
+          "pickrate": 8.3174,
+          "banrate": 0.7764
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 49.4001,
+          "pickrate": 9.3247,
+          "banrate": 0.2587
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 49.425799999999995,
+          "pickrate": 9.439599999999999,
+          "banrate": 0.25
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 48.8684,
+          "pickrate": 9.6533,
+          "banrate": 0.1697
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 49.1358,
+          "pickrate": 8.0599,
+          "banrate": 0.1503
         }
       ]
     }

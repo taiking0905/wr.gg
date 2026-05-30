@@ -3,47 +3,6 @@
   "name_ja": "ジリアン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0f",
-      "updatetime": "2026/04/07",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 53.1003,
-          "pickrate": 1.5645,
-          "banrate": 1.9229
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 53.388000000000005,
-          "pickrate": 1.5612,
-          "banrate": 2.086
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 53.0247,
-          "pickrate": 2.1211,
-          "banrate": 3.1325
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 53.106500000000004,
-          "pickrate": 2.6923,
-          "banrate": 4.3193
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 54.7566,
-          "pickrate": 1.6808,
-          "banrate": 1.0189
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1",
       "updatetime": "2026/04/14",
       "data": [
@@ -190,6 +149,40 @@
           "winrate": 52.0833,
           "pickrate": 1.0099,
           "banrate": 0.8597
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1f",
+      "updatetime": "2026/05/29",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 52.3998,
+          "pickrate": 1.5767,
+          "banrate": 1.5044
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 52.4817,
+          "pickrate": 1.6472,
+          "banrate": 1.635
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 51.2883,
+          "pickrate": 2.2251,
+          "banrate": 2.6744
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 50.9765,
+          "pickrate": 3.1260000000000003,
+          "banrate": 5.1969
         }
       ]
     }

@@ -3,68 +3,6 @@
   "name_ja": "ブラッドミア",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.0f",
-      "updatetime": "2026/04/07",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 51.012100000000004,
-          "pickrate": 2.7555,
-          "banrate": 0.9166000000000001
-        },
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 48.6676,
-          "pickrate": 1.3256999999999999,
-          "banrate": 0.9166000000000001
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.3873,
-          "pickrate": 3.1908,
-          "banrate": 1.2262
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.310700000000004,
-          "pickrate": 3.2401,
-          "banrate": 1.2961
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 49.1429,
-          "pickrate": 3.8074999999999997,
-          "banrate": 1.1275
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 49.0732,
-          "pickrate": 4.2973,
-          "banrate": 1.1092
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.1562,
-          "pickrate": 1.0802,
-          "banrate": 1.2262
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 47.8326,
-          "pickrate": 1.0464,
-          "banrate": 1.2961
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1",
       "updatetime": "2026/04/14",
       "data": [
@@ -288,6 +226,68 @@
           "winrate": 49.0836,
           "pickrate": 5.0275,
           "banrate": 1.0714
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1f",
+      "updatetime": "2026/05/29",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 50.1744,
+          "pickrate": 3.5494,
+          "banrate": 1.4856
+        },
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 51.0278,
+          "pickrate": 1.4626000000000001,
+          "banrate": 1.4856
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 49.1028,
+          "pickrate": 3.6319999999999997,
+          "banrate": 1.7589000000000001
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 47.6914,
+          "pickrate": 1.1408,
+          "banrate": 1.7589000000000001
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 49.2192,
+          "pickrate": 3.6371,
+          "banrate": 1.8362
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 47.485699999999994,
+          "pickrate": 1.0828,
+          "banrate": 1.8362
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 49.9026,
+          "pickrate": 4.3765,
+          "banrate": 1.2179
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 49.1481,
+          "pickrate": 4.7774,
+          "banrate": 1.2194
         }
       ]
     }
