@@ -3,40 +3,6 @@
   "name_ja": "トリスターナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 48.179100000000005,
-          "pickrate": 1.1641000000000001,
-          "banrate": 0.2251
-        },
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 49.1141,
-          "pickrate": 11.7218,
-          "banrate": 0.2251
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.4313,
-          "pickrate": 7.9746,
-          "banrate": 0.0776
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 47.8758,
-          "pickrate": 5.0741000000000005,
-          "banrate": 0.0214
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -211,6 +177,47 @@
           "winrate": 47.7174,
           "pickrate": 4.4782,
           "banrate": 0.041800000000000004
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 46.9324,
+          "pickrate": 7.223699999999999,
+          "banrate": 0.1326
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 48.5338,
+          "pickrate": 7.1496,
+          "banrate": 0.1381
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 48.633700000000005,
+          "pickrate": 7.0773,
+          "banrate": 0.1355
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 48.5891,
+          "pickrate": 5.6232999999999995,
+          "banrate": 0.055999999999999994
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 48.0291,
+          "pickrate": 4.7123,
+          "banrate": 0.0328
         }
       ]
     }

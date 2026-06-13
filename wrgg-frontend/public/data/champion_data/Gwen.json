@@ -3,33 +3,6 @@
   "name_ja": "グウェン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 48.2929,
-          "pickrate": 1.9716,
-          "banrate": 0.3137
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 49.1068,
-          "pickrate": 1.8581,
-          "banrate": 0.21080000000000002
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 48.4615,
-          "pickrate": 1.9666,
-          "banrate": 0.145
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -225,6 +198,54 @@
           "winrate": 47.0228,
           "pickrate": 1.7041,
           "banrate": 0.2731
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 50.4208,
+          "pickrate": 2.2805,
+          "banrate": 0.5043
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 46.0598,
+          "pickrate": 1.2842,
+          "banrate": 0.5043
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 47.6695,
+          "pickrate": 1.537,
+          "banrate": 0.3579
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 47.8251,
+          "pickrate": 1.4947,
+          "banrate": 0.3664
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 47.0256,
+          "pickrate": 1.4433,
+          "banrate": 0.2712
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 47.9748,
+          "pickrate": 1.7341,
+          "banrate": 0.24659999999999999
         }
       ]
     }

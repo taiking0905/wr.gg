@@ -3,33 +3,6 @@
   "name_ja": "ユーミ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 43.1101,
-          "pickrate": 6.7123,
-          "banrate": 14.59
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 44.422200000000004,
-          "pickrate": 11.4265,
-          "banrate": 17.0749
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 44.7624,
-          "pickrate": 15.6813,
-          "banrate": 20.224600000000002
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 43.612899999999996,
           "pickrate": 6.1212,
           "banrate": 22.7299
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 46.7406,
+          "pickrate": 7.7088,
+          "banrate": 19.5111
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 46.206399999999995,
+          "pickrate": 7.9415,
+          "banrate": 25.5368
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 46.3302,
+          "pickrate": 8.3063,
+          "banrate": 26.8447
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 47.1023,
+          "pickrate": 11.6085,
+          "banrate": 32.4659
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 42.2977,
+          "pickrate": 5.9782,
+          "banrate": 22.0772
         }
       ]
     }

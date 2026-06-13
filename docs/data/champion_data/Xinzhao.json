@@ -3,33 +3,6 @@
   "name_ja": "シン・ジャオ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 50.9328,
-          "pickrate": 10.6716,
-          "banrate": 1.1229
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 51.2743,
-          "pickrate": 9.7303,
-          "banrate": 0.7772
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.8861,
-          "pickrate": 9.3893,
-          "banrate": 0.5723
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 50.247299999999996,
           "pickrate": 9.3519,
           "banrate": 1.2774
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 50.4555,
+          "pickrate": 9.5758,
+          "banrate": 1.4639
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 50.8949,
+          "pickrate": 10.1183,
+          "banrate": 1.6922
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 50.9342,
+          "pickrate": 10.1042,
+          "banrate": 1.7549
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 51.1557,
+          "pickrate": 8.7691,
+          "banrate": 1.3069000000000002
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 51.6544,
+          "pickrate": 9.104700000000001,
+          "banrate": 1.2144
         }
       ]
     }

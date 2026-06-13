@@ -3,33 +3,6 @@
   "name_ja": "ジャーヴァンⅣ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 51.867399999999996,
-          "pickrate": 5.6525,
-          "banrate": 0.30219999999999997
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 51.139100000000006,
-          "pickrate": 6.687899999999999,
-          "banrate": 0.16410000000000002
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.666900000000005,
-          "pickrate": 6.8996,
-          "banrate": 0.09709999999999999
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -197,6 +170,47 @@
           "winrate": 50.269299999999994,
           "pickrate": 6.6495,
           "banrate": 0.3014
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 50.39900000000001,
+          "pickrate": 4.1545,
+          "banrate": 0.6439
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 51.6721,
+          "pickrate": 6.712899999999999,
+          "banrate": 0.4484
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 51.735600000000005,
+          "pickrate": 6.984500000000001,
+          "banrate": 0.45459999999999995
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 51.0433,
+          "pickrate": 7.109500000000001,
+          "banrate": 0.36519999999999997
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 49.079499999999996,
+          "pickrate": 6.4434000000000005,
+          "banrate": 0.2856
         }
       ]
     }

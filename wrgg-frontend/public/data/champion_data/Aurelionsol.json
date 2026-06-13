@@ -3,33 +3,6 @@
   "name_ja": "オレリオン・ソル",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 50.0309,
-          "pickrate": 5.5542,
-          "banrate": 1.1956
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.5699,
-          "pickrate": 7.0931,
-          "banrate": 1.6306
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.6434,
-          "pickrate": 8.4842,
-          "banrate": 1.6313000000000002
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 50.34459999999999,
           "pickrate": 10.1756,
           "banrate": 4.3842
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 51.44,
+          "pickrate": 5.6952,
+          "banrate": 0.9998
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.963499999999996,
+          "pickrate": 7.220899999999999,
+          "banrate": 3.4329
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.91250000000001,
+          "pickrate": 7.4588,
+          "banrate": 3.7934
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 50.285199999999996,
+          "pickrate": 9.1457,
+          "banrate": 5.0663
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 49.766,
+          "pickrate": 9.672799999999999,
+          "banrate": 4.460999999999999
         }
       ]
     }

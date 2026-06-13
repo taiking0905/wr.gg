@@ -3,33 +3,6 @@
   "name_ja": "シヴァーナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 54.6087,
-          "pickrate": 11.0291,
-          "banrate": 2.8963
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 53.1235,
-          "pickrate": 11.058900000000001,
-          "banrate": 3.9834
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.0063,
-          "pickrate": 10.0184,
-          "banrate": 3.6471000000000005
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 49.377500000000005,
           "pickrate": 7.431400000000001,
           "banrate": 4.9498
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 53.6825,
+          "pickrate": 7.6286000000000005,
+          "banrate": 2.2334
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 52.1926,
+          "pickrate": 8.4451,
+          "banrate": 5.0653999999999995
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 52.1263,
+          "pickrate": 8.5807,
+          "banrate": 5.479
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 51.6207,
+          "pickrate": 7.829,
+          "banrate": 5.7493
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 50.085100000000004,
+          "pickrate": 7.333099999999999,
+          "banrate": 4.5953
         }
       ]
     }

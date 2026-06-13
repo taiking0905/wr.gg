@@ -3,33 +3,6 @@
   "name_ja": "シヴィア",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 49.4475,
-          "pickrate": 3.4219,
-          "banrate": 0.043
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.7922,
-          "pickrate": 3.5004,
-          "banrate": 0.0234
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 49.2276,
-          "pickrate": 3.6723,
-          "banrate": 0.0088
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 48.9843,
           "pickrate": 5.2154,
           "banrate": 0.0552
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 50.8876,
+          "pickrate": 4.4232000000000005,
+          "banrate": 0.1047
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 50.3857,
+          "pickrate": 4.8661,
+          "banrate": 0.101
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 50.295,
+          "pickrate": 4.936999999999999,
+          "banrate": 0.0996
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 50.321400000000004,
+          "pickrate": 5.1565,
+          "banrate": 0.0603
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 49.3723,
+          "pickrate": 5.346,
+          "banrate": 0.025
         }
       ]
     }

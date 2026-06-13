@@ -3,33 +3,6 @@
   "name_ja": "カサディン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 50.253800000000005,
-          "pickrate": 1.3542999999999998,
-          "banrate": 0.06530000000000001
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.8976,
-          "pickrate": 2.0337,
-          "banrate": 0.1476
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 52.1624,
-          "pickrate": 2.8566000000000003,
-          "banrate": 0.29
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 51.82639999999999,
           "pickrate": 3.4724999999999997,
           "banrate": 1.061
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 51.061,
+          "pickrate": 1.3155999999999999,
+          "banrate": 0.08549999999999999
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 51.3892,
+          "pickrate": 1.8748,
+          "banrate": 0.3648
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 51.543099999999995,
+          "pickrate": 1.9251999999999998,
+          "banrate": 0.40590000000000004
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 52.1192,
+          "pickrate": 2.5898999999999996,
+          "banrate": 0.6939
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 53.797200000000004,
+          "pickrate": 3.4324,
+          "banrate": 1.2706
         }
       ]
     }

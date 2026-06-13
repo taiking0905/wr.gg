@@ -3,33 +3,6 @@
   "name_ja": "アッシュ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1",
-      "updatetime": "2026/04/14",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 51.3286,
-          "pickrate": 12.914200000000001,
-          "banrate": 0.2721
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 51.017,
-          "pickrate": 8.8115,
-          "banrate": 0.0974
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 50.5595,
-          "pickrate": 6.1961,
-          "banrate": 0.0429
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1b",
       "updatetime": "2026/05/05",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 50.069399999999995,
           "pickrate": 5.3766,
           "banrate": 0.0567
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1g",
+      "updatetime": "2026/06/12",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 50.0587,
+          "pickrate": 8.9198,
+          "banrate": 0.2966
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 50.341,
+          "pickrate": 8.0981,
+          "banrate": 0.1554
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 50.3325,
+          "pickrate": 7.945399999999999,
+          "banrate": 0.15089999999999998
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 49.3178,
+          "pickrate": 6.4921999999999995,
+          "banrate": 0.08310000000000001
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 49.837900000000005,
+          "pickrate": 5.2961,
+          "banrate": 0.089
         }
       ]
     }
