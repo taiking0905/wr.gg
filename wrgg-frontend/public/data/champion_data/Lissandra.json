@@ -3,54 +3,6 @@
   "name_ja": "リサンドラ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1b",
-      "updatetime": "2026/05/05",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 51.598299999999995,
-          "pickrate": 3.1268,
-          "banrate": 1.5363
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.8036,
-          "pickrate": 4.4201999999999995,
-          "banrate": 4.6189
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 50.8806,
-          "pickrate": 4.8694,
-          "banrate": 5.9641
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 54.1899,
-          "pickrate": 6.1738,
-          "banrate": 8.2701
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 60.9375,
-          "pickrate": 1.3637,
-          "banrate": 10.398499999999999
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 50.131499999999996,
-          "pickrate": 5.3155,
-          "banrate": 7.875400000000001
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1d",
       "updatetime": "2026/05/12",
       "data": [
@@ -218,6 +170,47 @@
           "winrate": 56.1664,
           "pickrate": 1.0333999999999999,
           "banrate": 7.8143
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.1h",
+      "updatetime": "2026/06/26",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 49.2188,
+          "pickrate": 2.8344,
+          "banrate": 2.0438
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.005,
+          "pickrate": 4.3478,
+          "banrate": 5.4657
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 49.9963,
+          "pickrate": 4.4768,
+          "banrate": 5.9051
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 49.823,
+          "pickrate": 5.0592,
+          "banrate": 7.441300000000001
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 50.214000000000006,
+          "pickrate": 5.5758,
+          "banrate": 7.9954
         }
       ]
     }
