@@ -3,54 +3,6 @@
   "name_ja": "イレリア",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1e",
-      "updatetime": "2026/05/26",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 46.5259,
-          "pickrate": 1.9563000000000001,
-          "banrate": 0.967
-        },
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 48.2711,
-          "pickrate": 2.488,
-          "banrate": 0.967
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.628,
-          "pickrate": 1.9356000000000002,
-          "banrate": 0.8949
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 48.4041,
-          "pickrate": 1.9168999999999998,
-          "banrate": 0.9272
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 49.4903,
-          "pickrate": 1.8526,
-          "banrate": 0.7426
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 49.8291,
-          "pickrate": 2.2849,
-          "banrate": 1.0151999999999999
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1f",
       "updatetime": "2026/06/10",
       "data": [
@@ -225,6 +177,40 @@
           "winrate": 52.9979,
           "pickrate": 2.5672,
           "banrate": 0.5531999999999999
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2a",
+      "updatetime": "2026/07/17",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 47.362300000000005,
+          "pickrate": 1.4208,
+          "banrate": 0.7793
+        },
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 48.681999999999995,
+          "pickrate": 1.9653,
+          "banrate": 0.7793
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 50.688599999999994,
+          "pickrate": 2.044,
+          "banrate": 0.6049
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 51.51559999999999,
+          "pickrate": 2.4471,
+          "banrate": 0.6097
         }
       ]
     }

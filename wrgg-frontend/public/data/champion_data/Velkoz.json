@@ -3,75 +3,6 @@
   "name_ja": "ヴェル＝コズ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1e",
-      "updatetime": "2026/05/26",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 49.9005,
-          "pickrate": 3.4583999999999997,
-          "banrate": 0.5213
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 48.854,
-          "pickrate": 2.6273999999999997,
-          "banrate": 0.5213
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.5556,
-          "pickrate": 3.6727999999999996,
-          "banrate": 0.6769
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 49.9643,
-          "pickrate": 1.9369,
-          "banrate": 0.6769
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.9705,
-          "pickrate": 3.6532,
-          "banrate": 0.7148
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 50.10679999999999,
-          "pickrate": 1.7849,
-          "banrate": 0.7148
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 49.3831,
-          "pickrate": 3.0614,
-          "banrate": 0.2533
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 51.2931,
-          "pickrate": 1.195,
-          "banrate": 0.2533
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 48.9035,
-          "pickrate": 2.1366,
-          "banrate": 0.1312
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1f",
       "updatetime": "2026/06/10",
       "data": [
@@ -337,6 +268,54 @@
           "winrate": 48.661,
           "pickrate": 2.5658,
           "banrate": 0.12160000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2a",
+      "updatetime": "2026/07/17",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 50.5328,
+          "pickrate": 3.4135999999999997,
+          "banrate": 0.4701
+        },
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 53.317499999999995,
+          "pickrate": 1.8605,
+          "banrate": 0.4701
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.942299999999996,
+          "pickrate": 3.4692,
+          "banrate": 0.3291
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 50.462700000000005,
+          "pickrate": 1.7662,
+          "banrate": 0.3291
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.1822,
+          "pickrate": 2.948,
+          "banrate": 0.1899
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 49.2432,
+          "pickrate": 1.2825,
+          "banrate": 0.1899
         }
       ]
     }

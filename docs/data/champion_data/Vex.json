@@ -3,47 +3,6 @@
   "name_ja": "ヴェックス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1e",
-      "updatetime": "2026/05/26",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 48.5562,
-          "pickrate": 2.2643,
-          "banrate": 0.5126999999999999
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 48.656,
-          "pickrate": 2.686,
-          "banrate": 0.5780000000000001
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 48.7305,
-          "pickrate": 2.7493,
-          "banrate": 0.6153
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 49.7313,
-          "pickrate": 2.396,
-          "banrate": 0.334
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 50.4696,
-          "pickrate": 2.4941999999999998,
-          "banrate": 0.2764
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.1f",
       "updatetime": "2026/06/10",
       "data": [
@@ -190,6 +149,33 @@
           "winrate": 47.9242,
           "pickrate": 2.102,
           "banrate": 0.1354
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2a",
+      "updatetime": "2026/07/17",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 50.14960000000001,
+          "pickrate": 2.5791999999999997,
+          "banrate": 0.4431
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 48.9704,
+          "pickrate": 2.4063,
+          "banrate": 0.24489999999999998
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 48.9411,
+          "pickrate": 2.2586,
+          "banrate": 0.1629
         }
       ]
     }
