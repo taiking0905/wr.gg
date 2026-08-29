@@ -3,110 +3,6 @@
   "name_ja": "ノーチラス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.1h",
-      "updatetime": "2026/07/07",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 49.9614,
-          "pickrate": 8.7904,
-          "banrate": 3.1648
-        },
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 44.7537,
-          "pickrate": 1.0045,
-          "banrate": 3.3274999999999997
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.215599999999995,
-          "pickrate": 1.0182,
-          "banrate": 5.8751999999999995
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 48.5553,
-          "pickrate": 10.0769,
-          "banrate": 5.8751999999999995
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 41.314,
-          "pickrate": 1.2238,
-          "banrate": 5.8751999999999995
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 48.282000000000004,
-          "pickrate": 1.0746,
-          "banrate": 6.2665
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 48.5325,
-          "pickrate": 10.206800000000001,
-          "banrate": 6.2665
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 41.3648,
-          "pickrate": 1.2455,
-          "banrate": 6.2665
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 46.9085,
-          "pickrate": 1.2223,
-          "banrate": 6.5442
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 48.408,
-          "pickrate": 9.388100000000001,
-          "banrate": 6.5442
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 41.5115,
-          "pickrate": 1.1788,
-          "banrate": 6.5442
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 48.0843,
-          "pickrate": 1.0174,
-          "banrate": 5.3757
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 47.6425,
-          "pickrate": 8.722299999999999,
-          "banrate": 5.3757
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 37.4204,
-          "pickrate": 1.2241,
-          "banrate": 5.3757
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2",
       "updatetime": "2026/07/14",
       "data": [
@@ -274,6 +170,54 @@
           "winrate": 40.9752,
           "pickrate": 1.0375,
           "banrate": 3.5207
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2d",
+      "updatetime": "2026/08/28",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 50.277899999999995,
+          "pickrate": 13.7041,
+          "banrate": 3.8580000000000005
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 44.4737,
+          "pickrate": 1.1352,
+          "banrate": 3.8580000000000005
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 48.9941,
+          "pickrate": 12.7749,
+          "banrate": 3.5718
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 48.8583,
+          "pickrate": 12.6129,
+          "banrate": 3.6382
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 48.9112,
+          "pickrate": 10.7808,
+          "banrate": 2.6492
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 48.329499999999996,
+          "pickrate": 9.657200000000001,
+          "banrate": 1.9699000000000002
         }
       ]
     }
