@@ -3,33 +3,6 @@
   "name_ja": "ゼリ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 50.8492,
-          "pickrate": 1.1843,
-          "banrate": 0.0315
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 50.7158,
-          "pickrate": 1.4571,
-          "banrate": 0.0077
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 51.343799999999995,
-          "pickrate": 1.9687,
-          "banrate": 0.006200000000000001
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 52.6169,
           "pickrate": 2.4592,
           "banrate": 0.011000000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 45.5677,
+          "pickrate": 1.2216,
+          "banrate": 0.0798
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 50.048700000000004,
+          "pickrate": 1.2379,
+          "banrate": 0.0178
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 49.826,
+          "pickrate": 1.2652999999999999,
+          "banrate": 0.0169
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 49.6244,
+          "pickrate": 1.4792,
+          "banrate": 0.0229
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 49.8762,
+          "pickrate": 2.2534,
+          "banrate": 0.0237
         }
       ]
     }

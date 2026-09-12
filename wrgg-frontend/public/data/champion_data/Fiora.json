@@ -3,33 +3,6 @@
   "name_ja": "フィオラ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 46.9399,
-          "pickrate": 2.1843999999999997,
-          "banrate": 0.2646
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 47.8116,
-          "pickrate": 1.9918000000000002,
-          "banrate": 0.2103
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 48.4242,
-          "pickrate": 2.0931,
-          "banrate": 0.2701
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 48.243399999999994,
           "pickrate": 4.9499,
           "banrate": 1.3898000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 50.0697,
+          "pickrate": 4.0866,
+          "banrate": 0.5719
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 48.391400000000004,
+          "pickrate": 4.3593,
+          "banrate": 0.7702
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 48.3302,
+          "pickrate": 4.3406,
+          "banrate": 0.7946
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 48.5424,
+          "pickrate": 4.4753,
+          "banrate": 0.7971
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 50.298500000000004,
+          "pickrate": 4.9042,
+          "banrate": 1.1461999999999999
         }
       ]
     }

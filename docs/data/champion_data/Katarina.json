@@ -3,33 +3,6 @@
   "name_ja": "カタリナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 45.711200000000005,
-          "pickrate": 1.4529,
-          "banrate": 0.4058
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 48.2644,
-          "pickrate": 1.791,
-          "banrate": 0.2299
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.566900000000004,
-          "pickrate": 2.4593,
-          "banrate": 0.2151
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 50.57469999999999,
           "pickrate": 1.7869,
           "banrate": 0.3601
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 46.558699999999995,
+          "pickrate": 1.4078,
+          "banrate": 0.7979
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 46.6365,
+          "pickrate": 1.3324,
+          "banrate": 0.4091
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 46.7036,
+          "pickrate": 1.3434,
+          "banrate": 0.4063
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 46.9223,
+          "pickrate": 1.4674,
+          "banrate": 0.38029999999999997
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 47.8326,
+          "pickrate": 1.8657,
+          "banrate": 0.23979999999999999
         }
       ]
     }

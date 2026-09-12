@@ -3,33 +3,6 @@
   "name_ja": "トリスターナ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 48.4516,
-          "pickrate": 6.3928,
-          "banrate": 0.1242
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.3009,
-          "pickrate": 4.7689,
-          "banrate": 0.0409
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 48.2147,
-          "pickrate": 3.1369000000000002,
-          "banrate": 0.0151
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 48.458,
           "pickrate": 3.8627000000000002,
           "banrate": 0.0246
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 47.6497,
+          "pickrate": 6.7902000000000005,
+          "banrate": 0.24130000000000001
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 48.2779,
+          "pickrate": 5.6681,
+          "banrate": 0.11069999999999999
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 48.119299999999996,
+          "pickrate": 5.5646,
+          "banrate": 0.1099
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 47.5799,
+          "pickrate": 4.7985,
+          "banrate": 0.057300000000000004
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 47.5138,
+          "pickrate": 3.7859,
+          "banrate": 0.029300000000000003
         }
       ]
     }

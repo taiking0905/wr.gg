@@ -3,33 +3,6 @@
   "name_ja": "ブラウム",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 49.5319,
-          "pickrate": 3.8751,
-          "banrate": 0.7556
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 49.852999999999994,
-          "pickrate": 3.6655,
-          "banrate": 0.528
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 49.7448,
-          "pickrate": 2.9616,
-          "banrate": 0.3539
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 50.954,
           "pickrate": 4.3775,
           "banrate": 0.9448
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 52.53529999999999,
+          "pickrate": 3.6345,
+          "banrate": 1.3299
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 51.6501,
+          "pickrate": 3.9482999999999997,
+          "banrate": 1.2101000000000002
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 51.687799999999996,
+          "pickrate": 4.0033,
+          "banrate": 1.2377
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 51.592499999999994,
+          "pickrate": 3.9613,
+          "banrate": 1.1405
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 51.7999,
+          "pickrate": 4.3770999999999995,
+          "banrate": 0.9566
         }
       ]
     }

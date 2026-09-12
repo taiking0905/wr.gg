@@ -3,54 +3,6 @@
   "name_ja": "マルファイト",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 51.442299999999996,
-          "pickrate": 4.0194,
-          "banrate": 16.247700000000002
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 51.05309999999999,
-          "pickrate": 10.5226,
-          "banrate": 16.247700000000002
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 51.261,
-          "pickrate": 5.204000000000001,
-          "banrate": 10.6099
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 51.02569999999999,
-          "pickrate": 7.9198,
-          "banrate": 10.6099
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 52.2907,
-          "pickrate": 5.9095,
-          "banrate": 5.3474
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 50.7924,
-          "pickrate": 4.2926,
-          "banrate": 5.3474
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -358,6 +310,110 @@
           "winrate": 48.906,
           "pickrate": 6.5711,
           "banrate": 11.2006
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.2e",
+      "updatetime": "2026/09/11",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 49.2674,
+          "pickrate": 1.0373,
+          "banrate": 21.1798
+        },
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 51.1914,
+          "pickrate": 4.7839,
+          "banrate": 21.1798
+        },
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 50.9689,
+          "pickrate": 11.9616,
+          "banrate": 21.1798
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.098,
+          "pickrate": 1.1528,
+          "banrate": 22.9282
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 55.184,
+          "pickrate": 8.3425,
+          "banrate": 22.9282
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 52.626799999999996,
+          "pickrate": 11.7213,
+          "banrate": 22.9282
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.4803,
+          "pickrate": 1.1459000000000001,
+          "banrate": 23.2793
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 55.2856,
+          "pickrate": 8.6905,
+          "banrate": 23.2793
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 52.590199999999996,
+          "pickrate": 11.513,
+          "banrate": 23.2793
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 51.8665,
+          "pickrate": 1.0849,
+          "banrate": 20.5895
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 55.4089,
+          "pickrate": 9.9397,
+          "banrate": 20.5895
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 52.33449999999999,
+          "pickrate": 10.094899999999999,
+          "banrate": 20.5895
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 54.6233,
+          "pickrate": 9.4403,
+          "banrate": 13.2457
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 51.3666,
+          "pickrate": 8.673300000000001,
+          "banrate": 13.2457
         }
       ]
     }
