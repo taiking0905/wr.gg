@@ -3,47 +3,6 @@
   "name_ja": "カサディン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2a",
-      "updatetime": "2026/07/28",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 49.5215,
-          "pickrate": 1.5972,
-          "banrate": 0.1307
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.367700000000006,
-          "pickrate": 2.0317000000000003,
-          "banrate": 0.9155
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 50.7421,
-          "pickrate": 2.2819,
-          "banrate": 1.2956
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 53.3199,
-          "pickrate": 4.0279,
-          "banrate": 5.1665
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 51.931700000000006,
-          "pickrate": 4.1028,
-          "banrate": 4.4249
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2b",
       "updatetime": "2026/08/18",
       "data": [
@@ -204,6 +163,33 @@
           "winrate": 53.973000000000006,
           "pickrate": 1.6648,
           "banrate": 0.8062
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3",
+      "updatetime": "2026/09/25",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 51.8446,
+          "pickrate": 1.0991,
+          "banrate": 0.2222
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 52.597899999999996,
+          "pickrate": 1.754,
+          "banrate": 0.5097
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 53.263000000000005,
+          "pickrate": 3.1673,
+          "banrate": 1.3383
         }
       ]
     }

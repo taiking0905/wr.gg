@@ -3,89 +3,6 @@
   "name_ja": "ジェイス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2a",
-      "updatetime": "2026/07/28",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 48.15,
-          "pickrate": 1.5078,
-          "banrate": 0.4402
-        },
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 49.7378,
-          "pickrate": 2.6229,
-          "banrate": 0.4402
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 48.5613,
-          "pickrate": 1.4987,
-          "banrate": 1.4136
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 48.8874,
-          "pickrate": 3.2199,
-          "banrate": 1.4136
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.3545,
-          "pickrate": 1.5713000000000001,
-          "banrate": 1.9164
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 49.3222,
-          "pickrate": 3.4877,
-          "banrate": 1.9164
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 49.5798,
-          "pickrate": 2.4111000000000002,
-          "banrate": 6.208
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 52.613200000000006,
-          "pickrate": 4.6518999999999995,
-          "banrate": 6.208
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 60.0,
-          "pickrate": 1.7606,
-          "banrate": 3.5211
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 48.7455,
-          "pickrate": 2.3276000000000003,
-          "banrate": 6.0249999999999995
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 48.5013,
-          "pickrate": 5.2324,
-          "banrate": 6.0249999999999995
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2b",
       "updatetime": "2026/08/18",
       "data": [
@@ -379,6 +296,61 @@
           "winrate": 50.2666,
           "pickrate": 3.2772,
           "banrate": 2.6906
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3",
+      "updatetime": "2026/09/25",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 48.26,
+          "pickrate": 1.7236999999999998,
+          "banrate": 0.7548
+        },
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 50.4487,
+          "pickrate": 2.9144,
+          "banrate": 0.7548
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 49.7867,
+          "pickrate": 2.0992,
+          "banrate": 1.4301
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 50.323499999999996,
+          "pickrate": 4.1315,
+          "banrate": 1.4301
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.9957,
+          "pickrate": 2.9356,
+          "banrate": 3.5389999999999997
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 50.8652,
+          "pickrate": 5.1884,
+          "banrate": 3.5389999999999997
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 54.081599999999995,
+          "pickrate": 1.0231000000000001,
+          "banrate": 3.5389999999999997
         }
       ]
     }
