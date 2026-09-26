@@ -108,7 +108,6 @@
     "kana": "いれりあ",
     "name_cn": "艾瑞莉娅",
     "lanes": [
-      "JG",
       "MID",
       "TOP"
     ]
@@ -277,7 +276,6 @@
     "kana": "か・さんて",
     "name_cn": "奎桑提",
     "lanes": [
-      "SUP",
       "TOP"
     ]
   },
@@ -371,7 +369,6 @@
     "kana": "がれん",
     "name_cn": "盖伦",
     "lanes": [
-      "MID",
       "TOP"
     ]
   },
@@ -393,6 +390,7 @@
     "name_cn": "格温",
     "lanes": [
       "JG",
+      "MID",
       "TOP"
     ]
   },
@@ -403,10 +401,7 @@
     "kana": "ぐらがす",
     "name_cn": "古拉加斯",
     "lanes": [
-      "JG",
-      "MID",
-      "SUP",
-      "TOP"
+      "JG"
     ]
   },
   {
@@ -426,8 +421,7 @@
     "kana": "けいとりん",
     "name_cn": "凯特琳",
     "lanes": [
-      "ADC",
-      "TOP"
+      "ADC"
     ]
   },
   {
@@ -469,8 +463,7 @@
     "kana": "こーき",
     "name_cn": "库奇",
     "lanes": [
-      "ADC",
-      "MID"
+      "ADC"
     ]
   },
   {
@@ -480,7 +473,8 @@
     "kana": "こぐ＝まう",
     "name_cn": "克格莫",
     "lanes": [
-      "ADC"
+      "ADC",
+      "MID"
     ]
   },
   {
@@ -564,7 +558,6 @@
     "kana": "しぇん",
     "name_cn": "慎",
     "lanes": [
-      "JG",
       "TOP"
     ]
   },
@@ -575,6 +568,7 @@
     "kana": "じぐす",
     "name_cn": "吉格斯",
     "lanes": [
+      "ADC",
       "MID"
     ]
   },
@@ -585,8 +579,7 @@
     "kana": "じゃーゔぁんⅣ",
     "name_cn": "嘉文四世",
     "lanes": [
-      "JG",
-      "TOP"
+      "JG"
     ]
   },
   {
@@ -658,7 +651,6 @@
     "name_cn": "辛吉德",
     "lanes": [
       "MID",
-      "SUP",
       "TOP"
     ]
   },
@@ -687,7 +679,7 @@
   {
     "id": "Skarner",
     "name_ja": "スカーナー",
-    "img_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8e66d1da10939835480ceacbad2be008fbc7d96-96x96.jpg?accountingTag=WR&auto=format&fit=fill&q=80&w=96",
+    "img_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7829853403818fecfe447864e5359624a379c26d-285x323.jpg?accountingTag=WR&auto=format&fit=fill&q=80&w=285",
     "kana": "すかーなー",
     "name_cn": "斯卡纳",
     "lanes": [
@@ -747,6 +739,7 @@
     "kana": "せな",
     "name_cn": "赛娜",
     "lanes": [
+      "ADC",
       "SUP"
     ]
   },
@@ -841,8 +834,20 @@
     "kana": "たろん",
     "name_cn": "泰隆",
     "lanes": [
+      "JG"
+    ]
+  },
+  {
+    "id": "Chogath",
+    "name_ja": "チョ＝ガス",
+    "img_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d532b61341e7297740f08996d458d589d5ab4c91-285x323.jpg?accountingTag=WR&auto=format&fit=fill&q=80&w=285",
+    "kana": "ちょ＝がす",
+    "name_cn": "科加斯",
+    "lanes": [
       "JG",
-      "MID"
+      "MID",
+      "SUP",
+      "TOP"
     ]
   },
   {
@@ -873,7 +878,8 @@
     "kana": "とぅいっち",
     "name_cn": "图奇",
     "lanes": [
-      "ADC"
+      "ADC",
+      "JG"
     ]
   },
   {
@@ -967,8 +973,7 @@
     "kana": "にだりー",
     "name_cn": "奈德丽",
     "lanes": [
-      "JG",
-      "SUP"
+      "JG"
     ]
   },
   {
@@ -1011,8 +1016,7 @@
     "kana": "のら",
     "name_cn": "诺拉",
     "lanes": [
-      "MID",
-      "SUP"
+      "MID"
     ]
   },
   {
@@ -1032,6 +1036,7 @@
     "kana": "ぱいく",
     "name_cn": "派克",
     "lanes": [
+      "MID",
       "SUP"
     ]
   },
@@ -1094,7 +1099,19 @@
     "kana": "ふぃどるすてぃっくす",
     "name_cn": "费德提克",
     "lanes": [
-      "JG"
+      "JG",
+      "SUP"
+    ]
+  },
+  {
+    "id": "Hwei",
+    "name_ja": "フェイ",
+    "img_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/95ec8d04793e6ae018566656751b74dcc2e71e4f-285x323.jpg?accountingTag=WR&auto=format&fit=fill&q=80&w=285",
+    "kana": "ふぇい",
+    "name_cn": "彗",
+    "lanes": [
+      "MID",
+      "SUP"
     ]
   },
   {
@@ -1241,8 +1258,7 @@
     "kana": "める",
     "name_cn": "梅尔",
     "lanes": [
-      "MID",
-      "SUP"
+      "MID"
     ]
   },
   {
@@ -1264,6 +1280,8 @@
     "kana": "もるでかいざー",
     "name_cn": "莫德凯撒",
     "lanes": [
+      "MID",
+      "SUP",
       "TOP"
     ]
   },
@@ -1287,6 +1305,16 @@
     "name_cn": "悠米",
     "lanes": [
       "SUP"
+    ]
+  },
+  {
+    "id": "Yunara",
+    "name_ja": "ユナラ",
+    "img_url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/50157a1e1a9597825b3bcfac15b87c0cbac94450-285x323.jpg?accountingTag=WR&auto=format&fit=fill&q=80&w=285",
+    "kana": "ゆなら",
+    "name_cn": "芸阿娜",
+    "lanes": [
+      "ADC"
     ]
   },
   {
@@ -1350,6 +1378,7 @@
     "kana": "らんぶる",
     "name_cn": "兰博",
     "lanes": [
+      "MID",
       "TOP"
     ]
   },
@@ -1381,8 +1410,7 @@
     "kana": "りさんどら",
     "name_cn": "丽桑卓",
     "lanes": [
-      "MID",
-      "SUP"
+      "MID"
     ]
   },
   {
@@ -1462,8 +1490,7 @@
     "kana": "わーうぃっく",
     "name_cn": "沃里克",
     "lanes": [
-      "JG",
-      "TOP"
+      "JG"
     ]
   }
 ]
