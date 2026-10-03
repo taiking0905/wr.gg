@@ -3,47 +3,6 @@
   "name_ja": "ミス・フォーチュン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 51.1142,
-          "pickrate": 21.4969,
-          "banrate": 2.1232
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 52.0323,
-          "pickrate": 23.6799,
-          "banrate": 4.5966
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 52.0644,
-          "pickrate": 23.7336,
-          "banrate": 5.0419
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 51.845200000000006,
-          "pickrate": 20.1612,
-          "banrate": 3.6409
-        },
-        {
-          "lane": "ADC",
-          "rank": "Legendary_rank",
-          "winrate": 51.3135,
-          "pickrate": 17.319399999999998,
-          "banrate": 2.6113
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -190,6 +149,40 @@
           "winrate": 48.4638,
           "pickrate": 8.8922,
           "banrate": 1.1766999999999999
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 48.2577,
+          "pickrate": 18.1847,
+          "banrate": 3.618
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 48.8622,
+          "pickrate": 13.0059,
+          "banrate": 2.4488
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 48.941,
+          "pickrate": 9.746,
+          "banrate": 1.3691
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 52.2936,
+          "pickrate": 4.0385,
+          "banrate": 0.22230000000000003
         }
       ]
     }

@@ -3,40 +3,6 @@
   "name_ja": "コーキ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 49.0616,
-          "pickrate": 1.0823,
-          "banrate": 0.0125
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 50.7483,
-          "pickrate": 1.0250000000000001,
-          "banrate": 0.0162
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 50.664500000000004,
-          "pickrate": 1.2155,
-          "banrate": 0.0081
-        },
-        {
-          "lane": "ADC",
-          "rank": "Legendary_rank",
-          "winrate": 50.424400000000006,
-          "pickrate": 1.5357,
-          "banrate": 0.0091
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -113,6 +79,19 @@
           "winrate": 51.38589999999999,
           "pickrate": 1.0444,
           "banrate": 0.0078
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 51.6841,
+          "pickrate": 1.0348,
+          "banrate": 0.007899999999999999
         }
       ]
     }

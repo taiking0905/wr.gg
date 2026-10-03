@@ -3,47 +3,6 @@
   "name_ja": "ジグス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 49.2158,
-          "pickrate": 4.8929,
-          "banrate": 2.4313000000000002
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.613600000000005,
-          "pickrate": 6.3184000000000005,
-          "banrate": 2.7313
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.444700000000005,
-          "pickrate": 6.4809,
-          "banrate": 2.9301
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 49.278800000000004,
-          "pickrate": 5.774,
-          "banrate": 1.6829
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 47.2794,
-          "pickrate": 5.0074,
-          "banrate": 1.2359
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -197,6 +156,40 @@
           "winrate": 0.0,
           "pickrate": 2.0618999999999996,
           "banrate": 0.5155
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 48.104,
+          "pickrate": 4.9451,
+          "banrate": 4.0075
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 48.6723,
+          "pickrate": 5.0178,
+          "banrate": 2.0298
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 48.1064,
+          "pickrate": 4.6792,
+          "banrate": 1.294
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 51.51520000000001,
+          "pickrate": 2.4454,
+          "banrate": 0.1482
         }
       ]
     }

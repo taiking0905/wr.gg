@@ -3,47 +3,6 @@
   "name_ja": "アムム",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 51.9651,
-          "pickrate": 1.5976000000000001,
-          "banrate": 0.11280000000000001
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 55.4003,
-          "pickrate": 2.3219,
-          "banrate": 0.0924
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 55.5238,
-          "pickrate": 2.4112999999999998,
-          "banrate": 0.0936
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 53.715999999999994,
-          "pickrate": 2.5061,
-          "banrate": 0.0692
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 54.2967,
-          "pickrate": 2.3817999999999997,
-          "banrate": 0.1043
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -197,6 +156,40 @@
           "winrate": 50.0,
           "pickrate": 3.6082,
           "banrate": 0.2577
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 56.0284,
+          "pickrate": 1.5966,
+          "banrate": 0.1599
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 57.2148,
+          "pickrate": 2.6109,
+          "banrate": 0.096
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 56.5925,
+          "pickrate": 3.1349,
+          "banrate": 0.1033
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 53.8071,
+          "pickrate": 7.2989999999999995,
+          "banrate": 0.44460000000000005
         }
       ]
     }

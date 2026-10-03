@@ -3,47 +3,6 @@
   "name_ja": "ルシアン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 47.9182,
-          "pickrate": 6.311400000000001,
-          "banrate": 0.1674
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.710300000000004,
-          "pickrate": 5.131200000000001,
-          "banrate": 0.1284
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 48.9292,
-          "pickrate": 5.1487,
-          "banrate": 0.1392
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 50.3976,
-          "pickrate": 6.855700000000001,
-          "banrate": 0.2806
-        },
-        {
-          "lane": "ADC",
-          "rank": "Legendary_rank",
-          "winrate": 48.2523,
-          "pickrate": 7.8325000000000005,
-          "banrate": 0.2868
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -197,6 +156,40 @@
           "winrate": 47.0588,
           "pickrate": 8.7629,
           "banrate": 0.2577
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 46.4101,
+          "pickrate": 4.46,
+          "banrate": 0.22469999999999998
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 47.3654,
+          "pickrate": 3.5934,
+          "banrate": 0.0424
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 47.3184,
+          "pickrate": 3.8489000000000004,
+          "banrate": 0.033100000000000004
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 59.493700000000004,
+          "pickrate": 5.854,
+          "banrate": 0.0741
         }
       ]
     }

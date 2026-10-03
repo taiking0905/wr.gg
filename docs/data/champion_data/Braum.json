@@ -3,47 +3,6 @@
   "name_ja": "ブラウム",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 50.62029999999999,
-          "pickrate": 3.7487,
-          "banrate": 1.1372
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 50.975,
-          "pickrate": 3.8515,
-          "banrate": 1.0206
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 51.022800000000004,
-          "pickrate": 3.8823999999999996,
-          "banrate": 1.0603
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 50.4691,
-          "pickrate": 3.5505,
-          "banrate": 0.8621
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 50.1072,
-          "pickrate": 3.6477000000000004,
-          "banrate": 0.6936
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -190,6 +149,40 @@
           "winrate": 51.8227,
           "pickrate": 3.8811,
           "banrate": 0.7555000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 52.326499999999996,
+          "pickrate": 4.6724000000000006,
+          "banrate": 1.8085
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 52.5221,
+          "pickrate": 4.2793,
+          "banrate": 1.0737999999999999
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 53.016200000000005,
+          "pickrate": 4.0607,
+          "banrate": 0.918
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 48.1481,
+          "pickrate": 3.0011,
+          "banrate": 0.44460000000000005
         }
       ]
     }

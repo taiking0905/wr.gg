@@ -3,47 +3,6 @@
   "name_ja": "アニー",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 47.824,
-          "pickrate": 2.4581,
-          "banrate": 0.2046
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.4863,
-          "pickrate": 2.3381,
-          "banrate": 0.13040000000000002
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.894,
-          "pickrate": 2.3623000000000003,
-          "banrate": 0.13849999999999998
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 50.965199999999996,
-          "pickrate": 2.6672000000000002,
-          "banrate": 0.159
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 54.5141,
-          "pickrate": 2.6426000000000003,
-          "banrate": 0.1773
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -190,6 +149,40 @@
           "winrate": 51.7406,
           "pickrate": 2.4478,
           "banrate": 0.09330000000000001
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 47.713699999999996,
+          "pickrate": 1.6641,
+          "banrate": 0.24280000000000002
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 50.3205,
+          "pickrate": 1.9965,
+          "banrate": 0.0955
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 50.867799999999995,
+          "pickrate": 2.3758999999999997,
+          "banrate": 0.08
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 58.0153,
+          "pickrate": 4.8536,
+          "banrate": 0.0371
         }
       ]
     }

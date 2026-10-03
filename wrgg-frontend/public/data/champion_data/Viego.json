@@ -3,47 +3,6 @@
   "name_ja": "ヴィエゴ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2b",
-      "updatetime": "2026/08/18",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 48.192800000000005,
-          "pickrate": 7.4311,
-          "banrate": 2.6139
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 47.553200000000004,
-          "pickrate": 4.2599,
-          "banrate": 2.9864
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 47.2114,
-          "pickrate": 4.0680000000000005,
-          "banrate": 3.085
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 46.5388,
-          "pickrate": 4.0543000000000005,
-          "banrate": 2.4202999999999997
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 46.6684,
-          "pickrate": 4.9696,
-          "banrate": 3.0023999999999997
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2c",
       "updatetime": "2026/08/26",
       "data": [
@@ -197,6 +156,40 @@
           "winrate": 37.037,
           "pickrate": 6.9588,
           "banrate": 2.0618999999999996
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3a",
+      "updatetime": "2026/10/02",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 47.6186,
+          "pickrate": 9.6714,
+          "banrate": 4.5732
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 46.1628,
+          "pickrate": 6.392100000000001,
+          "banrate": 2.9309000000000003
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 45.4965,
+          "pickrate": 5.6355,
+          "banrate": 2.4528000000000003
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 41.525400000000005,
+          "pickrate": 4.372,
+          "banrate": 1.4449999999999998
         }
       ]
     }
