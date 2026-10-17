@@ -3,26 +3,6 @@
   "name_ja": "グラガス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2",
-      "updatetime": "2026/07/14",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 48.4213,
-          "pickrate": 1.0413999999999999,
-          "banrate": 0.0428
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 53.02329999999999,
-          "pickrate": 1.1819,
-          "banrate": 0.0646
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2a",
       "updatetime": "2026/07/28",
       "data": [
@@ -134,6 +114,26 @@
           "winrate": 47.8018,
           "pickrate": 1.6703,
           "banrate": 0.0494
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3b",
+      "updatetime": "2026/10/16",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 50.0505,
+          "pickrate": 1.2189,
+          "banrate": 0.046700000000000005
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 47.6038,
+          "pickrate": 1.345,
+          "banrate": 0.0616
         }
       ]
     }

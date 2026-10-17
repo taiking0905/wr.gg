@@ -3,47 +3,6 @@
   "name_ja": "ジリアン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2c",
-      "updatetime": "2026/08/26",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 50.2726,
-          "pickrate": 1.197,
-          "banrate": 0.7232
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 50.0207,
-          "pickrate": 1.1344,
-          "banrate": 1.439
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 50.3039,
-          "pickrate": 1.1297,
-          "banrate": 1.5975
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 49.481,
-          "pickrate": 1.2082000000000002,
-          "banrate": 2.2797
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 53.0284,
-          "pickrate": 1.9800000000000002,
-          "banrate": 4.5572
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2d",
       "updatetime": "2026/09/08",
       "data": [
@@ -183,6 +142,40 @@
           "winrate": 47.373,
           "pickrate": 1.5502,
           "banrate": 1.0655
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3b",
+      "updatetime": "2026/10/16",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 51.0404,
+          "pickrate": 1.1191,
+          "banrate": 0.7928
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 50.4246,
+          "pickrate": 1.1791,
+          "banrate": 0.7826
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 50.3279,
+          "pickrate": 1.5006,
+          "banrate": 1.0406
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 50.793699999999994,
+          "pickrate": 1.8048000000000002,
+          "banrate": 1.3637
         }
       ]
     }
