@@ -3,82 +3,6 @@
   "name_ja": "ボリベア",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2d",
-      "updatetime": "2026/09/08",
-      "data": [
-        {
-          "lane": "TOP",
-          "rank": "Emerald",
-          "winrate": 49.9684,
-          "pickrate": 5.9427,
-          "banrate": 6.1307
-        },
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 50.2752,
-          "pickrate": 4.0971,
-          "banrate": 6.1307
-        },
-        {
-          "lane": "TOP",
-          "rank": "Diamond",
-          "winrate": 51.348400000000005,
-          "pickrate": 6.5229,
-          "banrate": 6.4408
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 50.2182,
-          "pickrate": 3.7560000000000002,
-          "banrate": 6.4408
-        },
-        {
-          "lane": "TOP",
-          "rank": "Master",
-          "winrate": 51.410500000000006,
-          "pickrate": 6.5845,
-          "banrate": 6.6931
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.063599999999994,
-          "pickrate": 3.7376,
-          "banrate": 6.6931
-        },
-        {
-          "lane": "TOP",
-          "rank": "Challenger",
-          "winrate": 51.017599999999995,
-          "pickrate": 7.0268999999999995,
-          "banrate": 6.0729999999999995
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 48.7837,
-          "pickrate": 3.3185,
-          "banrate": 6.0729999999999995
-        },
-        {
-          "lane": "TOP",
-          "rank": "Legendary_rank",
-          "winrate": 51.7702,
-          "pickrate": 7.387199999999999,
-          "banrate": 4.8308
-        },
-        {
-          "lane": "JG",
-          "rank": "Legendary_rank",
-          "winrate": 46.990300000000005,
-          "pickrate": 2.8207,
-          "banrate": 4.8308
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.2e",
       "updatetime": "2026/09/22",
       "data": [
@@ -358,6 +282,82 @@
           "winrate": 49.4698,
           "pickrate": 2.6572,
           "banrate": 3.9873
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3d",
+      "updatetime": "2026/10/30",
+      "data": [
+        {
+          "lane": "TOP",
+          "rank": "Emerald",
+          "winrate": 49.1599,
+          "pickrate": 7.836600000000001,
+          "banrate": 12.6006
+        },
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 50.177099999999996,
+          "pickrate": 5.0033,
+          "banrate": 12.6006
+        },
+        {
+          "lane": "TOP",
+          "rank": "Diamond",
+          "winrate": 48.9365,
+          "pickrate": 6.5411,
+          "banrate": 7.339900000000001
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 49.399300000000004,
+          "pickrate": 3.6561000000000003,
+          "banrate": 7.339900000000001
+        },
+        {
+          "lane": "TOP",
+          "rank": "Master",
+          "winrate": 48.754799999999996,
+          "pickrate": 6.2902,
+          "banrate": 6.6850000000000005
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 49.4816,
+          "pickrate": 3.386,
+          "banrate": 6.6850000000000005
+        },
+        {
+          "lane": "TOP",
+          "rank": "Challenger",
+          "winrate": 48.4833,
+          "pickrate": 5.5833,
+          "banrate": 4.2594
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 49.3618,
+          "pickrate": 2.3876,
+          "banrate": 4.2594
+        },
+        {
+          "lane": "TOP",
+          "rank": "Legendary_rank",
+          "winrate": 49.4433,
+          "pickrate": 5.921,
+          "banrate": 3.9093999999999998
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 49.0369,
+          "pickrate": 2.5488,
+          "banrate": 3.9093999999999998
         }
       ]
     }
