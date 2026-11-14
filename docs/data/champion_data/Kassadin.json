@@ -3,47 +3,6 @@
   "name_ja": "カサディン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2e",
-      "updatetime": "2026/09/22",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 49.8214,
-          "pickrate": 1.0172,
-          "banrate": 0.1907
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.8583,
-          "pickrate": 1.1403,
-          "banrate": 0.3727
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 51.1418,
-          "pickrate": 1.1615,
-          "banrate": 0.3967
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 51.697,
-          "pickrate": 1.3375,
-          "banrate": 0.5498000000000001
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 53.973000000000006,
-          "pickrate": 1.6648,
-          "banrate": 0.8062
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3",
       "updatetime": "2026/09/30",
       "data": [
@@ -197,6 +156,40 @@
           "winrate": 52.432599999999994,
           "pickrate": 3.2085000000000004,
           "banrate": 2.6189
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3f",
+      "updatetime": "2026/11/13",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 51.46079999999999,
+          "pickrate": 1.0631,
+          "banrate": 0.38630000000000003
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 51.2413,
+          "pickrate": 1.11,
+          "banrate": 0.4058
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 51.3655,
+          "pickrate": 1.4513,
+          "banrate": 0.6634
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 54.589600000000004,
+          "pickrate": 2.6717999999999997,
+          "banrate": 1.9503
         }
       ]
     }

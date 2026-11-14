@@ -3,82 +3,6 @@
   "name_ja": "ラックス",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.2e",
-      "updatetime": "2026/09/22",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 47.6779,
-          "pickrate": 6.5844,
-          "banrate": 25.1518
-        },
-        {
-          "lane": "SUP",
-          "rank": "Emerald",
-          "winrate": 50.6595,
-          "pickrate": 11.5078,
-          "banrate": 25.1518
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 49.556400000000004,
-          "pickrate": 5.7501,
-          "banrate": 18.990399999999998
-        },
-        {
-          "lane": "SUP",
-          "rank": "Diamond",
-          "winrate": 48.955799999999996,
-          "pickrate": 9.1837,
-          "banrate": 18.990399999999998
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.3538,
-          "pickrate": 5.7774,
-          "banrate": 18.0878
-        },
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 48.9145,
-          "pickrate": 8.982999999999999,
-          "banrate": 18.0878
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 48.9375,
-          "pickrate": 5.2813,
-          "banrate": 12.9471
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 49.1374,
-          "pickrate": 7.893600000000001,
-          "banrate": 12.9471
-        },
-        {
-          "lane": "MID",
-          "rank": "Legendary_rank",
-          "winrate": 49.8057,
-          "pickrate": 3.8537000000000003,
-          "banrate": 7.9371
-        },
-        {
-          "lane": "SUP",
-          "rank": "Legendary_rank",
-          "winrate": 46.8436,
-          "pickrate": 6.958699999999999,
-          "banrate": 7.9371
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3",
       "updatetime": "2026/09/30",
       "data": [
@@ -351,6 +275,82 @@
           "winrate": 48.532399999999996,
           "pickrate": 5.6701,
           "banrate": 4.6277
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3f",
+      "updatetime": "2026/11/13",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 49.500899999999994,
+          "pickrate": 5.8363,
+          "banrate": 25.428
+        },
+        {
+          "lane": "SUP",
+          "rank": "Emerald",
+          "winrate": 49.4142,
+          "pickrate": 11.4145,
+          "banrate": 25.428
+        },
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 49.225,
+          "pickrate": 4.6862,
+          "banrate": 16.8261
+        },
+        {
+          "lane": "SUP",
+          "rank": "Diamond",
+          "winrate": 49.9019,
+          "pickrate": 8.8307,
+          "banrate": 16.8261
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 48.9708,
+          "pickrate": 4.7314,
+          "banrate": 15.2587
+        },
+        {
+          "lane": "SUP",
+          "rank": "Master",
+          "winrate": 49.7962,
+          "pickrate": 8.5854,
+          "banrate": 15.2587
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 49.1169,
+          "pickrate": 4.3974,
+          "banrate": 7.8824000000000005
+        },
+        {
+          "lane": "SUP",
+          "rank": "Challenger",
+          "winrate": 49.0202,
+          "pickrate": 7.0073,
+          "banrate": 7.8824000000000005
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 48.4191,
+          "pickrate": 2.7497000000000003,
+          "banrate": 4.1602
+        },
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 47.4093,
+          "pickrate": 5.6849,
+          "banrate": 4.1602
         }
       ]
     }
