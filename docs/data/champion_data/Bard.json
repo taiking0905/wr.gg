@@ -3,26 +3,6 @@
   "name_ja": "バード",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/25",
-      "data": [
-        {
-          "lane": "SUP",
-          "rank": "Master",
-          "winrate": 51.535799999999995,
-          "pickrate": 1.2235,
-          "banrate": 0.3529
-        },
-        {
-          "lane": "SUP",
-          "rank": "Challenger",
-          "winrate": 14.285700000000002,
-          "pickrate": 1.8041,
-          "banrate": 0.7732
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -99,6 +79,19 @@
           "winrate": 52.5703,
           "pickrate": 1.2443,
           "banrate": 0.27399999999999997
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "SUP",
+          "rank": "Legendary_rank",
+          "winrate": 52.669,
+          "pickrate": 1.3497999999999999,
+          "banrate": 0.26180000000000003
         }
       ]
     }

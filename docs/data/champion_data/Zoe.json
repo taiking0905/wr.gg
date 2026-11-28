@@ -3,33 +3,6 @@
   "name_ja": "ゾーイ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.3213,
-          "pickrate": 1.0841,
-          "banrate": 0.3085
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 50.7954,
-          "pickrate": 1.1653,
-          "banrate": 0.2882
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 48.0,
-          "pickrate": 6.443300000000001,
-          "banrate": 2.5773
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -127,6 +100,26 @@
           "winrate": 53.7879,
           "pickrate": 1.2744,
           "banrate": 0.5334
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Emerald",
+          "winrate": 45.4268,
+          "pickrate": 1.2716,
+          "banrate": 0.6087
+        },
+        {
+          "lane": "MID",
+          "rank": "Legendary_rank",
+          "winrate": 54.7,
+          "pickrate": 1.2009,
+          "banrate": 0.4443
         }
       ]
     }

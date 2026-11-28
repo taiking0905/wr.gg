@@ -3,40 +3,6 @@
   "name_ja": "タロン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 51.0775,
-          "pickrate": 1.7076999999999998,
-          "banrate": 0.5459999999999999
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 50.1171,
-          "pickrate": 2.6069999999999998,
-          "banrate": 0.9951
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 50.4819,
-          "pickrate": 3.6782000000000004,
-          "banrate": 1.8346999999999998
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 54.545500000000004,
-          "pickrate": 8.5052,
-          "banrate": 13.917499999999999
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -197,6 +163,47 @@
           "winrate": 51.0352,
           "pickrate": 4.4883,
           "banrate": 6.2503
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 51.43879999999999,
+          "pickrate": 1.7963,
+          "banrate": 1.0429000000000002
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 49.3416,
+          "pickrate": 2.2266,
+          "banrate": 1.1387
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 49.5086,
+          "pickrate": 2.2574,
+          "banrate": 1.1989
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 49.8298,
+          "pickrate": 2.8474,
+          "banrate": 2.0401
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 56.1343,
+          "pickrate": 4.5417,
+          "banrate": 5.9959999999999996
         }
       ]
     }

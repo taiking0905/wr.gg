@@ -3,33 +3,6 @@
   "name_ja": "ミス・フォーチュン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 48.526599999999995,
-          "pickrate": 18.496299999999998,
-          "banrate": 3.8993
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.8129,
-          "pickrate": 12.932099999999998,
-          "banrate": 2.5107999999999997
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 48.4638,
-          "pickrate": 8.8922,
-          "banrate": 1.1766999999999999
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -190,6 +163,47 @@
           "winrate": 48.8579,
           "pickrate": 5.2836,
           "banrate": 0.48269999999999996
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 49.2969,
+          "pickrate": 14.3365,
+          "banrate": 1.963
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 50.1336,
+          "pickrate": 12.798000000000002,
+          "banrate": 1.6984
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 50.1877,
+          "pickrate": 12.701699999999999,
+          "banrate": 1.6622000000000001
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 50.0462,
+          "pickrate": 10.5035,
+          "banrate": 0.9360999999999999
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 48.365700000000004,
+          "pickrate": 6.502800000000001,
+          "banrate": 0.45630000000000004
         }
       ]
     }

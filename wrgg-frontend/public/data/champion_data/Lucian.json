@@ -3,40 +3,6 @@
   "name_ja": "ルシアン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 46.7677,
-          "pickrate": 4.1693,
-          "banrate": 0.2123
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 48.2794,
-          "pickrate": 3.5523,
-          "banrate": 0.038
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 48.916900000000005,
-          "pickrate": 3.9787000000000003,
-          "banrate": 0.0332
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 47.0588,
-          "pickrate": 8.7629,
-          "banrate": 0.2577
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -197,6 +163,47 @@
           "winrate": 47.7546,
           "pickrate": 6.3155,
           "banrate": 0.076
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 51.0394,
+          "pickrate": 6.527299999999999,
+          "banrate": 0.818
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 48.434,
+          "pickrate": 4.8318,
+          "banrate": 0.1526
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 48.4736,
+          "pickrate": 4.6764,
+          "banrate": 0.1157
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 48.4506,
+          "pickrate": 4.9089,
+          "banrate": 0.0702
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 49.7912,
+          "pickrate": 5.4628000000000005,
+          "banrate": 0.06
         }
       ]
     }

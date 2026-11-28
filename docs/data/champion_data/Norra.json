@@ -3,40 +3,6 @@
   "name_ja": "ノラ",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "MID",
-          "rank": "Emerald",
-          "winrate": 50.7008,
-          "pickrate": 1.4193,
-          "banrate": 8.1874
-        },
-        {
-          "lane": "MID",
-          "rank": "Diamond",
-          "winrate": 50.4174,
-          "pickrate": 1.5672,
-          "banrate": 7.9386
-        },
-        {
-          "lane": "MID",
-          "rank": "Master",
-          "winrate": 49.8691,
-          "pickrate": 1.4903,
-          "banrate": 5.5425
-        },
-        {
-          "lane": "MID",
-          "rank": "Challenger",
-          "winrate": 50.0,
-          "pickrate": 1.0309000000000001,
-          "banrate": 0.5155
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -190,6 +156,33 @@
           "winrate": 50.214999999999996,
           "pickrate": 1.0213,
           "banrate": 4.5628
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "MID",
+          "rank": "Diamond",
+          "winrate": 49.5717,
+          "pickrate": 1.0312999999999999,
+          "banrate": 5.656
+        },
+        {
+          "lane": "MID",
+          "rank": "Master",
+          "winrate": 49.2725,
+          "pickrate": 1.0198,
+          "banrate": 5.5821000000000005
+        },
+        {
+          "lane": "MID",
+          "rank": "Challenger",
+          "winrate": 48.841,
+          "pickrate": 1.024,
+          "banrate": 4.5669
         }
       ]
     }

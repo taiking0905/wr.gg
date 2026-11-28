@@ -3,40 +3,6 @@
   "name_ja": "キンドレッド",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "JG",
-          "rank": "Emerald",
-          "winrate": 51.3248,
-          "pickrate": 2.8341000000000003,
-          "banrate": 0.361
-        },
-        {
-          "lane": "JG",
-          "rank": "Diamond",
-          "winrate": 51.382000000000005,
-          "pickrate": 2.7817000000000003,
-          "banrate": 0.41250000000000003
-        },
-        {
-          "lane": "JG",
-          "rank": "Master",
-          "winrate": 51.571,
-          "pickrate": 2.7535,
-          "banrate": 0.4817
-        },
-        {
-          "lane": "JG",
-          "rank": "Challenger",
-          "winrate": 40.0,
-          "pickrate": 2.5773,
-          "banrate": 0.2577
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -197,6 +163,47 @@
           "winrate": 51.172399999999996,
           "pickrate": 2.6249000000000002,
           "banrate": 0.5322
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "JG",
+          "rank": "Emerald",
+          "winrate": 48.6243,
+          "pickrate": 2.4424,
+          "banrate": 0.3618
+        },
+        {
+          "lane": "JG",
+          "rank": "Diamond",
+          "winrate": 49.9879,
+          "pickrate": 2.112,
+          "banrate": 0.32239999999999996
+        },
+        {
+          "lane": "JG",
+          "rank": "Master",
+          "winrate": 49.8079,
+          "pickrate": 2.0618999999999996,
+          "banrate": 0.32139999999999996
+        },
+        {
+          "lane": "JG",
+          "rank": "Challenger",
+          "winrate": 49.770199999999996,
+          "pickrate": 1.9642,
+          "banrate": 0.3253
+        },
+        {
+          "lane": "JG",
+          "rank": "Legendary_rank",
+          "winrate": 51.011300000000006,
+          "pickrate": 2.4341999999999997,
+          "banrate": 0.47800000000000004
         }
       ]
     }

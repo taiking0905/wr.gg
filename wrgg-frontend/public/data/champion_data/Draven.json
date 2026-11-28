@@ -3,40 +3,6 @@
   "name_ja": "ドレイヴン",
   "patches": [
     {
-      "patch_name": "ワイルドリフト パッチノート 7.3",
-      "updatetime": "2026/09/30",
-      "data": [
-        {
-          "lane": "ADC",
-          "rank": "Emerald",
-          "winrate": 45.8331,
-          "pickrate": 9.649000000000001,
-          "banrate": 8.8637
-        },
-        {
-          "lane": "ADC",
-          "rank": "Diamond",
-          "winrate": 46.6109,
-          "pickrate": 7.133000000000001,
-          "banrate": 2.3399
-        },
-        {
-          "lane": "ADC",
-          "rank": "Master",
-          "winrate": 48.583,
-          "pickrate": 6.610199999999999,
-          "banrate": 1.221
-        },
-        {
-          "lane": "ADC",
-          "rank": "Challenger",
-          "winrate": 58.3333,
-          "pickrate": 6.1856,
-          "banrate": 0.2577
-        }
-      ]
-    },
-    {
       "patch_name": "ワイルドリフト パッチノート 7.3a",
       "updatetime": "2026/10/14",
       "data": [
@@ -197,6 +163,47 @@
           "winrate": 49.8938,
           "pickrate": 5.6795,
           "banrate": 0.7314
+        }
+      ]
+    },
+    {
+      "patch_name": "ワイルドリフト パッチノート 7.3g",
+      "updatetime": "2026/11/27",
+      "data": [
+        {
+          "lane": "ADC",
+          "rank": "Emerald",
+          "winrate": 48.2733,
+          "pickrate": 10.4778,
+          "banrate": 14.4101
+        },
+        {
+          "lane": "ADC",
+          "rank": "Diamond",
+          "winrate": 47.9474,
+          "pickrate": 6.4184,
+          "banrate": 3.4570999999999996
+        },
+        {
+          "lane": "ADC",
+          "rank": "Master",
+          "winrate": 48.3103,
+          "pickrate": 6.1557,
+          "banrate": 2.6352
+        },
+        {
+          "lane": "ADC",
+          "rank": "Challenger",
+          "winrate": 49.2458,
+          "pickrate": 5.8738,
+          "banrate": 0.9288
+        },
+        {
+          "lane": "ADC",
+          "rank": "Legendary_rank",
+          "winrate": 48.1307,
+          "pickrate": 6.1353,
+          "banrate": 0.7758
         }
       ]
     }
